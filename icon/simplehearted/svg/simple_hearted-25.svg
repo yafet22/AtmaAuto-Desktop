@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="basic_x5F_heart_x5F_outline">
+	<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="50,20 60,10 85,10 95,20 95,45 50,95 5,45 
+		5,20 15,10 40,10 	"/>
+</g>
+<g id="details">
+	<g>
+		<g>
+			<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M66.782,45.811
+				c0.484,5.054-1.21,10.277-5.08,14.148c-6.881,6.881-18.036,6.881-24.917,0"/>
+			<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="71.268,51.905 66.863,45.298 
+				62.458,51.905 			"/>
+		</g>
+		<g>
+			<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M33.218,49.189
+				c-0.484-5.054,1.21-10.277,5.081-14.148c6.88-6.881,18.035-6.881,24.916,0"/>
+			<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="28.732,43.095 33.137,49.702 
+				37.542,43.095 			"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="basic_x5F_heart_x5F_outline">
+	<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="50,20 60,10 85,10 95,20 95,45 50,95 5,45 
+		5,20 15,10 40,10 	"/>
+</g>
+<g id="details">
+	<g>
+		<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M67.303,52.5c-3.46-5.972-9.904-10-17.303-10
+			s-13.843,4.028-17.303,10"/>
+		<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M58.65,57.513C56.832,54.374,53.598,52.5,50,52.5
+			s-6.832,1.874-8.65,5.013"/>
+		<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M24.044,47.487C29.4,38.243,39.346,32.5,50,32.5
+			s20.6,5.743,25.956,14.987"/>
+	</g>
+	<circle cx="50" cy="62.5" r="2.5"/>
+</g>
+</svg>

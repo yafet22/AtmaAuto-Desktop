@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="basic_x5F_heart_x5F_outline">
+	<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="50,20 60,10 85,10 95,20 95,45 50,95 5,45 
+		5,20 15,10 40,10 	"/>
+</g>
+<g id="details">
+	<g>
+		<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="55.429,27.5 67.5,27.5 74.428,42.5 
+			50,75.683 25.572,42.5 32.5,27.5 44.571,27.5 		"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="25.572" y1="42.5" x2="75" y2="42.5"/>
+		<polyline fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="67.5,27.5 
+			60,42.5 50,27.5 40,42.5 32.5,27.5 		"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="40" y1="42.5" x2="50" y2="75"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="60" y1="42.5" x2="50" y2="75"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="fill">
+	<g>
+		
+			<line fill="none" stroke="#EFACAC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="81.33" y1="34.411" x2="81.33" y2="64.294"/>
+		
+			<polyline fill="none" stroke="#EFACAC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			89.333,51.726 81.33,65.589 73.327,51.726 		"/>
+	</g>
+	<g>
+		
+			<line fill="none" stroke="#C2CCAC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="18.67" y1="65.589" x2="18.67" y2="35.706"/>
+		
+			<polyline fill="none" stroke="#C2CCAC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			26.673,48.274 18.67,34.411 10.667,48.274 		"/>
+	</g>
+</g>
+<g id="outline">
+</g>
+<g id="dollar_x5F_signs">
+	<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+		M50,62.55l0,5.659 M50,31.791l0,5.698 M58.457,43.721v-4.608c0-0.896-0.648-1.624-1.449-1.624H42.992
+		c-0.801,0-1.449,0.728-1.449,1.624v9.263c0,0.897,0.648,1.624,1.449,1.624h14.016c0.801,0,1.449,0.727,1.449,1.624v9.263
+		c0,0.896-0.648,1.624-1.449,1.624H42.992c-0.801,0-1.449-0.728-1.449-1.624v-4.583"/>
+</g>
+</svg>

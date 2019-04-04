@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="outlines">
+	
+		<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="44.302" y1="36.728" x2="44.302" y2="31.474"/>
+	<g>
+		<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M49.276,28.771c0,1.1-0.9,2-2,2h-5.948c-1.1,0-2-0.9-2-2v-5.948c0-1.1,0.9-2,2-2h5.948c1.1,0,2,0.9,2,2V28.771z"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M39.221,25.796h-6.65c-1.1,0-2-0.9-2-2V11.189c0-1.1,0.9-2,2-2h23.463c1.1,0,2,0.9,2,2v12.607c0,1.1-0.9,2-2,2h-6.479"/>
+	</g>
+	
+		<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="30.96" y1="13.729" x2="57.644" y2="13.729"/>
+	<g>
+		
+			<circle fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="48.858" cy="88.074" r="1.735"/>
+		<g>
+			<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M62.315,89.701c0,1.65-1.35,3-3,3H38.401c-1.65,0-3-1.35-3-3V39.854c0-1.65,1.35-3,3-3h20.914c1.65,0,3,1.35,3,3V89.701z"/>
+		</g>
+		
+			<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="35.789" y1="82.498" x2="61.928" y2="82.498"/>
+	</g>
+</g>
+<g id="dollar_x5F_signs">
+	<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+		M48.858,69.516v4.208 M48.858,46.646v4.237 M55.146,55.517v-3.426c0-0.667-0.482-1.208-1.078-1.208H43.648
+		c-0.595,0-1.077,0.541-1.077,1.208v6.887c0,0.667,0.482,1.208,1.077,1.208h10.421c0.595,0,1.078,0.541,1.078,1.208v6.887
+		c0,0.666-0.482,1.207-1.078,1.207H43.648c-0.595,0-1.077-0.541-1.077-1.207v-3.407"/>
+</g>
+</svg>

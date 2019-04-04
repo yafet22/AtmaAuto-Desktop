@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="fill">
+	<g>
+		<path fill="#C8E5ED" d="M11.379,65.768V20.401c0-1.65,1.35-3,3-3h71.242c1.65,0,3,1.35,3,3v45.367"/>
+	</g>
+	<g>
+		<g>
+			<g>
+				<path fill="#CFDAE5" d="M88.621,65.728v3.023c0,1.65-1.35,3-3,3H14.379c-1.65,0-3-1.35-3-3v-3.023 M11.379,65.728h77.242"/>
+			</g>
+		</g>
+		<g>
+			<polygon fill="#CFDAE5" points="65.37,81.884 57.506,71.732 42.494,71.732 34.63,81.884 			"/>
+		</g>
+	</g>
+</g>
+<g id="outline">
+	<g>
+		<g>
+			<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M88.621,68.75c0,1.65-1.35,3-3,3H14.379c-1.65,0-3-1.35-3-3v-48.35c0-1.65,1.35-3,3-3h71.242c1.65,0,3,1.35,3,3V68.75z"/>
+		</g>
+		
+			<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="11.379" y1="65.728" x2="88.621" y2="65.728"/>
+		<g>
+			
+				<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="42.494" y1="71.732" x2="34.63" y2="81.884"/>
+			
+				<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="57.506" y1="71.732" x2="65.37" y2="81.884"/>
+		</g>
+		
+			<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="28.554" y1="82.599" x2="71.446" y2="82.599"/>
+	</g>
+</g>
+<g id="dollar_x5F_signs">
+	<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+		M50,52.527v4.333 M50,28.974v4.363 M56.476,38.109v-3.529c0-0.687-0.496-1.244-1.109-1.244H44.634
+		c-0.613,0-1.109,0.557-1.109,1.244v7.093c0,0.688,0.496,1.244,1.109,1.244h10.732c0.613,0,1.109,0.557,1.109,1.244v7.093
+		c0,0.686-0.496,1.243-1.109,1.243H44.634c-0.613,0-1.109-0.557-1.109-1.243v-3.509"/>
+</g>
+</svg>

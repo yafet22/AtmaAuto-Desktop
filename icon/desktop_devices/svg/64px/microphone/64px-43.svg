@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	<g>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M35.7,27.281
+			c0,1.997-1.656,3.616-3.7,3.616l0,0c-2.042,0-3.698-1.619-3.698-3.616v-8.125c0-1.993,1.656-3.615,3.698-3.615l0,0
+			c2.044,0,3.7,1.622,3.7,3.615V27.281z"/>
+		<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37.96,28.41
+			c0,2.547-2.667,4.614-5.96,4.614l0,0c-3.29,0-5.961-2.066-5.961-4.614"/>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="32" y1="33.023" x2="32" y2="37.021"/>
+		
+			<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="28.076" y1="37.103" x2="35.924" y2="37.103"/>
+	</g>
+	<g>
+		<g>
+			<path d="M53.693,46.249H10.307c-1.93,0-3.5-1.57-3.5-3.5V13.998c0-1.93,1.57-3.5,3.5-3.5h43.387c1.93,0,3.5,1.57,3.5,3.5v28.751
+				C57.193,44.679,55.623,46.249,53.693,46.249z M10.307,11.498c-1.378,0-2.5,1.122-2.5,2.5v28.751c0,1.378,1.122,2.5,2.5,2.5
+				h43.387c1.378,0,2.5-1.122,2.5-2.5V13.998c0-1.378-1.122-2.5-2.5-2.5H10.307z"/>
+		</g>
+		<g>
+			<path d="M61.14,54.097c-0.007,0-0.013,0-0.02,0H2.88c-0.195,0-0.372-0.113-0.454-0.29c-0.082-0.176-0.054-0.384,0.072-0.533
+				l4.321-5.118c0.095-0.112,0.234-0.177,0.382-0.177H56.8c0.147,0,0.287,0.065,0.382,0.177l4.25,5.034
+				c0.126,0.091,0.209,0.239,0.209,0.407C61.64,53.873,61.417,54.097,61.14,54.097z M3.957,53.097h56.087l-3.477-4.118H7.434
+				L3.957,53.097z"/>
+		</g>
+		<g>
+			<path d="M56.693,42.398H7.307c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5h49.387c0.276,0,0.5,0.224,0.5,0.5
+				S56.97,42.398,56.693,42.398z"/>
+		</g>
+	</g>
+</g>
+</svg>

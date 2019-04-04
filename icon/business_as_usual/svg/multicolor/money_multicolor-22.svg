@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="fill">
+	<g>
+		<g>
+			<path fill="#CFDAE5" d="M63.421,82.188v7.265c0,1.65-1.35,3-3,3H39.506c-1.65,0-3-1.35-3-3v-7.265 M36.506,82.188h26.915"/>
+		</g>
+	</g>
+	<circle fill="#FFFFFF" cx="49.964" cy="87.948" r="1.735"/>
+	<g>
+		<path fill="#C8E5ED" d="M36.506,82.166V39.728c0-1.65,1.35-3,3-3h20.915c1.65,0,3,1.35,3,3v42.438"/>
+	</g>
+	<g>
+		<path fill="#CADDDA" d="M42.221,27.796c-1.1,0-2.9,0-4,0h-4.65c-1.1,0-2-0.9-2-2V13.189c0-1.1,0.9-2,2-2h23.463c1.1,0,2,0.9,2,2
+			v12.607c0,1.1-0.9,2-2,2h-4.479c-1.1,0-2.9,0-4,0H42.221z"/>
+	</g>
+	<g>
+		<path fill="#DCEBF4" d="M50.276,28.771c0,1.1-0.9,2-2,2h-5.948c-1.1,0-2-0.9-2-2v-5.948c0-1.1,0.9-2,2-2h5.948c1.1,0,2,0.9,2,2
+			V28.771z"/>
+	</g>
+</g>
+<g id="outline">
+	
+		<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="45.302" y1="36.728" x2="45.302" y2="31.474"/>
+	<g>
+		<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M50.276,28.771c0,1.1-0.9,2-2,2h-5.948c-1.1,0-2-0.9-2-2v-5.948c0-1.1,0.9-2,2-2h5.948c1.1,0,2,0.9,2,2V28.771z"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+			M40.221,27.796h-6.65c-1.1,0-2-0.9-2-2V13.189c0-1.1,0.9-2,2-2h23.463c1.1,0,2,0.9,2,2v12.607c0,1.1-0.9,2-2,2h-6.479"/>
+	</g>
+	
+		<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="50.276" y1="22.729" x2="58.644" y2="22.729"/>
+	
+		<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="31.96" y1="22.729" x2="40.328" y2="22.729"/>
+	<g>
+		
+			<circle fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="49.858" cy="88.074" r="1.735"/>
+		<g>
+			<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+				M63.315,89.701c0,1.65-1.35,3-3,3H39.401c-1.65,0-3-1.35-3-3V39.854c0-1.65,1.35-3,3-3h20.914c1.65,0,3,1.35,3,3V89.701z"/>
+		</g>
+		
+			<line fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="36.789" y1="82.498" x2="62.928" y2="82.498"/>
+	</g>
+</g>
+<g id="dollar_x5F_signs">
+	<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+		M49.858,69.516v4.208 M49.858,46.646v4.237 M56.146,55.517v-3.426c0-0.667-0.482-1.208-1.078-1.208H44.648
+		c-0.595,0-1.077,0.541-1.077,1.208v6.887c0,0.667,0.482,1.208,1.077,1.208h10.421c0.595,0,1.078,0.541,1.078,1.208v6.887
+		c0,0.666-0.482,1.207-1.078,1.207H44.648c-0.595,0-1.077-0.541-1.077-1.207v-3.407"/>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="fill">
+	<circle fill="#DAE6E8" cx="50" cy="50.803" r="39.408"/>
+	<circle fill="#E8EEEF" cx="50" cy="50.141" r="26.319"/>
+</g>
+<g id="outline">
+	
+		<circle fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50" cy="50" r="26.319"/>
+	
+		<circle fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50" cy="50" r="39.408"/>
+</g>
+<g id="dollar_x5F_signs">
+	<path fill="none" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" d="
+		M50,60.022v4.564 M50,35.414v4.564 M56.775,44.97v-3.692c0-0.718-0.52-1.301-1.16-1.301H44.385c-0.641,0-1.16,0.583-1.16,1.301
+		v7.421c0,0.718,0.52,1.301,1.16,1.301h11.229c0.641,0,1.16,0.583,1.16,1.301v7.421c0,0.717-0.52,1.301-1.16,1.301H44.385
+		c-0.641,0-1.16-0.583-1.16-1.301v-3.671"/>
+</g>
+</svg>
