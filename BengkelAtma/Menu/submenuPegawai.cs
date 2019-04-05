@@ -153,16 +153,27 @@ namespace BengkelAtma.Menu
 
         private async void btnSimpanPeg_Click(object sender, EventArgs e)
         {
+            int count = 0;
             try
             {
                 if (tbNamaPegawai.Text.ToString().Trim() != "" && tbNomorTeleponPegawai.Text.ToString().Trim() != "" && tbAlamatPegawai.Text.ToString().Trim() != "" && tbGajiPegawai.Text.ToString().Trim() != "" && comboCabang.SelectedValue.ToString().Trim() != "" && comboJabatan.SelectedValue.ToString().Trim() != "")
                 {
                     if(check.Equals("simpan"))
                     {
+                        Debug.WriteLine("masuuuk simpan");
                         var name = tbNamaPegawai.Text.ToString();
+                        String[] substrings = name.Split(' ');
+                        foreach (var substring in substrings)
+                        {
+                            count++;
+                        }
                         var firstname = name.Split(' ')[0];
-                        var lastname = name.Split(' ')[1];
-
+                        var lastname = "";
+                        if (count>1)
+                        {
+                            lastname = name.Split(' ')[1];
+                        }
+                        Debug.WriteLine(name);
                         Employee employee = new Employee { first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = comboCabang.SelectedIndex + 1, id_role = comboJabatan.SelectedIndex + 1 };
 
                         var response = client.PostAsJsonAsync("api/employees", employee).Result;
