@@ -15,7 +15,7 @@ namespace BengkelAtma.Menu
 {
     public partial class Akun : UserControl
     {
-        static HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
         private string check = "";
         private int id;
 
@@ -23,7 +23,10 @@ namespace BengkelAtma.Menu
         {
             InitializeComponent();
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+
         }
+
+
 
         public class User
         {
@@ -59,7 +62,7 @@ namespace BengkelAtma.Menu
             t.Columns.Remove("role");
             t.Columns.Remove("name");
             dgAkun.DataSource = t;
-
+            dgAkun.Columns[dgAkun.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgAkun.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
@@ -69,6 +72,7 @@ namespace BengkelAtma.Menu
                     dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             };
+            
         }
 
         static async Task<DataTable> GetAkun()
@@ -102,7 +106,6 @@ namespace BengkelAtma.Menu
 
         private async void btnSimpanAkun_Click(object sender, EventArgs e)
         {
-            int count = 0;
             try
             {
                 if (tbOldPassAkun.Text.ToString().Trim() != "" && tbNewPassAkun.Text.ToString().Trim() != "" )
@@ -183,20 +186,20 @@ namespace BengkelAtma.Menu
         {
             string searchValue = tbCariAkun.Text;
 
-           dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+           //dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCariAkun.Text.Trim() != "")
                 {
                     foreach (DataGridViewRow row in dgAkun.Rows)
                     {
-                        if (row.Cells[1].Value.ToString().Equals(searchValue))
+                        if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                             id = Convert.ToInt16(row.Cells[0].Value);
                             Debug.WriteLine("bind :" + id);
-                            userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
-                            userlabel.Visible = true;
-                            row.Selected = true;
+                            //userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
+                            //userlabel.Visible = true;
+                            //row.Selected = true;
                             ((DataTable)dgAkun.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
 
@@ -243,6 +246,7 @@ namespace BengkelAtma.Menu
                         dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
                 };
+
             }
 
         }
@@ -258,6 +262,22 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
+            dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dgAkun.Rows)
+            {
+                if (row.Selected==true)
+                {
+                    id = Convert.ToInt16(row.Cells[0].Value);
+                    Debug.WriteLine("bind :" + id);
+                    userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
+                    userlabel.Visible = true;
+                    
+                    ((DataTable)dgAkun.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
+                    Debug.WriteLine("masuk edit");
+
+                    break;
+                }
+            }
         }
 
         private void btnResetAkun_Click(object sender, EventArgs e)
@@ -294,6 +314,12 @@ namespace BengkelAtma.Menu
             {
                 MessageBox.Show(exc.Message);
             }
+        }
+
+        private void dgAkun_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgAkun.Rows[e.RowIndex].ReadOnly = true;
+            var a = dgAkun.Rows;
         }
     }
  }

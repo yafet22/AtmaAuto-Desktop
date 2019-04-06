@@ -31,6 +31,10 @@ namespace BengkelAtma
             {
                 GetLogin(tbUser.Text.ToString(), tbPass.Text.ToString());
             }
+            else
+            {
+                MessageBox.Show("Username dan Password harus diisi!","Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -51,6 +55,12 @@ namespace BengkelAtma
                 MainMenu main = new MainMenu();
                 main.Show();
             }
+            else
+            {
+                MessageBox.Show("Username atau Password tidak Benar","Peringatan!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                
+            }
+
         }
 
 

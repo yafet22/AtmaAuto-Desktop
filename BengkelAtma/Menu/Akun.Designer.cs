@@ -39,6 +39,7 @@
             this.btnEditAkun = new System.Windows.Forms.Button();
             this.btnDeleteAkun = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.userlabel = new System.Windows.Forms.Label();
             this.tbNewPassAkun = new System.Windows.Forms.TextBox();
             this.newPass = new System.Windows.Forms.Label();
             this.tbOldPassAkun = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.btnSimpanAkun = new System.Windows.Forms.Button();
             this.btnResetAkun = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.userlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.dgContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAkun)).BeginInit();
@@ -86,6 +86,7 @@
             // 
             // dgAkun
             // 
+            this.dgAkun.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgAkun.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgAkun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAkun.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -93,6 +94,7 @@
             this.dgAkun.Name = "dgAkun";
             this.dgAkun.Size = new System.Drawing.Size(300, 198);
             this.dgAkun.TabIndex = 13;
+            this.dgAkun.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAkun_CellClick);
             this.dgAkun.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgAkun_UserDeletingRow);
             // 
             // findHeader
@@ -192,6 +194,16 @@
             this.panel2.Size = new System.Drawing.Size(280, 400);
             this.panel2.TabIndex = 1;
             // 
+            // userlabel
+            // 
+            this.userlabel.AutoSize = true;
+            this.userlabel.Location = new System.Drawing.Point(25, 55);
+            this.userlabel.Name = "userlabel";
+            this.userlabel.Size = new System.Drawing.Size(55, 13);
+            this.userlabel.TabIndex = 10;
+            this.userlabel.Text = "Username";
+            this.userlabel.Visible = false;
+            // 
             // tbNewPassAkun
             // 
             this.tbNewPassAkun.Location = new System.Drawing.Point(29, 135);
@@ -253,16 +265,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 400);
             this.panel3.TabIndex = 11;
-            // 
-            // userlabel
-            // 
-            this.userlabel.AutoSize = true;
-            this.userlabel.Location = new System.Drawing.Point(25, 55);
-            this.userlabel.Name = "userlabel";
-            this.userlabel.Size = new System.Drawing.Size(55, 13);
-            this.userlabel.TabIndex = 10;
-            this.userlabel.Text = "Username";
-            this.userlabel.Visible = false;
             // 
             // Akun
             // 

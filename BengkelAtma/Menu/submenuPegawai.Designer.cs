@@ -160,7 +160,7 @@
             this.dgContainer.HorizontalScrollbarSize = 10;
             this.dgContainer.Location = new System.Drawing.Point(0, 82);
             this.dgContainer.Name = "dgContainer";
-            this.dgContainer.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.dgContainer.Padding = new System.Windows.Forms.Padding(10);
             this.dgContainer.Size = new System.Drawing.Size(320, 218);
             this.dgContainer.TabIndex = 15;
             this.dgContainer.VerticalScrollbarBarColor = true;
@@ -170,6 +170,7 @@
             // dataPegawai
             // 
             this.dataPegawai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataPegawai.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPegawai.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -215,7 +216,7 @@
             // 
             this.comboJabatan.FormattingEnabled = true;
             this.comboJabatan.Location = new System.Drawing.Point(22, 314);
-            this.comboJabatan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboJabatan.Margin = new System.Windows.Forms.Padding(2);
             this.comboJabatan.Name = "comboJabatan";
             this.comboJabatan.Size = new System.Drawing.Size(236, 21);
             this.comboJabatan.TabIndex = 16;
@@ -233,7 +234,7 @@
             // 
             this.comboCabang.FormattingEnabled = true;
             this.comboCabang.Location = new System.Drawing.Point(22, 266);
-            this.comboCabang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboCabang.Margin = new System.Windows.Forms.Padding(2);
             this.comboCabang.Name = "comboCabang";
             this.comboCabang.Size = new System.Drawing.Size(236, 21);
             this.comboCabang.TabIndex = 14;
@@ -300,7 +301,7 @@
             // buttonSimpan
             // 
             this.buttonSimpan.Location = new System.Drawing.Point(15, -2);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpan.TabIndex = 3;
@@ -311,7 +312,7 @@
             // buttonEdit
             // 
             this.buttonEdit.Location = new System.Drawing.Point(101, -2);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 2;

@@ -79,6 +79,18 @@ namespace BengkelAtma.Menu
             t.Columns.Remove("id_branch");
             t.Columns.Remove("id_role");
             dataPegawai.DataSource = t;
+            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataPegawai.DataBindingComplete += (o, _) =>
+            {
+                var dataGridView = o as DataGridView;
+                if (dataGridView != null)
+                {
+                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            };
+
 
             //load combobox cabang
             comboCabang.DataSource = await GetCabang();
@@ -188,6 +200,16 @@ namespace BengkelAtma.Menu
                             dataPegawai.DataSource = t;
                             dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+                            dataPegawai.DataBindingComplete += (o, _) =>
+                            {
+                                var dataGridView = o as DataGridView;
+                                if (dataGridView != null)
+                                {
+                                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                }
+                            };
+
                             MessageBox.Show("Berhasil Input Data Pegawai");
                         }
                     }
@@ -208,6 +230,16 @@ namespace BengkelAtma.Menu
                         t.Columns.Remove("id_role");
                         dataPegawai.DataSource = t;
                         dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                        dataPegawai.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
 
                         MessageBox.Show("Berhasil Update Data Pegawai");
                     }
@@ -234,14 +266,14 @@ namespace BengkelAtma.Menu
                 {
                     foreach (DataGridViewRow row in dataPegawai.Rows)
                     {
-                        if (row.Cells[1].Value.ToString().Equals(searchValue))
+                        if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                             id = Convert.ToInt16(row.Cells[0].Value);
                             Debug.WriteLine("bind :" + id);
-                            tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
-                            tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
-                            tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
-                            tbGajiPegawai.Text = row.Cells[4].Value.ToString();
+                            //tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
+                            //tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
+                            //tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
+                            //tbGajiPegawai.Text = row.Cells[4].Value.ToString();
                             row.Selected = true;
                             ((DataTable)dataPegawai.DataSource).DefaultView.RowFilter = string.Format("name like '%{0}%'", tbCariPeg.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
@@ -257,6 +289,15 @@ namespace BengkelAtma.Menu
                     t.Columns.Remove("id_role");
                     dataPegawai.DataSource = t;
                     dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataPegawai.DataBindingComplete += (o, _) =>
+                    {
+                        var dataGridView = o as DataGridView;
+                        if (dataGridView != null)
+                        {
+                            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        }
+                    };
                 }
 
             }
@@ -268,6 +309,16 @@ namespace BengkelAtma.Menu
                 t.Columns.Remove("id_role");
                 dataPegawai.DataSource = t;
                 dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                dataPegawai.DataBindingComplete += (o, _) =>
+                {
+                    var dataGridView = o as DataGridView;
+                    if (dataGridView != null)
+                    {
+                        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                };
             }
         }
 
