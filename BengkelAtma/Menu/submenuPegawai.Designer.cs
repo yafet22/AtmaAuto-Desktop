@@ -66,19 +66,17 @@
             // labelNotel
             // 
             this.labelNotel.AutoSize = true;
-            this.labelNotel.Location = new System.Drawing.Point(26, 198);
-            this.labelNotel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNotel.Location = new System.Drawing.Point(20, 161);
             this.labelNotel.Name = "labelNotel";
-            this.labelNotel.Size = new System.Drawing.Size(82, 17);
+            this.labelNotel.Size = new System.Drawing.Size(63, 13);
             this.labelNotel.TabIndex = 4;
             this.labelNotel.Text = "No.Telepon";
             // 
             // btnResetPeg
             // 
-            this.btnResetPeg.Location = new System.Drawing.Point(28, 442);
-            this.btnResetPeg.Margin = new System.Windows.Forms.Padding(4);
+            this.btnResetPeg.Location = new System.Drawing.Point(21, 351);
             this.btnResetPeg.Name = "btnResetPeg";
-            this.btnResetPeg.Size = new System.Drawing.Size(100, 28);
+            this.btnResetPeg.Size = new System.Drawing.Size(75, 23);
             this.btnResetPeg.TabIndex = 2;
             this.btnResetPeg.Text = "Reset";
             this.btnResetPeg.UseVisualStyleBackColor = true;
@@ -93,22 +91,20 @@
             this.findHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.findHeader.HorizontalScrollbarBarColor = true;
             this.findHeader.HorizontalScrollbarHighlightOnWheel = false;
-            this.findHeader.HorizontalScrollbarSize = 12;
+            this.findHeader.HorizontalScrollbarSize = 10;
             this.findHeader.Location = new System.Drawing.Point(0, 0);
-            this.findHeader.Margin = new System.Windows.Forms.Padding(4);
             this.findHeader.Name = "findHeader";
-            this.findHeader.Size = new System.Drawing.Size(427, 101);
+            this.findHeader.Size = new System.Drawing.Size(320, 82);
             this.findHeader.TabIndex = 16;
             this.findHeader.VerticalScrollbarBarColor = true;
             this.findHeader.VerticalScrollbarHighlightOnWheel = false;
-            this.findHeader.VerticalScrollbarSize = 13;
+            this.findHeader.VerticalScrollbarSize = 10;
             // 
             // btnCariPeg
             // 
-            this.btnCariPeg.Location = new System.Drawing.Point(300, 65);
-            this.btnCariPeg.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCariPeg.Location = new System.Drawing.Point(225, 53);
             this.btnCariPeg.Name = "btnCariPeg";
-            this.btnCariPeg.Size = new System.Drawing.Size(65, 28);
+            this.btnCariPeg.Size = new System.Drawing.Size(49, 23);
             this.btnCariPeg.TabIndex = 11;
             this.btnCariPeg.Text = "Cari";
             this.btnCariPeg.UseVisualStyleBackColor = true;
@@ -118,45 +114,40 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nama Pegawai:";
             // 
             // tbCariPeg
             // 
-            this.tbCariPeg.Location = new System.Drawing.Point(20, 68);
-            this.tbCariPeg.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCariPeg.Location = new System.Drawing.Point(15, 55);
             this.tbCariPeg.Name = "tbCariPeg";
-            this.tbCariPeg.Size = new System.Drawing.Size(267, 22);
+            this.tbCariPeg.Size = new System.Drawing.Size(201, 20);
             this.tbCariPeg.TabIndex = 10;
             // 
             // tbGajiPegawai
             // 
-            this.tbGajiPegawai.Location = new System.Drawing.Point(30, 271);
-            this.tbGajiPegawai.Margin = new System.Windows.Forms.Padding(4);
+            this.tbGajiPegawai.Location = new System.Drawing.Point(22, 220);
             this.tbGajiPegawai.Name = "tbGajiPegawai";
-            this.tbGajiPegawai.Size = new System.Drawing.Size(313, 22);
+            this.tbGajiPegawai.Size = new System.Drawing.Size(236, 20);
             this.tbGajiPegawai.TabIndex = 9;
             // 
             // labelGaji
             // 
             this.labelGaji.AutoSize = true;
-            this.labelGaji.Location = new System.Drawing.Point(26, 251);
-            this.labelGaji.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelGaji.Location = new System.Drawing.Point(20, 204);
             this.labelGaji.Name = "labelGaji";
-            this.labelGaji.Size = new System.Drawing.Size(33, 17);
+            this.labelGaji.Size = new System.Drawing.Size(25, 13);
             this.labelGaji.TabIndex = 8;
             this.labelGaji.Text = "Gaji";
             // 
             // tbNomorTeleponPegawai
             // 
-            this.tbNomorTeleponPegawai.Location = new System.Drawing.Point(30, 218);
-            this.tbNomorTeleponPegawai.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNomorTeleponPegawai.Location = new System.Drawing.Point(22, 177);
             this.tbNomorTeleponPegawai.Name = "tbNomorTeleponPegawai";
-            this.tbNomorTeleponPegawai.Size = new System.Drawing.Size(313, 22);
+            this.tbNomorTeleponPegawai.Size = new System.Drawing.Size(236, 20);
             this.tbNomorTeleponPegawai.TabIndex = 7;
             // 
             // dgContainer
@@ -166,26 +157,25 @@
             this.dgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgContainer.HorizontalScrollbarBarColor = true;
             this.dgContainer.HorizontalScrollbarHighlightOnWheel = false;
-            this.dgContainer.HorizontalScrollbarSize = 12;
-            this.dgContainer.Location = new System.Drawing.Point(0, 101);
-            this.dgContainer.Margin = new System.Windows.Forms.Padding(4);
+            this.dgContainer.HorizontalScrollbarSize = 10;
+            this.dgContainer.Location = new System.Drawing.Point(0, 82);
             this.dgContainer.Name = "dgContainer";
-            this.dgContainer.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.dgContainer.Size = new System.Drawing.Size(427, 268);
+            this.dgContainer.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.dgContainer.Size = new System.Drawing.Size(320, 218);
             this.dgContainer.TabIndex = 15;
             this.dgContainer.VerticalScrollbarBarColor = true;
             this.dgContainer.VerticalScrollbarHighlightOnWheel = false;
-            this.dgContainer.VerticalScrollbarSize = 13;
+            this.dgContainer.VerticalScrollbarSize = 10;
             // 
             // dataPegawai
             // 
+            this.dataPegawai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPegawai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataPegawai.Location = new System.Drawing.Point(13, 12);
-            this.dataPegawai.Margin = new System.Windows.Forms.Padding(4);
+            this.dataPegawai.Location = new System.Drawing.Point(10, 10);
             this.dataPegawai.Name = "dataPegawai";
-            this.dataPegawai.Size = new System.Drawing.Size(401, 244);
+            this.dataPegawai.Size = new System.Drawing.Size(300, 198);
             this.dataPegawai.TabIndex = 13;
             this.dataPegawai.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataPegawai_UserDeletingRow);
             // 
@@ -208,89 +198,83 @@
             this.panel2.Controls.Add(this.btnResetPeg);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(373, 492);
+            this.panel2.Size = new System.Drawing.Size(280, 400);
             this.panel2.TabIndex = 1;
             // 
             // labelJabatan
             // 
             this.labelJabatan.AutoSize = true;
-            this.labelJabatan.Location = new System.Drawing.Point(25, 367);
-            this.labelJabatan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelJabatan.Location = new System.Drawing.Point(19, 298);
             this.labelJabatan.Name = "labelJabatan";
-            this.labelJabatan.Size = new System.Drawing.Size(59, 17);
+            this.labelJabatan.Size = new System.Drawing.Size(45, 13);
             this.labelJabatan.TabIndex = 17;
             this.labelJabatan.Text = "Jabatan";
             // 
             // comboJabatan
             // 
             this.comboJabatan.FormattingEnabled = true;
-            this.comboJabatan.Location = new System.Drawing.Point(29, 387);
+            this.comboJabatan.Location = new System.Drawing.Point(22, 314);
+            this.comboJabatan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboJabatan.Name = "comboJabatan";
-            this.comboJabatan.Size = new System.Drawing.Size(313, 24);
+            this.comboJabatan.Size = new System.Drawing.Size(236, 21);
             this.comboJabatan.TabIndex = 16;
             // 
             // labelCabang
             // 
             this.labelCabang.AutoSize = true;
-            this.labelCabang.Location = new System.Drawing.Point(26, 308);
-            this.labelCabang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCabang.Location = new System.Drawing.Point(20, 250);
             this.labelCabang.Name = "labelCabang";
-            this.labelCabang.Size = new System.Drawing.Size(57, 17);
+            this.labelCabang.Size = new System.Drawing.Size(44, 13);
             this.labelCabang.TabIndex = 15;
             this.labelCabang.Text = "Cabang";
             // 
             // comboCabang
             // 
             this.comboCabang.FormattingEnabled = true;
-            this.comboCabang.Location = new System.Drawing.Point(30, 328);
+            this.comboCabang.Location = new System.Drawing.Point(22, 266);
+            this.comboCabang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboCabang.Name = "comboCabang";
-            this.comboCabang.Size = new System.Drawing.Size(313, 24);
+            this.comboCabang.Size = new System.Drawing.Size(236, 21);
             this.comboCabang.TabIndex = 14;
             // 
             // tbAlamatPegawai
             // 
-            this.tbAlamatPegawai.Location = new System.Drawing.Point(30, 166);
-            this.tbAlamatPegawai.Margin = new System.Windows.Forms.Padding(4);
+            this.tbAlamatPegawai.Location = new System.Drawing.Point(22, 135);
             this.tbAlamatPegawai.Name = "tbAlamatPegawai";
-            this.tbAlamatPegawai.Size = new System.Drawing.Size(313, 22);
+            this.tbAlamatPegawai.Size = new System.Drawing.Size(236, 20);
             this.tbAlamatPegawai.TabIndex = 13;
             // 
             // labelAlamat
             // 
             this.labelAlamat.AutoSize = true;
-            this.labelAlamat.Location = new System.Drawing.Point(26, 146);
-            this.labelAlamat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAlamat.Location = new System.Drawing.Point(20, 119);
             this.labelAlamat.Name = "labelAlamat";
-            this.labelAlamat.Size = new System.Drawing.Size(51, 17);
+            this.labelAlamat.Size = new System.Drawing.Size(39, 13);
             this.labelAlamat.TabIndex = 12;
             this.labelAlamat.Text = "Alamat";
             // 
             // tbNamaPegawai
             // 
-            this.tbNamaPegawai.Location = new System.Drawing.Point(30, 113);
-            this.tbNamaPegawai.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNamaPegawai.Location = new System.Drawing.Point(22, 92);
             this.tbNamaPegawai.Name = "tbNamaPegawai";
-            this.tbNamaPegawai.Size = new System.Drawing.Size(313, 22);
+            this.tbNamaPegawai.Size = new System.Drawing.Size(236, 20);
             this.tbNamaPegawai.TabIndex = 11;
             // 
             // labelNama
             // 
             this.labelNama.AutoSize = true;
-            this.labelNama.Location = new System.Drawing.Point(26, 94);
-            this.labelNama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNama.Location = new System.Drawing.Point(20, 76);
             this.labelNama.Name = "labelNama";
-            this.labelNama.Size = new System.Drawing.Size(45, 17);
+            this.labelNama.Size = new System.Drawing.Size(35, 13);
             this.labelNama.TabIndex = 10;
             this.labelNama.Text = "Nama";
             // 
             // btnSimpanPeg
             // 
-            this.btnSimpanPeg.Location = new System.Drawing.Point(139, 442);
-            this.btnSimpanPeg.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpanPeg.Location = new System.Drawing.Point(104, 352);
             this.btnSimpanPeg.Name = "btnSimpanPeg";
-            this.btnSimpanPeg.Size = new System.Drawing.Size(100, 28);
+            this.btnSimpanPeg.Size = new System.Drawing.Size(75, 23);
             this.btnSimpanPeg.TabIndex = 3;
             this.btnSimpanPeg.Text = "Simpan";
             this.btnSimpanPeg.UseVisualStyleBackColor = true;
@@ -304,19 +288,19 @@
             this.bootomContent.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bootomContent.HorizontalScrollbarBarColor = true;
             this.bootomContent.HorizontalScrollbarHighlightOnWheel = false;
-            this.bootomContent.HorizontalScrollbarSize = 12;
-            this.bootomContent.Location = new System.Drawing.Point(0, 369);
-            this.bootomContent.Margin = new System.Windows.Forms.Padding(4);
+            this.bootomContent.HorizontalScrollbarSize = 10;
+            this.bootomContent.Location = new System.Drawing.Point(0, 300);
             this.bootomContent.Name = "bootomContent";
-            this.bootomContent.Size = new System.Drawing.Size(427, 123);
+            this.bootomContent.Size = new System.Drawing.Size(320, 100);
             this.bootomContent.TabIndex = 14;
             this.bootomContent.VerticalScrollbarBarColor = true;
             this.bootomContent.VerticalScrollbarHighlightOnWheel = false;
-            this.bootomContent.VerticalScrollbarSize = 13;
+            this.bootomContent.VerticalScrollbarSize = 10;
             // 
             // buttonSimpan
             // 
-            this.buttonSimpan.Location = new System.Drawing.Point(13, 18);
+            this.buttonSimpan.Location = new System.Drawing.Point(15, -2);
+            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpan.TabIndex = 3;
@@ -326,7 +310,8 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(110, 18);
+            this.buttonEdit.Location = new System.Drawing.Point(101, -2);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 2;
@@ -340,10 +325,9 @@
             this.panel1.Controls.Add(this.findHeader);
             this.panel1.Controls.Add(this.bootomContent);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(373, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(280, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 492);
+            this.panel1.Size = new System.Drawing.Size(320, 400);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -352,19 +336,17 @@
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 492);
+            this.panel3.Size = new System.Drawing.Size(600, 400);
             this.panel3.TabIndex = 12;
             // 
             // submenuPegawai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "submenuPegawai";
-            this.Size = new System.Drawing.Size(800, 492);
+            this.Size = new System.Drawing.Size(600, 400);
             this.Load += new System.EventHandler(this.submenuPegawai_Load);
             this.findHeader.ResumeLayout(false);
             this.findHeader.PerformLayout();

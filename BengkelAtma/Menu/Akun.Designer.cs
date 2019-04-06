@@ -46,6 +46,7 @@
             this.btnSimpanAkun = new System.Windows.Forms.Button();
             this.btnResetAkun = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.userlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.dgContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgAkun)).BeginInit();
@@ -92,6 +93,7 @@
             this.dgAkun.Name = "dgAkun";
             this.dgAkun.Size = new System.Drawing.Size(300, 198);
             this.dgAkun.TabIndex = 13;
+            this.dgAkun.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgAkun_UserDeletingRow);
             // 
             // findHeader
             // 
@@ -119,6 +121,7 @@
             this.btnCariAkun.TabIndex = 11;
             this.btnCariAkun.Text = "Cari";
             this.btnCariAkun.UseVisualStyleBackColor = true;
+            this.btnCariAkun.Click += new System.EventHandler(this.btnCariAkun_Click);
             // 
             // label1
             // 
@@ -162,6 +165,7 @@
             this.btnEditAkun.TabIndex = 0;
             this.btnEditAkun.Text = "Edit";
             this.btnEditAkun.UseVisualStyleBackColor = true;
+            this.btnEditAkun.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnDeleteAkun
             // 
@@ -175,6 +179,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.userlabel);
             this.panel2.Controls.Add(this.tbNewPassAkun);
             this.panel2.Controls.Add(this.newPass);
             this.panel2.Controls.Add(this.tbOldPassAkun);
@@ -227,6 +232,7 @@
             this.btnSimpanAkun.TabIndex = 3;
             this.btnSimpanAkun.Text = "Simpan";
             this.btnSimpanAkun.UseVisualStyleBackColor = true;
+            this.btnSimpanAkun.Click += new System.EventHandler(this.btnSimpanAkun_Click);
             // 
             // btnResetAkun
             // 
@@ -236,6 +242,7 @@
             this.btnResetAkun.TabIndex = 2;
             this.btnResetAkun.Text = "Reset";
             this.btnResetAkun.UseVisualStyleBackColor = true;
+            this.btnResetAkun.Click += new System.EventHandler(this.btnResetAkun_Click);
             // 
             // panel3
             // 
@@ -247,6 +254,16 @@
             this.panel3.Size = new System.Drawing.Size(600, 400);
             this.panel3.TabIndex = 11;
             // 
+            // userlabel
+            // 
+            this.userlabel.AutoSize = true;
+            this.userlabel.Location = new System.Drawing.Point(25, 55);
+            this.userlabel.Name = "userlabel";
+            this.userlabel.Size = new System.Drawing.Size(55, 13);
+            this.userlabel.TabIndex = 10;
+            this.userlabel.Text = "Username";
+            this.userlabel.Visible = false;
+            // 
             // Akun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +271,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "Akun";
             this.Size = new System.Drawing.Size(600, 400);
+            this.Load += new System.EventHandler(this.Akun_Load);
             this.panel1.ResumeLayout(false);
             this.dgContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgAkun)).EndInit();
@@ -287,5 +305,6 @@
         private MetroFramework.Controls.MetroPanel dgContainer;
         private MetroFramework.Controls.MetroPanel bootomContent;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label userlabel;
     }
 }

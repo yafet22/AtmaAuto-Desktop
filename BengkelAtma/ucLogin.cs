@@ -22,6 +22,7 @@ namespace BengkelAtma
         public ucLogin()
         {
             InitializeComponent();
+            
         }
 
         private void tbMasuk_Click(object sender, EventArgs e)
