@@ -216,10 +216,8 @@ namespace BengkelAtma.Menu
                     else if(check.Equals("edit"))
                     {
                         var name = tbNamaPegawai.Text.ToString();
-                        var firstname = name.Split(' ')[0];
-                        var lastname = name.Split(' ')[1];
 
-                        Employee employee = new Employee { id_employee = id, first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = comboCabang.SelectedIndex + 1, id_role = comboJabatan.SelectedIndex + 1 };
+                        Employee employee = new Employee { id_employee = id, first_name = name, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = comboCabang.SelectedIndex + 1, id_role = comboJabatan.SelectedIndex + 1 };
 
                         HttpResponseMessage response = await client.PutAsJsonAsync(
                         $"api/employees/{employee.id_employee}", employee);
