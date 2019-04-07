@@ -29,16 +29,16 @@ namespace BengkelAtma.Menu
 
         public void disableInput()
         {
-            tbNamaCabang.ReadOnly = true;
-            tbAlamatCabang.ReadOnly = true;
-            tbNomorTeleponCabang.ReadOnly = true;
+            tbNamaCabang.Enabled = false;
+            tbAlamatCabang.Enabled = false;
+            tbNomorTeleponCabang.Enabled = false;
         }
 
         public void enableInput()
         {
-            tbNamaCabang.ReadOnly = false;
-            tbAlamatCabang.ReadOnly = false;
-            tbNomorTeleponCabang.ReadOnly = false;
+            tbNamaCabang.Enabled = true;
+            tbAlamatCabang.Enabled = true;
+            tbNomorTeleponCabang.Enabled = true;
         }
 
         public void clearInput()
@@ -136,6 +136,7 @@ namespace BengkelAtma.Menu
 
         private async void buttonCari_Click(object sender, EventArgs e)
         {
+            disableInput();
             string searchValue = tbCari.Text;
 
             dataCabang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -145,13 +146,9 @@ namespace BengkelAtma.Menu
                 {
                     foreach (DataGridViewRow row in dataCabang.Rows)
                     {
-                        if (row.Cells[1].Value.ToString().Equals(searchValue))
+                        if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
-                            id = Convert.ToInt16(row.Cells[0].Value);
-                            tbNamaCabang.Text = row.Cells[1].Value.ToString();
-                            tbAlamatCabang.Text = row.Cells[2].Value.ToString();
-                            tbNomorTeleponCabang.Text = row.Cells[3].Value.ToString();
-                            row.Selected = true;
+                           
                             ((DataTable)dataCabang.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
                             break;
                         }
@@ -247,13 +244,65 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
+            foreach (DataGridViewRow row in dataCabang.Rows)
+            {
+                if (row.Selected==true)
+                {
+                    id = Convert.ToInt16(row.Cells[0].Value);
+                    tbNamaCabang.Text = row.Cells[1].Value.ToString();
+                    tbAlamatCabang.Text = row.Cells[2].Value.ToString();
+                    tbNomorTeleponCabang.Text = row.Cells[3].Value.ToString();
+                    row.Selected = true;
+                    ((DataTable)dataCabang.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
+                    break;
+                }
+            }
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
             clearInput();
+            
         }
 
-      
+        private async void btnHapusCbg_Click(object sender, EventArgs e)
+        {
+            dataCabang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dataCabang.SelectedRows)
+            {
+                if (row.Selected == true)
+                {
+                    try
+                    {
+                        DialogResult res = MessageBox.Show("Anda yakin akan menghapus data?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        if (res == DialogResult.OK)
+                        {
+
+                            HttpResponseMessage response = await client.DeleteAsync(
+                            $"api/branches/{Convert.ToInt16(dataCabang.SelectedRows[0].Cells["id_branch"].Value)}");
+                            response.EnsureSuccessStatusCode();
+                            dataCabang.DataSource = await GetData();
+                            dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            //Some task…  
+                        }
+                        if (res == DialogResult.Cancel)
+                        {
+                            //e.Cancel = true;
+                            //Some task…  
+                            break;
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+                }
+            }
+        }
+
+        private void dataCabang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataCabang.Rows[e.RowIndex].ReadOnly = true;
+        }
     }
 }

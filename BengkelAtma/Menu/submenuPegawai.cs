@@ -43,20 +43,20 @@ namespace BengkelAtma.Menu
 
         public void disableInput()
         {
-            tbNamaPegawai.ReadOnly = true;
-            tbAlamatPegawai.ReadOnly = true;
-            tbGajiPegawai.ReadOnly = true;
-            tbNomorTeleponPegawai.ReadOnly = true;
+            tbNamaPegawai.Enabled = false;
+            tbAlamatPegawai.Enabled = false;
+            tbGajiPegawai.Enabled = false;
+            tbNomorTeleponPegawai.Enabled = false;
             comboCabang.Enabled = false;
             comboJabatan.Enabled = false;
         }
 
         public void enableInput()
         {
-            tbNamaPegawai.ReadOnly = false;
-            tbAlamatPegawai.ReadOnly = false;
-            tbGajiPegawai.ReadOnly = false;
-            tbNomorTeleponPegawai.ReadOnly = false;
+            tbNamaPegawai.Enabled = true;
+            tbAlamatPegawai.Enabled = true;
+            tbGajiPegawai.Enabled = true;
+            tbNomorTeleponPegawai.Enabled = true;
             comboCabang.Enabled = true;
             comboJabatan.Enabled = true;
         }
@@ -79,6 +79,18 @@ namespace BengkelAtma.Menu
             t.Columns.Remove("id_branch");
             t.Columns.Remove("id_role");
             dataPegawai.DataSource = t;
+            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataPegawai.DataBindingComplete += (o, _) =>
+            {
+                var dataGridView = o as DataGridView;
+                if (dataGridView != null)
+                {
+                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            };
+
 
             //load combobox cabang
             comboCabang.DataSource = await GetCabang();
@@ -188,6 +200,16 @@ namespace BengkelAtma.Menu
                             dataPegawai.DataSource = t;
                             dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+                            dataPegawai.DataBindingComplete += (o, _) =>
+                            {
+                                var dataGridView = o as DataGridView;
+                                if (dataGridView != null)
+                                {
+                                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                                }
+                            };
+
                             MessageBox.Show("Berhasil Input Data Pegawai");
                         }
                     }
@@ -209,6 +231,16 @@ namespace BengkelAtma.Menu
                         dataPegawai.DataSource = t;
                         dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
+                        dataPegawai.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
+
                         MessageBox.Show("Berhasil Update Data Pegawai");
                     }
 
@@ -225,6 +257,7 @@ namespace BengkelAtma.Menu
 
         private async void btnCariPeg_Click(object sender, EventArgs e)
         {
+            disableInput();
             string searchValue = tbCariPeg.Text;
 
             dataPegawai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -234,14 +267,14 @@ namespace BengkelAtma.Menu
                 {
                     foreach (DataGridViewRow row in dataPegawai.Rows)
                     {
-                        if (row.Cells[1].Value.ToString().Equals(searchValue))
+                        if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                             id = Convert.ToInt16(row.Cells[0].Value);
                             Debug.WriteLine("bind :" + id);
-                            tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
-                            tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
-                            tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
-                            tbGajiPegawai.Text = row.Cells[4].Value.ToString();
+                            //tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
+                            //tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
+                            //tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
+                            //tbGajiPegawai.Text = row.Cells[4].Value.ToString();
                             row.Selected = true;
                             ((DataTable)dataPegawai.DataSource).DefaultView.RowFilter = string.Format("name like '%{0}%'", tbCariPeg.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
@@ -257,6 +290,15 @@ namespace BengkelAtma.Menu
                     t.Columns.Remove("id_role");
                     dataPegawai.DataSource = t;
                     dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataPegawai.DataBindingComplete += (o, _) =>
+                    {
+                        var dataGridView = o as DataGridView;
+                        if (dataGridView != null)
+                        {
+                            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        }
+                    };
                 }
 
             }
@@ -268,6 +310,16 @@ namespace BengkelAtma.Menu
                 t.Columns.Remove("id_role");
                 dataPegawai.DataSource = t;
                 dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                dataPegawai.DataBindingComplete += (o, _) =>
+                {
+                    var dataGridView = o as DataGridView;
+                    if (dataGridView != null)
+                    {
+                        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                };
             }
         }
 
@@ -283,6 +335,21 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
+            foreach (DataGridViewRow row in dataPegawai.Rows)
+            {
+                if (row.Selected == true)
+                {
+                    {
+                        
+                        id = Convert.ToInt16(row.Cells[0].Value);
+                        tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
+                        tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
+                        tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
+                        tbGajiPegawai.Text = row.Cells[4].Value.ToString();
+                    }
+                }
+            }
+            
         }
 
         private void btnResetPeg_Click(object sender, EventArgs e)
@@ -317,6 +384,50 @@ namespace BengkelAtma.Menu
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void dataPegawai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataPegawai.Rows[e.RowIndex].ReadOnly = true;
+        }
+
+        private async void btnHapusPeg_Click(object sender, EventArgs e)
+        {
+
+            dataPegawai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dataPegawai.SelectedRows)
+            {
+                if (row.Selected == true)
+                {
+                    try
+                    {
+                        DialogResult res = MessageBox.Show("Anda yakin akan menghapus data?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        if (res == DialogResult.OK)
+                        {
+
+                            HttpResponseMessage response = await client.DeleteAsync(
+                            $"api/employees/{Convert.ToInt16(dataPegawai.SelectedRows[0].Cells["id_employee"].Value)}");
+                            response.EnsureSuccessStatusCode();
+                            DataTable t = await GetPegawai();
+                            t.Columns.Remove("id_branch");
+                            t.Columns.Remove("id_role");
+                            dataPegawai.DataSource = t;
+                            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            //Some task…  
+                        }
+                        if (res == DialogResult.Cancel)
+                        {
+                            //e.Cancel = true;
+                            //Some task…  
+                            break;
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+                }
             }
         }
     }

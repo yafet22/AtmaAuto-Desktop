@@ -15,7 +15,7 @@ namespace BengkelAtma.Menu
 {
     public partial class Akun : UserControl
     {
-        static HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
         private string check = "";
         private int id;
 
@@ -23,7 +23,10 @@ namespace BengkelAtma.Menu
         {
             InitializeComponent();
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+
         }
+
+
 
         public class User
         {
@@ -55,11 +58,12 @@ namespace BengkelAtma.Menu
         private async void Akun_Load(object sender, EventArgs e)
         {
             //load tabel pegawai
+            disableInput();
             DataTable t = await GetAkun();
             t.Columns.Remove("role");
             t.Columns.Remove("name");
             dgAkun.DataSource = t;
-
+            dgAkun.Columns[dgAkun.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgAkun.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
@@ -69,6 +73,7 @@ namespace BengkelAtma.Menu
                     dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             };
+            
         }
 
         static async Task<DataTable> GetAkun()
@@ -102,7 +107,6 @@ namespace BengkelAtma.Menu
 
         private async void btnSimpanAkun_Click(object sender, EventArgs e)
         {
-            int count = 0;
             try
             {
                 if (tbOldPassAkun.Text.ToString().Trim() != "" && tbNewPassAkun.Text.ToString().Trim() != "" )
@@ -182,21 +186,21 @@ namespace BengkelAtma.Menu
         private async void btnCariAkun_Click(object sender, EventArgs e)
         {
             string searchValue = tbCariAkun.Text;
-
-           dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            disableInput();
+            //dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCariAkun.Text.Trim() != "")
                 {
                     foreach (DataGridViewRow row in dgAkun.Rows)
                     {
-                        if (row.Cells[1].Value.ToString().Equals(searchValue))
+                        if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                             id = Convert.ToInt16(row.Cells[0].Value);
                             Debug.WriteLine("bind :" + id);
-                            userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
-                            userlabel.Visible = true;
-                            row.Selected = true;
+                            //userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
+                            //userlabel.Visible = true;
+                            //row.Selected = true;
                             ((DataTable)dgAkun.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
 
@@ -243,26 +247,45 @@ namespace BengkelAtma.Menu
                         dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
                 };
+
             }
 
         }
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
+            disableInput();
             check = "simpan";
             clearInput();
-            enableInput();
+            //enableInput();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             check = "edit";
             enableInput();
+            dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dgAkun.Rows)
+            {
+                if (row.Selected==true)
+                {
+                    id = Convert.ToInt16(row.Cells[0].Value);
+                    Debug.WriteLine("bind :" + id);
+                    userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
+                    userlabel.Visible = true;
+                    
+                    ((DataTable)dgAkun.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
+                    Debug.WriteLine("masuk edit");
+
+                    break;
+                }
+            }
         }
 
         private void btnResetAkun_Click(object sender, EventArgs e)
         {
             clearInput();
+            
         }
 
 
@@ -293,6 +316,54 @@ namespace BengkelAtma.Menu
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void dgAkun_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgAkun.Rows[e.RowIndex].ReadOnly = true;
+            var a = dgAkun.Rows;
+        }
+
+        private async void bootomContent_Click(object sender, EventArgs e)
+        {
+            dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dgAkun.SelectedRows)
+            {   if (row.Selected == true)
+                {
+                    try
+                    {
+                        DialogResult res = MessageBox.Show("Anda yakin akan menghapus data?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        if (res == DialogResult.OK)
+                        {
+
+                            HttpResponseMessage response = await client.DeleteAsync(
+                            $"api/users/{Convert.ToInt16(dgAkun.SelectedRows[0].Cells["id"].Value)}");
+                            response.EnsureSuccessStatusCode();
+                            DataTable t = await GetAkun();
+                            t.Columns.Remove("role");
+                            t.Columns.Remove("name");
+                            dgAkun.DataSource = t;
+                            dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            //Some task…  
+                        }
+                        if (res == DialogResult.Cancel)
+                        {
+                            //  dgAkun.UserDeletingRow -= false;
+                            //e.Cancel = true;
+                            break;//Some task…  
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+                    finally
+                    {
+                    }
+                }
+
+                break;
             }
         }
     }

@@ -22,7 +22,9 @@ namespace BengkelAtma
         public ucLogin()
         {
             InitializeComponent();
-            
+            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+
+
         }
 
         private void tbMasuk_Click(object sender, EventArgs e)
@@ -31,12 +33,15 @@ namespace BengkelAtma
             {
                 GetLogin(tbUser.Text.ToString(), tbPass.Text.ToString());
             }
+            else
+            {
+                MessageBox.Show(" Username atau password harus diisi");
+            }
 
         }
 
         static async void GetLogin(string user, string pass)
         {
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
             LoginClass lgn = new LoginClass { username = user, password = pass };
             var response = client.PostAsJsonAsync("api/mobileauthenticate", lgn).Result;
             if (response.IsSuccessStatusCode)
@@ -50,6 +55,10 @@ namespace BengkelAtma
                 SplashScreen.ActiveForm.Hide();
                 MainMenu main = new MainMenu();
                 main.Show();
+            }
+            else
+            {
+                MessageBox.Show(" Username atau password tidak benar");
             }
         }
 

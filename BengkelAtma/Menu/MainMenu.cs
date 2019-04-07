@@ -17,7 +17,7 @@ namespace BengkelAtma
         public MainMenu()
         {
             InitializeComponent();
-            TabMenu.SelectedTab = AkunCabangTab;
+         
         }
 
 
