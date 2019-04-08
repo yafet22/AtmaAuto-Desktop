@@ -21,6 +21,8 @@ namespace BengkelAtma
 
         public ucLogin()
         {
+
+            var dataUserLogin = ""; 
             InitializeComponent();
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
 
@@ -54,7 +56,8 @@ namespace BengkelAtma
                 //Console.WriteLine($"{b.username}");
                 SplashScreen.ActiveForm.Hide();
                 MainMenu main = new MainMenu();
-                main.Show();
+                var userlogin = user;
+                main.Show();  //bukan ini.,,
             }
             else
             {

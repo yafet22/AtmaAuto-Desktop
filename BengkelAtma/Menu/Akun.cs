@@ -22,6 +22,7 @@ namespace BengkelAtma.Menu
         public Akun()
         {
             InitializeComponent();
+            //client.Dispose();
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
 
         }
@@ -346,25 +347,17 @@ namespace BengkelAtma.Menu
                             dgAkun.DataSource = t;
                             dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                             //Some task…  
-                        }
-                        if (res == DialogResult.Cancel)
-                        {
-                            //  dgAkun.UserDeletingRow -= false;
-                            //e.Cancel = true;
-                            break;//Some task…  
-                        }
+                        } 
                     }
                     catch (Exception exc)
                     {
                         MessageBox.Show(exc.Message);
                     }
-                    finally
-                    {
-                    }
+                   
                 }
-
-                break;
+    
             }
+
         }
     }
  }

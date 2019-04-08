@@ -32,8 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.ucLogin1 = new BengkelAtma.ucLogin();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -83,6 +83,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Selamat Datang";
             // 
+            // ucLogin1
+            // 
+            this.ucLogin1.BackColor = System.Drawing.Color.White;
+            this.ucLogin1.Location = new System.Drawing.Point(7, 158);
+            this.ucLogin1.Name = "ucLogin1";
+            this.ucLogin1.Size = new System.Drawing.Size(248, 223);
+            this.ucLogin1.TabIndex = 2;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::BengkelAtma.Properties.Resources.gambar_motor_2;
@@ -93,14 +101,6 @@
             this.panel2.Size = new System.Drawing.Size(518, 450);
             this.panel2.TabIndex = 1;
             // 
-            // ucLogin1
-            // 
-            this.ucLogin1.BackColor = System.Drawing.Color.White;
-            this.ucLogin1.Location = new System.Drawing.Point(7, 158);
-            this.ucLogin1.Name = "ucLogin1";
-            this.ucLogin1.Size = new System.Drawing.Size(248, 223);
-            this.ucLogin1.TabIndex = 2;
-            // 
             // SplashScreen
             // 
             this.AllowDrop = true;
@@ -109,7 +109,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome, Please Login";

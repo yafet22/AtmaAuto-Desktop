@@ -137,7 +137,7 @@
             this.dataCabang.Margin = new System.Windows.Forms.Padding(2);
             this.dataCabang.Name = "dataCabang";
             this.dataCabang.RowTemplate.Height = 24;
-            this.dataCabang.Size = new System.Drawing.Size(494, 254);
+            this.dataCabang.Size = new System.Drawing.Size(507, 254);
             this.dataCabang.TabIndex = 16;
             this.dataCabang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellClick);
             this.dataCabang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellEndEdit);
@@ -211,7 +211,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(808, 405);
+            this.panel1.Size = new System.Drawing.Size(821, 405);
             this.panel1.TabIndex = 23;
             // 
             // Kanan
@@ -222,7 +222,7 @@
             this.Kanan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Kanan.Location = new System.Drawing.Point(294, 0);
             this.Kanan.Name = "Kanan";
-            this.Kanan.Size = new System.Drawing.Size(514, 405);
+            this.Kanan.Size = new System.Drawing.Size(527, 405);
             this.Kanan.TabIndex = 1;
             // 
             // panel6
@@ -232,7 +232,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 69);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(10);
-            this.panel6.Size = new System.Drawing.Size(514, 274);
+            this.panel6.Size = new System.Drawing.Size(527, 274);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -243,7 +243,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 343);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(514, 62);
+            this.panel5.Size = new System.Drawing.Size(527, 62);
             this.panel5.TabIndex = 1;
             // 
             // panel4
@@ -254,7 +254,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(514, 69);
+            this.panel4.Size = new System.Drawing.Size(527, 69);
             this.panel4.TabIndex = 0;
             // 
             // Kiri
@@ -280,7 +280,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cabang";
-            this.Size = new System.Drawing.Size(808, 405);
+            this.Size = new System.Drawing.Size(821, 405);
             this.Load += new System.EventHandler(this.Cabang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataCabang)).EndInit();
             this.panel1.ResumeLayout(false);

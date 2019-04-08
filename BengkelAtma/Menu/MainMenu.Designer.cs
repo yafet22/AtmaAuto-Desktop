@@ -53,6 +53,7 @@ namespace BengkelAtma
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
+            this.profile1 = new BengkelAtma.Menu.Profile();
             this.akun2 = new BengkelAtma.Menu.Akun();
             this.submenuPegawai1 = new BengkelAtma.Menu.submenuPegawai();
             this.cabang2 = new BengkelAtma.Menu.Cabang();
@@ -102,6 +103,7 @@ namespace BengkelAtma
             this.btnKeluar.TabIndex = 4;
             this.btnKeluar.Text = "Keluar";
             this.btnKeluar.UseVisualStyleBackColor = false;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
             // 
             // btnProfil
             // 
@@ -119,6 +121,7 @@ namespace BengkelAtma
             this.btnProfil.TabIndex = 3;
             this.btnProfil.Text = "Profil";
             this.btnProfil.UseVisualStyleBackColor = false;
+            this.btnProfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnProfil_MouseClick);
             // 
             // btnHome
             // 
@@ -136,6 +139,7 @@ namespace BengkelAtma
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Beranda";
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // lbUser
             // 
@@ -149,7 +153,7 @@ namespace BengkelAtma
             // 
             // pbProfil
             // 
-            this.pbProfil.BackgroundImage = global::BengkelAtma.Properties.Resources.user;
+            this.pbProfil.BackgroundImage = global::BengkelAtma.Properties.Resources.logo;
             this.pbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbProfil.Location = new System.Drawing.Point(39, 12);
             this.pbProfil.Name = "pbProfil";
@@ -159,6 +163,7 @@ namespace BengkelAtma
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.profile1);
             this.panel1.Controls.Add(this.metroPanel1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -196,7 +201,7 @@ namespace BengkelAtma
             this.TabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabMenu.Location = new System.Drawing.Point(0, 0);
             this.TabMenu.Name = "TabMenu";
-            this.TabMenu.SelectedIndex = 1;
+            this.TabMenu.SelectedIndex = 0;
             this.TabMenu.Size = new System.Drawing.Size(808, 496);
             this.TabMenu.TabIndex = 0;
             // 
@@ -352,6 +357,14 @@ namespace BengkelAtma
             this.label.TabIndex = 1;
             this.label.Text = "Ayo Pilih Menu";
             // 
+            // profile1
+            // 
+            this.profile1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profile1.Location = new System.Drawing.Point(0, 42);
+            this.profile1.Name = "profile1";
+            this.profile1.Size = new System.Drawing.Size(808, 496);
+            this.profile1.TabIndex = 3;
+            // 
             // akun2
             // 
             this.akun2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -446,5 +459,6 @@ namespace BengkelAtma
         private MetroFramework.Controls.MetroTabPage Sales;
         private MetroFramework.Controls.MetroTabPage Nota;
         private Akun akun2;
+        private Profile profile1;
     }
 }
