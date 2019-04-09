@@ -97,6 +97,18 @@
     <Compile Include="Menu\menuMain.Designer.cs">
       <DependentUpon>menuMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\profileWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\profileWindow.Designer.cs">
+      <DependentUpon>profileWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Profil\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\submenuPegawai.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\menuMain.resx">
       <DependentUpon>menuMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\profileWindow.resx">
+      <DependentUpon>profileWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\submenuPegawai.resx">
       <DependentUpon>submenuPegawai.cs</DependentUpon>

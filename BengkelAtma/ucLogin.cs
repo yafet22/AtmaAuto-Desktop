@@ -21,8 +21,12 @@ namespace BengkelAtma
 
         public ucLogin()
         {
+
+            var dataUserLogin = ""; 
             InitializeComponent();
-            
+            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+
+
         }
 
         private void tbMasuk_Click(object sender, EventArgs e)
@@ -33,14 +37,13 @@ namespace BengkelAtma
             }
             else
             {
-                MessageBox.Show("Username dan Password harus diisi!","Peringatan!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(" Username atau password harus diisi");
             }
 
         }
 
         static async void GetLogin(string user, string pass)
         {
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
             LoginClass lgn = new LoginClass { username = user, password = pass };
             var response = client.PostAsJsonAsync("api/mobileauthenticate", lgn).Result;
             if (response.IsSuccessStatusCode)
@@ -49,18 +52,19 @@ namespace BengkelAtma
                 Console.WriteLine($"{a}");
                 Data data = new Data(a);
                 Console.WriteLine($"{data.name}");
+                Console.WriteLine($"{data.id}");
+                
                 //var b = JsonConvert.DeserializeObject<Data>(a);
                 //Console.WriteLine($"{b.username}");
                 SplashScreen.ActiveForm.Hide();
                 MainMenu main = new MainMenu();
-                main.Show();
+                var userlogin = user;
+                main.Show();  //bukan ini.,,
             }
             else
             {
-                MessageBox.Show("Username atau Password tidak Benar","Peringatan!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                
+                MessageBox.Show(" Username atau password tidak benar");
             }
-
         }
 
 

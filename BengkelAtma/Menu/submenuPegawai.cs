@@ -43,20 +43,20 @@ namespace BengkelAtma.Menu
 
         public void disableInput()
         {
-            tbNamaPegawai.ReadOnly = true;
-            tbAlamatPegawai.ReadOnly = true;
-            tbGajiPegawai.ReadOnly = true;
-            tbNomorTeleponPegawai.ReadOnly = true;
+            tbNamaPegawai.Enabled = false;
+            tbAlamatPegawai.Enabled = false;
+            tbGajiPegawai.Enabled = false;
+            tbNomorTeleponPegawai.Enabled = false;
             comboCabang.Enabled = false;
             comboJabatan.Enabled = false;
         }
 
         public void enableInput()
         {
-            tbNamaPegawai.ReadOnly = false;
-            tbAlamatPegawai.ReadOnly = false;
-            tbGajiPegawai.ReadOnly = false;
-            tbNomorTeleponPegawai.ReadOnly = false;
+            tbNamaPegawai.Enabled = true;
+            tbAlamatPegawai.Enabled = true;
+            tbGajiPegawai.Enabled = true;
+            tbNomorTeleponPegawai.Enabled = true;
             comboCabang.Enabled = true;
             comboJabatan.Enabled = true;
         }
@@ -216,10 +216,8 @@ namespace BengkelAtma.Menu
                     else if(check.Equals("edit"))
                     {
                         var name = tbNamaPegawai.Text.ToString();
-                        var firstname = name.Split(' ')[0];
-                        var lastname = name.Split(' ')[1];
 
-                        Employee employee = new Employee { id_employee = id, first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = comboCabang.SelectedIndex + 1, id_role = comboJabatan.SelectedIndex + 1 };
+                        Employee employee = new Employee { id_employee = id, first_name = name, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = comboCabang.SelectedIndex + 1, id_role = comboJabatan.SelectedIndex + 1 };
 
                         HttpResponseMessage response = await client.PutAsJsonAsync(
                         $"api/employees/{employee.id_employee}", employee);
@@ -257,6 +255,7 @@ namespace BengkelAtma.Menu
 
         private async void btnCariPeg_Click(object sender, EventArgs e)
         {
+            disableInput();
             string searchValue = tbCariPeg.Text;
 
             dataPegawai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -334,6 +333,21 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
+            foreach (DataGridViewRow row in dataPegawai.Rows)
+            {
+                if (row.Selected == true)
+                {
+                    {
+                        
+                        id = Convert.ToInt16(row.Cells[0].Value);
+                        tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
+                        tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
+                        tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
+                        tbGajiPegawai.Text = row.Cells[4].Value.ToString();
+                    }
+                }
+            }
+            
         }
 
         private void btnResetPeg_Click(object sender, EventArgs e)
@@ -368,6 +382,50 @@ namespace BengkelAtma.Menu
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void dataPegawai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataPegawai.Rows[e.RowIndex].ReadOnly = true;
+        }
+
+        private async void btnHapusPeg_Click(object sender, EventArgs e)
+        {
+
+            dataPegawai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dataPegawai.SelectedRows)
+            {
+                if (row.Selected == true)
+                {
+                    try
+                    {
+                        DialogResult res = MessageBox.Show("Anda yakin akan menghapus data?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        if (res == DialogResult.OK)
+                        {
+
+                            HttpResponseMessage response = await client.DeleteAsync(
+                            $"api/employees/{Convert.ToInt16(dataPegawai.SelectedRows[0].Cells["id_employee"].Value)}");
+                            response.EnsureSuccessStatusCode();
+                            DataTable t = await GetPegawai();
+                            t.Columns.Remove("id_branch");
+                            t.Columns.Remove("id_role");
+                            dataPegawai.DataSource = t;
+                            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            //Some task…  
+                        }
+                        if (res == DialogResult.Cancel)
+                        {
+                            //e.Cancel = true;
+                            //Some task…  
+                            break;
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+                }
             }
         }
     }

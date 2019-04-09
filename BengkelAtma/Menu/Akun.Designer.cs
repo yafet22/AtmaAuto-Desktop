@@ -117,7 +117,7 @@
             // 
             // btnCariAkun
             // 
-            this.btnCariAkun.Location = new System.Drawing.Point(225, 53);
+            this.btnCariAkun.Location = new System.Drawing.Point(219, 53);
             this.btnCariAkun.Name = "btnCariAkun";
             this.btnCariAkun.Size = new System.Drawing.Size(49, 23);
             this.btnCariAkun.TabIndex = 11;
@@ -129,7 +129,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Location = new System.Drawing.Point(6, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 12;
@@ -137,7 +137,7 @@
             // 
             // tbCariAkun
             // 
-            this.tbCariAkun.Location = new System.Drawing.Point(15, 55);
+            this.tbCariAkun.Location = new System.Drawing.Point(9, 55);
             this.tbCariAkun.Name = "tbCariAkun";
             this.tbCariAkun.Size = new System.Drawing.Size(201, 20);
             this.tbCariAkun.TabIndex = 10;
@@ -158,10 +158,11 @@
             this.bootomContent.VerticalScrollbarBarColor = true;
             this.bootomContent.VerticalScrollbarHighlightOnWheel = false;
             this.bootomContent.VerticalScrollbarSize = 10;
+            this.bootomContent.Click += new System.EventHandler(this.bootomContent_Click);
             // 
             // btnEditAkun
             // 
-            this.btnEditAkun.Location = new System.Drawing.Point(15, 0);
+            this.btnEditAkun.Location = new System.Drawing.Point(10, 5);
             this.btnEditAkun.Name = "btnEditAkun";
             this.btnEditAkun.Size = new System.Drawing.Size(75, 23);
             this.btnEditAkun.TabIndex = 0;
@@ -171,12 +172,13 @@
             // 
             // btnDeleteAkun
             // 
-            this.btnDeleteAkun.Location = new System.Drawing.Point(96, 0);
+            this.btnDeleteAkun.Location = new System.Drawing.Point(91, 5);
             this.btnDeleteAkun.Name = "btnDeleteAkun";
             this.btnDeleteAkun.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteAkun.TabIndex = 1;
             this.btnDeleteAkun.Text = "Hapus";
             this.btnDeleteAkun.UseVisualStyleBackColor = true;
+            this.btnDeleteAkun.Click += new System.EventHandler(this.bootomContent_Click);
             // 
             // panel2
             // 

@@ -31,9 +31,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbMasuk = new AltoControls.AltoButton();
-            this.tbUser = new AltoControls.AltoTextBox();
-            this.tbPass = new AltoControls.AltoTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,28 +78,6 @@
             this.tbMasuk.Transparency = false;
             this.tbMasuk.Click += new System.EventHandler(this.tbMasuk_Click);
             // 
-            // tbUser
-            // 
-            this.tbUser.BackColor = System.Drawing.Color.Transparent;
-            this.tbUser.Br = System.Drawing.Color.White;
-            this.tbUser.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUser.ForeColor = System.Drawing.Color.DimGray;
-            this.tbUser.Location = new System.Drawing.Point(18, 66);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(214, 26);
-            this.tbUser.TabIndex = 5;
-            // 
-            // tbPass
-            // 
-            this.tbPass.BackColor = System.Drawing.Color.Transparent;
-            this.tbPass.Br = System.Drawing.Color.White;
-            this.tbPass.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.ForeColor = System.Drawing.Color.DimGray;
-            this.tbPass.Location = new System.Drawing.Point(18, 122);
-            this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(214, 26);
-            this.tbPass.TabIndex = 6;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.tbPass);
@@ -112,6 +90,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 226);
             this.panel1.TabIndex = 6;
+            // 
+            // tbUser
+            // 
+            this.tbUser.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUser.Location = new System.Drawing.Point(18, 65);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(200, 22);
+            this.tbUser.TabIndex = 5;
+            // 
+            // tbPass
+            // 
+            this.tbPass.Location = new System.Drawing.Point(18, 121);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.PasswordChar = '*';
+            this.tbPass.Size = new System.Drawing.Size(200, 20);
+            this.tbPass.TabIndex = 6;
             // 
             // ucLogin
             // 
@@ -132,8 +126,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private AltoControls.AltoButton tbMasuk;
-        private AltoControls.AltoTextBox tbUser;
-        private AltoControls.AltoTextBox tbPass;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbPass;
+        private System.Windows.Forms.TextBox tbUser;
     }
 }

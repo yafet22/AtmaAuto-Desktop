@@ -54,6 +54,7 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnHapusPeg = new System.Windows.Forms.Button();
             this.findHeader.SuspendLayout();
             this.dgContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPegawai)).BeginInit();
@@ -102,7 +103,7 @@
             // 
             // btnCariPeg
             // 
-            this.btnCariPeg.Location = new System.Drawing.Point(225, 53);
+            this.btnCariPeg.Location = new System.Drawing.Point(220, 53);
             this.btnCariPeg.Name = "btnCariPeg";
             this.btnCariPeg.Size = new System.Drawing.Size(49, 23);
             this.btnCariPeg.TabIndex = 11;
@@ -114,7 +115,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Location = new System.Drawing.Point(7, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 12;
@@ -122,7 +123,7 @@
             // 
             // tbCariPeg
             // 
-            this.tbCariPeg.Location = new System.Drawing.Point(15, 55);
+            this.tbCariPeg.Location = new System.Drawing.Point(10, 55);
             this.tbCariPeg.Name = "tbCariPeg";
             this.tbCariPeg.Size = new System.Drawing.Size(201, 20);
             this.tbCariPeg.TabIndex = 10;
@@ -178,6 +179,7 @@
             this.dataPegawai.Name = "dataPegawai";
             this.dataPegawai.Size = new System.Drawing.Size(300, 198);
             this.dataPegawai.TabIndex = 13;
+            this.dataPegawai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPegawai_CellClick);
             this.dataPegawai.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataPegawai_UserDeletingRow);
             // 
             // panel2
@@ -284,6 +286,7 @@
             // bootomContent
             // 
             this.bootomContent.BackColor = System.Drawing.Color.White;
+            this.bootomContent.Controls.Add(this.btnHapusPeg);
             this.bootomContent.Controls.Add(this.buttonSimpan);
             this.bootomContent.Controls.Add(this.buttonEdit);
             this.bootomContent.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -300,7 +303,7 @@
             // 
             // buttonSimpan
             // 
-            this.buttonSimpan.Location = new System.Drawing.Point(15, -2);
+            this.buttonSimpan.Location = new System.Drawing.Point(11, 5);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 23);
@@ -311,7 +314,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(101, -2);
+            this.buttonEdit.Location = new System.Drawing.Point(97, 5);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
@@ -340,6 +343,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 400);
             this.panel3.TabIndex = 12;
+            // 
+            // btnHapusPeg
+            // 
+            this.btnHapusPeg.Location = new System.Drawing.Point(183, 5);
+            this.btnHapusPeg.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHapusPeg.Name = "btnHapusPeg";
+            this.btnHapusPeg.Size = new System.Drawing.Size(75, 23);
+            this.btnHapusPeg.TabIndex = 4;
+            this.btnHapusPeg.Text = "Hapus";
+            this.btnHapusPeg.UseVisualStyleBackColor = true;
+            this.btnHapusPeg.Click += new System.EventHandler(this.btnHapusPeg_Click);
             // 
             // submenuPegawai
             // 
@@ -390,5 +404,6 @@
         private System.Windows.Forms.ComboBox comboJabatan;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button btnHapusPeg;
     }
 }
