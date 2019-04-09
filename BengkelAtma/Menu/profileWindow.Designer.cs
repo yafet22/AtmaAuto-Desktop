@@ -33,11 +33,13 @@
             // 
             // profile1
             // 
+            this.profile1.AutoScroll = true;
             this.profile1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profile1.Location = new System.Drawing.Point(0, 0);
             this.profile1.Name = "profile1";
             this.profile1.Size = new System.Drawing.Size(800, 450);
             this.profile1.TabIndex = 0;
+            this.profile1.Load += new System.EventHandler(this.profile1_Load);
             // 
             // profileWindow
             // 

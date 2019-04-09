@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BengkelAtma.Menu;
+using Newtonsoft.Json.Linq;
 
 namespace BengkelAtma
 {
@@ -18,14 +20,14 @@ namespace BengkelAtma
         {
             InitializeComponent();
             disableProfil();
-            disableHome();
+            //disableHome();
 
         }
 
         public void enableHome() {
             metroPanel1.Show();
            
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
         }
 
         public void disableHome()
@@ -37,7 +39,7 @@ namespace BengkelAtma
         {
             profile1.Show();
            
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
             //    profileWindow p = new profileWindow();
             //    p.Show();
@@ -62,6 +64,8 @@ namespace BengkelAtma
         {
             disableHome();
             enableProfil();
+
+
             
         }
 
@@ -80,6 +84,12 @@ namespace BengkelAtma
             {
                 MessageBox.Show("Keluar, dibatalkan.");
             }
+        }
+
+
+        private void btnProfil_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

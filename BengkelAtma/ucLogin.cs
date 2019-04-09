@@ -52,6 +52,8 @@ namespace BengkelAtma
                 Console.WriteLine($"{a}");
                 Data data = new Data(a);
                 Console.WriteLine($"{data.name}");
+                Console.WriteLine($"{data.id}");
+                
                 //var b = JsonConvert.DeserializeObject<Data>(a);
                 //Console.WriteLine($"{b.username}");
                 SplashScreen.ActiveForm.Hide();

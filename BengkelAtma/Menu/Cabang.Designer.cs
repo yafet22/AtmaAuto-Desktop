@@ -129,6 +129,7 @@
             // 
             // dataCabang
             // 
+            this.dataCabang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataCabang.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataCabang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -137,7 +138,7 @@
             this.dataCabang.Margin = new System.Windows.Forms.Padding(2);
             this.dataCabang.Name = "dataCabang";
             this.dataCabang.RowTemplate.Height = 24;
-            this.dataCabang.Size = new System.Drawing.Size(507, 254);
+            this.dataCabang.Size = new System.Drawing.Size(403, 254);
             this.dataCabang.TabIndex = 16;
             this.dataCabang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellClick);
             this.dataCabang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellEndEdit);
@@ -173,7 +174,7 @@
             // 
             // buttonInput
             // 
-            this.buttonInput.Location = new System.Drawing.Point(8, 0);
+            this.buttonInput.Location = new System.Drawing.Point(8, 5);
             this.buttonInput.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInput.Name = "buttonInput";
             this.buttonInput.Size = new System.Drawing.Size(75, 23);
@@ -184,7 +185,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(99, 0);
+            this.buttonEdit.Location = new System.Drawing.Point(99, 5);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
@@ -195,7 +196,7 @@
             // 
             // btnHapusCbg
             // 
-            this.btnHapusCbg.Location = new System.Drawing.Point(193, 0);
+            this.btnHapusCbg.Location = new System.Drawing.Point(193, 5);
             this.btnHapusCbg.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapusCbg.Name = "btnHapusCbg";
             this.btnHapusCbg.Size = new System.Drawing.Size(75, 23);
@@ -211,7 +212,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(821, 405);
+            this.panel1.Size = new System.Drawing.Size(717, 405);
             this.panel1.TabIndex = 23;
             // 
             // Kanan
@@ -222,17 +223,18 @@
             this.Kanan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Kanan.Location = new System.Drawing.Point(294, 0);
             this.Kanan.Name = "Kanan";
-            this.Kanan.Size = new System.Drawing.Size(527, 405);
+            this.Kanan.Size = new System.Drawing.Size(423, 405);
             this.Kanan.TabIndex = 1;
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.dataCabang);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 69);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(10);
-            this.panel6.Size = new System.Drawing.Size(527, 274);
+            this.panel6.Size = new System.Drawing.Size(423, 274);
             this.panel6.TabIndex = 2;
             // 
             // panel5
@@ -243,7 +245,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 343);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(527, 62);
+            this.panel5.Size = new System.Drawing.Size(423, 62);
             this.panel5.TabIndex = 1;
             // 
             // panel4
@@ -254,7 +256,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(527, 69);
+            this.panel4.Size = new System.Drawing.Size(423, 69);
             this.panel4.TabIndex = 0;
             // 
             // Kiri
@@ -277,10 +279,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cabang";
-            this.Size = new System.Drawing.Size(821, 405);
+            this.Size = new System.Drawing.Size(717, 405);
             this.Load += new System.EventHandler(this.Cabang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataCabang)).EndInit();
             this.panel1.ResumeLayout(false);
