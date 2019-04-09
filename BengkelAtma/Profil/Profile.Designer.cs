@@ -63,7 +63,11 @@
             // 
             // panelJudul
             // 
+<<<<<<< HEAD
             this.panelJudul.BackColor = System.Drawing.Color.White;
+=======
+            this.panelJudul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(168)))), ((int)(((byte)(205)))));
+>>>>>>> d0e82315746e60f4d04d0a43b5af65425bfd1f94
             this.panelJudul.Controls.Add(this.LabelProfil);
             this.panelJudul.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelJudul.Location = new System.Drawing.Point(0, 5);
@@ -95,7 +99,11 @@
             // 
             // panel2
             // 
+<<<<<<< HEAD
             this.panel2.BackColor = System.Drawing.Color.White;
+=======
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(168)))), ((int)(((byte)(205)))));
+>>>>>>> d0e82315746e60f4d04d0a43b5af65425bfd1f94
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(345, 0);
@@ -115,7 +123,11 @@
             // 
             // panel3
             // 
+<<<<<<< HEAD
             this.panel3.BackColor = System.Drawing.Color.White;
+=======
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(168)))), ((int)(((byte)(205)))));
+>>>>>>> d0e82315746e60f4d04d0a43b5af65425bfd1f94
             this.panel3.Controls.Add(this.tbTampilNomorTeleponPegawai);
             this.panel3.Controls.Add(this.labelTampilNotel);
             this.panel3.Controls.Add(this.labelTampilGaji);
@@ -239,7 +251,11 @@
             // 
             // panelubahPass
             // 
+<<<<<<< HEAD
             this.panelubahPass.BackColor = System.Drawing.Color.White;
+=======
+            this.panelubahPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(168)))), ((int)(((byte)(205)))));
+>>>>>>> d0e82315746e60f4d04d0a43b5af65425bfd1f94
             this.panelubahPass.Controls.Add(this.buttonSimpanProfil);
             this.panelubahPass.Controls.Add(this.buttonEditProfil);
             this.panelubahPass.Controls.Add(this.tbTampilPass);
