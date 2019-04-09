@@ -54,7 +54,7 @@ namespace BengkelAtma
                 Data data = new Data(a);
                 Console.WriteLine($"{data.name}");
                 Console.WriteLine($"{data.id}");
-                idUser = data.id;
+                idUser = data.id_employee;
                 //var b = JsonConvert.DeserializeObject<Data>(a);
                 //Console.WriteLine($"{b.username}");
                 SplashScreen.ActiveForm.Hide();
@@ -87,11 +87,13 @@ namespace BengkelAtma
                 username = (string)jUser["username"];
                 id = (int)jUser["id"];
                 role = (string)jUser["role"];
+                id_employee = (int)jUser["id_employee"];
             }
             public int id { get; set; }
             public string username { get; set; }
             public string name { get; set; }
             public string role { get; set; }
+            public int id_employee { get; set; }
         }
 
         public static class LoginInfo

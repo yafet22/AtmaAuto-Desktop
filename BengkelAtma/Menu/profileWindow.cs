@@ -12,7 +12,7 @@ namespace BengkelAtma.Menu
 {
     public partial class profileWindow : Form
     {
-        private int id_employee;
+
         public profileWindow()
         {
             InitializeComponent();

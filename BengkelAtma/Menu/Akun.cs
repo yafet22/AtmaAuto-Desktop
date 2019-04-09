@@ -63,6 +63,7 @@ namespace BengkelAtma.Menu
             DataTable t = await GetAkun();
             t.Columns.Remove("role");
             t.Columns.Remove("name");
+            t.Columns.Remove("id_employee");
             dgAkun.DataSource = t;
             dgAkun.Columns[dgAkun.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgAkun.DataBindingComplete += (o, _) =>
@@ -129,6 +130,7 @@ namespace BengkelAtma.Menu
                             DataTable t = await GetAkun();
                             t.Columns.Remove("role");
                             t.Columns.Remove("name");
+                            t.Columns.Remove("id_employee");
                             dgAkun.DataSource = t;
                             dgAkun.DataBindingComplete += (o, _) =>
                             {
@@ -156,6 +158,7 @@ namespace BengkelAtma.Menu
                         DataTable t = await GetAkun();
                         t.Columns.Remove("role");
                         t.Columns.Remove("name");
+                        t.Columns.Remove("id_employee");
                         dgAkun.DataSource = t;
                         dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -214,6 +217,7 @@ namespace BengkelAtma.Menu
                     DataTable t = await GetAkun();
                     t.Columns.Remove("role");
                     t.Columns.Remove("name");
+                    t.Columns.Remove("id_employee");
                     dgAkun.DataSource = t;
                     dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -236,6 +240,7 @@ namespace BengkelAtma.Menu
                 DataTable t = await GetAkun();
                 t.Columns.Remove("role");
                 t.Columns.Remove("name");
+                t.Columns.Remove("id_employee");
                 dgAkun.DataSource = t;
                 dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -304,6 +309,7 @@ namespace BengkelAtma.Menu
                     DataTable t = await GetAkun();
                     t.Columns.Remove("role");
                     t.Columns.Remove("name");
+                    t.Columns.Remove("id_employee");
                     dgAkun.DataSource = t;
                     dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                     //Some task…  
@@ -344,6 +350,7 @@ namespace BengkelAtma.Menu
                             DataTable t = await GetAkun();
                             t.Columns.Remove("role");
                             t.Columns.Remove("name");
+                            t.Columns.Remove("id_employee");
                             dgAkun.DataSource = t;
                             dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                             //Some task…  

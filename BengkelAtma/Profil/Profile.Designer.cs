@@ -94,7 +94,7 @@
             // 
             this.LabelProfil.AutoSize = true;
             this.LabelProfil.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelProfil.Location = new System.Drawing.Point(345, 18);
+            this.LabelProfil.Location = new System.Drawing.Point(12, 20);
             this.LabelProfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelProfil.Name = "LabelProfil";
             this.LabelProfil.Size = new System.Drawing.Size(124, 32);
@@ -119,17 +119,17 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(168)))), ((int)(((byte)(205)))));
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(460, 0);
+            this.panel2.Location = new System.Drawing.Point(427, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 427);
+            this.panel2.Size = new System.Drawing.Size(366, 427);
             this.panel2.TabIndex = 56;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::BengkelAtma.Properties.Resources.user;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(70, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(173, 165);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 142);
@@ -158,23 +158,24 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(460, 427);
+            this.panel3.Size = new System.Drawing.Size(427, 427);
             this.panel3.TabIndex = 57;
             // 
             // buttonSimpanProfil
             // 
-            this.buttonSimpanProfil.Location = new System.Drawing.Point(268, 393);
+            this.buttonSimpanProfil.Location = new System.Drawing.Point(188, 393);
             this.buttonSimpanProfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSimpanProfil.Name = "buttonSimpanProfil";
             this.buttonSimpanProfil.Size = new System.Drawing.Size(100, 28);
             this.buttonSimpanProfil.TabIndex = 35;
             this.buttonSimpanProfil.Text = "Simpan";
             this.buttonSimpanProfil.UseVisualStyleBackColor = true;
+            this.buttonSimpanProfil.Click += new System.EventHandler(this.buttonSimpanProfil_Click);
             // 
             // labelTampilNamaPegawai
             // 
             this.labelTampilNamaPegawai.AutoSize = true;
-            this.labelTampilNamaPegawai.Location = new System.Drawing.Point(94, 67);
+            this.labelTampilNamaPegawai.Location = new System.Drawing.Point(14, 67);
             this.labelTampilNamaPegawai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilNamaPegawai.Name = "labelTampilNamaPegawai";
             this.labelTampilNamaPegawai.Size = new System.Drawing.Size(45, 17);
@@ -183,18 +184,19 @@
             // 
             // buttonEditProfil
             // 
-            this.buttonEditProfil.Location = new System.Drawing.Point(125, 393);
+            this.buttonEditProfil.Location = new System.Drawing.Point(45, 393);
             this.buttonEditProfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditProfil.Name = "buttonEditProfil";
             this.buttonEditProfil.Size = new System.Drawing.Size(100, 28);
             this.buttonEditProfil.TabIndex = 34;
             this.buttonEditProfil.Text = "Edit";
             this.buttonEditProfil.UseVisualStyleBackColor = true;
+            this.buttonEditProfil.Click += new System.EventHandler(this.buttonEditProfil_Click);
             // 
             // tbTampilNamaPegawai
             // 
             this.tbTampilNamaPegawai.Enabled = false;
-            this.tbTampilNamaPegawai.Location = new System.Drawing.Point(96, 87);
+            this.tbTampilNamaPegawai.Location = new System.Drawing.Point(16, 87);
             this.tbTampilNamaPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilNamaPegawai.Name = "tbTampilNamaPegawai";
             this.tbTampilNamaPegawai.Size = new System.Drawing.Size(313, 22);
@@ -203,7 +205,7 @@
             // tbTampilNomorTeleponPegawai
             // 
             this.tbTampilNomorTeleponPegawai.Enabled = false;
-            this.tbTampilNomorTeleponPegawai.Location = new System.Drawing.Point(97, 185);
+            this.tbTampilNomorTeleponPegawai.Location = new System.Drawing.Point(17, 185);
             this.tbTampilNomorTeleponPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilNomorTeleponPegawai.Name = "tbTampilNomorTeleponPegawai";
             this.tbTampilNomorTeleponPegawai.Size = new System.Drawing.Size(313, 22);
@@ -212,7 +214,7 @@
             // labelTampilNotel
             // 
             this.labelTampilNotel.AutoSize = true;
-            this.labelTampilNotel.Location = new System.Drawing.Point(95, 165);
+            this.labelTampilNotel.Location = new System.Drawing.Point(15, 165);
             this.labelTampilNotel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilNotel.Name = "labelTampilNotel";
             this.labelTampilNotel.Size = new System.Drawing.Size(82, 17);
@@ -222,7 +224,7 @@
             // labelTampilGaji
             // 
             this.labelTampilGaji.AutoSize = true;
-            this.labelTampilGaji.Location = new System.Drawing.Point(95, 218);
+            this.labelTampilGaji.Location = new System.Drawing.Point(15, 218);
             this.labelTampilGaji.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilGaji.Name = "labelTampilGaji";
             this.labelTampilGaji.Size = new System.Drawing.Size(33, 17);
@@ -232,7 +234,7 @@
             // tbTampilGajiPegawai
             // 
             this.tbTampilGajiPegawai.Enabled = false;
-            this.tbTampilGajiPegawai.Location = new System.Drawing.Point(97, 238);
+            this.tbTampilGajiPegawai.Location = new System.Drawing.Point(17, 238);
             this.tbTampilGajiPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilGajiPegawai.Name = "tbTampilGajiPegawai";
             this.tbTampilGajiPegawai.Size = new System.Drawing.Size(313, 22);
@@ -251,7 +253,7 @@
             // labelTampilAlamat
             // 
             this.labelTampilAlamat.AutoSize = true;
-            this.labelTampilAlamat.Location = new System.Drawing.Point(95, 113);
+            this.labelTampilAlamat.Location = new System.Drawing.Point(15, 113);
             this.labelTampilAlamat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilAlamat.Name = "labelTampilAlamat";
             this.labelTampilAlamat.Size = new System.Drawing.Size(51, 17);
@@ -261,7 +263,7 @@
             // tbTampilAlamatPegawai
             // 
             this.tbTampilAlamatPegawai.Enabled = false;
-            this.tbTampilAlamatPegawai.Location = new System.Drawing.Point(97, 133);
+            this.tbTampilAlamatPegawai.Location = new System.Drawing.Point(17, 133);
             this.tbTampilAlamatPegawai.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilAlamatPegawai.Name = "tbTampilAlamatPegawai";
             this.tbTampilAlamatPegawai.Size = new System.Drawing.Size(313, 22);
@@ -270,7 +272,7 @@
             // labelTampilCabang
             // 
             this.labelTampilCabang.AutoSize = true;
-            this.labelTampilCabang.Location = new System.Drawing.Point(95, 274);
+            this.labelTampilCabang.Location = new System.Drawing.Point(15, 274);
             this.labelTampilCabang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilCabang.Name = "labelTampilCabang";
             this.labelTampilCabang.Size = new System.Drawing.Size(57, 17);
@@ -280,7 +282,7 @@
             // labelTampilJabatan
             // 
             this.labelTampilJabatan.AutoSize = true;
-            this.labelTampilJabatan.Location = new System.Drawing.Point(93, 334);
+            this.labelTampilJabatan.Location = new System.Drawing.Point(13, 334);
             this.labelTampilJabatan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilJabatan.Name = "labelTampilJabatan";
             this.labelTampilJabatan.Size = new System.Drawing.Size(59, 17);
@@ -290,7 +292,7 @@
             // tbTampilCabang
             // 
             this.tbTampilCabang.Enabled = false;
-            this.tbTampilCabang.Location = new System.Drawing.Point(97, 294);
+            this.tbTampilCabang.Location = new System.Drawing.Point(17, 294);
             this.tbTampilCabang.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilCabang.Name = "tbTampilCabang";
             this.tbTampilCabang.Size = new System.Drawing.Size(313, 22);
@@ -299,7 +301,7 @@
             // tbTampilJabatan
             // 
             this.tbTampilJabatan.Enabled = false;
-            this.tbTampilJabatan.Location = new System.Drawing.Point(96, 353);
+            this.tbTampilJabatan.Location = new System.Drawing.Point(16, 353);
             this.tbTampilJabatan.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilJabatan.Name = "tbTampilJabatan";
             this.tbTampilJabatan.Size = new System.Drawing.Size(313, 22);
@@ -323,7 +325,7 @@
             // 
             // tbTampilConfirmPass
             // 
-            this.tbTampilConfirmPass.Location = new System.Drawing.Point(291, 63);
+            this.tbTampilConfirmPass.Location = new System.Drawing.Point(291, 52);
             this.tbTampilConfirmPass.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilConfirmPass.Name = "tbTampilConfirmPass";
             this.tbTampilConfirmPass.Size = new System.Drawing.Size(254, 22);
@@ -332,16 +334,16 @@
             // labelTampilConfirmPassword
             // 
             this.labelTampilConfirmPassword.AutoSize = true;
-            this.labelTampilConfirmPassword.Location = new System.Drawing.Point(288, 43);
+            this.labelTampilConfirmPassword.Location = new System.Drawing.Point(288, 32);
             this.labelTampilConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilConfirmPassword.Name = "labelTampilConfirmPassword";
-            this.labelTampilConfirmPassword.Size = new System.Drawing.Size(69, 17);
+            this.labelTampilConfirmPassword.Size = new System.Drawing.Size(139, 17);
             this.labelTampilConfirmPassword.TabIndex = 34;
-            this.labelTampilConfirmPassword.Text = "Password";
+            this.labelTampilConfirmPassword.Text = "Konfrimasi Password";
             // 
             // tbTampilPass
             // 
-            this.tbTampilPass.Location = new System.Drawing.Point(15, 63);
+            this.tbTampilPass.Location = new System.Drawing.Point(15, 52);
             this.tbTampilPass.Margin = new System.Windows.Forms.Padding(4);
             this.tbTampilPass.Name = "tbTampilPass";
             this.tbTampilPass.Size = new System.Drawing.Size(254, 22);
@@ -350,7 +352,7 @@
             // labelTampilPassword
             // 
             this.labelTampilPassword.AutoSize = true;
-            this.labelTampilPassword.Location = new System.Drawing.Point(12, 43);
+            this.labelTampilPassword.Location = new System.Drawing.Point(12, 32);
             this.labelTampilPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTampilPassword.Name = "labelTampilPassword";
             this.labelTampilPassword.Size = new System.Drawing.Size(69, 17);
@@ -359,7 +361,7 @@
             // 
             // btnEditPass
             // 
-            this.btnEditPass.Location = new System.Drawing.Point(579, 60);
+            this.btnEditPass.Location = new System.Drawing.Point(579, 49);
             this.btnEditPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditPass.Name = "btnEditPass";
             this.btnEditPass.Size = new System.Drawing.Size(151, 28);
