@@ -19,10 +19,11 @@ namespace BengkelAtma
     {
         static HttpClient client = new HttpClient();
 
+        public static int idUser { get; set; }
+
         public ucLogin()
         {
 
-            var dataUserLogin = ""; 
             InitializeComponent();
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
 
@@ -53,7 +54,7 @@ namespace BengkelAtma
                 Data data = new Data(a);
                 Console.WriteLine($"{data.name}");
                 Console.WriteLine($"{data.id}");
-                
+                idUser = data.id;
                 //var b = JsonConvert.DeserializeObject<Data>(a);
                 //Console.WriteLine($"{b.username}");
                 SplashScreen.ActiveForm.Hide();
