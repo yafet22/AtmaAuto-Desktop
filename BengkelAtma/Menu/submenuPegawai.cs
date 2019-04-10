@@ -23,7 +23,7 @@ namespace BengkelAtma.Menu
         public submenuPegawai()
         {
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://10.53.4.136:8000/");
         }
 
         public class Employee
@@ -186,7 +186,9 @@ namespace BengkelAtma.Menu
                             lastname = name.Split(' ')[1];
                         }
                         Debug.WriteLine(name);
-                        Employee employee = new Employee { first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = comboCabang.SelectedIndex + 1, id_role = comboJabatan.SelectedIndex + 1 };
+                        Debug.WriteLine("ceki");
+                        Debug.WriteLine(Convert.ToInt16(comboJabatan.SelectedValue.ToString()));
+                        Employee employee = new Employee { first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = Convert.ToInt16(comboCabang.SelectedValue.ToString()) , id_role = Convert.ToInt16(comboJabatan.SelectedValue.ToString()) };
 
                         var response = client.PostAsJsonAsync("api/employees", employee).Result;
 

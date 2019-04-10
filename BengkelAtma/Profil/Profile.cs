@@ -22,7 +22,7 @@ namespace BengkelAtma.Menu
         {
             InitializeComponent();
             disableInput();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://10.53.4.136:8000/");
             GetPegawai();
                 
         }
