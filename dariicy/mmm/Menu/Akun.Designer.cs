@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgContainer = new MetroFramework.Controls.MetroPanel();
-            this.dgAkunMetro = new MetroFramework.Controls.MetroGrid();
+            this.dgAkun = new System.Windows.Forms.DataGridView();
             this.findHeader = new MetroFramework.Controls.MetroPanel();
             this.btnCariAkun = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.dgContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgAkunMetro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAkun)).BeginInit();
             this.findHeader.SuspendLayout();
             this.bootomContent.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,7 +70,7 @@
             // dgContainer
             // 
             this.dgContainer.BackColor = System.Drawing.Color.White;
-            this.dgContainer.Controls.Add(this.dgAkunMetro);
+            this.dgContainer.Controls.Add(this.dgAkun);
             this.dgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgContainer.HorizontalScrollbarBarColor = true;
             this.dgContainer.HorizontalScrollbarHighlightOnWheel = false;
@@ -87,53 +84,18 @@
             this.dgContainer.VerticalScrollbarHighlightOnWheel = false;
             this.dgContainer.VerticalScrollbarSize = 10;
             // 
-            // dgAkunMetro
+            // dgAkun
             // 
-            this.dgAkunMetro.AllowUserToResizeRows = false;
-            this.dgAkunMetro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgAkunMetro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgAkunMetro.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgAkunMetro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAkunMetro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgAkunMetro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgAkunMetro.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgAkunMetro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgAkunMetro.EnableHeadersVisualStyles = false;
-            this.dgAkunMetro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgAkunMetro.GridColor = System.Drawing.Color.White;
-            this.dgAkunMetro.Location = new System.Drawing.Point(10, 10);
-            this.dgAkunMetro.Name = "dgAkunMetro";
-            this.dgAkunMetro.ReadOnly = true;
-            this.dgAkunMetro.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAkunMetro.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgAkunMetro.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgAkunMetro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgAkunMetro.Size = new System.Drawing.Size(300, 198);
-            this.dgAkunMetro.TabIndex = 2;
-            this.dgAkunMetro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAkunMetro_CellClick);
-            this.dgAkunMetro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAkunMetro_CellClick);
-            this.dgAkunMetro.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgAkunMetro_UserDeletingRow);
+            this.dgAkun.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgAkun.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgAkun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAkun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgAkun.Location = new System.Drawing.Point(10, 10);
+            this.dgAkun.Name = "dgAkun";
+            this.dgAkun.Size = new System.Drawing.Size(300, 198);
+            this.dgAkun.TabIndex = 13;
+            this.dgAkun.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAkun_CellClick);
+            this.dgAkun.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgAkun_UserDeletingRow);
             // 
             // findHeader
             // 
@@ -155,13 +117,12 @@
             // 
             // btnCariAkun
             // 
-            this.btnCariAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnCariAkun.Location = new System.Drawing.Point(219, 53);
             this.btnCariAkun.Name = "btnCariAkun";
-            this.btnCariAkun.Size = new System.Drawing.Size(75, 23);
+            this.btnCariAkun.Size = new System.Drawing.Size(49, 23);
             this.btnCariAkun.TabIndex = 11;
             this.btnCariAkun.Text = "Cari";
-            this.btnCariAkun.UseVisualStyleBackColor = false;
+            this.btnCariAkun.UseVisualStyleBackColor = true;
             this.btnCariAkun.Click += new System.EventHandler(this.btnCariAkun_Click);
             // 
             // label1
@@ -201,24 +162,22 @@
             // 
             // btnEditAkun
             // 
-            this.btnEditAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditAkun.Location = new System.Drawing.Point(10, 5);
             this.btnEditAkun.Name = "btnEditAkun";
             this.btnEditAkun.Size = new System.Drawing.Size(75, 23);
             this.btnEditAkun.TabIndex = 0;
             this.btnEditAkun.Text = "Edit";
-            this.btnEditAkun.UseVisualStyleBackColor = false;
+            this.btnEditAkun.UseVisualStyleBackColor = true;
             this.btnEditAkun.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnDeleteAkun
             // 
-            this.btnDeleteAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteAkun.Location = new System.Drawing.Point(91, 5);
             this.btnDeleteAkun.Name = "btnDeleteAkun";
             this.btnDeleteAkun.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteAkun.TabIndex = 1;
             this.btnDeleteAkun.Text = "Hapus";
-            this.btnDeleteAkun.UseVisualStyleBackColor = false;
+            this.btnDeleteAkun.UseVisualStyleBackColor = true;
             this.btnDeleteAkun.Click += new System.EventHandler(this.bootomContent_Click);
             // 
             // panel2
@@ -281,24 +240,22 @@
             // 
             // btnSimpanAkun
             // 
-            this.btnSimpanAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnSimpanAkun.Location = new System.Drawing.Point(111, 183);
             this.btnSimpanAkun.Name = "btnSimpanAkun";
             this.btnSimpanAkun.Size = new System.Drawing.Size(75, 23);
             this.btnSimpanAkun.TabIndex = 3;
             this.btnSimpanAkun.Text = "Simpan";
-            this.btnSimpanAkun.UseVisualStyleBackColor = false;
+            this.btnSimpanAkun.UseVisualStyleBackColor = true;
             this.btnSimpanAkun.Click += new System.EventHandler(this.btnSimpanAkun_Click);
             // 
             // btnResetAkun
             // 
-            this.btnResetAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnResetAkun.Location = new System.Drawing.Point(28, 183);
             this.btnResetAkun.Name = "btnResetAkun";
             this.btnResetAkun.Size = new System.Drawing.Size(75, 23);
             this.btnResetAkun.TabIndex = 2;
             this.btnResetAkun.Text = "Reset";
-            this.btnResetAkun.UseVisualStyleBackColor = false;
+            this.btnResetAkun.UseVisualStyleBackColor = true;
             this.btnResetAkun.Click += new System.EventHandler(this.btnResetAkun_Click);
             // 
             // panel3
@@ -321,7 +278,7 @@
             this.Load += new System.EventHandler(this.Akun_Load);
             this.panel1.ResumeLayout(false);
             this.dgContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgAkunMetro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAkun)).EndInit();
             this.findHeader.ResumeLayout(false);
             this.findHeader.PerformLayout();
             this.bootomContent.ResumeLayout(false);
@@ -344,6 +301,7 @@
         private System.Windows.Forms.TextBox tbNewPassAkun;
         private System.Windows.Forms.Label newPass;
         private System.Windows.Forms.TextBox tbOldPassAkun;
+        private System.Windows.Forms.DataGridView dgAkun;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCariAkun;
         private System.Windows.Forms.TextBox tbCariAkun;
@@ -352,7 +310,5 @@
         private MetroFramework.Controls.MetroPanel bootomContent;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label userlabel;
-        private MetroFramework.Controls.MetroGrid dgAkun1;
-        private MetroFramework.Controls.MetroGrid dgAkunMetro;
     }
 }

@@ -112,35 +112,32 @@
             // 
             // buttonSimpan
             // 
-            this.buttonSimpan.BackColor = System.Drawing.Color.LightBlue;
             this.buttonSimpan.Location = new System.Drawing.Point(100, 205);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpan.TabIndex = 15;
             this.buttonSimpan.Text = "Simpan";
-            this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.UseVisualStyleBackColor = true;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonReset
             // 
-            this.buttonReset.BackColor = System.Drawing.Color.LightBlue;
             this.buttonReset.Location = new System.Drawing.Point(17, 205);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(75, 23);
             this.buttonReset.TabIndex = 14;
             this.buttonReset.Text = "Reset";
-            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // buttonCari
             // 
-            this.buttonCari.BackColor = System.Drawing.Color.LightBlue;
             this.buttonCari.Location = new System.Drawing.Point(302, 44);
             this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(75, 23);
+            this.buttonCari.Size = new System.Drawing.Size(77, 23);
             this.buttonCari.TabIndex = 18;
             this.buttonCari.Text = "Cari";
-            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.UseVisualStyleBackColor = true;
             this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // labelCari
@@ -162,38 +159,35 @@
             // 
             // buttonInput
             // 
-            this.buttonInput.BackColor = System.Drawing.Color.LightBlue;
             this.buttonInput.Location = new System.Drawing.Point(8, 5);
             this.buttonInput.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInput.Name = "buttonInput";
             this.buttonInput.Size = new System.Drawing.Size(75, 23);
             this.buttonInput.TabIndex = 21;
             this.buttonInput.Text = "Input";
-            this.buttonInput.UseVisualStyleBackColor = false;
+            this.buttonInput.UseVisualStyleBackColor = true;
             this.buttonInput.Click += new System.EventHandler(this.buttonInput_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.LightBlue;
             this.buttonEdit.Location = new System.Drawing.Point(99, 5);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 20;
             this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnHapusCbg
             // 
-            this.btnHapusCbg.BackColor = System.Drawing.Color.LightBlue;
             this.btnHapusCbg.Location = new System.Drawing.Point(193, 5);
             this.btnHapusCbg.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapusCbg.Name = "btnHapusCbg";
             this.btnHapusCbg.Size = new System.Drawing.Size(75, 23);
             this.btnHapusCbg.TabIndex = 22;
             this.btnHapusCbg.Text = "Hapus";
-            this.btnHapusCbg.UseVisualStyleBackColor = false;
+            this.btnHapusCbg.UseVisualStyleBackColor = true;
             this.btnHapusCbg.Click += new System.EventHandler(this.btnHapusCbg_Click);
             // 
             // panel1
@@ -238,7 +232,6 @@
             // 
             this.dataCabang.AllowUserToResizeRows = false;
             this.dataCabang.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataCabang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataCabang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataCabang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

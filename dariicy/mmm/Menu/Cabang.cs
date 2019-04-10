@@ -52,11 +52,9 @@ namespace BengkelAtma.Menu
         private async void Cabang_Load(object sender, EventArgs e)
         {
             disableInput();
-            dataCabang.DataSource = await GetData();
-            dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            dataCabang.DataBindingComplete += (o, _) =>
+            dataCabangMetro.DataSource = await GetData();
+            dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataCabangMetro.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
                 if (dataGridView != null)
@@ -116,10 +114,9 @@ namespace BengkelAtma.Menu
                     {
                         var a = await response.Content.ReadAsStringAsync();
                         Debug.WriteLine(a);
-                        dataCabang.DataSource = await GetData();
-                        dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                        dataCabang.DataBindingComplete += (o, _) =>
+                        dataCabangMetro.DataSource = await GetData();
+                        dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dataCabangMetro.DataBindingComplete += (o, _) =>
                         {
                             var dataGridView = o as DataGridView;
                             if (dataGridView != null)
@@ -144,10 +141,9 @@ namespace BengkelAtma.Menu
                     $"api/branches/{branch.id_branch}", branch);
                     response.EnsureSuccessStatusCode();
                     branch = await response.Content.ReadAsAsync<Branch>();
-                    dataCabang.DataSource = await GetData();
-                    dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                    dataCabang.DataBindingComplete += (o, _) =>
+                    dataCabangMetro.DataSource = await GetData();
+                    dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataCabangMetro.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -156,7 +152,6 @@ namespace BengkelAtma.Menu
                             dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                         }
                     };
-
                     MessageBox.Show("Berhasil Update Data Cabang");
                 }
 
@@ -170,27 +165,26 @@ namespace BengkelAtma.Menu
             disableInput();
             string searchValue = tbCari.Text;
 
-            dataCabang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataCabangMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCari.Text.Trim() != "")
                 {
-                    foreach (DataGridViewRow row in dataCabang.Rows)
+                    foreach (DataGridViewRow row in dataCabangMetro.Rows)
                     {
                         if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                            
-                            ((DataTable)dataCabang.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
+                            ((DataTable)dataCabangMetro.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
                             break;
                         }
                     }
                 }
                 else
                 {
-                    dataCabang.DataSource = await GetData();
-                    dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                    dataCabang.DataBindingComplete += (o, _) =>
+                    dataCabangMetro.DataSource = await GetData();
+                    dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataCabangMetro.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -205,10 +199,9 @@ namespace BengkelAtma.Menu
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
-                dataCabang.DataSource = await GetData();
-                dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                dataCabang.DataBindingComplete += (o, _) =>
+                dataCabangMetro.DataSource = await GetData();
+                dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataCabangMetro.DataBindingComplete += (o, _) =>
                 {
                     var dataGridView = o as DataGridView;
                     if (dataGridView != null)
@@ -222,12 +215,12 @@ namespace BengkelAtma.Menu
 
         private void dataCabang_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Tab && dataCabang.CurrentCell.ColumnIndex == 1)
+            if (e.KeyCode == Keys.Tab && dataCabangMetro.CurrentCell.ColumnIndex == 1)
             {
                 e.Handled = true;
-                DataGridViewCell cell = dataCabang.Rows[0].Cells[0];
-                dataCabang.CurrentCell = cell;
-                dataCabang.BeginEdit(true);
+                DataGridViewCell cell = dataCabangMetro.Rows[0].Cells[0];
+                dataCabangMetro.CurrentCell = cell;
+                dataCabangMetro.BeginEdit(true);
             }
         }
 
@@ -235,20 +228,19 @@ namespace BengkelAtma.Menu
         {
             try
             {
-                dataCabang.Rows[e.RowIndex].Selected = true;
-                dataCabang.CurrentCell = dataCabang.Rows[e.RowIndex].Cells[1];
+                dataCabangMetro.Rows[e.RowIndex].Selected = true;
+                dataCabangMetro.CurrentCell = dataCabangMetro.Rows[e.RowIndex].Cells[1];
 
 
-                Branch branch = new Branch { id_branch = Convert.ToInt16(dataCabang.Rows[e.RowIndex].Cells["id_branch"].Value), branch_name = Convert.ToString(dataCabang.Rows[e.RowIndex].Cells["branch_name"].Value), branch_address = Convert.ToString(dataCabang.Rows[e.RowIndex].Cells["branch_address"].Value), branch_phone_number = Convert.ToString(dataCabang.Rows[e.RowIndex].Cells["branch_phone_number"].Value) };
+                Branch branch = new Branch { id_branch = Convert.ToInt16(dataCabangMetro.Rows[e.RowIndex].Cells["id_branch"].Value), branch_name = Convert.ToString(dataCabangMetro.Rows[e.RowIndex].Cells["branch_name"].Value), branch_address = Convert.ToString(dataCabangMetro.Rows[e.RowIndex].Cells["branch_address"].Value), branch_phone_number = Convert.ToString(dataCabangMetro.Rows[e.RowIndex].Cells["branch_phone_number"].Value) };
 
                 HttpResponseMessage response = await client.PutAsJsonAsync(
                 $"api/branches/{branch.id_branch}", branch);
                 response.EnsureSuccessStatusCode();
                 branch = await response.Content.ReadAsAsync<Branch>();
-                dataCabang.DataSource = await GetData();
-                dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                dataCabang.DataBindingComplete += (o, _) =>
+                dataCabangMetro.DataSource = await GetData();
+                dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataCabangMetro.DataBindingComplete += (o, _) =>
                 {
                     var dataGridView = o as DataGridView;
                     if (dataGridView != null)
@@ -257,7 +249,7 @@ namespace BengkelAtma.Menu
                         dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     }
                 };
-                //((DataTable)dataCabang.DataSource).AcceptChanges();
+                //((DataTable)dataCabangMetro.DataSource).AcceptChanges();
 
                 MessageBox.Show("Berhasil Update Data Cabang");
             }
@@ -276,12 +268,11 @@ namespace BengkelAtma.Menu
                 {
           
                     HttpResponseMessage response = await client.DeleteAsync(
-                    $"api/branches/{Convert.ToInt16(dataCabang.SelectedRows[0].Cells["id_branch"].Value)}");
+                    $"api/branches/{Convert.ToInt16(dataCabangMetro.SelectedRows[0].Cells["id_branch"].Value)}");
                     response.EnsureSuccessStatusCode();
-                    dataCabang.DataSource = await GetData();
-                    dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                    dataCabang.DataBindingComplete += (o, _) =>
+                    dataCabangMetro.DataSource = await GetData();
+                    dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataCabangMetro.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -315,7 +306,7 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
-            foreach (DataGridViewRow row in dataCabang.Rows)
+            foreach (DataGridViewRow row in dataCabangMetro.Rows)
             {
                 if (row.Selected==true)
                 {
@@ -324,7 +315,7 @@ namespace BengkelAtma.Menu
                     tbAlamatCabang.Text = row.Cells[2].Value.ToString();
                     tbNomorTeleponCabang.Text = row.Cells[3].Value.ToString();
                     row.Selected = true;
-                    ((DataTable)dataCabang.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
+                    ((DataTable)dataCabangMetro.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
                     break;
                 }
             }
@@ -338,8 +329,8 @@ namespace BengkelAtma.Menu
 
         private async void btnHapusCbg_Click(object sender, EventArgs e)
         {
-            dataCabang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            foreach (DataGridViewRow row in dataCabang.SelectedRows)
+            dataCabangMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dataCabangMetro.SelectedRows)
             {
                 if (row.Selected == true)
                 {
@@ -350,18 +341,18 @@ namespace BengkelAtma.Menu
                         {
 
                             HttpResponseMessage response = await client.DeleteAsync(
-                            $"api/branches/{Convert.ToInt16(dataCabang.SelectedRows[0].Cells["id_branch"].Value)}");
+                            $"api/branches/{Convert.ToInt16(dataCabangMetro.SelectedRows[0].Cells["id_branch"].Value)}");
                             response.EnsureSuccessStatusCode();
-                            dataCabang.DataSource = await GetData();
-                            dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                            dataCabang.DataBindingComplete += (o, _) =>
+                            dataCabangMetro.DataSource = await GetData();
+                            dataCabangMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataCabangMetro.DataBindingComplete += (o, _) =>
                             {
                                 var dataGridView = o as DataGridView;
                                 if (dataGridView != null)
                                 {
                                     dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                                     dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
                                 }
                             };
                             //Some task…  
@@ -383,7 +374,7 @@ namespace BengkelAtma.Menu
 
         private void dataCabang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataCabang.Rows[e.RowIndex].ReadOnly = true;
+            dataCabangMetro.Rows[e.RowIndex].ReadOnly = true;
         }
     }
 }
