@@ -38,7 +38,6 @@ namespace BengkelAtma
         public void enableProfil()
         {
             profile1.Show();
-            CenterControlInParent(profile1);
            
             //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
@@ -91,12 +90,6 @@ namespace BengkelAtma
         private void btnProfil_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void CenterControlInParent(Control ctrlToCenter)
-        {
-            ctrlToCenter.Left = (ctrlToCenter.Parent.Width - ctrlToCenter.Width) / 2;
-            ctrlToCenter.Top = (ctrlToCenter.Parent.Height - ctrlToCenter.Height) / 2;
         }
     }
 }

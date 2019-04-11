@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbNamaCabang = new System.Windows.Forms.TextBox();
             this.labelCabang = new System.Windows.Forms.Label();
             this.tbAlamatCabang = new System.Windows.Forms.TextBox();
@@ -39,6 +36,7 @@
             this.labelNomorTelepon = new System.Windows.Forms.Label();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
+            this.dataCabang = new System.Windows.Forms.DataGridView();
             this.buttonCari = new System.Windows.Forms.Button();
             this.labelCari = new System.Windows.Forms.Label();
             this.tbCari = new System.Windows.Forms.TextBox();
@@ -47,15 +45,14 @@
             this.btnHapusCbg = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Kanan = new System.Windows.Forms.Panel();
-            this.dgContainer = new MetroFramework.Controls.MetroPanel();
-            this.dataCabang = new MetroFramework.Controls.MetroGrid();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Kiri = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCabang)).BeginInit();
             this.panel1.SuspendLayout();
             this.Kanan.SuspendLayout();
-            this.dgContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCabang)).BeginInit();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.Kiri.SuspendLayout();
@@ -112,35 +109,50 @@
             // 
             // buttonSimpan
             // 
-            this.buttonSimpan.BackColor = System.Drawing.Color.LightBlue;
             this.buttonSimpan.Location = new System.Drawing.Point(100, 205);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpan.TabIndex = 15;
             this.buttonSimpan.Text = "Simpan";
-            this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.UseVisualStyleBackColor = true;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonReset
             // 
-            this.buttonReset.BackColor = System.Drawing.Color.LightBlue;
             this.buttonReset.Location = new System.Drawing.Point(17, 205);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(75, 23);
             this.buttonReset.TabIndex = 14;
             this.buttonReset.Text = "Reset";
-            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // dataCabang
+            // 
+            this.dataCabang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataCabang.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataCabang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataCabang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataCabang.Location = new System.Drawing.Point(10, 10);
+            this.dataCabang.Margin = new System.Windows.Forms.Padding(2);
+            this.dataCabang.Name = "dataCabang";
+            this.dataCabang.RowTemplate.Height = 24;
+            this.dataCabang.Size = new System.Drawing.Size(403, 254);
+            this.dataCabang.TabIndex = 16;
+            this.dataCabang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellClick);
+            this.dataCabang.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellEndEdit);
+            this.dataCabang.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataCabang_UserDeletingRow);
+            this.dataCabang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataCabang_KeyDown);
             // 
             // buttonCari
             // 
-            this.buttonCari.BackColor = System.Drawing.Color.LightBlue;
             this.buttonCari.Location = new System.Drawing.Point(302, 44);
             this.buttonCari.Name = "buttonCari";
-            this.buttonCari.Size = new System.Drawing.Size(75, 23);
+            this.buttonCari.Size = new System.Drawing.Size(77, 23);
             this.buttonCari.TabIndex = 18;
             this.buttonCari.Text = "Cari";
-            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.UseVisualStyleBackColor = true;
             this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
             // labelCari
@@ -162,38 +174,35 @@
             // 
             // buttonInput
             // 
-            this.buttonInput.BackColor = System.Drawing.Color.LightBlue;
             this.buttonInput.Location = new System.Drawing.Point(8, 5);
             this.buttonInput.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInput.Name = "buttonInput";
             this.buttonInput.Size = new System.Drawing.Size(75, 23);
             this.buttonInput.TabIndex = 21;
             this.buttonInput.Text = "Input";
-            this.buttonInput.UseVisualStyleBackColor = false;
+            this.buttonInput.UseVisualStyleBackColor = true;
             this.buttonInput.Click += new System.EventHandler(this.buttonInput_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.LightBlue;
             this.buttonEdit.Location = new System.Drawing.Point(99, 5);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 20;
             this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnHapusCbg
             // 
-            this.btnHapusCbg.BackColor = System.Drawing.Color.LightBlue;
             this.btnHapusCbg.Location = new System.Drawing.Point(193, 5);
             this.btnHapusCbg.Margin = new System.Windows.Forms.Padding(2);
             this.btnHapusCbg.Name = "btnHapusCbg";
             this.btnHapusCbg.Size = new System.Drawing.Size(75, 23);
             this.btnHapusCbg.TabIndex = 22;
             this.btnHapusCbg.Text = "Hapus";
-            this.btnHapusCbg.UseVisualStyleBackColor = false;
+            this.btnHapusCbg.UseVisualStyleBackColor = true;
             this.btnHapusCbg.Click += new System.EventHandler(this.btnHapusCbg_Click);
             // 
             // panel1
@@ -208,7 +217,7 @@
             // 
             // Kanan
             // 
-            this.Kanan.Controls.Add(this.dgContainer);
+            this.Kanan.Controls.Add(this.panel6);
             this.Kanan.Controls.Add(this.panel5);
             this.Kanan.Controls.Add(this.panel4);
             this.Kanan.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -217,71 +226,16 @@
             this.Kanan.Size = new System.Drawing.Size(423, 405);
             this.Kanan.TabIndex = 1;
             // 
-            // dgContainer
+            // panel6
             // 
-            this.dgContainer.BackColor = System.Drawing.Color.White;
-            this.dgContainer.Controls.Add(this.dataCabang);
-            this.dgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgContainer.HorizontalScrollbarBarColor = true;
-            this.dgContainer.HorizontalScrollbarHighlightOnWheel = false;
-            this.dgContainer.HorizontalScrollbarSize = 10;
-            this.dgContainer.Location = new System.Drawing.Point(0, 69);
-            this.dgContainer.Name = "dgContainer";
-            this.dgContainer.Padding = new System.Windows.Forms.Padding(10);
-            this.dgContainer.Size = new System.Drawing.Size(423, 274);
-            this.dgContainer.TabIndex = 16;
-            this.dgContainer.VerticalScrollbarBarColor = true;
-            this.dgContainer.VerticalScrollbarHighlightOnWheel = false;
-            this.dgContainer.VerticalScrollbarSize = 10;
-            // 
-            // dataCabang
-            // 
-            this.dataCabang.AllowUserToResizeRows = false;
-            this.dataCabang.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataCabang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataCabang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataCabang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCabang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataCabang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataCabang.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataCabang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataCabang.EnableHeadersVisualStyles = false;
-            this.dataCabang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dataCabang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataCabang.Location = new System.Drawing.Point(10, 10);
-            this.dataCabang.Name = "dataCabang";
-            this.dataCabang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCabang.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataCabang.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataCabang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCabang.Size = new System.Drawing.Size(403, 254);
-            this.dataCabang.Style = MetroFramework.MetroColorStyle.Blue;
-            this.dataCabang.TabIndex = 2;
-            this.dataCabang.UseCustomBackColor = true;
-            this.dataCabang.UseStyleColors = true;
-            this.dataCabang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCabang_CellClick);
-            this.dataCabang.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataCabang_UserDeletingRow);
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.dataCabang);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 69);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(10);
+            this.panel6.Size = new System.Drawing.Size(423, 274);
+            this.panel6.TabIndex = 2;
             // 
             // panel5
             // 
@@ -332,10 +286,10 @@
             this.Name = "Cabang";
             this.Size = new System.Drawing.Size(717, 405);
             this.Load += new System.EventHandler(this.Cabang_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataCabang)).EndInit();
             this.panel1.ResumeLayout(false);
             this.Kanan.ResumeLayout(false);
-            this.dgContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataCabang)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -355,6 +309,7 @@
         private System.Windows.Forms.Label labelNomorTelepon;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.DataGridView dataCabang;
         private System.Windows.Forms.Button buttonCari;
         private System.Windows.Forms.Label labelCari;
         private System.Windows.Forms.TextBox tbCari;
@@ -363,10 +318,9 @@
         private System.Windows.Forms.Button btnHapusCbg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Kanan;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel Kiri;
-        private MetroFramework.Controls.MetroPanel dgContainer;
-        private MetroFramework.Controls.MetroGrid dataCabang;
     }
 }

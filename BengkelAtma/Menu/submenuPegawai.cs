@@ -78,10 +78,10 @@ namespace BengkelAtma.Menu
             DataTable t = await GetPegawai();
             t.Columns.Remove("id_branch");
             t.Columns.Remove("id_role");
-            dataPegawaiMetro.DataSource = t;
-            dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataPegawai.DataSource = t;
+            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataPegawaiMetro.DataBindingComplete += (o, _) =>
+            dataPegawai.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
                 if (dataGridView != null)
@@ -199,10 +199,10 @@ namespace BengkelAtma.Menu
                             DataTable t = await GetPegawai();
                             t.Columns.Remove("id_branch");
                             t.Columns.Remove("id_role");
-                            dataPegawaiMetro.DataSource = t;
-                            dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataPegawai.DataSource = t;
+                            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                            dataPegawaiMetro.DataBindingComplete += (o, _) =>
+                            dataPegawai.DataBindingComplete += (o, _) =>
                             {
                                 var dataGridView = o as DataGridView;
                                 if (dataGridView != null)
@@ -228,10 +228,10 @@ namespace BengkelAtma.Menu
                         DataTable t = await GetPegawai();
                         t.Columns.Remove("id_branch");
                         t.Columns.Remove("id_role");
-                        dataPegawaiMetro.DataSource = t;
-                        dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dataPegawai.DataSource = t;
+                        dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                        dataPegawaiMetro.DataBindingComplete += (o, _) =>
+                        dataPegawai.DataBindingComplete += (o, _) =>
                         {
                             var dataGridView = o as DataGridView;
                             if (dataGridView != null)
@@ -260,12 +260,12 @@ namespace BengkelAtma.Menu
             disableInput();
             string searchValue = tbCariPeg.Text;
 
-            dataPegawaiMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataPegawai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCariPeg.Text.Trim() != "")
                 {
-                    foreach (DataGridViewRow row in dataPegawaiMetro.Rows)
+                    foreach (DataGridViewRow row in dataPegawai.Rows)
                     {
                         if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
@@ -276,7 +276,7 @@ namespace BengkelAtma.Menu
                             //tbNomorTeleponPegawai.Text = row.Cells[3].Value.ToString();
                             //tbGajiPegawai.Text = row.Cells[4].Value.ToString();
                             row.Selected = true;
-                            ((DataTable)dataPegawaiMetro.DataSource).DefaultView.RowFilter = string.Format("name like '%{0}%'", tbCariPeg.Text.Trim().Replace("'", "''"));
+                            ((DataTable)dataPegawai.DataSource).DefaultView.RowFilter = string.Format("name like '%{0}%'", tbCariPeg.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
                             
                             break;
@@ -288,9 +288,9 @@ namespace BengkelAtma.Menu
                     DataTable t = await GetPegawai();
                     t.Columns.Remove("id_branch");
                     t.Columns.Remove("id_role");
-                    dataPegawaiMetro.DataSource = t;
-                    dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dataPegawaiMetro.DataBindingComplete += (o, _) =>
+                    dataPegawai.DataSource = t;
+                    dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataPegawai.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -308,10 +308,10 @@ namespace BengkelAtma.Menu
                 DataTable t = await GetPegawai();
                 t.Columns.Remove("id_branch");
                 t.Columns.Remove("id_role");
-                dataPegawaiMetro.DataSource = t;
-                dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataPegawai.DataSource = t;
+                dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                dataPegawaiMetro.DataBindingComplete += (o, _) =>
+                dataPegawai.DataBindingComplete += (o, _) =>
                 {
                     var dataGridView = o as DataGridView;
                     if (dataGridView != null)
@@ -335,7 +335,7 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
-            foreach (DataGridViewRow row in dataPegawaiMetro.Rows)
+            foreach (DataGridViewRow row in dataPegawai.Rows)
             {
                 if (row.Selected == true)
                 {
@@ -357,7 +357,7 @@ namespace BengkelAtma.Menu
             clearInput();
         }
 
-        private async void dataPegawaiMetro_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        private async void dataPegawai_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             try
             {
@@ -366,13 +366,13 @@ namespace BengkelAtma.Menu
                 {
 
                     HttpResponseMessage response = await client.DeleteAsync(
-                    $"api/employees/{Convert.ToInt16(dataPegawaiMetro.SelectedRows[0].Cells["id_employee"].Value)}");
+                    $"api/employees/{Convert.ToInt16(dataPegawai.SelectedRows[0].Cells["id_employee"].Value)}");
                     response.EnsureSuccessStatusCode();
                     DataTable t = await GetPegawai();
                     t.Columns.Remove("id_branch");
                     t.Columns.Remove("id_role");
-                    dataPegawaiMetro.DataSource = t;
-                    dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataPegawai.DataSource = t;
+                    dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                     //Some task…  
                 }
                 if (res == DialogResult.Cancel)
@@ -387,16 +387,16 @@ namespace BengkelAtma.Menu
             }
         }
 
-        private void dataPegawaiMetro_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataPegawai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataPegawaiMetro.Rows[e.RowIndex].ReadOnly = true;
+            dataPegawai.Rows[e.RowIndex].ReadOnly = true;
         }
 
         private async void btnHapusPeg_Click(object sender, EventArgs e)
         {
 
-            dataPegawaiMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            foreach (DataGridViewRow row in dataPegawaiMetro.SelectedRows)
+            dataPegawai.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dataPegawai.SelectedRows)
             {
                 if (row.Selected == true)
                 {
@@ -407,13 +407,13 @@ namespace BengkelAtma.Menu
                         {
 
                             HttpResponseMessage response = await client.DeleteAsync(
-                            $"api/employees/{Convert.ToInt16(dataPegawaiMetro.SelectedRows[0].Cells["id_employee"].Value)}");
+                            $"api/employees/{Convert.ToInt16(dataPegawai.SelectedRows[0].Cells["id_employee"].Value)}");
                             response.EnsureSuccessStatusCode();
                             DataTable t = await GetPegawai();
                             t.Columns.Remove("id_branch");
                             t.Columns.Remove("id_role");
-                            dataPegawaiMetro.DataSource = t;
-                            dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataPegawai.DataSource = t;
+                            dataPegawai.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                             //Some task…  
                         }
                         if (res == DialogResult.Cancel)

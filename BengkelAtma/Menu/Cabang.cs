@@ -54,17 +54,6 @@ namespace BengkelAtma.Menu
             disableInput();
             dataCabang.DataSource = await GetData();
             dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            dataCabang.DataBindingComplete += (o, _) =>
-            {
-                var dataGridView = o as DataGridView;
-                if (dataGridView != null)
-                {
-                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-            };
         }
 
         public class Branch
@@ -119,16 +108,6 @@ namespace BengkelAtma.Menu
                         dataCabang.DataSource = await GetData();
                         dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                        dataCabang.DataBindingComplete += (o, _) =>
-                        {
-                            var dataGridView = o as DataGridView;
-                            if (dataGridView != null)
-                            {
-                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            }
-                        };
-
                         MessageBox.Show("Berhasil Input Data Cabang");
                     }
                     else
@@ -146,16 +125,6 @@ namespace BengkelAtma.Menu
                     branch = await response.Content.ReadAsAsync<Branch>();
                     dataCabang.DataSource = await GetData();
                     dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                    dataCabang.DataBindingComplete += (o, _) =>
-                    {
-                        var dataGridView = o as DataGridView;
-                        if (dataGridView != null)
-                        {
-                            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        }
-                    };
 
                     MessageBox.Show("Berhasil Update Data Cabang");
                 }
@@ -189,16 +158,6 @@ namespace BengkelAtma.Menu
                 {
                     dataCabang.DataSource = await GetData();
                     dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                    dataCabang.DataBindingComplete += (o, _) =>
-                    {
-                        var dataGridView = o as DataGridView;
-                        if (dataGridView != null)
-                        {
-                            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        }
-                    };
                 }
 
             }
@@ -207,16 +166,6 @@ namespace BengkelAtma.Menu
                 MessageBox.Show(exc.Message);
                 dataCabang.DataSource = await GetData();
                 dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                dataCabang.DataBindingComplete += (o, _) =>
-                {
-                    var dataGridView = o as DataGridView;
-                    if (dataGridView != null)
-                    {
-                        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                        dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    }
-                };
             }
         }
 
@@ -247,16 +196,6 @@ namespace BengkelAtma.Menu
                 branch = await response.Content.ReadAsAsync<Branch>();
                 dataCabang.DataSource = await GetData();
                 dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                dataCabang.DataBindingComplete += (o, _) =>
-                {
-                    var dataGridView = o as DataGridView;
-                    if (dataGridView != null)
-                    {
-                        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                        dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    }
-                };
                 //((DataTable)dataCabang.DataSource).AcceptChanges();
 
                 MessageBox.Show("Berhasil Update Data Cabang");
@@ -280,16 +219,6 @@ namespace BengkelAtma.Menu
                     response.EnsureSuccessStatusCode();
                     dataCabang.DataSource = await GetData();
                     dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                    dataCabang.DataBindingComplete += (o, _) =>
-                    {
-                        var dataGridView = o as DataGridView;
-                        if (dataGridView != null)
-                        {
-                            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                        }
-                    };
                     //Some task…  
                 }
                 if (res == DialogResult.Cancel)
@@ -354,16 +283,6 @@ namespace BengkelAtma.Menu
                             response.EnsureSuccessStatusCode();
                             dataCabang.DataSource = await GetData();
                             dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                            dataCabang.DataBindingComplete += (o, _) =>
-                            {
-                                var dataGridView = o as DataGridView;
-                                if (dataGridView != null)
-                                {
-                                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                                }
-                            };
                             //Some task…  
                         }
                         if (res == DialogResult.Cancel)
