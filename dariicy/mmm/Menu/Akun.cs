@@ -63,11 +63,10 @@ namespace BengkelAtma.Menu
             DataTable t = await GetAkun();
             t.Columns.Remove("role");
             t.Columns.Remove("name");
-            dgAkunMetro.DataSource = t;
-            dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-            dgAkunMetro.Columns[1].HeaderText = "Nama";
-            dgAkunMetro.Columns[dgAkunMetro.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgAkunMetro.DataBindingComplete += (o, _) =>
+            t.Columns.Remove("id_employee");
+            dgAkun.DataSource = t;
+            dgAkun.Columns[dgAkun.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgAkun.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
                 if (dataGridView != null)
@@ -131,10 +130,9 @@ namespace BengkelAtma.Menu
                             DataTable t = await GetAkun();
                             t.Columns.Remove("role");
                             t.Columns.Remove("name");
-                            dgAkunMetro.DataSource = t;
-                            dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-                            dgAkunMetro.Columns[1].HeaderText = "Nama";
-                            dgAkunMetro.DataBindingComplete += (o, _) =>
+                            t.Columns.Remove("id_employee");
+                            dgAkun.DataSource = t;
+                            dgAkun.DataBindingComplete += (o, _) =>
                             {
                                 var dataGridView = o as DataGridView;
                                 if (dataGridView != null)
@@ -160,13 +158,12 @@ namespace BengkelAtma.Menu
                         DataTable t = await GetAkun();
                         t.Columns.Remove("role");
                         t.Columns.Remove("name");
-                        dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-                        dgAkunMetro.Columns[1].HeaderText = "Nama";
-                        dgAkunMetro.DataSource = t;
-                        dgAkunMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        t.Columns.Remove("id_employee");
+                        dgAkun.DataSource = t;
+                        dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
-                        dgAkunMetro.DataBindingComplete += (o, _) =>
+                        dgAkun.DataBindingComplete += (o, _) =>
                         {
                             var dataGridView = o as DataGridView;
                             if (dataGridView != null)
@@ -194,12 +191,12 @@ namespace BengkelAtma.Menu
         {
             string searchValue = tbCariAkun.Text;
             disableInput();
-            //dgAkunMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCariAkun.Text.Trim() != "")
                 {
-                    foreach (DataGridViewRow row in dgAkunMetro.Rows)
+                    foreach (DataGridViewRow row in dgAkun.Rows)
                     {
                         if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
@@ -208,7 +205,7 @@ namespace BengkelAtma.Menu
                             //userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
                             //userlabel.Visible = true;
                             //row.Selected = true;
-                            ((DataTable)dgAkunMetro.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
+                            ((DataTable)dgAkun.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
 
                             break;
@@ -218,14 +215,13 @@ namespace BengkelAtma.Menu
                 else
                 {
                     DataTable t = await GetAkun();
-                    dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-                    dgAkunMetro.Columns[1].HeaderText = "Nama";
                     t.Columns.Remove("role");
                     t.Columns.Remove("name");
-                    dgAkunMetro.DataSource = t;
-                    dgAkunMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    t.Columns.Remove("id_employee");
+                    dgAkun.DataSource = t;
+                    dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                    dgAkunMetro.DataBindingComplete += (o, _) =>
+                    dgAkun.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -244,12 +240,11 @@ namespace BengkelAtma.Menu
                 DataTable t = await GetAkun();
                 t.Columns.Remove("role");
                 t.Columns.Remove("name");
-                dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-                dgAkunMetro.Columns[1].HeaderText = "Nama";
-                dgAkunMetro.DataSource = t;
-                dgAkunMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                t.Columns.Remove("id_employee");
+                dgAkun.DataSource = t;
+                dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-                dgAkunMetro.DataBindingComplete += (o, _) =>
+                dgAkun.DataBindingComplete += (o, _) =>
                 {
                     var dataGridView = o as DataGridView;
                     if (dataGridView != null)
@@ -275,8 +270,8 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
-            dgAkunMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            foreach (DataGridViewRow row in dgAkunMetro.Rows)
+            dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dgAkun.Rows)
             {
                 if (row.Selected==true)
                 {
@@ -285,7 +280,7 @@ namespace BengkelAtma.Menu
                     userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
                     userlabel.Visible = true;
                     
-                    ((DataTable)dgAkunMetro.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
+                    ((DataTable)dgAkun.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
                     Debug.WriteLine("masuk edit");
 
                     break;
@@ -300,7 +295,7 @@ namespace BengkelAtma.Menu
         }
 
 
-        private async void dgAkunMetro_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        private async void dgAkun_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             try
             {
@@ -309,15 +304,14 @@ namespace BengkelAtma.Menu
                 {
 
                     HttpResponseMessage response = await client.DeleteAsync(
-                    $"api/users/{Convert.ToInt16(dgAkunMetro.SelectedRows[0].Cells["id"].Value)}");
+                    $"api/users/{Convert.ToInt16(dgAkun.SelectedRows[0].Cells["id"].Value)}");
                     response.EnsureSuccessStatusCode();
                     DataTable t = await GetAkun();
-                    dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-                    dgAkunMetro.Columns[1].HeaderText = "Nama";
                     t.Columns.Remove("role");
                     t.Columns.Remove("name");
-                    dgAkunMetro.DataSource = t;
-                    dgAkunMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    t.Columns.Remove("id_employee");
+                    dgAkun.DataSource = t;
+                    dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                     //Some task…  
                 }
                 if (res == DialogResult.Cancel)
@@ -332,16 +326,16 @@ namespace BengkelAtma.Menu
             }
         }
 
-        private void dgAkunMetro_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgAkun_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgAkunMetro.Rows[e.RowIndex].ReadOnly = true;
-            var a = dgAkunMetro.Rows;
+            dgAkun.Rows[e.RowIndex].ReadOnly = true;
+            var a = dgAkun.Rows;
         }
 
         private async void bootomContent_Click(object sender, EventArgs e)
         {
-            dgAkunMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            foreach (DataGridViewRow row in dgAkunMetro.SelectedRows)
+            dgAkun.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dgAkun.SelectedRows)
             {   if (row.Selected == true)
                 {
                     try
@@ -351,21 +345,16 @@ namespace BengkelAtma.Menu
                         {
 
                             HttpResponseMessage response = await client.DeleteAsync(
-                            $"api/users/{Convert.ToInt16(dgAkunMetro.SelectedRows[0].Cells["id"].Value)}");
+                            $"api/users/{Convert.ToInt16(dgAkun.SelectedRows[0].Cells["id"].Value)}");
                             response.EnsureSuccessStatusCode();
                             DataTable t = await GetAkun();
-                            dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
-                            dgAkunMetro.Columns[1].HeaderText = "Nama";
                             t.Columns.Remove("role");
                             t.Columns.Remove("name");
-                            dgAkunMetro.DataSource = t;
-                            dgAkunMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            t.Columns.Remove("id_employee");
+                            dgAkun.DataSource = t;
+                            dgAkun.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                             //Some task…  
-                        }
-                        else if (res == DialogResult.Cancel)
-                        {
-                            break;
-                        }
+                        } 
                     }
                     catch (Exception exc)
                     {

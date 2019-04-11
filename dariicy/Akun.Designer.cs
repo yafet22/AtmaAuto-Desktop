@@ -91,7 +91,6 @@
             // 
             this.dgAkunMetro.AllowUserToResizeRows = false;
             this.dgAkunMetro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgAkunMetro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgAkunMetro.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgAkunMetro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -112,9 +111,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgAkunMetro.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgAkunMetro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgAkunMetro.EnableHeadersVisualStyles = false;
             this.dgAkunMetro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgAkunMetro.GridColor = System.Drawing.Color.White;
+            this.dgAkunMetro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgAkunMetro.Location = new System.Drawing.Point(10, 10);
             this.dgAkunMetro.Name = "dgAkunMetro";
             this.dgAkunMetro.ReadOnly = true;
@@ -155,13 +153,12 @@
             // 
             // btnCariAkun
             // 
-            this.btnCariAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnCariAkun.Location = new System.Drawing.Point(219, 53);
             this.btnCariAkun.Name = "btnCariAkun";
-            this.btnCariAkun.Size = new System.Drawing.Size(75, 23);
+            this.btnCariAkun.Size = new System.Drawing.Size(49, 23);
             this.btnCariAkun.TabIndex = 11;
             this.btnCariAkun.Text = "Cari";
-            this.btnCariAkun.UseVisualStyleBackColor = false;
+            this.btnCariAkun.UseVisualStyleBackColor = true;
             this.btnCariAkun.Click += new System.EventHandler(this.btnCariAkun_Click);
             // 
             // label1
@@ -201,24 +198,22 @@
             // 
             // btnEditAkun
             // 
-            this.btnEditAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditAkun.Location = new System.Drawing.Point(10, 5);
             this.btnEditAkun.Name = "btnEditAkun";
             this.btnEditAkun.Size = new System.Drawing.Size(75, 23);
             this.btnEditAkun.TabIndex = 0;
             this.btnEditAkun.Text = "Edit";
-            this.btnEditAkun.UseVisualStyleBackColor = false;
+            this.btnEditAkun.UseVisualStyleBackColor = true;
             this.btnEditAkun.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnDeleteAkun
             // 
-            this.btnDeleteAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteAkun.Location = new System.Drawing.Point(91, 5);
             this.btnDeleteAkun.Name = "btnDeleteAkun";
             this.btnDeleteAkun.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteAkun.TabIndex = 1;
             this.btnDeleteAkun.Text = "Hapus";
-            this.btnDeleteAkun.UseVisualStyleBackColor = false;
+            this.btnDeleteAkun.UseVisualStyleBackColor = true;
             this.btnDeleteAkun.Click += new System.EventHandler(this.bootomContent_Click);
             // 
             // panel2
@@ -281,24 +276,22 @@
             // 
             // btnSimpanAkun
             // 
-            this.btnSimpanAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnSimpanAkun.Location = new System.Drawing.Point(111, 183);
             this.btnSimpanAkun.Name = "btnSimpanAkun";
             this.btnSimpanAkun.Size = new System.Drawing.Size(75, 23);
             this.btnSimpanAkun.TabIndex = 3;
             this.btnSimpanAkun.Text = "Simpan";
-            this.btnSimpanAkun.UseVisualStyleBackColor = false;
+            this.btnSimpanAkun.UseVisualStyleBackColor = true;
             this.btnSimpanAkun.Click += new System.EventHandler(this.btnSimpanAkun_Click);
             // 
             // btnResetAkun
             // 
-            this.btnResetAkun.BackColor = System.Drawing.Color.LightBlue;
             this.btnResetAkun.Location = new System.Drawing.Point(28, 183);
             this.btnResetAkun.Name = "btnResetAkun";
             this.btnResetAkun.Size = new System.Drawing.Size(75, 23);
             this.btnResetAkun.TabIndex = 2;
             this.btnResetAkun.Text = "Reset";
-            this.btnResetAkun.UseVisualStyleBackColor = false;
+            this.btnResetAkun.UseVisualStyleBackColor = true;
             this.btnResetAkun.Click += new System.EventHandler(this.btnResetAkun_Click);
             // 
             // panel3

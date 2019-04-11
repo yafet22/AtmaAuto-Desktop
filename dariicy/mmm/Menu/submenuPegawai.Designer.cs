@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelNotel = new System.Windows.Forms.Label();
             this.btnResetPeg = new System.Windows.Forms.Button();
             this.findHeader = new MetroFramework.Controls.MetroPanel();
@@ -41,7 +38,7 @@
             this.labelGaji = new System.Windows.Forms.Label();
             this.tbNomorTeleponPegawai = new System.Windows.Forms.TextBox();
             this.dgContainer = new MetroFramework.Controls.MetroPanel();
-            this.dataPegawaiMetro = new MetroFramework.Controls.MetroGrid();
+            this.dataPegawai = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelJabatan = new System.Windows.Forms.Label();
             this.comboJabatan = new System.Windows.Forms.ComboBox();
@@ -53,14 +50,14 @@
             this.labelNama = new System.Windows.Forms.Label();
             this.btnSimpanPeg = new System.Windows.Forms.Button();
             this.bootomContent = new MetroFramework.Controls.MetroPanel();
-            this.btnHapusPeg = new System.Windows.Forms.Button();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnHapusPeg = new System.Windows.Forms.Button();
             this.findHeader.SuspendLayout();
             this.dgContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataPegawaiMetro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPegawai)).BeginInit();
             this.panel2.SuspendLayout();
             this.bootomContent.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -78,13 +75,12 @@
             // 
             // btnResetPeg
             // 
-            this.btnResetPeg.BackColor = System.Drawing.Color.LightBlue;
             this.btnResetPeg.Location = new System.Drawing.Point(21, 351);
             this.btnResetPeg.Name = "btnResetPeg";
             this.btnResetPeg.Size = new System.Drawing.Size(75, 23);
             this.btnResetPeg.TabIndex = 2;
             this.btnResetPeg.Text = "Reset";
-            this.btnResetPeg.UseVisualStyleBackColor = false;
+            this.btnResetPeg.UseVisualStyleBackColor = true;
             this.btnResetPeg.Click += new System.EventHandler(this.btnResetPeg_Click);
             // 
             // findHeader
@@ -107,13 +103,12 @@
             // 
             // btnCariPeg
             // 
-            this.btnCariPeg.BackColor = System.Drawing.Color.LightBlue;
             this.btnCariPeg.Location = new System.Drawing.Point(220, 53);
             this.btnCariPeg.Name = "btnCariPeg";
-            this.btnCariPeg.Size = new System.Drawing.Size(75, 23);
+            this.btnCariPeg.Size = new System.Drawing.Size(49, 23);
             this.btnCariPeg.TabIndex = 11;
             this.btnCariPeg.Text = "Cari";
-            this.btnCariPeg.UseVisualStyleBackColor = false;
+            this.btnCariPeg.UseVisualStyleBackColor = true;
             this.btnCariPeg.Click += new System.EventHandler(this.btnCariPeg_Click);
             // 
             // label1
@@ -159,7 +154,7 @@
             // dgContainer
             // 
             this.dgContainer.BackColor = System.Drawing.Color.White;
-            this.dgContainer.Controls.Add(this.dataPegawaiMetro);
+            this.dgContainer.Controls.Add(this.dataPegawai);
             this.dgContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgContainer.HorizontalScrollbarBarColor = true;
             this.dgContainer.HorizontalScrollbarHighlightOnWheel = false;
@@ -173,53 +168,19 @@
             this.dgContainer.VerticalScrollbarHighlightOnWheel = false;
             this.dgContainer.VerticalScrollbarSize = 10;
             // 
-            // dataPegawaiMetro
+            // dataPegawai
             // 
-            this.dataPegawaiMetro.AllowUserToResizeRows = false;
-            this.dataPegawaiMetro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataPegawaiMetro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataPegawaiMetro.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataPegawaiMetro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPegawaiMetro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataPegawaiMetro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataPegawaiMetro.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataPegawaiMetro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataPegawaiMetro.EnableHeadersVisualStyles = false;
-            this.dataPegawaiMetro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dataPegawaiMetro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataPegawaiMetro.Location = new System.Drawing.Point(10, 10);
-            this.dataPegawaiMetro.Name = "dataPegawaiMetro";
-            this.dataPegawaiMetro.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataPegawaiMetro.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataPegawaiMetro.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataPegawaiMetro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataPegawaiMetro.Size = new System.Drawing.Size(300, 198);
-            this.dataPegawaiMetro.Style = MetroFramework.MetroColorStyle.Blue;
-            this.dataPegawaiMetro.TabIndex = 14;
-            this.dataPegawaiMetro.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.dataPegawaiMetro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPegawaiMetro_CellClick);
-            this.dataPegawaiMetro.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataPegawaiMetro_UserDeletingRow);
+            this.dataPegawai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataPegawai.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataPegawai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataPegawai.Location = new System.Drawing.Point(10, 10);
+            this.dataPegawai.Name = "dataPegawai";
+            this.dataPegawai.Size = new System.Drawing.Size(300, 198);
+            this.dataPegawai.TabIndex = 13;
+            this.dataPegawai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPegawai_CellClick);
+            this.dataPegawai.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataPegawai_UserDeletingRow);
             // 
             // panel2
             // 
@@ -314,13 +275,12 @@
             // 
             // btnSimpanPeg
             // 
-            this.btnSimpanPeg.BackColor = System.Drawing.Color.LightBlue;
             this.btnSimpanPeg.Location = new System.Drawing.Point(104, 352);
             this.btnSimpanPeg.Name = "btnSimpanPeg";
             this.btnSimpanPeg.Size = new System.Drawing.Size(75, 23);
             this.btnSimpanPeg.TabIndex = 3;
             this.btnSimpanPeg.Text = "Simpan";
-            this.btnSimpanPeg.UseVisualStyleBackColor = false;
+            this.btnSimpanPeg.UseVisualStyleBackColor = true;
             this.btnSimpanPeg.Click += new System.EventHandler(this.btnSimpanPeg_Click);
             // 
             // bootomContent
@@ -341,40 +301,26 @@
             this.bootomContent.VerticalScrollbarHighlightOnWheel = false;
             this.bootomContent.VerticalScrollbarSize = 10;
             // 
-            // btnHapusPeg
-            // 
-            this.btnHapusPeg.BackColor = System.Drawing.Color.LightBlue;
-            this.btnHapusPeg.Location = new System.Drawing.Point(183, 5);
-            this.btnHapusPeg.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHapusPeg.Name = "btnHapusPeg";
-            this.btnHapusPeg.Size = new System.Drawing.Size(75, 23);
-            this.btnHapusPeg.TabIndex = 4;
-            this.btnHapusPeg.Text = "Hapus";
-            this.btnHapusPeg.UseVisualStyleBackColor = false;
-            this.btnHapusPeg.Click += new System.EventHandler(this.btnHapusPeg_Click);
-            // 
             // buttonSimpan
             // 
-            this.buttonSimpan.BackColor = System.Drawing.Color.LightBlue;
             this.buttonSimpan.Location = new System.Drawing.Point(11, 5);
             this.buttonSimpan.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 23);
             this.buttonSimpan.TabIndex = 3;
             this.buttonSimpan.Text = "Input";
-            this.buttonSimpan.UseVisualStyleBackColor = false;
+            this.buttonSimpan.UseVisualStyleBackColor = true;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonEdit
             // 
-            this.buttonEdit.BackColor = System.Drawing.Color.LightBlue;
             this.buttonEdit.Location = new System.Drawing.Point(97, 5);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 2;
             this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // panel1
@@ -398,6 +344,17 @@
             this.panel3.Size = new System.Drawing.Size(600, 400);
             this.panel3.TabIndex = 12;
             // 
+            // btnHapusPeg
+            // 
+            this.btnHapusPeg.Location = new System.Drawing.Point(183, 5);
+            this.btnHapusPeg.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHapusPeg.Name = "btnHapusPeg";
+            this.btnHapusPeg.Size = new System.Drawing.Size(75, 23);
+            this.btnHapusPeg.TabIndex = 4;
+            this.btnHapusPeg.Text = "Hapus";
+            this.btnHapusPeg.UseVisualStyleBackColor = true;
+            this.btnHapusPeg.Click += new System.EventHandler(this.btnHapusPeg_Click);
+            // 
             // submenuPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,7 +366,7 @@
             this.findHeader.ResumeLayout(false);
             this.findHeader.PerformLayout();
             this.dgContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataPegawaiMetro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataPegawai)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.bootomContent.ResumeLayout(false);
@@ -431,6 +388,7 @@
         private System.Windows.Forms.Label labelGaji;
         private System.Windows.Forms.TextBox tbNomorTeleponPegawai;
         private MetroFramework.Controls.MetroPanel dgContainer;
+        private System.Windows.Forms.DataGridView dataPegawai;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSimpanPeg;
         private MetroFramework.Controls.MetroPanel bootomContent;
@@ -447,6 +405,5 @@
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button btnHapusPeg;
-        private MetroFramework.Controls.MetroGrid dataPegawaiMetro;
     }
 }
