@@ -37,8 +37,8 @@ namespace BengkelAtma
 
         public void enableProfil()
         {
-            profile1.Show();
-            CenterControlInParent(profile1);
+           // profile1.Show();
+            //CenterControlInParent(profile1);
            
             //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
@@ -49,7 +49,7 @@ namespace BengkelAtma
 
         public void disableProfil()
         {
-            profile1.Hide();
+            //profile1.Hide();
             //profileWindow p = new profileWindow();
             //p.Close();
 
