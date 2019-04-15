@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnNewJasa = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgContainer = new MetroFramework.Controls.MetroPanel();
-            this.dgJasa = new System.Windows.Forms.DataGridView();
             this.findHeader = new MetroFramework.Controls.MetroPanel();
             this.btnCariJasa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,13 +49,14 @@
             this.tbLynJasa = new System.Windows.Forms.TextBox();
             this.btnSimpanJasa = new System.Windows.Forms.Button();
             this.btnResetJasa = new System.Windows.Forms.Button();
+            this.dgJasa = new MetroFramework.Controls.MetroGrid();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.dgContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgJasa)).BeginInit();
             this.findHeader.SuspendLayout();
             this.bootomContent.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJasa)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -76,12 +79,14 @@
             // 
             // btnNewJasa
             // 
+            this.btnNewJasa.BackColor = System.Drawing.Color.LightBlue;
             this.btnNewJasa.Location = new System.Drawing.Point(9, 0);
             this.btnNewJasa.Name = "btnNewJasa";
             this.btnNewJasa.Size = new System.Drawing.Size(75, 23);
             this.btnNewJasa.TabIndex = 2;
-            this.btnNewJasa.Text = "Tambah";
-            this.btnNewJasa.UseVisualStyleBackColor = true;
+            this.btnNewJasa.Text = "Input";
+            this.btnNewJasa.UseVisualStyleBackColor = false;
+            this.btnNewJasa.Click += new System.EventHandler(this.btnNewJasa_Click);
             // 
             // panel3
             // 
@@ -121,16 +126,6 @@
             this.dgContainer.VerticalScrollbarHighlightOnWheel = false;
             this.dgContainer.VerticalScrollbarSize = 10;
             // 
-            // dgJasa
-            // 
-            this.dgJasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgJasa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgJasa.Location = new System.Drawing.Point(10, 10);
-            this.dgJasa.Name = "dgJasa";
-            this.dgJasa.Size = new System.Drawing.Size(300, 198);
-            this.dgJasa.TabIndex = 13;
-            // 
             // findHeader
             // 
             this.findHeader.BackColor = System.Drawing.Color.White;
@@ -151,12 +146,14 @@
             // 
             // btnCariJasa
             // 
+            this.btnCariJasa.BackColor = System.Drawing.Color.LightBlue;
             this.btnCariJasa.Location = new System.Drawing.Point(225, 53);
             this.btnCariJasa.Name = "btnCariJasa";
-            this.btnCariJasa.Size = new System.Drawing.Size(49, 23);
+            this.btnCariJasa.Size = new System.Drawing.Size(75, 23);
             this.btnCariJasa.TabIndex = 11;
             this.btnCariJasa.Text = "Cari";
-            this.btnCariJasa.UseVisualStyleBackColor = true;
+            this.btnCariJasa.UseVisualStyleBackColor = false;
+            this.btnCariJasa.Click += new System.EventHandler(this.btnCariJasa_Click);
             // 
             // label1
             // 
@@ -195,21 +192,25 @@
             // 
             // btnEditJasa
             // 
+            this.btnEditJasa.BackColor = System.Drawing.Color.LightBlue;
             this.btnEditJasa.Location = new System.Drawing.Point(90, 0);
             this.btnEditJasa.Name = "btnEditJasa";
             this.btnEditJasa.Size = new System.Drawing.Size(75, 23);
             this.btnEditJasa.TabIndex = 0;
             this.btnEditJasa.Text = "Edit";
-            this.btnEditJasa.UseVisualStyleBackColor = true;
+            this.btnEditJasa.UseVisualStyleBackColor = false;
+            this.btnEditJasa.Click += new System.EventHandler(this.btnEditJasa_Click);
             // 
             // btnDeleteJasa
             // 
+            this.btnDeleteJasa.BackColor = System.Drawing.Color.LightBlue;
             this.btnDeleteJasa.Location = new System.Drawing.Point(171, 0);
             this.btnDeleteJasa.Name = "btnDeleteJasa";
             this.btnDeleteJasa.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteJasa.TabIndex = 1;
             this.btnDeleteJasa.Text = "Hapus";
-            this.btnDeleteJasa.UseVisualStyleBackColor = true;
+            this.btnDeleteJasa.UseVisualStyleBackColor = false;
+            this.btnDeleteJasa.Click += new System.EventHandler(this.btnDeleteJasa_Click);
             // 
             // panel2
             // 
@@ -242,21 +243,69 @@
             // 
             // btnSimpanJasa
             // 
+            this.btnSimpanJasa.BackColor = System.Drawing.Color.LightBlue;
             this.btnSimpanJasa.Location = new System.Drawing.Point(112, 174);
             this.btnSimpanJasa.Name = "btnSimpanJasa";
             this.btnSimpanJasa.Size = new System.Drawing.Size(75, 23);
             this.btnSimpanJasa.TabIndex = 3;
             this.btnSimpanJasa.Text = "Simpan";
-            this.btnSimpanJasa.UseVisualStyleBackColor = true;
+            this.btnSimpanJasa.UseVisualStyleBackColor = false;
+            this.btnSimpanJasa.Click += new System.EventHandler(this.btnSimpanJasa_Click);
             // 
             // btnResetJasa
             // 
+            this.btnResetJasa.BackColor = System.Drawing.Color.LightBlue;
             this.btnResetJasa.Location = new System.Drawing.Point(29, 174);
             this.btnResetJasa.Name = "btnResetJasa";
             this.btnResetJasa.Size = new System.Drawing.Size(75, 23);
             this.btnResetJasa.TabIndex = 2;
             this.btnResetJasa.Text = "Reset";
-            this.btnResetJasa.UseVisualStyleBackColor = true;
+            this.btnResetJasa.UseVisualStyleBackColor = false;
+            this.btnResetJasa.Click += new System.EventHandler(this.btnResetJasa_Click);
+            // 
+            // dgJasa
+            // 
+            this.dgJasa.AllowUserToResizeRows = false;
+            this.dgJasa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgJasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgJasa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgJasa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgJasa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgJasa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgJasa.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgJasa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgJasa.EnableHeadersVisualStyles = false;
+            this.dgJasa.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgJasa.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgJasa.Location = new System.Drawing.Point(10, 10);
+            this.dgJasa.Name = "dgJasa";
+            this.dgJasa.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgJasa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgJasa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgJasa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgJasa.Size = new System.Drawing.Size(300, 198);
+            this.dgJasa.TabIndex = 14;
             // 
             // menuJasa
             // 
@@ -265,15 +314,16 @@
             this.Controls.Add(this.panel3);
             this.Name = "menuJasa";
             this.Size = new System.Drawing.Size(600, 400);
+            this.Load += new System.EventHandler(this.menuJasa_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.dgContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgJasa)).EndInit();
             this.findHeader.ResumeLayout(false);
             this.findHeader.PerformLayout();
             this.bootomContent.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJasa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +336,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroPanel dgContainer;
-        private System.Windows.Forms.DataGridView dgJasa;
         private MetroFramework.Controls.MetroPanel findHeader;
         private System.Windows.Forms.Button btnCariJasa;
         private System.Windows.Forms.Label label1;
@@ -299,5 +348,6 @@
         private System.Windows.Forms.TextBox tbLynJasa;
         private System.Windows.Forms.Button btnSimpanJasa;
         private System.Windows.Forms.Button btnResetJasa;
+        private MetroFramework.Controls.MetroGrid dgJasa;
     }
 }
