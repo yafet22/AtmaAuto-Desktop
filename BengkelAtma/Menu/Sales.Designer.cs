@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1Luar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5DataGrid = new System.Windows.Forms.Panel();
-            this.dgSales = new System.Windows.Forms.DataGridView();
             this.panel4bottom = new System.Windows.Forms.Panel();
             this.btnNewSales = new System.Windows.Forms.Button();
             this.btnEditSales = new System.Windows.Forms.Button();
@@ -41,21 +43,22 @@
             this.label1CariNama = new System.Windows.Forms.Label();
             this.tbCariSales = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbSupplier = new System.Windows.Forms.ComboBox();
             this.tbNoTelpSales = new System.Windows.Forms.TextBox();
             this.label2Telepon = new System.Windows.Forms.Label();
             this.tbNamaSales = new System.Windows.Forms.TextBox();
             this.label3Nama = new System.Windows.Forms.Label();
             this.btnSimpanSales = new System.Windows.Forms.Button();
             this.btnResetSales = new System.Windows.Forms.Button();
-            this.cbSupplier = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dgSales = new MetroFramework.Controls.MetroGrid();
             this.panel1Luar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5DataGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).BeginInit();
             this.panel4bottom.SuspendLayout();
             this.panel3Top.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1Luar
@@ -89,20 +92,6 @@
             this.panel5DataGrid.Padding = new System.Windows.Forms.Padding(10);
             this.panel5DataGrid.Size = new System.Drawing.Size(320, 218);
             this.panel5DataGrid.TabIndex = 2;
-            // 
-            // dgSales
-            // 
-            this.dgSales.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgSales.GridColor = System.Drawing.SystemColors.Control;
-            this.dgSales.Location = new System.Drawing.Point(10, 10);
-            this.dgSales.Name = "dgSales";
-            this.dgSales.Size = new System.Drawing.Size(300, 198);
-            this.dgSales.TabIndex = 0;
-            this.dgSales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSales_CellClick);
-            this.dgSales.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgSales_UserDeletingRow);
             // 
             // panel4bottom
             // 
@@ -206,6 +195,23 @@
             this.panel1.Size = new System.Drawing.Size(280, 400);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Supplier";
+            // 
+            // cbSupplier
+            // 
+            this.cbSupplier.FormattingEnabled = true;
+            this.cbSupplier.Location = new System.Drawing.Point(29, 182);
+            this.cbSupplier.Name = "cbSupplier";
+            this.cbSupplier.Size = new System.Drawing.Size(236, 21);
+            this.cbSupplier.TabIndex = 20;
+            // 
             // tbNoTelpSales
             // 
             this.tbNoTelpSales.Location = new System.Drawing.Point(29, 135);
@@ -260,22 +266,51 @@
             this.btnResetSales.UseVisualStyleBackColor = false;
             this.btnResetSales.Click += new System.EventHandler(this.btnResetSales_Click);
             // 
-            // cbSupplier
+            // dgSales
             // 
-            this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Location = new System.Drawing.Point(29, 182);
-            this.cbSupplier.Name = "cbSupplier";
-            this.cbSupplier.Size = new System.Drawing.Size(236, 21);
-            this.cbSupplier.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Supplier";
+            this.dgSales.AllowUserToResizeRows = false;
+            this.dgSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSales.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgSales.EnableHeadersVisualStyles = false;
+            this.dgSales.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgSales.Location = new System.Drawing.Point(10, 10);
+            this.dgSales.Name = "dgSales";
+            this.dgSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgSales.Size = new System.Drawing.Size(300, 198);
+            this.dgSales.TabIndex = 1;
+            this.dgSales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSales_CellClick);
+            this.dgSales.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgSales_UserDeletingRow);
             // 
             // Sales
             // 
@@ -288,12 +323,12 @@
             this.panel1Luar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5DataGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).EndInit();
             this.panel4bottom.ResumeLayout(false);
             this.panel3Top.ResumeLayout(false);
             this.panel3Top.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,7 +341,6 @@
         private System.Windows.Forms.Panel panel5DataGrid;
         private System.Windows.Forms.Panel panel4bottom;
         private System.Windows.Forms.Panel panel3Top;
-        private System.Windows.Forms.DataGridView dgSales;
         private System.Windows.Forms.TextBox tbNoTelpSales;
         private System.Windows.Forms.Label label2Telepon;
         private System.Windows.Forms.TextBox tbNamaSales;
@@ -321,5 +355,6 @@
         private System.Windows.Forms.Button btnDeleteSales;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbSupplier;
+        private MetroFramework.Controls.MetroGrid dgSales;
     }
 }

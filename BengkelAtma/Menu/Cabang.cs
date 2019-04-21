@@ -332,7 +332,14 @@ namespace BengkelAtma.Menu
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            clearInput();
+            if (tbNamaCabang.Text.ToString().Trim() != "" && tbAlamatCabang.Text.ToString().Trim() != "" && tbNomorTeleponCabang.Text.ToString().Trim() != "")
+            {
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show(" Anda belum memilih data atau data kosong");
+            }
             
         }
 

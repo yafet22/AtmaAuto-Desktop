@@ -41,9 +41,9 @@ namespace BengkelAtma.Menu
             DataTable t = await GetSparepart();
             //t.Columns.Remove("id_branch");
             //t.Columns.Remove("id_role");
-            dataSparepart.DataSource = t;
-            dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataSparepart.DataBindingComplete += (o, _) =>
+            dgmSparepart.DataSource = t;
+            dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgmSparepart.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
                 if (dataGridView != null)
@@ -329,8 +329,8 @@ namespace BengkelAtma.Menu
                         var a = await response.Content.ReadAsStringAsync();
                         Debug.WriteLine(a);
                         DataTable t = await GetSparepart();
-                        dataSparepart.DataSource = t;
-                        dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgmSparepart.DataSource = t;
+                        dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                         MessageBox.Show("Berhasil Input Data Sparepart");
                         
@@ -369,8 +369,8 @@ namespace BengkelAtma.Menu
                         Debug.WriteLine(a);
 
                         DataTable t = await GetSparepart();
-                        dataSparepart.DataSource = t;
-                        dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgmSparepart.DataSource = t;
+                        dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                         MessageBox.Show("Berhasil Ubah Data Sparepart");
 
@@ -493,7 +493,7 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
-            foreach (DataGridViewRow row in dataSparepart.Rows)
+            foreach (DataGridViewRow row in dgmSparepart.Rows)
             {
                 if (row.Selected == true)
                 {
@@ -532,8 +532,8 @@ namespace BengkelAtma.Menu
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            dataSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            foreach (DataGridViewRow row in dataSparepart.SelectedRows)
+            dgmSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dgmSparepart.SelectedRows)
             {
                 if (row.Selected == true)
                 {
@@ -547,9 +547,9 @@ namespace BengkelAtma.Menu
                             $"api/spareparts/{Convert.ToString(row.Cells["id_sparepart"].Value)}");
                             response.EnsureSuccessStatusCode();
                             DataTable t = await GetSparepart();
-                            dataSparepart.DataSource = t;
-                            dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            dataSparepart.DataBindingComplete += (o, _) =>
+                            dgmSparepart.DataSource = t;
+                            dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dgmSparepart.DataBindingComplete += (o, _) =>
                             {
                                 var dataGridView = o as DataGridView;
                                 if (dataGridView != null)
@@ -580,19 +580,19 @@ namespace BengkelAtma.Menu
             disableInput();
             string searchValue = tbCari.Text;
 
-            dataSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgmSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCari.Text.Trim() != "")
                 {
-                    foreach (DataGridViewRow row in dataSparepart.Rows)
+                    foreach (DataGridViewRow row in dgmSparepart.Rows)
                     {
                         Debug.WriteLine(searchValue);
                         if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                             id = Convert.ToString(row.Cells[0].Value);
                             row.Selected = true;
-                            ((DataTable)dataSparepart.DataSource).DefaultView.RowFilter = string.Format("sparepart_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
+                            ((DataTable)dgmSparepart.DataSource).DefaultView.RowFilter = string.Format("sparepart_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
 
                             break;
                         }
@@ -602,9 +602,9 @@ namespace BengkelAtma.Menu
                 {
  
                     DataTable t = await GetSparepart();
-                    dataSparepart.DataSource = t;
-                    dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dataSparepart.DataBindingComplete += (o, _) =>
+                    dgmSparepart.DataSource = t;
+                    dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dgmSparepart.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -620,9 +620,9 @@ namespace BengkelAtma.Menu
             {
                 MessageBox.Show(exc.Message);
                 DataTable t = await GetSparepart();
-                dataSparepart.DataSource = t;
-                dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                dataSparepart.DataBindingComplete += (o, _) =>
+                dgmSparepart.DataSource = t;
+                dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dgmSparepart.DataBindingComplete += (o, _) =>
                 {
                     var dataGridView = o as DataGridView;
                     if (dataGridView != null)
@@ -671,6 +671,28 @@ namespace BengkelAtma.Menu
             }
             
             dataCompatibility.DataSource = t2;
+            dataCompatibility.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataCompatibility.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            dataCompatibility.DataBindingComplete += (o, _) =>
+            {
+                var dataGridView = o as DataGridView;
+                if (dataGridView != null)
+                {
+                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            };
+        }
+
+        private void labelType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataCompatibility_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
