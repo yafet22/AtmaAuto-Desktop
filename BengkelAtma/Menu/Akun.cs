@@ -35,7 +35,7 @@ namespace BengkelAtma.Menu
             public int id_employee { get; set; }
             public string username { get; set; }
             public string password { get; set; }
-           
+
         }
 
         public void disableInput()
@@ -64,8 +64,9 @@ namespace BengkelAtma.Menu
             t.Columns.Remove("role");
             t.Columns.Remove("name");
             dgAkunMetro.DataSource = t;
-            dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
+            dgAkunMetro.Columns[0].HeaderText = "ID Akun"; //nama kolom sesuai indeks
             dgAkunMetro.Columns[1].HeaderText = "Nama";
+            dgAkunMetro.Columns[2].HeaderText = "ID Pegawai";
             dgAkunMetro.Columns[dgAkunMetro.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgAkunMetro.DataBindingComplete += (o, _) =>
             {
@@ -76,7 +77,7 @@ namespace BengkelAtma.Menu
                     dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
             };
-            
+
         }
 
         static async Task<DataTable> GetAkun()
@@ -112,15 +113,17 @@ namespace BengkelAtma.Menu
         {
             try
             {
-                if (tbOldPassAkun.Text.ToString().Trim() != "" && tbNewPassAkun.Text.ToString().Trim() != "" )
+
+                if (tbOldPassAkun.Text.ToString().Trim() != "" && tbNewPassAkun.Text.ToString().Trim() != "")
                 {
+
                     if (check.Equals("simpan"))
                     {
                         Debug.WriteLine("masuuuk simpan");
                         var pass = tbNewPassAkun.Text.ToString();
                         Debug.WriteLine(pass);
 
-                        User user = new User {  id_user = id, password = tbNewPassAkun.Text.ToString() };
+                        User user = new User { id_user = id, password = tbNewPassAkun.Text.ToString() };
 
                         var response = client.PostAsJsonAsync("api/user", user).Result;
 
@@ -182,6 +185,10 @@ namespace BengkelAtma.Menu
                     clearInput();
                     disableInput();
                 }
+                else
+                {
+                    MessageBox.Show("Data Anda Masih Kosong atau tidak lengkap");
+                }
             }
             catch (Exception exc)
             {
@@ -217,6 +224,7 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
+                    MessageBox.Show("Anda Belum Memasukkan Data");
                     DataTable t = await GetAkun();
                     dgAkunMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
                     dgAkunMetro.Columns[1].HeaderText = "Nama";
@@ -240,7 +248,7 @@ namespace BengkelAtma.Menu
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Data yang Anda cari tidak ada");
                 DataTable t = await GetAkun();
                 t.Columns.Remove("role");
                 t.Columns.Remove("name");
@@ -278,13 +286,13 @@ namespace BengkelAtma.Menu
             dgAkunMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             foreach (DataGridViewRow row in dgAkunMetro.Rows)
             {
-                if (row.Selected==true)
+                if (row.Selected == true)
                 {
                     id = Convert.ToInt16(row.Cells[0].Value);
                     Debug.WriteLine("bind :" + id);
-                    userlabel.Text = "User: "+Convert.ToString(row.Cells["username"].Value);
+                    userlabel.Text = "User: " + Convert.ToString(row.Cells["username"].Value);
                     userlabel.Visible = true;
-                    
+
                     ((DataTable)dgAkunMetro.DataSource).DefaultView.RowFilter = string.Format("username like '%{0}%'", tbCariAkun.Text.Trim().Replace("'", "''"));
                     Debug.WriteLine("masuk edit");
 
@@ -295,8 +303,15 @@ namespace BengkelAtma.Menu
 
         private void btnResetAkun_Click(object sender, EventArgs e)
         {
-            clearInput();
-            
+            if (tbOldPassAkun.Text.ToString().Trim() != "" && tbNewPassAkun.Text.ToString().Trim() != "")
+            {
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show(" Anda harus memilih menu input atau edit terlebih dahulu");
+            }
+
         }
 
 
@@ -342,7 +357,8 @@ namespace BengkelAtma.Menu
         {
             dgAkunMetro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             foreach (DataGridViewRow row in dgAkunMetro.SelectedRows)
-            {   if (row.Selected == true)
+            {
+                if (row.Selected == true)
                 {
                     try
                     {
@@ -371,23 +387,25 @@ namespace BengkelAtma.Menu
                     {
                         MessageBox.Show(exc.Message);
                     }
-                   
+
                 }
-    
+
             }
 
         }
+
+
     }
- }
+}
 
 
 
 
-    //private void submenuAkun_SelectedIndexChanged(object sender, EventArgs e)
-       // {
+//private void submenuAkun_SelectedIndexChanged(object sender, EventArgs e)
+// {
 
-        //}
+//}
 
-        
 
- 
+
+

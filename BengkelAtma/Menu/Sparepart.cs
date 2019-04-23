@@ -20,8 +20,8 @@ namespace BengkelAtma.Menu
         static HttpClient client = new HttpClient();
         OpenFileDialog open = new OpenFileDialog();
         private string check = "";
-        private string id ="";
-        private Boolean upload = false ;
+        private string id = "";
+        private Boolean upload = false;
         private DataTable t2;
         public Sparepart()
         {
@@ -41,9 +41,9 @@ namespace BengkelAtma.Menu
             DataTable t = await GetSparepart();
             //t.Columns.Remove("id_branch");
             //t.Columns.Remove("id_role");
-            dgmSparepart.DataSource = t;
-            dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgmSparepart.DataBindingComplete += (o, _) =>
+            dataSparepart.DataSource = t;
+            dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataSparepart.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
                 if (dataGridView != null)
@@ -260,9 +260,9 @@ namespace BengkelAtma.Menu
             DataTable dt = new DataTable();
             Debug.WriteLine("yi");
             JArray json_array = JArray.Parse(json_object["data"]["compatibility"]["data"].ToString());
-        
+
             dt = JsonConvert.DeserializeObject<DataTable>(json_array.ToString());
-     
+
             return dt;
         }
 
@@ -271,11 +271,11 @@ namespace BengkelAtma.Menu
             try
             {
                 List<int> motorcycleTypes = new List<int>();
-                string motor="";
+                string motor = "";
                 foreach (DataGridViewRow row in dataCompatibility.Rows)
                 {
                     string id_motorcycle_type = Convert.ToString(row.Cells["id_motorcycle_type"].Value);
-                    if(!id_motorcycle_type.Equals(""))
+                    if (!id_motorcycle_type.Equals(""))
                     {
                         if (!motor.Equals(""))
                         {
@@ -286,8 +286,8 @@ namespace BengkelAtma.Menu
                             motor = id_motorcycle_type;
                         }
                     }
-                    
-                    
+
+
                 }
                 Debug.WriteLine(motor);
                 if (tbMerkSparepart.Text.ToString().Trim() != "" && tbNameSparepart.Text.ToString().Trim() != "" && tbKodeSparepart.Text.ToString().Trim() != "" && tbMinStock.Text.ToString().Trim() != "" && tbStock.Text.ToString().Trim() != "" && tbBeli.Text.ToString().Trim() != "" && tbJual.Text.ToString().Trim() != "" && tbNomor.Text.ToString().Trim() != "")
@@ -329,13 +329,13 @@ namespace BengkelAtma.Menu
                         var a = await response.Content.ReadAsStringAsync();
                         Debug.WriteLine(a);
                         DataTable t = await GetSparepart();
-                        dgmSparepart.DataSource = t;
-                        dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataSparepart.DataSource = t;
+                        dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                         MessageBox.Show("Berhasil Input Data Sparepart");
-                        
+
                     }
-                    else if(check.Equals("edit"))
+                    else if (check.Equals("edit"))
                     {
                         Debug.WriteLine("masuk edit");
                         placement = comboPosition.SelectedValue.ToString() + "-" + comboTempat.SelectedValue.ToString() + "-" + tbNomor.Text.ToString();
@@ -353,7 +353,7 @@ namespace BengkelAtma.Menu
 
 
                         Debug.WriteLine("cek mana");
-                        if(upload==true)
+                        if (upload == true)
                         {
                             MemoryStream ms = new MemoryStream();
 
@@ -362,15 +362,15 @@ namespace BengkelAtma.Menu
                             byte[] buff = ms.GetBuffer();
                             form.Add(new ByteArrayContent(buff, 0, buff.Length), "image", open.SafeFileName);
                         }
-                        
+
                         var response = client.PostAsync($"api/updatesparepart/{tbKodeSparepart.Text.ToString()}", form).Result;
 
                         var a = await response.Content.ReadAsStringAsync();
                         Debug.WriteLine(a);
 
                         DataTable t = await GetSparepart();
-                        dgmSparepart.DataSource = t;
-                        dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataSparepart.DataSource = t;
+                        dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                         MessageBox.Show("Berhasil Ubah Data Sparepart");
 
@@ -493,7 +493,7 @@ namespace BengkelAtma.Menu
         {
             check = "edit";
             enableInput();
-            foreach (DataGridViewRow row in dgmSparepart.Rows)
+            foreach (DataGridViewRow row in dataSparepart.Rows)
             {
                 if (row.Selected == true)
                 {
@@ -516,7 +516,7 @@ namespace BengkelAtma.Menu
                         {
                             pictureBox1.Load("http://p3l.yafetrakan.com/images/" + Convert.ToString(row.Cells["image"].Value));
                         }
-                        
+
                         t2 = await GetCompatibility(id);
                         //t.Columns.Remove("id_branch");
                         //t.Columns.Remove("id_role");
@@ -532,8 +532,8 @@ namespace BengkelAtma.Menu
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            dgmSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            foreach (DataGridViewRow row in dgmSparepart.SelectedRows)
+            dataSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            foreach (DataGridViewRow row in dataSparepart.SelectedRows)
             {
                 if (row.Selected == true)
                 {
@@ -547,9 +547,9 @@ namespace BengkelAtma.Menu
                             $"api/spareparts/{Convert.ToString(row.Cells["id_sparepart"].Value)}");
                             response.EnsureSuccessStatusCode();
                             DataTable t = await GetSparepart();
-                            dgmSparepart.DataSource = t;
-                            dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                            dgmSparepart.DataBindingComplete += (o, _) =>
+                            dataSparepart.DataSource = t;
+                            dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                            dataSparepart.DataBindingComplete += (o, _) =>
                             {
                                 var dataGridView = o as DataGridView;
                                 if (dataGridView != null)
@@ -580,19 +580,19 @@ namespace BengkelAtma.Menu
             disableInput();
             string searchValue = tbCari.Text;
 
-            dgmSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataSparepart.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
                 if (tbCari.Text.Trim() != "")
                 {
-                    foreach (DataGridViewRow row in dgmSparepart.Rows)
+                    foreach (DataGridViewRow row in dataSparepart.Rows)
                     {
                         Debug.WriteLine(searchValue);
                         if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
                             id = Convert.ToString(row.Cells[0].Value);
                             row.Selected = true;
-                            ((DataTable)dgmSparepart.DataSource).DefaultView.RowFilter = string.Format("sparepart_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
+                            ((DataTable)dataSparepart.DataSource).DefaultView.RowFilter = string.Format("sparepart_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
 
                             break;
                         }
@@ -600,11 +600,11 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
- 
+
                     DataTable t = await GetSparepart();
-                    dgmSparepart.DataSource = t;
-                    dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dgmSparepart.DataBindingComplete += (o, _) =>
+                    dataSparepart.DataSource = t;
+                    dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    dataSparepart.DataBindingComplete += (o, _) =>
                     {
                         var dataGridView = o as DataGridView;
                         if (dataGridView != null)
@@ -620,9 +620,9 @@ namespace BengkelAtma.Menu
             {
                 MessageBox.Show(exc.Message);
                 DataTable t = await GetSparepart();
-                dgmSparepart.DataSource = t;
-                dgmSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                dgmSparepart.DataBindingComplete += (o, _) =>
+                dataSparepart.DataSource = t;
+                dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataSparepart.DataBindingComplete += (o, _) =>
                 {
                     var dataGridView = o as DataGridView;
                     if (dataGridView != null)
@@ -646,7 +646,7 @@ namespace BengkelAtma.Menu
         private void btnCompatibility_Click(object sender, EventArgs e)
         {
             Debug.WriteLine(comboMotorType.SelectedText.ToString());
-            if(t2 == null)
+            if (t2 == null)
             {
                 t2 = new DataTable();
                 t2.Columns.Add("id_motorcycle_type");
@@ -660,7 +660,7 @@ namespace BengkelAtma.Menu
                 row["motorcycle_brand"] = comboMotorBrand.GetItemText(comboMotorBrand.SelectedItem);
                 t2.Rows.Add(row);
             }
-            else if(t2 != null)
+            else if (t2 != null)
             {
                 DataRow row = t2.NewRow();
                 row["id_motorcycle_type"] = Convert.ToInt16(comboMotorType.SelectedValue.ToString());
@@ -669,30 +669,8 @@ namespace BengkelAtma.Menu
                 row["motorcycle_brand"] = comboMotorBrand.GetItemText(comboMotorBrand.SelectedItem);
                 t2.Rows.Add(row);
             }
-            
+
             dataCompatibility.DataSource = t2;
-            dataCompatibility.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataCompatibility.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-            dataCompatibility.DataBindingComplete += (o, _) =>
-            {
-                var dataGridView = o as DataGridView;
-                if (dataGridView != null)
-                {
-                    dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                    dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                }
-            };
-        }
-
-        private void labelType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataCompatibility_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

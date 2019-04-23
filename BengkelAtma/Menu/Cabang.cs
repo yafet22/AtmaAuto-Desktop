@@ -55,7 +55,11 @@ namespace BengkelAtma.Menu
             dataCabang.DataSource = await GetData();
             dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            dataCabang.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
+            dataCabang.Columns[1].HeaderText = "Nama";
+            dataCabang.Columns[2].HeaderText = "Alamat";
+            dataCabang.Columns[3].HeaderText = "No.Telp";
+            dataCabang.Columns[dataCabang.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataCabang.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
@@ -133,6 +137,7 @@ namespace BengkelAtma.Menu
                     }
                     else
                     {
+
                         Debug.WriteLine("Gagal");
                     }
                 }
@@ -163,6 +168,10 @@ namespace BengkelAtma.Menu
                 clearInput();
                 disableInput();
             }
+            else
+            {
+                MessageBox.Show("Berhasil Update Password");
+            }
         }
 
         private async void buttonCari_Click(object sender, EventArgs e)
@@ -179,7 +188,7 @@ namespace BengkelAtma.Menu
                     {
                         if (row.Cells[1].Value.ToString().Contains(searchValue))
                         {
-                           
+
                             ((DataTable)dataCabang.DataSource).DefaultView.RowFilter = string.Format("branch_name like '%{0}%'", tbCari.Text.Trim().Replace("'", "''"));
                             break;
                         }
@@ -187,6 +196,8 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
+                    MessageBox.Show("Anda Belum Memasukkan Data");
+                    MessageBox.Show("Anda Belum Memasukkan Data");
                     dataCabang.DataSource = await GetData();
                     dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -199,12 +210,13 @@ namespace BengkelAtma.Menu
                             dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                         }
                     };
+
                 }
 
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Data yang Anda cari tidak ada");
                 dataCabang.DataSource = await GetData();
                 dataCabang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -274,7 +286,7 @@ namespace BengkelAtma.Menu
                 DialogResult res = MessageBox.Show("Anda yakin akan menghapus data?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if (res == DialogResult.OK)
                 {
-          
+
                     HttpResponseMessage response = await client.DeleteAsync(
                     $"api/branches/{Convert.ToInt16(dataCabang.SelectedRows[0].Cells["id_branch"].Value)}");
                     response.EnsureSuccessStatusCode();
@@ -306,9 +318,10 @@ namespace BengkelAtma.Menu
 
         private void buttonInput_Click(object sender, EventArgs e)
         {
-            check = "simpan";
             clearInput();
             enableInput();
+            check = "simpan";
+
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -317,7 +330,7 @@ namespace BengkelAtma.Menu
             enableInput();
             foreach (DataGridViewRow row in dataCabang.Rows)
             {
-                if (row.Selected==true)
+                if (row.Selected == true)
                 {
                     id = Convert.ToInt16(row.Cells[0].Value);
                     tbNamaCabang.Text = row.Cells[1].Value.ToString();
@@ -338,9 +351,9 @@ namespace BengkelAtma.Menu
             }
             else
             {
-                MessageBox.Show(" Anda belum memilih data atau data kosong");
+                MessageBox.Show(" Anda harus memilih menu input atau edit terlebih dahulu");
             }
-            
+
         }
 
         private async void btnHapusCbg_Click(object sender, EventArgs e)

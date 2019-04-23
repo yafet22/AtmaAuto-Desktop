@@ -80,7 +80,14 @@ namespace BengkelAtma.Menu
             t.Columns.Remove("id_role");
             dataPegawaiMetro.DataSource = t;
             dataPegawaiMetro.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            dataPegawaiMetro.Columns[0].HeaderText = "ID"; //nama kolom sesuai indeks
+            dataPegawaiMetro.Columns[1].HeaderText = "Nama";
+            dataPegawaiMetro.Columns[2].HeaderText = "Alamat";
+            dataPegawaiMetro.Columns[3].HeaderText = "No.Telp";
+            dataPegawaiMetro.Columns[4].HeaderText = "Gaji";
+            dataPegawaiMetro.Columns[5].HeaderText = "Jabatan";
+            dataPegawaiMetro.Columns[6].HeaderText = "Nama Cabang";
+            dataPegawaiMetro.Columns[dataPegawaiMetro.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataPegawaiMetro.DataBindingComplete += (o, _) =>
             {
                 var dataGridView = o as DataGridView;
@@ -170,8 +177,9 @@ namespace BengkelAtma.Menu
             {
                 if (tbNamaPegawai.Text.ToString().Trim() != "" && tbNomorTeleponPegawai.Text.ToString().Trim() != "" && tbAlamatPegawai.Text.ToString().Trim() != "" && tbGajiPegawai.Text.ToString().Trim() != "" && comboCabang.SelectedValue.ToString().Trim() != "" && comboJabatan.SelectedValue.ToString().Trim() != "")
                 {
-                    if(check.Equals("simpan"))
+                    if (check.Equals("simpan"))
                     {
+
                         Debug.WriteLine("masuuuk simpan");
                         var name = tbNamaPegawai.Text.ToString();
                         String[] substrings = name.Split(' ');
@@ -181,14 +189,14 @@ namespace BengkelAtma.Menu
                         }
                         var firstname = name.Split(' ')[0];
                         var lastname = "";
-                        if (count>1)
+                        if (count > 1)
                         {
                             lastname = name.Split(' ')[1];
                         }
                         Debug.WriteLine(name);
                         Debug.WriteLine("ceki");
                         Debug.WriteLine(Convert.ToInt16(comboJabatan.SelectedValue.ToString()));
-                        Employee employee = new Employee { first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = Convert.ToInt16(comboCabang.SelectedValue.ToString()) , id_role = Convert.ToInt16(comboJabatan.SelectedValue.ToString()) };
+                        Employee employee = new Employee { first_name = firstname, last_name = lastname, address = tbAlamatPegawai.Text.ToString(), phone_number = tbNomorTeleponPegawai.Text.ToString(), salary = double.Parse(tbGajiPegawai.Text.ToString()), id_branch = Convert.ToInt16(comboCabang.SelectedValue.ToString()), id_role = Convert.ToInt16(comboJabatan.SelectedValue.ToString()) };
 
                         var response = client.PostAsJsonAsync("api/employees", employee).Result;
 
@@ -215,7 +223,7 @@ namespace BengkelAtma.Menu
                             MessageBox.Show("Berhasil Input Data Pegawai");
                         }
                     }
-                    else if(check.Equals("edit"))
+                    else if (check.Equals("edit"))
                     {
                         var name = tbNamaPegawai.Text.ToString();
 
@@ -246,6 +254,10 @@ namespace BengkelAtma.Menu
 
                     clearInput();
                     disableInput();
+                }
+                else
+                {
+                    MessageBox.Show("Data Anda Masih Kosong atau tidak lengkap");
                 }
             }
             catch (Exception exc)
@@ -278,13 +290,14 @@ namespace BengkelAtma.Menu
                             row.Selected = true;
                             ((DataTable)dataPegawaiMetro.DataSource).DefaultView.RowFilter = string.Format("name like '%{0}%'", tbCariPeg.Text.Trim().Replace("'", "''"));
                             Debug.WriteLine("masuk edit");
-                            
+
                             break;
                         }
                     }
                 }
                 else
                 {
+                    MessageBox.Show("Anda Belum Memasukkan Data");
                     DataTable t = await GetPegawai();
                     t.Columns.Remove("id_branch");
                     t.Columns.Remove("id_role");
@@ -304,7 +317,7 @@ namespace BengkelAtma.Menu
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Data yang Anda cari tidak ada");
                 DataTable t = await GetPegawai();
                 t.Columns.Remove("id_branch");
                 t.Columns.Remove("id_role");
@@ -340,7 +353,7 @@ namespace BengkelAtma.Menu
                 if (row.Selected == true)
                 {
                     {
-                        
+
                         id = Convert.ToInt16(row.Cells[0].Value);
                         tbNamaPegawai.Text = Convert.ToString(row.Cells["name"].Value);
                         tbAlamatPegawai.Text = row.Cells[2].Value.ToString();
@@ -349,12 +362,19 @@ namespace BengkelAtma.Menu
                     }
                 }
             }
-            
+
         }
 
         private void btnResetPeg_Click(object sender, EventArgs e)
         {
-            clearInput();
+            if (tbNamaPegawai.Text.ToString().Trim() != "" && tbNomorTeleponPegawai.Text.ToString().Trim() != "" && tbAlamatPegawai.Text.ToString().Trim() != "" && tbGajiPegawai.Text.ToString().Trim() != "" && comboCabang.SelectedValue.ToString().Trim() != "" && comboJabatan.SelectedValue.ToString().Trim() != "")
+            {
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show(" Anda harus memilih menu input atau edit terlebih dahulu");
+            }
         }
 
         private async void dataPegawaiMetro_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)

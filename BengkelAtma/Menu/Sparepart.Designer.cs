@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1bawah = new System.Windows.Forms.Panel();
             this.labelKodeSparepart = new System.Windows.Forms.Label();
             this.tbKodeSparepart = new System.Windows.Forms.TextBox();
@@ -80,7 +77,7 @@
             this.panel1KT = new System.Windows.Forms.Panel();
             this.panel1tengah = new System.Windows.Forms.Panel();
             this.panel1kiri = new System.Windows.Forms.Panel();
-            this.dgmSparepart = new MetroFramework.Controls.MetroGrid();
+            this.dataSparepart = new System.Windows.Forms.DataGridView();
             this.panel1bawah.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompatibility)).BeginInit();
@@ -93,12 +90,12 @@
             this.panel1KT.SuspendLayout();
             this.panel1tengah.SuspendLayout();
             this.panel1kiri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgmSparepart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSparepart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1bawah
             // 
-            this.panel1bawah.Controls.Add(this.dgmSparepart);
+            this.panel1bawah.Controls.Add(this.dataSparepart);
             this.panel1bawah.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1bawah.Location = new System.Drawing.Point(0, 332);
             this.panel1bawah.Margin = new System.Windows.Forms.Padding(2);
@@ -411,7 +408,7 @@
             this.dataCompatibility.RowTemplate.Height = 24;
             this.dataCompatibility.Size = new System.Drawing.Size(271, 184);
             this.dataCompatibility.TabIndex = 48;
-            this.dataCompatibility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCompatibility_CellContentClick);
+           // this.dataCompatibility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCompatibility_CellContentClick);
             // 
             // comboMotorBrand
             // 
@@ -471,7 +468,7 @@
             this.labelType.Size = new System.Drawing.Size(31, 13);
             this.labelType.TabIndex = 54;
             this.labelType.Text = "Type";
-            this.labelType.Click += new System.EventHandler(this.labelType_Click);
+          //  this.labelType.Click += new System.EventHandler(this.labelType_Click);
             // 
             // panel2all
             // 
@@ -596,45 +593,20 @@
             this.panel1kiri.Size = new System.Drawing.Size(238, 332);
             this.panel1kiri.TabIndex = 55;
             // 
-            // dgmSparepart
+            // dataSparepart
             // 
-            this.dgmSparepart.AllowUserToResizeRows = false;
-            this.dgmSparepart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgmSparepart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgmSparepart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgmSparepart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgmSparepart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgmSparepart.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgmSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgmSparepart.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgmSparepart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgmSparepart.Location = new System.Drawing.Point(3, 3);
-            this.dgmSparepart.Margin = new System.Windows.Forms.Padding(5);
-            this.dgmSparepart.Name = "dgmSparepart";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgmSparepart.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgmSparepart.Size = new System.Drawing.Size(779, 124);
-            this.dgmSparepart.TabIndex = 1;
+            this.dataSparepart.AllowUserToResizeRows = false;
+            this.dataSparepart.BackgroundColor = System.Drawing.Color.White;
+            this.dataSparepart.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataSparepart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataSparepart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataSparepart.GridColor = System.Drawing.Color.White;
+            this.dataSparepart.Location = new System.Drawing.Point(3, 3);
+            this.dataSparepart.Name = "dataSparepart";
+            this.dataSparepart.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataSparepart.Size = new System.Drawing.Size(779, 124);
+            this.dataSparepart.TabIndex = 2;
             // 
             // Sparepart
             // 
@@ -661,7 +633,7 @@
             this.panel1tengah.PerformLayout();
             this.panel1kiri.ResumeLayout(false);
             this.panel1kiri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgmSparepart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSparepart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,6 +688,6 @@
         private System.Windows.Forms.Panel panel1tengah2;
         private System.Windows.Forms.Panel panel1bawah2;
         private System.Windows.Forms.Panel panel1atas2;
-        private MetroFramework.Controls.MetroGrid dgmSparepart;
+        private System.Windows.Forms.DataGridView dataSparepart;
     }
 }
