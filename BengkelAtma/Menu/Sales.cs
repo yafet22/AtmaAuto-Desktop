@@ -168,6 +168,10 @@ namespace BengkelAtma.Menu
                     clearInput();
                     disableInput();
                 }
+                else
+                {
+                    MessageBox.Show("Data Anda Masih Kosong atau tidak lengkap");
+                }
             }
             catch (Exception exc)
             {
@@ -234,6 +238,7 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
+                    MessageBox.Show("Anda Belum Memasukkan Data");
                     DataTable t = await GetSales();
                     t.Columns.Remove("id_supplier");
                     dgSales.DataSource = t;
@@ -252,7 +257,7 @@ namespace BengkelAtma.Menu
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Data yang Anda cari tidak ada");
                 DataTable t = await GetSales();
                 t.Columns.Remove("id_supplier");
                 dgSales.DataSource = t;
@@ -272,7 +277,14 @@ namespace BengkelAtma.Menu
 
         private void btnResetSales_Click(object sender, EventArgs e)
         {
-            clearInput();
+            if (tbNamaSales.Text.ToString().Trim() != "" && tbNoTelpSales.Text.ToString().Trim() != "" && cbSupplier.SelectedValue.ToString().Trim() != "")
+            {
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show(" Anda harus memilih menu input atau edit terlebih dahulu");
+            }
         }
 
         private void btnEditSales_Click(object sender, EventArgs e)

@@ -381,7 +381,7 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
-                    MessageBox.Show("Pastikan Semua Data Terinput");
+                    MessageBox.Show("Data Anda Masih Kosong atau tidak lengkap");
                 }
             }
             catch (Exception exc)
@@ -393,7 +393,14 @@ namespace BengkelAtma.Menu
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            clearInput();
+            if(tbMerkSparepart.Text.ToString().Trim() != "" && tbNameSparepart.Text.ToString().Trim() != "" && tbKodeSparepart.Text.ToString().Trim() != "" && tbMinStock.Text.ToString().Trim() != "" && tbStock.Text.ToString().Trim() != "" && tbBeli.Text.ToString().Trim() != "" && tbJual.Text.ToString().Trim() != "" && tbNomor.Text.ToString().Trim() != "")
+            {
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show(" Anda harus memilih menu input atau edit terlebih dahulu");
+            }
         }
 
         private DataTable dataPosisi()
@@ -600,7 +607,7 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
-
+                    MessageBox.Show("Anda Belum Memasukkan Data");
                     DataTable t = await GetSparepart();
                     dataSparepart.DataSource = t;
                     dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -618,7 +625,7 @@ namespace BengkelAtma.Menu
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show("Data yang Anda cari tidak ada");
                 DataTable t = await GetSparepart();
                 dataSparepart.DataSource = t;
                 dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
