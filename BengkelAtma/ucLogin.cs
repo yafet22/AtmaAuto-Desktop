@@ -63,6 +63,7 @@ namespace BengkelAtma
                 SplashScreen.ActiveForm.Hide();
                 if (role == "Cashier")
                 {
+                   
                     MainMenuKasir kasir = new MainMenuKasir();
                     kasir.Show();
 

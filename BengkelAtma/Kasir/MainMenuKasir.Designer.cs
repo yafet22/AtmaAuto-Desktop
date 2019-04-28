@@ -41,6 +41,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.panel1bwahMain = new System.Windows.Forms.Panel();
+            this.pembayaran2 = new BengkelAtma.Kasir.pembayaran();
             this.panel1Kasir.SuspendLayout();
             this.metroPanel1Kasir.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -56,19 +57,20 @@
             this.panel1Kasir.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1Kasir.Location = new System.Drawing.Point(200, 47);
             this.panel1Kasir.Name = "panel1Kasir";
-            this.panel1Kasir.Size = new System.Drawing.Size(808, 538);
+            this.panel1Kasir.Size = new System.Drawing.Size(824, 538);
             this.panel1Kasir.TabIndex = 10;
             // 
             // metroPanel1Kasir
             // 
             this.metroPanel1Kasir.BackColor = System.Drawing.Color.Transparent;
+            this.metroPanel1Kasir.Controls.Add(this.pembayaran2);
             this.metroPanel1Kasir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1Kasir.HorizontalScrollbarBarColor = true;
             this.metroPanel1Kasir.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1Kasir.HorizontalScrollbarSize = 10;
             this.metroPanel1Kasir.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1Kasir.Name = "metroPanel1Kasir";
-            this.metroPanel1Kasir.Size = new System.Drawing.Size(808, 538);
+            this.metroPanel1Kasir.Size = new System.Drawing.Size(824, 538);
             this.metroPanel1Kasir.TabIndex = 5;
             this.metroPanel1Kasir.VerticalScrollbarBarColor = true;
             this.metroPanel1Kasir.VerticalScrollbarHighlightOnWheel = false;
@@ -85,7 +87,7 @@
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 47);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 494);
+            this.leftPanel.Size = new System.Drawing.Size(200, 544);
             this.leftPanel.TabIndex = 9;
             // 
             // btnKeluarKasir
@@ -165,7 +167,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1008, 47);
+            this.panel3.Size = new System.Drawing.Size(1024, 47);
             this.panel3.TabIndex = 11;
             // 
             // panel2
@@ -175,7 +177,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1008, 47);
+            this.panel2.Size = new System.Drawing.Size(1024, 47);
             this.panel2.TabIndex = 1;
             // 
             // panel5
@@ -186,7 +188,7 @@
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel5.Controls.Add(this.label);
             this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(804, 9);
+            this.panel5.Location = new System.Drawing.Point(820, 9);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(231, 30);
             this.panel5.TabIndex = 0;
@@ -211,11 +213,20 @@
             this.panel1bwahMain.Size = new System.Drawing.Size(808, 100);
             this.panel1bwahMain.TabIndex = 3;
             // 
+            // pembayaran2
+            // 
+            this.pembayaran2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pembayaran2.Location = new System.Drawing.Point(0, 0);
+            this.pembayaran2.Name = "pembayaran2";
+            this.pembayaran2.Size = new System.Drawing.Size(824, 538);
+            this.pembayaran2.TabIndex = 2;
+            // 
             // MainMenuKasir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 541);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1024, 591);
             this.Controls.Add(this.panel1Kasir);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.panel3);
@@ -250,5 +261,6 @@
         private System.Windows.Forms.Label label;
         private pembayaran pembayaran1;
         private System.Windows.Forms.Panel panel1bwahMain;
+        private pembayaran pembayaran2;
     }
 }
