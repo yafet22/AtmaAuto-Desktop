@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using BengkelAtma.Kasir;
 
 namespace BengkelAtma
 {
@@ -20,6 +21,7 @@ namespace BengkelAtma
         static HttpClient client = new HttpClient();
 
         public static int idUser { get; set; }
+        public static string role { get; set; }
 
         public ucLogin()
         {
@@ -55,12 +57,22 @@ namespace BengkelAtma
                 Console.WriteLine($"{data.name}");
                 Console.WriteLine($"{data.id}");
                 idUser = data.id_employee;
+                role = data.role;
                 //var b = JsonConvert.DeserializeObject<Data>(a);
                 //Console.WriteLine($"{b.username}");
                 SplashScreen.ActiveForm.Hide();
-                MainMenu main = new MainMenu();
-                var userlogin = user;
-                main.Show();  //bukan ini.,,
+                if (role == "Cashier")
+                {
+                    MainMenuKasir kasir = new MainMenuKasir();
+                    kasir.Show();
+
+                }
+                else
+                {
+                    MainMenu main = new MainMenu();
+                    var userlogin = user;
+                    main.Show();  //bukan ini.,,
+                }
             }
             else
             {

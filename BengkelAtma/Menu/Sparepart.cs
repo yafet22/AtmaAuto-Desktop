@@ -292,92 +292,104 @@ namespace BengkelAtma.Menu
                 Debug.WriteLine(motor);
                 if (tbMerkSparepart.Text.ToString().Trim() != "" && tbNameSparepart.Text.ToString().Trim() != "" && tbKodeSparepart.Text.ToString().Trim() != "" && tbMinStock.Text.ToString().Trim() != "" && tbStock.Text.ToString().Trim() != "" && tbBeli.Text.ToString().Trim() != "" && tbJual.Text.ToString().Trim() != "" && tbNomor.Text.ToString().Trim() != "")
                 {
-                    string placement;
-                    if (check.Equals("simpan"))
+                    if (tbBeli.Text.ToString() == tbJual.Text.ToString())
                     {
-                        Debug.WriteLine("masuk simpan");
-                        Debug.WriteLine(tbKodeSparepart.Text);
-                        Debug.WriteLine(motor);
-                        placement = comboPosition.SelectedValue.ToString() + "-" + comboTempat.SelectedValue.ToString() + "-" + tbNomor.Text.ToString();
-                        MultipartFormDataContent form = new MultipartFormDataContent();
-                        form.Add(new StringContent(tbKodeSparepart.Text), "id_sparepart");
-                        form.Add(new StringContent(tbNameSparepart.Text), "sparepart_name");
-                        form.Add(new StringContent(tbMerkSparepart.Text), "merk");
-                        form.Add(new StringContent(tbStock.Text), "stock");
-                        form.Add(new StringContent(tbMinStock.Text), "min_stock");
-                        form.Add(new StringContent(tbBeli.Text), "purchase_price");
-                        form.Add(new StringContent(tbJual.Text), "sell_price");
-                        form.Add(new StringContent(comboSparepartType.SelectedValue.ToString()), "id_sparepart_type");
-                        form.Add(new StringContent(placement), "placement");
-                        form.Add(new StringContent(motor.ToString()), "motorcycleTypes");
-                        form.Add(new StringContent("true"), "desktop");
-
-                        if (upload == true)
-                        {
-                            MemoryStream ms = new MemoryStream();
-
-                            pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-                            byte[] buff = ms.GetBuffer();
-                            form.Add(new ByteArrayContent(buff, 0, buff.Length), "image", open.SafeFileName);
-                        }
-
-                        Debug.WriteLine(form);
-
-                        var response = client.PostAsync("api/spareparts", form).Result;
-
-                        var a = await response.Content.ReadAsStringAsync();
-                        Debug.WriteLine(a);
-                        DataTable t = await GetSparepart();
-                        dataSparepart.DataSource = t;
-                        dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                        MessageBox.Show("Berhasil Input Data Sparepart");
-
+                        MessageBox.Show("Harga Jual tidak boleh sama dengan harga beli");
                     }
-                    else if (check.Equals("edit"))
+                    else if (Double.Parse(tbBeli.Text.ToString()) > Double.Parse(tbJual.Text.ToString()))
                     {
-                        Debug.WriteLine("masuk edit");
-                        placement = comboPosition.SelectedValue.ToString() + "-" + comboTempat.SelectedValue.ToString() + "-" + tbNomor.Text.ToString();
-                        MultipartFormDataContent form = new MultipartFormDataContent();
-                        form.Add(new StringContent(tbKodeSparepart.Text), "id_sparepart");
-                        form.Add(new StringContent(tbNameSparepart.Text), "sparepart_name");
-                        form.Add(new StringContent(tbMerkSparepart.Text), "merk");
-                        form.Add(new StringContent(tbStock.Text), "stock");
-                        form.Add(new StringContent(tbMinStock.Text), "min_stock");
-                        form.Add(new StringContent(tbBeli.Text), "purchase_price");
-                        form.Add(new StringContent(tbJual.Text), "sell_price");
-                        form.Add(new StringContent(comboSparepartType.SelectedValue.ToString()), "id_sparepart_type");
-                        form.Add(new StringContent(placement), "placement");
-                        form.Add(new StringContent(motor), "motorcycleTypes");
-
-
-                        Debug.WriteLine("cek mana");
-                        if (upload == true)
-                        {
-                            MemoryStream ms = new MemoryStream();
-
-                            pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-                            byte[] buff = ms.GetBuffer();
-                            form.Add(new ByteArrayContent(buff, 0, buff.Length), "image", open.SafeFileName);
-                        }
-
-                        var response = client.PostAsync($"api/updatesparepart/{tbKodeSparepart.Text.ToString()}", form).Result;
-
-                        var a = await response.Content.ReadAsStringAsync();
-                        Debug.WriteLine(a);
-
-                        DataTable t = await GetSparepart();
-                        dataSparepart.DataSource = t;
-                        dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                        MessageBox.Show("Berhasil Ubah Data Sparepart");
-
-
+                        MessageBox.Show("Harga Jual tidak boleh lebih kecil  harga beli");
                     }
-                    clearInput();
-                    disableInput();
+                    else
+                    {
+                        string placement;
+                        if (check.Equals("simpan"))
+                        {
+                            Debug.WriteLine("masuk simpan");
+                            Debug.WriteLine(tbKodeSparepart.Text);
+                            Debug.WriteLine(motor);
+                            placement = comboPosition.SelectedValue.ToString() + "-" + comboTempat.SelectedValue.ToString() + "-" + tbNomor.Text.ToString();
+                            MultipartFormDataContent form = new MultipartFormDataContent();
+                            form.Add(new StringContent(tbKodeSparepart.Text), "id_sparepart");
+                            form.Add(new StringContent(tbNameSparepart.Text), "sparepart_name");
+                            form.Add(new StringContent(tbMerkSparepart.Text), "merk");
+                            form.Add(new StringContent(tbStock.Text), "stock");
+                            form.Add(new StringContent(tbMinStock.Text), "min_stock");
+                            form.Add(new StringContent(tbBeli.Text), "purchase_price");
+                            form.Add(new StringContent(tbJual.Text), "sell_price");
+                            form.Add(new StringContent(comboSparepartType.SelectedValue.ToString()), "id_sparepart_type");
+                            form.Add(new StringContent(placement), "placement");
+                            form.Add(new StringContent(motor.ToString()), "motorcycleTypes");
+                            form.Add(new StringContent("true"), "desktop");
+
+                            if (upload == true)
+                            {
+                                MemoryStream ms = new MemoryStream();
+
+                                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                                byte[] buff = ms.GetBuffer();
+                                form.Add(new ByteArrayContent(buff, 0, buff.Length), "image", open.SafeFileName);
+                            }
+
+                            Debug.WriteLine(form);
+
+                            var response = client.PostAsync("api/spareparts", form).Result;
+
+                            var a = await response.Content.ReadAsStringAsync();
+                            Debug.WriteLine(a);
+                            DataTable t = await GetSparepart();
+                            dataSparepart.DataSource = t;
+                            dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                            MessageBox.Show("Berhasil Input Data Sparepart");
+
+                        }
+                        else if (check.Equals("edit"))
+                        {
+                            Debug.WriteLine("masuk edit");
+                            placement = comboPosition.SelectedValue.ToString() + "-" + comboTempat.SelectedValue.ToString() + "-" + tbNomor.Text.ToString();
+                            MultipartFormDataContent form = new MultipartFormDataContent();
+                            form.Add(new StringContent(tbKodeSparepart.Text), "id_sparepart");
+                            form.Add(new StringContent(tbNameSparepart.Text), "sparepart_name");
+                            form.Add(new StringContent(tbMerkSparepart.Text), "merk");
+                            form.Add(new StringContent(tbStock.Text), "stock");
+                            form.Add(new StringContent(tbMinStock.Text), "min_stock");
+                            form.Add(new StringContent(tbBeli.Text), "purchase_price");
+                            form.Add(new StringContent(tbJual.Text), "sell_price");
+                            form.Add(new StringContent(comboSparepartType.SelectedValue.ToString()), "id_sparepart_type");
+                            form.Add(new StringContent(placement), "placement");
+                            form.Add(new StringContent(motor), "motorcycleTypes");
+
+
+                            Debug.WriteLine("cek mana");
+                            if (upload == true)
+                            {
+                                MemoryStream ms = new MemoryStream();
+
+                                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                                byte[] buff = ms.GetBuffer();
+                                form.Add(new ByteArrayContent(buff, 0, buff.Length), "image", open.SafeFileName);
+                            }
+
+                            var response = client.PostAsync($"api/updatesparepart/{tbKodeSparepart.Text.ToString()}", form).Result;
+
+                            var a = await response.Content.ReadAsStringAsync();
+                            Debug.WriteLine(a);
+
+                            DataTable t = await GetSparepart();
+                            dataSparepart.DataSource = t;
+                            dataSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                            MessageBox.Show("Berhasil Ubah Data Sparepart");
+
+
+                        }
+                        clearInput();
+                        disableInput();
+                    }
+
                 }
                 else
                 {
@@ -393,7 +405,7 @@ namespace BengkelAtma.Menu
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if(tbMerkSparepart.Text.ToString().Trim() != "" && tbNameSparepart.Text.ToString().Trim() != "" && tbKodeSparepart.Text.ToString().Trim() != "" && tbMinStock.Text.ToString().Trim() != "" && tbStock.Text.ToString().Trim() != "" && tbBeli.Text.ToString().Trim() != "" && tbJual.Text.ToString().Trim() != "" && tbNomor.Text.ToString().Trim() != "")
+            if (tbMerkSparepart.Text.ToString().Trim() != "" && tbNameSparepart.Text.ToString().Trim() != "" && tbKodeSparepart.Text.ToString().Trim() != "" && tbMinStock.Text.ToString().Trim() != "" && tbStock.Text.ToString().Trim() != "" && tbBeli.Text.ToString().Trim() != "" && tbJual.Text.ToString().Trim() != "" && tbNomor.Text.ToString().Trim() != "")
             {
                 clearInput();
             }
@@ -494,6 +506,7 @@ namespace BengkelAtma.Menu
             check = "simpan";
             clearInput();
             enableInput();
+
         }
 
         private async void btnEdit_Click(object sender, EventArgs e)
