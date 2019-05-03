@@ -56,6 +56,48 @@ namespace BengkelAtma.Kasir
 
         }
 
+        static async Task<DataTable> GetSparepart(string id)
+        {
+            Console.WriteLine($"cek masuk");
+
+            HttpResponseMessage response = await client.GetAsync($"api/transactions/{id}");
+
+            var a = await response.Content.ReadAsStringAsync();
+            Debug.WriteLine(a);
+            //JObject jsonResponse = JObject.Parse(a);
+            //var sparepart = jsonResponse["data"]["compatibility"];
+            //var comp = sparepart.Children();
+            //Debug.WriteLine(a);
+            DataTable dt = new DataTable();
+            dt = json_convertsparepart(a);
+            Debug.WriteLine(dt.Rows.Count);
+
+
+            return dt;
+
+        }
+
+        static async Task<DataTable> GetService(string id)
+        {
+            Console.WriteLine($"cek masuk");
+
+            HttpResponseMessage response = await client.GetAsync($"api/transactions/{id}");
+
+            var a = await response.Content.ReadAsStringAsync();
+            Debug.WriteLine(a);
+            //JObject jsonResponse = JObject.Parse(a);
+            //var sparepart = jsonResponse["data"]["compatibility"];
+            //var comp = sparepart.Children();
+            //Debug.WriteLine(a);
+            DataTable dt = new DataTable();
+            dt = json_convertservice(a);
+            Debug.WriteLine(dt.Rows.Count);
+
+
+            return dt;
+
+        }
+
         public static DataTable json_convert(string json)
         {
             JObject json_object = JObject.Parse(json);
@@ -187,6 +229,101 @@ namespace BengkelAtma.Kasir
                 };
             }
 
+        }
+
+       
+
+        private void dgTransaksi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Debug.WriteLine("cekmassuk");
+            check = "edit";
+            //enableInput();
+            foreach (DataGridViewRow row in dgTransaksi.Rows)
+            {
+                if (row.Selected == true)
+                {
+                    //id = Convert.ToString(row.Cells[0].Value);
+                    labelID.Text = row.Cells[0].Value.ToString();
+                    labelCstmr.Text = row.Cells[7].Value.ToString();
+                    labelWkt.Text = row.Cells[2].Value.ToString();
+                    row.Selected = true;
+                    ((DataTable)dgTransaksi.DataSource).DefaultView.RowFilter = string.Format("customer_name like '%{0}%'", tbCariByr.Text.Trim().Replace("'", "''"));
+                    break;
+                }
+            }
+        }
+
+        private void dgTransaksi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Debug.WriteLine("cekmassuk");
+            check = "edit";
+            //enableInput();
+            foreach (DataGridViewRow row in dgTransaksi.Rows)
+            {
+                if (row.Selected == true)
+                {
+                    //id = Convert.ToString(row.Cells[0].Value);
+                    labelID.Text = row.Cells[0].Value.ToString();
+                    labelCstmr.Text = row.Cells[7].Value.ToString();
+                    labelWkt.Text = row.Cells[2].Value.ToString();
+                    row.Selected = true;
+                    ((DataTable)dgTransaksi.DataSource).DefaultView.RowFilter = string.Format("customer_name like '%{0}%'", tbCariByr.Text.Trim().Replace("'", "''"));
+                    break;
+                }
+            }
+        }
+
+        private async void dgTransaksi_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Debug.WriteLine("cekmassuk");
+            check = "edit";
+            //enableInput();
+            foreach (DataGridViewRow row in dgTransaksi.Rows)
+            {
+                if (row.Selected == true)
+                {
+                    id = Convert.ToString(row.Cells[0].Value);
+                    labelID.Text = row.Cells[0].Value.ToString();
+                    labelCstmr.Text = row.Cells[7].Value.ToString();
+                    labelWkt.Text = row.Cells[2].Value.ToString();
+
+                    if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
+                    {
+                        DataTable t = await GetSparepart(id);
+                        dgSparepart.DataSource = t;
+                        dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgSparepart.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
+                    }
+                    if (row.Cells[4].Value.ToString().Equals("Service") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
+                    {
+                        DataTable t = await GetService(id);
+                        dgService.DataSource = t;
+                        dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgService.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
+                    }
+
+
+                    break;
+                }
+            }
         }
     }
   }

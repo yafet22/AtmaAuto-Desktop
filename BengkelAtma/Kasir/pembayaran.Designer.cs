@@ -32,11 +32,11 @@
             this.panel1SS = new System.Windows.Forms.Panel();
             this.panel1Sparepart = new System.Windows.Forms.Panel();
             this.panel1dgSparepart = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgSparepart = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1Service = new System.Windows.Forms.Panel();
             this.panel2Service = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgService = new System.Windows.Forms.DataGridView();
             this.label1Service = new System.Windows.Forms.Label();
             this.panel2bawah = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,24 +60,20 @@
             this.tbCariByr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1dataDiri = new System.Windows.Forms.Panel();
-            this.label4valueCS = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4valueWkt = new System.Windows.Forms.Label();
+            this.labelWkt = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6valueTlp = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4valueCstmr = new System.Windows.Forms.Label();
+            this.labelCstmr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label3valueID = new System.Windows.Forms.Label();
+            this.labelID = new System.Windows.Forms.Label();
             this.panel1kiri = new System.Windows.Forms.Panel();
             this.panel1kanan.SuspendLayout();
             this.panel1SS.SuspendLayout();
             this.panel1Sparepart.SuspendLayout();
             this.panel1dgSparepart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSparepart)).BeginInit();
             this.panel1Service.SuspendLayout();
             this.panel2Service.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgService)).BeginInit();
             this.panel2bawah.SuspendLayout();
             this.panel4dg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTransaksi)).BeginInit();
@@ -104,7 +100,7 @@
             this.panel1SS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1SS.Location = new System.Drawing.Point(0, 0);
             this.panel1SS.Name = "panel1SS";
-            this.panel1SS.Size = new System.Drawing.Size(358, 206);
+            this.panel1SS.Size = new System.Drawing.Size(358, 224);
             this.panel1SS.TabIndex = 3;
             // 
             // panel1Sparepart
@@ -115,27 +111,28 @@
             this.panel1Sparepart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1Sparepart.Location = new System.Drawing.Point(0, 0);
             this.panel1Sparepart.Name = "panel1Sparepart";
-            this.panel1Sparepart.Size = new System.Drawing.Size(358, 102);
+            this.panel1Sparepart.Size = new System.Drawing.Size(358, 113);
             this.panel1Sparepart.TabIndex = 11;
             // 
             // panel1dgSparepart
             // 
-            this.panel1dgSparepart.Controls.Add(this.dataGridView3);
+            this.panel1dgSparepart.Controls.Add(this.dgSparepart);
             this.panel1dgSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1dgSparepart.Location = new System.Drawing.Point(0, 17);
             this.panel1dgSparepart.Name = "panel1dgSparepart";
             this.panel1dgSparepart.Padding = new System.Windows.Forms.Padding(2);
-            this.panel1dgSparepart.Size = new System.Drawing.Size(358, 85);
+            this.panel1dgSparepart.Size = new System.Drawing.Size(358, 96);
             this.panel1dgSparepart.TabIndex = 0;
             // 
-            // dataGridView3
+            // dgSparepart
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(354, 81);
-            this.dataGridView3.TabIndex = 0;
+            this.dgSparepart.BackgroundColor = System.Drawing.Color.White;
+            this.dgSparepart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgSparepart.Location = new System.Drawing.Point(2, 2);
+            this.dgSparepart.Name = "dgSparepart";
+            this.dgSparepart.Size = new System.Drawing.Size(354, 92);
+            this.dgSparepart.TabIndex = 0;
             // 
             // label1
             // 
@@ -154,29 +151,30 @@
             this.panel1Service.Controls.Add(this.panel2Service);
             this.panel1Service.Controls.Add(this.label1Service);
             this.panel1Service.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1Service.Location = new System.Drawing.Point(0, 102);
+            this.panel1Service.Location = new System.Drawing.Point(0, 113);
             this.panel1Service.Name = "panel1Service";
-            this.panel1Service.Size = new System.Drawing.Size(358, 104);
+            this.panel1Service.Size = new System.Drawing.Size(358, 111);
             this.panel1Service.TabIndex = 9;
             // 
             // panel2Service
             // 
-            this.panel2Service.Controls.Add(this.dataGridView2);
+            this.panel2Service.Controls.Add(this.dgService);
             this.panel2Service.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2Service.Location = new System.Drawing.Point(0, 17);
             this.panel2Service.Name = "panel2Service";
             this.panel2Service.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2Service.Size = new System.Drawing.Size(358, 87);
+            this.panel2Service.Size = new System.Drawing.Size(358, 94);
             this.panel2Service.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgService
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(352, 81);
-            this.dataGridView2.TabIndex = 0;
+            this.dgService.BackgroundColor = System.Drawing.Color.White;
+            this.dgService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgService.Location = new System.Drawing.Point(3, 3);
+            this.dgService.Name = "dgService";
+            this.dgService.Size = new System.Drawing.Size(352, 88);
+            this.dgService.TabIndex = 0;
             // 
             // label1Service
             // 
@@ -205,9 +203,9 @@
             this.panel2bawah.Controls.Add(this.label2Bayar);
             this.panel2bawah.Controls.Add(this.labelKodeSparepart);
             this.panel2bawah.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2bawah.Location = new System.Drawing.Point(0, 206);
+            this.panel2bawah.Location = new System.Drawing.Point(0, 224);
             this.panel2bawah.Name = "panel2bawah";
-            this.panel2bawah.Size = new System.Drawing.Size(358, 146);
+            this.panel2bawah.Size = new System.Drawing.Size(358, 128);
             this.panel2bawah.TabIndex = 0;
             // 
             // label4
@@ -335,12 +333,16 @@
             // 
             // dgTransaksi
             // 
+            this.dgTransaksi.BackgroundColor = System.Drawing.Color.White;
             this.dgTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTransaksi.Location = new System.Drawing.Point(4, 4);
             this.dgTransaksi.Name = "dgTransaksi";
             this.dgTransaksi.Size = new System.Drawing.Size(308, 168);
             this.dgTransaksi.TabIndex = 0;
+            this.dgTransaksi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransaksi_CellClick);
+            this.dgTransaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransaksi_CellContentClick);
+            this.dgTransaksi.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgTransaksi_RowHeaderMouseClick);
             // 
             // panel3atas
             // 
@@ -394,15 +396,11 @@
             // panel1dataDiri
             // 
             this.panel1dataDiri.BackColor = System.Drawing.Color.White;
-            this.panel1dataDiri.Controls.Add(this.label4valueCS);
-            this.panel1dataDiri.Controls.Add(this.label6);
-            this.panel1dataDiri.Controls.Add(this.label4valueWkt);
+            this.panel1dataDiri.Controls.Add(this.labelWkt);
             this.panel1dataDiri.Controls.Add(this.label5);
-            this.panel1dataDiri.Controls.Add(this.label6valueTlp);
-            this.panel1dataDiri.Controls.Add(this.label7);
-            this.panel1dataDiri.Controls.Add(this.label4valueCstmr);
+            this.panel1dataDiri.Controls.Add(this.labelCstmr);
             this.panel1dataDiri.Controls.Add(this.label3);
-            this.panel1dataDiri.Controls.Add(this.label3valueID);
+            this.panel1dataDiri.Controls.Add(this.labelID);
             this.panel1dataDiri.Controls.Add(this.label2);
             this.panel1dataDiri.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1dataDiri.Location = new System.Drawing.Point(0, 221);
@@ -410,68 +408,32 @@
             this.panel1dataDiri.Size = new System.Drawing.Size(316, 131);
             this.panel1dataDiri.TabIndex = 10;
             // 
-            // label4valueCS
+            // labelWkt
             // 
-            this.label4valueCS.AutoSize = true;
-            this.label4valueCS.Location = new System.Drawing.Point(110, 100);
-            this.label4valueCS.Name = "label4valueCS";
-            this.label4valueCS.Size = new System.Drawing.Size(35, 13);
-            this.label4valueCS.TabIndex = 9;
-            this.label4valueCS.Text = "Nama";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Customer Service";
-            // 
-            // label4valueWkt
-            // 
-            this.label4valueWkt.AutoSize = true;
-            this.label4valueWkt.Location = new System.Drawing.Point(110, 77);
-            this.label4valueWkt.Name = "label4valueWkt";
-            this.label4valueWkt.Size = new System.Drawing.Size(65, 13);
-            this.label4valueWkt.TabIndex = 7;
-            this.label4valueWkt.Text = "DD/MM/YY";
+            this.labelWkt.AutoSize = true;
+            this.labelWkt.Location = new System.Drawing.Point(110, 55);
+            this.labelWkt.Name = "labelWkt";
+            this.labelWkt.Size = new System.Drawing.Size(65, 13);
+            this.labelWkt.TabIndex = 7;
+            this.labelWkt.Text = "DD/MM/YY";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 77);
+            this.label5.Location = new System.Drawing.Point(3, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tanggal/Jam";
             // 
-            // label6valueTlp
+            // labelCstmr
             // 
-            this.label6valueTlp.AutoSize = true;
-            this.label6valueTlp.Location = new System.Drawing.Point(110, 53);
-            this.label6valueTlp.Name = "label6valueTlp";
-            this.label6valueTlp.Size = new System.Drawing.Size(13, 13);
-            this.label6valueTlp.TabIndex = 5;
-            this.label6valueTlp.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 53);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Telepon";
-            // 
-            // label4valueCstmr
-            // 
-            this.label4valueCstmr.AutoSize = true;
-            this.label4valueCstmr.Location = new System.Drawing.Point(110, 32);
-            this.label4valueCstmr.Name = "label4valueCstmr";
-            this.label4valueCstmr.Size = new System.Drawing.Size(35, 13);
-            this.label4valueCstmr.TabIndex = 3;
-            this.label4valueCstmr.Text = "Nama";
+            this.labelCstmr.AutoSize = true;
+            this.labelCstmr.Location = new System.Drawing.Point(110, 32);
+            this.labelCstmr.Name = "labelCstmr";
+            this.labelCstmr.Size = new System.Drawing.Size(35, 13);
+            this.labelCstmr.TabIndex = 3;
+            this.labelCstmr.Text = "Nama";
             // 
             // label3
             // 
@@ -482,14 +444,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Customer";
             // 
-            // label3valueID
+            // labelID
             // 
-            this.label3valueID.AutoSize = true;
-            this.label3valueID.Location = new System.Drawing.Point(110, 8);
-            this.label3valueID.Name = "label3valueID";
-            this.label3valueID.Size = new System.Drawing.Size(13, 13);
-            this.label3valueID.TabIndex = 1;
-            this.label3valueID.Text = "0";
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(110, 8);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(13, 13);
+            this.labelID.TabIndex = 1;
+            this.labelID.Text = "0";
             // 
             // panel1kiri
             // 
@@ -516,11 +478,11 @@
             this.panel1Sparepart.ResumeLayout(false);
             this.panel1Sparepart.PerformLayout();
             this.panel1dgSparepart.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSparepart)).EndInit();
             this.panel1Service.ResumeLayout(false);
             this.panel1Service.PerformLayout();
             this.panel2Service.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgService)).EndInit();
             this.panel2bawah.ResumeLayout(false);
             this.panel2bawah.PerformLayout();
             this.panel4dg.ResumeLayout(false);
@@ -558,22 +520,18 @@
         private System.Windows.Forms.Panel panel1Service;
         private System.Windows.Forms.Label label1Service;
         private System.Windows.Forms.Panel panel2Service;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgService;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgSparepart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1Sparepart;
         private System.Windows.Forms.Panel panel1dgSparepart;
         private System.Windows.Forms.Panel panel1dataDiri;
-        private System.Windows.Forms.Label label4valueCS;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4valueWkt;
+        private System.Windows.Forms.Label labelWkt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6valueTlp;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4valueCstmr;
+        private System.Windows.Forms.Label labelCstmr;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label3valueID;
+        private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Panel panel1kiri;
         private System.Windows.Forms.Panel panel1SS;
         private System.Windows.Forms.Label labelTotal;
