@@ -415,7 +415,7 @@
             this.btnResetByr.BackColor = System.Drawing.Color.Red;
             this.btnResetByr.Location = new System.Drawing.Point(40, 89);
             this.btnResetByr.Name = "btnResetByr";
-            this.btnResetByr.Size = new System.Drawing.Size(229, 28);
+            this.btnResetByr.Size = new System.Drawing.Size(234, 23);
             this.btnResetByr.TabIndex = 8;
             this.btnResetByr.Text = "Reset";
             this.btnResetByr.UseVisualStyleBackColor = false;
