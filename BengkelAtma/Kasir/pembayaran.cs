@@ -39,6 +39,14 @@ namespace BengkelAtma.Kasir
             public string transaction_type;
         }
 
+        public void clearInput()
+        {
+            labelID.Text = "";
+            labelCstmr.Text = "";
+            labelWkt.Text = "";
+            
+            
+        }
 
         static async Task<DataTable> GetTransaction()
         {
@@ -324,6 +332,19 @@ namespace BengkelAtma.Kasir
                     break;
                 }
             }
+        }
+
+        private void btnResetByr_Click(object sender, EventArgs e)
+        {
+            if (labelID.Text.ToString().Trim() != "" && labelCstmr.Text.ToString().Trim() != "" && labelWkt.Text.ToString().Trim() != "" && dgSparepart != null && dgService != null)
+            {
+                clearInput();
+                DataTable t = null;
+                dgSparepart.DataSource = t;
+                MessageBox.Show("Anda Sukses Melakukan Reset");
+
+            }
+            
         }
     }
   }

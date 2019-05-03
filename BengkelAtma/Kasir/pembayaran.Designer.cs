@@ -66,6 +66,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
             this.panel1kiri = new System.Windows.Forms.Panel();
+            this.btnResetByr = new System.Windows.Forms.Button();
             this.panel1kanan.SuspendLayout();
             this.panel1SS.SuspendLayout();
             this.panel1Sparepart.SuspendLayout();
@@ -396,6 +397,7 @@
             // panel1dataDiri
             // 
             this.panel1dataDiri.BackColor = System.Drawing.Color.White;
+            this.panel1dataDiri.Controls.Add(this.btnResetByr);
             this.panel1dataDiri.Controls.Add(this.labelWkt);
             this.panel1dataDiri.Controls.Add(this.label5);
             this.panel1dataDiri.Controls.Add(this.labelCstmr);
@@ -463,6 +465,17 @@
             this.panel1kiri.Name = "panel1kiri";
             this.panel1kiri.Size = new System.Drawing.Size(316, 352);
             this.panel1kiri.TabIndex = 3;
+            // 
+            // btnResetByr
+            // 
+            this.btnResetByr.BackColor = System.Drawing.Color.Red;
+            this.btnResetByr.Location = new System.Drawing.Point(40, 89);
+            this.btnResetByr.Name = "btnResetByr";
+            this.btnResetByr.Size = new System.Drawing.Size(229, 28);
+            this.btnResetByr.TabIndex = 8;
+            this.btnResetByr.Text = "Reset";
+            this.btnResetByr.UseVisualStyleBackColor = false;
+            this.btnResetByr.Click += new System.EventHandler(this.btnResetByr_Click);
             // 
             // pembayaran
             // 
@@ -536,5 +549,6 @@
         private System.Windows.Forms.Panel panel1SS;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnResetByr;
     }
 }
