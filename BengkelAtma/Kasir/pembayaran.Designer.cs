@@ -53,7 +53,7 @@
             this.label2Bayar = new System.Windows.Forms.Label();
             this.labelKodeSparepart = new System.Windows.Forms.Label();
             this.panel4dg = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgTransaksi = new System.Windows.Forms.DataGridView();
             this.panel3atas = new System.Windows.Forms.Panel();
             this.labelCariBayar = new System.Windows.Forms.Label();
             this.btnCariByr = new System.Windows.Forms.Button();
@@ -80,7 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2bawah.SuspendLayout();
             this.panel4dg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTransaksi)).BeginInit();
             this.panel3atas.SuspendLayout();
             this.panel1dataDiri.SuspendLayout();
             this.panel1kiri.SuspendLayout();
@@ -325,25 +325,26 @@
             // 
             // panel4dg
             // 
-            this.panel4dg.Controls.Add(this.dataGridView1);
+            this.panel4dg.Controls.Add(this.dgTransaksi);
             this.panel4dg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4dg.Location = new System.Drawing.Point(0, 0);
+            this.panel4dg.Location = new System.Drawing.Point(0, 45);
             this.panel4dg.Name = "panel4dg";
             this.panel4dg.Padding = new System.Windows.Forms.Padding(4);
-            this.panel4dg.Size = new System.Drawing.Size(316, 221);
+            this.panel4dg.Size = new System.Drawing.Size(316, 176);
             this.panel4dg.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgTransaksi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(308, 213);
-            this.dataGridView1.TabIndex = 0;
+            this.dgTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgTransaksi.Location = new System.Drawing.Point(4, 4);
+            this.dgTransaksi.Name = "dgTransaksi";
+            this.dgTransaksi.Size = new System.Drawing.Size(308, 168);
+            this.dgTransaksi.TabIndex = 0;
             // 
             // panel3atas
             // 
+            this.panel3atas.BackColor = System.Drawing.Color.White;
             this.panel3atas.Controls.Add(this.labelCariBayar);
             this.panel3atas.Controls.Add(this.btnCariByr);
             this.panel3atas.Controls.Add(this.tbCariByr);
@@ -372,6 +373,7 @@
             this.btnCariByr.TabIndex = 47;
             this.btnCariByr.Text = "Cari";
             this.btnCariByr.UseVisualStyleBackColor = false;
+            this.btnCariByr.Click += new System.EventHandler(this.btnCariByr_Click);
             // 
             // tbCariByr
             // 
@@ -491,8 +493,8 @@
             // 
             // panel1kiri
             // 
-            this.panel1kiri.Controls.Add(this.panel3atas);
             this.panel1kiri.Controls.Add(this.panel4dg);
+            this.panel1kiri.Controls.Add(this.panel3atas);
             this.panel1kiri.Controls.Add(this.panel1dataDiri);
             this.panel1kiri.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1kiri.Location = new System.Drawing.Point(0, 0);
@@ -508,6 +510,7 @@
             this.Controls.Add(this.panel1kiri);
             this.Name = "pembayaran";
             this.Size = new System.Drawing.Size(674, 352);
+            this.Load += new System.EventHandler(this.pembayaran_Load);
             this.panel1kanan.ResumeLayout(false);
             this.panel1SS.ResumeLayout(false);
             this.panel1Sparepart.ResumeLayout(false);
@@ -521,7 +524,7 @@
             this.panel2bawah.ResumeLayout(false);
             this.panel2bawah.PerformLayout();
             this.panel4dg.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTransaksi)).EndInit();
             this.panel3atas.ResumeLayout(false);
             this.panel3atas.PerformLayout();
             this.panel1dataDiri.ResumeLayout(false);
@@ -535,7 +538,7 @@
 
         private System.Windows.Forms.Panel panel1kanan;
         private System.Windows.Forms.Panel panel4dg;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgTransaksi;
         private System.Windows.Forms.Panel panel3atas;
         private System.Windows.Forms.Label labelCariBayar;
         private System.Windows.Forms.Button btnCariByr;

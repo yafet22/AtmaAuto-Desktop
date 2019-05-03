@@ -30,6 +30,7 @@
         {
             this.panel1Kasir = new System.Windows.Forms.Panel();
             this.metroPanel1Kasir = new MetroFramework.Controls.MetroPanel();
+            this.pembayaran2 = new BengkelAtma.Kasir.pembayaran();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.btnKeluarKasir = new System.Windows.Forms.Button();
             this.btnProfilKasir = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.panel1bwahMain = new System.Windows.Forms.Panel();
-            this.pembayaran2 = new BengkelAtma.Kasir.pembayaran();
             this.panel1Kasir.SuspendLayout();
             this.metroPanel1Kasir.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -76,6 +76,14 @@
             this.metroPanel1Kasir.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1Kasir.VerticalScrollbarSize = 10;
             // 
+            // pembayaran2
+            // 
+            this.pembayaran2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pembayaran2.Location = new System.Drawing.Point(0, 0);
+            this.pembayaran2.Name = "pembayaran2";
+            this.pembayaran2.Size = new System.Drawing.Size(824, 538);
+            this.pembayaran2.TabIndex = 2;
+            // 
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
@@ -106,6 +114,7 @@
             this.btnKeluarKasir.TabIndex = 4;
             this.btnKeluarKasir.Text = "Keluar";
             this.btnKeluarKasir.UseVisualStyleBackColor = false;
+            this.btnKeluarKasir.Click += new System.EventHandler(this.btnKeluarKasir_Click);
             // 
             // btnProfilKasir
             // 
@@ -212,14 +221,6 @@
             this.panel1bwahMain.Name = "panel1bwahMain";
             this.panel1bwahMain.Size = new System.Drawing.Size(808, 100);
             this.panel1bwahMain.TabIndex = 3;
-            // 
-            // pembayaran2
-            // 
-            this.pembayaran2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pembayaran2.Location = new System.Drawing.Point(0, 0);
-            this.pembayaran2.Name = "pembayaran2";
-            this.pembayaran2.Size = new System.Drawing.Size(824, 538);
-            this.pembayaran2.TabIndex = 2;
             // 
             // MainMenuKasir
             // 
