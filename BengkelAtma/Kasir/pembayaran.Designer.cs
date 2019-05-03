@@ -60,13 +60,13 @@
             this.tbCariByr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1dataDiri = new System.Windows.Forms.Panel();
+            this.btnResetByr = new System.Windows.Forms.Button();
             this.labelWkt = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelCstmr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
             this.panel1kiri = new System.Windows.Forms.Panel();
-            this.btnResetByr = new System.Windows.Forms.Button();
             this.panel1kanan.SuspendLayout();
             this.panel1SS.SuspendLayout();
             this.panel1Sparepart.SuspendLayout();
@@ -410,6 +410,17 @@
             this.panel1dataDiri.Size = new System.Drawing.Size(316, 131);
             this.panel1dataDiri.TabIndex = 10;
             // 
+            // btnResetByr
+            // 
+            this.btnResetByr.BackColor = System.Drawing.Color.Red;
+            this.btnResetByr.Location = new System.Drawing.Point(40, 89);
+            this.btnResetByr.Name = "btnResetByr";
+            this.btnResetByr.Size = new System.Drawing.Size(229, 28);
+            this.btnResetByr.TabIndex = 8;
+            this.btnResetByr.Text = "Reset";
+            this.btnResetByr.UseVisualStyleBackColor = false;
+            this.btnResetByr.Click += new System.EventHandler(this.btnResetByr_Click);
+            // 
             // labelWkt
             // 
             this.labelWkt.AutoSize = true;
@@ -465,17 +476,6 @@
             this.panel1kiri.Name = "panel1kiri";
             this.panel1kiri.Size = new System.Drawing.Size(316, 352);
             this.panel1kiri.TabIndex = 3;
-            // 
-            // btnResetByr
-            // 
-            this.btnResetByr.BackColor = System.Drawing.Color.Red;
-            this.btnResetByr.Location = new System.Drawing.Point(40, 89);
-            this.btnResetByr.Name = "btnResetByr";
-            this.btnResetByr.Size = new System.Drawing.Size(229, 28);
-            this.btnResetByr.TabIndex = 8;
-            this.btnResetByr.Text = "Reset";
-            this.btnResetByr.UseVisualStyleBackColor = false;
-            this.btnResetByr.Click += new System.EventHandler(this.btnResetByr_Click);
             // 
             // pembayaran
             // 

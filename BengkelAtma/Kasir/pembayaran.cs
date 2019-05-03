@@ -341,6 +341,7 @@ namespace BengkelAtma.Kasir
                 clearInput();
                 DataTable t = null;
                 dgSparepart.DataSource = t;
+                dgService.DataSource = t;
                 MessageBox.Show("Anda Sukses Melakukan Reset");
 
             }
