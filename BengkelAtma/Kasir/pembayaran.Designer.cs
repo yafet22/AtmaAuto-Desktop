@@ -89,9 +89,9 @@
             this.panel1kanan.Controls.Add(this.panel1SS);
             this.panel1kanan.Controls.Add(this.panel2bawah);
             this.panel1kanan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1kanan.Location = new System.Drawing.Point(316, 0);
+            this.panel1kanan.Location = new System.Drawing.Point(673, 0);
             this.panel1kanan.Name = "panel1kanan";
-            this.panel1kanan.Size = new System.Drawing.Size(358, 352);
+            this.panel1kanan.Size = new System.Drawing.Size(357, 352);
             this.panel1kanan.TabIndex = 8;
             // 
             // panel1SS
@@ -101,7 +101,7 @@
             this.panel1SS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1SS.Location = new System.Drawing.Point(0, 0);
             this.panel1SS.Name = "panel1SS";
-            this.panel1SS.Size = new System.Drawing.Size(358, 224);
+            this.panel1SS.Size = new System.Drawing.Size(357, 224);
             this.panel1SS.TabIndex = 3;
             // 
             // panel1Sparepart
@@ -112,17 +112,18 @@
             this.panel1Sparepart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1Sparepart.Location = new System.Drawing.Point(0, 0);
             this.panel1Sparepart.Name = "panel1Sparepart";
-            this.panel1Sparepart.Size = new System.Drawing.Size(358, 113);
+            this.panel1Sparepart.Padding = new System.Windows.Forms.Padding(4);
+            this.panel1Sparepart.Size = new System.Drawing.Size(357, 77);
             this.panel1Sparepart.TabIndex = 11;
             // 
             // panel1dgSparepart
             // 
             this.panel1dgSparepart.Controls.Add(this.dgSparepart);
             this.panel1dgSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1dgSparepart.Location = new System.Drawing.Point(0, 17);
+            this.panel1dgSparepart.Location = new System.Drawing.Point(4, 21);
             this.panel1dgSparepart.Name = "panel1dgSparepart";
             this.panel1dgSparepart.Padding = new System.Windows.Forms.Padding(2);
-            this.panel1dgSparepart.Size = new System.Drawing.Size(358, 96);
+            this.panel1dgSparepart.Size = new System.Drawing.Size(349, 52);
             this.panel1dgSparepart.TabIndex = 0;
             // 
             // dgSparepart
@@ -132,7 +133,7 @@
             this.dgSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgSparepart.Location = new System.Drawing.Point(2, 2);
             this.dgSparepart.Name = "dgSparepart";
-            this.dgSparepart.Size = new System.Drawing.Size(354, 92);
+            this.dgSparepart.Size = new System.Drawing.Size(345, 48);
             this.dgSparepart.TabIndex = 0;
             // 
             // label1
@@ -140,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 2;
@@ -152,19 +153,20 @@
             this.panel1Service.Controls.Add(this.panel2Service);
             this.panel1Service.Controls.Add(this.label1Service);
             this.panel1Service.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1Service.Location = new System.Drawing.Point(0, 113);
+            this.panel1Service.Location = new System.Drawing.Point(0, 77);
             this.panel1Service.Name = "panel1Service";
-            this.panel1Service.Size = new System.Drawing.Size(358, 111);
+            this.panel1Service.Padding = new System.Windows.Forms.Padding(4);
+            this.panel1Service.Size = new System.Drawing.Size(357, 147);
             this.panel1Service.TabIndex = 9;
             // 
             // panel2Service
             // 
             this.panel2Service.Controls.Add(this.dgService);
             this.panel2Service.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2Service.Location = new System.Drawing.Point(0, 17);
+            this.panel2Service.Location = new System.Drawing.Point(4, 21);
             this.panel2Service.Name = "panel2Service";
             this.panel2Service.Padding = new System.Windows.Forms.Padding(3);
-            this.panel2Service.Size = new System.Drawing.Size(358, 94);
+            this.panel2Service.Size = new System.Drawing.Size(349, 122);
             this.panel2Service.TabIndex = 0;
             // 
             // dgService
@@ -174,7 +176,7 @@
             this.dgService.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgService.Location = new System.Drawing.Point(3, 3);
             this.dgService.Name = "dgService";
-            this.dgService.Size = new System.Drawing.Size(352, 88);
+            this.dgService.Size = new System.Drawing.Size(343, 116);
             this.dgService.TabIndex = 0;
             // 
             // label1Service
@@ -182,7 +184,7 @@
             this.label1Service.AutoSize = true;
             this.label1Service.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Service.Location = new System.Drawing.Point(0, 0);
+            this.label1Service.Location = new System.Drawing.Point(4, 4);
             this.label1Service.Name = "label1Service";
             this.label1Service.Size = new System.Drawing.Size(62, 17);
             this.label1Service.TabIndex = 1;
@@ -206,7 +208,7 @@
             this.panel2bawah.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2bawah.Location = new System.Drawing.Point(0, 224);
             this.panel2bawah.Name = "panel2bawah";
-            this.panel2bawah.Size = new System.Drawing.Size(358, 128);
+            this.panel2bawah.Size = new System.Drawing.Size(357, 128);
             this.panel2bawah.TabIndex = 0;
             // 
             // label4
@@ -324,12 +326,13 @@
             // 
             // panel4dg
             // 
+            this.panel4dg.BackColor = System.Drawing.Color.White;
             this.panel4dg.Controls.Add(this.dgTransaksi);
             this.panel4dg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4dg.Location = new System.Drawing.Point(0, 45);
             this.panel4dg.Name = "panel4dg";
             this.panel4dg.Padding = new System.Windows.Forms.Padding(4);
-            this.panel4dg.Size = new System.Drawing.Size(316, 176);
+            this.panel4dg.Size = new System.Drawing.Size(673, 176);
             this.panel4dg.TabIndex = 2;
             // 
             // dgTransaksi
@@ -339,7 +342,7 @@
             this.dgTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTransaksi.Location = new System.Drawing.Point(4, 4);
             this.dgTransaksi.Name = "dgTransaksi";
-            this.dgTransaksi.Size = new System.Drawing.Size(308, 168);
+            this.dgTransaksi.Size = new System.Drawing.Size(665, 168);
             this.dgTransaksi.TabIndex = 0;
             this.dgTransaksi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransaksi_CellClick);
             this.dgTransaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransaksi_CellContentClick);
@@ -354,7 +357,7 @@
             this.panel3atas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3atas.Location = new System.Drawing.Point(0, 0);
             this.panel3atas.Name = "panel3atas";
-            this.panel3atas.Size = new System.Drawing.Size(316, 45);
+            this.panel3atas.Size = new System.Drawing.Size(673, 45);
             this.panel3atas.TabIndex = 1;
             // 
             // labelCariBayar
@@ -407,7 +410,7 @@
             this.panel1dataDiri.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1dataDiri.Location = new System.Drawing.Point(0, 221);
             this.panel1dataDiri.Name = "panel1dataDiri";
-            this.panel1dataDiri.Size = new System.Drawing.Size(316, 131);
+            this.panel1dataDiri.Size = new System.Drawing.Size(673, 131);
             this.panel1dataDiri.TabIndex = 10;
             // 
             // btnResetByr
@@ -474,7 +477,7 @@
             this.panel1kiri.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1kiri.Location = new System.Drawing.Point(0, 0);
             this.panel1kiri.Name = "panel1kiri";
-            this.panel1kiri.Size = new System.Drawing.Size(316, 352);
+            this.panel1kiri.Size = new System.Drawing.Size(673, 352);
             this.panel1kiri.TabIndex = 3;
             // 
             // pembayaran
@@ -483,8 +486,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1kanan);
             this.Controls.Add(this.panel1kiri);
+            this.MinimumSize = new System.Drawing.Size(1030, 352);
             this.Name = "pembayaran";
-            this.Size = new System.Drawing.Size(674, 352);
+            this.Size = new System.Drawing.Size(1030, 352);
             this.Load += new System.EventHandler(this.pembayaran_Load);
             this.panel1kanan.ResumeLayout(false);
             this.panel1SS.ResumeLayout(false);
