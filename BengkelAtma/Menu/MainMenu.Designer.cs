@@ -507,7 +507,7 @@ namespace BengkelAtma
             this.metroTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl2.Name = "metroTabControl2";
-            this.metroTabControl2.SelectedIndex = 0;
+            this.metroTabControl2.SelectedIndex = 5;
             this.metroTabControl2.Size = new System.Drawing.Size(800, 496);
             this.metroTabControl2.TabIndex = 2;
             this.metroTabControl2.UseSelectable = true;
