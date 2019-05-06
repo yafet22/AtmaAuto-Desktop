@@ -20,6 +20,7 @@ namespace BengkelAtma.Kasir
         private static readonly HttpClient client = new HttpClient();
         private string check = "";
         private string id;
+        private double payamount;
 
         public pembayaran()
         {
@@ -27,17 +28,6 @@ namespace BengkelAtma.Kasir
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
         }
 
-        public class Bayar
-        {
-            public string id_transaction;
-            public int id_costumer;
-            public string transaction_status;
-            public string transaction_date;
-            public string transaction_paid;
-            public double transaction_discount;
-            public double transaction_total;
-            public string transaction_type;
-        }
 
         public void clearInput()
         {
@@ -261,7 +251,7 @@ namespace BengkelAtma.Kasir
             }
         }
 
-        private void dgTransaksi_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgTransaksi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Debug.WriteLine("cekmassuk");
             check = "edit";
@@ -274,8 +264,43 @@ namespace BengkelAtma.Kasir
                     labelID.Text = row.Cells[0].Value.ToString();
                     labelCstmr.Text = row.Cells[7].Value.ToString();
                     labelWkt.Text = row.Cells[2].Value.ToString();
+                    tbTotal.Text = row.Cells[6].Value.ToString();
                     row.Selected = true;
-                    ((DataTable)dgTransaksi.DataSource).DefaultView.RowFilter = string.Format("customer_name like '%{0}%'", tbCariByr.Text.Trim().Replace("'", "''"));
+                    
+                    if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
+                    {
+                        DataTable t = await GetSparepart(id);
+                        dgSparepart.DataSource = t;
+                        dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgSparepart.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
+                    }
+                    if (row.Cells[4].Value.ToString().Equals("Service") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
+                    {
+                        DataTable t = await GetService(id);
+                        dgService.DataSource = t;
+                        dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgService.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
+                    }
+
+
                     break;
                 }
             }
@@ -294,6 +319,7 @@ namespace BengkelAtma.Kasir
                     labelID.Text = row.Cells[0].Value.ToString();
                     labelCstmr.Text = row.Cells[7].Value.ToString();
                     labelWkt.Text = row.Cells[2].Value.ToString();
+                    tbTotal.Text = row.Cells[6].Value.ToString();
 
                     if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
                     {
@@ -346,6 +372,74 @@ namespace BengkelAtma.Kasir
 
             }
             
+        }
+
+        private async void btnBayar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Debug.WriteLine(labelID.Text);
+                Pay pay = new Pay { id_transaction = labelID.Text, transaction_discount = Convert.ToInt64(tbDiskon.Text), transaction_total = Convert.ToInt64(tbUangBayar.Text) };
+
+                HttpResponseMessage response = await client.PutAsJsonAsync(
+                $"api/payment/{pay.id_transaction}", pay);
+                response.EnsureSuccessStatusCode();
+                pay = await response.Content.ReadAsAsync<Pay>();
+                dgTransaksi.DataSource = await GetTransaction();
+                dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                dgTransaksi.DataBindingComplete += (o, _) =>
+                {
+                    var dataGridView = o as DataGridView;
+                    if (dataGridView != null)
+                    {
+                        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                        dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                };
+                //((DataTable)dataCabang.DataSource).AcceptChanges();
+
+                MessageBox.Show("Berhasil Update Data Cabang");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            
+        }
+
+        public class Pay
+        {
+            public string id_transaction { get; set; }
+            public double transaction_discount { get; set; }
+            public double transaction_total { get; set; }
+        }
+
+        public class Bayar
+        {
+            public string id_transaction { get; set; }
+            public double transaction_discount { get; set; }
+            public double transaction_total { get; set; }
+            public double payamount { get; set; }
+        }
+
+        private void tbDiskon_TextChanged(object sender, EventArgs e)
+        {
+            Debug.WriteLine("sososk1");
+            //tbTotal.Text = Convert.ToString((Convert.ToInt64(tbTotal.Text) - Convert.ToInt64(tbDiskon.Text)));
+        }
+
+        private void tbDiskon_KeyUp(object sender, KeyEventArgs e)
+        {
+            Debug.WriteLine("sososk2");
+            //tbTotal.Text = Convert.ToString((Convert.ToInt64(tbTotal.Text) - Convert.ToInt64(tbDiskon.Text)));
+        }
+
+        private void tbDiskon_KeyDown(object sender, KeyEventArgs e)
+        {
+            Debug.WriteLine("sososk3");
+            //tbTotal.Text = Convert.ToString((Convert.ToInt64(tbTotal.Text) - Convert.ToInt64(tbDiskon.Text)));
         }
     }
   }
