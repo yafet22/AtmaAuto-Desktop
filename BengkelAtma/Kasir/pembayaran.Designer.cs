@@ -233,7 +233,7 @@
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(67, 112);
+            this.labelTotal.Location = new System.Drawing.Point(93, 112);
             this.labelTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(47, 17);
@@ -258,9 +258,9 @@
             this.label1Total.Location = new System.Drawing.Point(4, 112);
             this.label1Total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1Total.Name = "label1Total";
-            this.label1Total.Size = new System.Drawing.Size(44, 17);
+            this.label1Total.Size = new System.Drawing.Size(81, 17);
             this.label1Total.TabIndex = 29;
-            this.label1Total.Text = "Total ";
+            this.label1Total.Text = "Total Bayar";
             // 
             // tbKembalian
             // 
@@ -299,7 +299,6 @@
             this.tbDiskon.Size = new System.Drawing.Size(103, 22);
             this.tbDiskon.TabIndex = 24;
             this.tbDiskon.TextChanged += new System.EventHandler(this.tbDiskon_TextChanged);
-            this.tbDiskon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDiskon_KeyDown);
             this.tbDiskon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbDiskon_KeyUp);
             // 
             // labelDiskon
@@ -319,6 +318,7 @@
             this.tbUangBayar.Name = "tbUangBayar";
             this.tbUangBayar.Size = new System.Drawing.Size(105, 22);
             this.tbUangBayar.TabIndex = 26;
+            this.tbUangBayar.TextChanged += new System.EventHandler(this.tbUangBayar_TextChanged);
             // 
             // labelSubTotal
             // 

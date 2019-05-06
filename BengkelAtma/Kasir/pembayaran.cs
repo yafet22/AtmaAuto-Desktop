@@ -21,11 +21,15 @@ namespace BengkelAtma.Kasir
         private string check = "";
         private string id;
         private double payamount;
+        private double total;
+        private double totalBefore;
+        private double kembalian;
 
         public pembayaran()
         {
             InitializeComponent();
             client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            disabledInput();
         }
 
 
@@ -34,8 +38,28 @@ namespace BengkelAtma.Kasir
             labelID.Text = "";
             labelCstmr.Text = "";
             labelWkt.Text = "";
+            tbTotal.Text = "0";
+            tbDiskon.Text = "0";
+            tbKembalian.Text = "";
+            tbUangBayar.Text = "";
+            labelTotal.Text = "";
             
-            
+        }
+
+        public void disabledInput()
+        {
+            tbKembalian.Enabled = false;
+            tbTotal.Enabled = false;
+            tbUangBayar.Enabled = false;
+            tbDiskon.Enabled = false;
+            btnBayar.Enabled = false;
+        }
+
+        public void enabledInput()
+        {
+            tbUangBayar.Enabled = true;
+            tbDiskon.Enabled = true;
+            btnBayar.Enabled = true;
         }
 
         static async Task<DataTable> GetTransaction()
@@ -267,38 +291,38 @@ namespace BengkelAtma.Kasir
                     tbTotal.Text = row.Cells[6].Value.ToString();
                     row.Selected = true;
                     
-                    if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
-                    {
-                        DataTable t = await GetSparepart(id);
-                        dgSparepart.DataSource = t;
-                        dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                        dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        dgSparepart.DataBindingComplete += (o, _) =>
-                        {
-                            var dataGridView = o as DataGridView;
-                            if (dataGridView != null)
-                            {
-                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            }
-                        };
-                    }
-                    if (row.Cells[4].Value.ToString().Equals("Service") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
-                    {
-                        DataTable t = await GetService(id);
-                        dgService.DataSource = t;
-                        dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                        dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                        dgService.DataBindingComplete += (o, _) =>
-                        {
-                            var dataGridView = o as DataGridView;
-                            if (dataGridView != null)
-                            {
-                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                            }
-                        };
-                    }
+                    //if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
+                    //{
+                    //    DataTable t = await GetSparepart(id);
+                    //    dgSparepart.DataSource = t;
+                    //    dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    //    dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    //    dgSparepart.DataBindingComplete += (o, _) =>
+                    //    {
+                    //        var dataGridView = o as DataGridView;
+                    //        if (dataGridView != null)
+                    //        {
+                    //            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    //            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    //        }
+                    //    };
+                    //}
+                    //if (row.Cells[4].Value.ToString().Equals("Service") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
+                    //{
+                    //    DataTable t = await GetService(id);
+                    //    dgService.DataSource = t;
+                    //    dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    //    dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    //    dgService.DataBindingComplete += (o, _) =>
+                    //    {
+                    //        var dataGridView = o as DataGridView;
+                    //        if (dataGridView != null)
+                    //        {
+                    //            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    //            dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    //        }
+                    //    };
+                    //}
 
 
                     break;
@@ -310,6 +334,11 @@ namespace BengkelAtma.Kasir
         {
             Debug.WriteLine("cekmassuk");
             check = "edit";
+            enabledInput();
+            clearInput();
+            DataTable t2 = null;
+            dgSparepart.DataSource = t2;
+            dgService.DataSource = t2;
             //enableInput();
             foreach (DataGridViewRow row in dgTransaksi.Rows)
             {
@@ -320,6 +349,9 @@ namespace BengkelAtma.Kasir
                     labelCstmr.Text = row.Cells[7].Value.ToString();
                     labelWkt.Text = row.Cells[2].Value.ToString();
                     tbTotal.Text = row.Cells[6].Value.ToString();
+                    totalBefore = Convert.ToInt64(row.Cells[6].Value.ToString());
+                    labelTotal.Text = row.Cells[6].Value.ToString();
+                    total = Convert.ToInt64(row.Cells[6].Value.ToString());
 
                     if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
                     {
@@ -365,6 +397,7 @@ namespace BengkelAtma.Kasir
             if (labelID.Text.ToString().Trim() != "" && labelCstmr.Text.ToString().Trim() != "" && labelWkt.Text.ToString().Trim() != "" && dgSparepart != null && dgService != null)
             {
                 clearInput();
+                disabledInput();
                 DataTable t = null;
                 dgSparepart.DataSource = t;
                 dgService.DataSource = t;
@@ -378,28 +411,44 @@ namespace BengkelAtma.Kasir
         {
             try
             {
-                Debug.WriteLine(labelID.Text);
-                Pay pay = new Pay { id_transaction = labelID.Text, transaction_discount = Convert.ToInt64(tbDiskon.Text), transaction_total = Convert.ToInt64(tbUangBayar.Text) };
-
-                HttpResponseMessage response = await client.PutAsJsonAsync(
-                $"api/payment/{pay.id_transaction}", pay);
-                response.EnsureSuccessStatusCode();
-                pay = await response.Content.ReadAsAsync<Pay>();
-                dgTransaksi.DataSource = await GetTransaction();
-                dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-                dgTransaksi.DataBindingComplete += (o, _) =>
+                if(tbUangBayar.Text.ToString().Trim() != "")
                 {
-                    var dataGridView = o as DataGridView;
-                    if (dataGridView != null)
+                    if( Convert.ToInt64(tbUangBayar.Text.ToString()) >= total)
                     {
-                        dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-                        dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    }
-                };
-                //((DataTable)dataCabang.DataSource).AcceptChanges();
+                        Debug.WriteLine(labelID.Text);
+                        Pay pay = new Pay { id_transaction = labelID.Text, transaction_discount = Convert.ToInt64(tbDiskon.Text), transaction_total = Convert.ToInt64(labelTotal.Text) };
 
-                MessageBox.Show("Berhasil Update Data Cabang");
+                        HttpResponseMessage response = await client.PutAsJsonAsync(
+                        $"api/payment/{pay.id_transaction}", pay);
+                        response.EnsureSuccessStatusCode();
+                        pay = await response.Content.ReadAsAsync<Pay>();
+                        dgTransaksi.DataSource = await GetTransaction();
+                        dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+                        dgTransaksi.DataBindingComplete += (o, _) =>
+                        {
+                            var dataGridView = o as DataGridView;
+                            if (dataGridView != null)
+                            {
+                                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                                dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                            }
+                        };
+                        //((DataTable)dataCabang.DataSource).AcceptChanges();
+
+                        MessageBox.Show("Pembayaran Berhasil");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Pembayaran tidak boleh kurang dari total bayar");
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Pembayaran tidak boleh kosong");
+                }
+                
             }
             catch (Exception exc)
             {
@@ -426,7 +475,18 @@ namespace BengkelAtma.Kasir
 
         private void tbDiskon_TextChanged(object sender, EventArgs e)
         {
-            Debug.WriteLine("sososk1");
+            try
+            {
+                Debug.WriteLine("sososk1");
+                total = totalBefore - Convert.ToInt64(tbDiskon.Text);
+                labelTotal.Text = total.ToString();
+                Debug.WriteLine(total);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
             //tbTotal.Text = Convert.ToString((Convert.ToInt64(tbTotal.Text) - Convert.ToInt64(tbDiskon.Text)));
         }
 
@@ -436,10 +496,18 @@ namespace BengkelAtma.Kasir
             //tbTotal.Text = Convert.ToString((Convert.ToInt64(tbTotal.Text) - Convert.ToInt64(tbDiskon.Text)));
         }
 
-        private void tbDiskon_KeyDown(object sender, KeyEventArgs e)
+        private void tbUangBayar_TextChanged(object sender, EventArgs e)
         {
-            Debug.WriteLine("sososk3");
-            //tbTotal.Text = Convert.ToString((Convert.ToInt64(tbTotal.Text) - Convert.ToInt64(tbDiskon.Text)));
+            try
+            {
+                Debug.WriteLine("sososk22");
+                kembalian = Convert.ToInt64(tbUangBayar.Text) - total;
+                tbKembalian.Text = kembalian.ToString();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
     }
   }
