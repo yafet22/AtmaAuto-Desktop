@@ -85,6 +85,12 @@
       <DependentUpon>jasa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Laporan\JasaReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laporan\JasaReport.Designer.cs">
+      <DependentUpon>JasaReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\Sprpat.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="Laporan\jasa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>jasa.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\JasaReport.resx">
+      <DependentUpon>JasaReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\Sprpat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

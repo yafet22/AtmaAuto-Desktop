@@ -144,12 +144,25 @@ namespace BengkelAtma.Menu
 
                 clearInput();
                 disableInput();
+
+            }
+            else
+            {
+                MessageBox.Show("Data Anda Masih Kosong atau tidak lengkap");
             }
         }
 
         private void btnResetJasa_Click(object sender, EventArgs e)
         {
-            clearInput();
+
+            if (tbLynJasa.Text.ToString().Trim() != "" && tbHrgJasa.Text.ToString().Trim() != "")
+            {
+                clearInput();
+            }
+            else
+            {
+                MessageBox.Show(" Anda harus memilih menu input atau edit terlebih dahulu");
+            }
         }
 
         private async void btnCariJasa_Click(object sender, EventArgs e)
@@ -174,6 +187,7 @@ namespace BengkelAtma.Menu
                 }
                 else
                 {
+                    MessageBox.Show("Anda Belum Memasukkan Data");
                     dgJasa.DataSource = await GetDataJasa();
                     dgJasa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -191,6 +205,7 @@ namespace BengkelAtma.Menu
             }
             catch (Exception exc)
             {
+                MessageBox.Show("Data yang Anda cari tidak ada");
                 MessageBox.Show(exc.Message);
                 dgJasa.DataSource = await GetDataJasa();
                 dgJasa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
