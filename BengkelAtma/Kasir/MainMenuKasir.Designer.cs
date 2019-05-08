@@ -80,8 +80,9 @@
             // 
             this.pembayaran2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pembayaran2.Location = new System.Drawing.Point(0, 0);
+            this.pembayaran2.MinimumSize = new System.Drawing.Size(1030, 352);
             this.pembayaran2.Name = "pembayaran2";
-            this.pembayaran2.Size = new System.Drawing.Size(824, 538);
+            this.pembayaran2.Size = new System.Drawing.Size(1030, 538);
             this.pembayaran2.TabIndex = 2;
             // 
             // leftPanel

@@ -53,22 +53,22 @@ namespace BengkelAtma
             this.sales1 = new BengkelAtma.Menu.Sales();
             this.Jasa = new MetroFramework.Controls.MetroTabPage();
             this.menuJasa1 = new BengkelAtma.Menu.menuJasa();
-            this.Surat = new MetroFramework.Controls.MetroTabPage();
             this.Laporan = new MetroFramework.Controls.MetroTabPage();
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.jasaReport1 = new BengkelAtma.Laporan.JasaReport();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage7 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
+            this.Surat = new MetroFramework.Controls.MetroTabPage();
             this.Pembayaran = new MetroFramework.Controls.MetroTabPage();
             this.Nota = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.jasaReport1 = new BengkelAtma.Laporan.JasaReport();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).BeginInit();
             this.panel1.SuspendLayout();
@@ -218,7 +218,7 @@ namespace BengkelAtma
             this.TabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabMenu.Location = new System.Drawing.Point(0, 0);
             this.TabMenu.Name = "TabMenu";
-            this.TabMenu.SelectedIndex = 6;
+            this.TabMenu.SelectedIndex = 5;
             this.TabMenu.Size = new System.Drawing.Size(808, 538);
             this.TabMenu.TabIndex = 0;
             this.TabMenu.UseSelectable = true;
@@ -261,7 +261,7 @@ namespace BengkelAtma
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 29);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(792, 463);
+            this.metroTabPage1.Size = new System.Drawing.Size(792, 466);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Akun";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -274,7 +274,7 @@ namespace BengkelAtma
             this.akun2.Location = new System.Drawing.Point(0, 0);
             this.akun2.Margin = new System.Windows.Forms.Padding(4);
             this.akun2.Name = "akun2";
-            this.akun2.Size = new System.Drawing.Size(792, 463);
+            this.akun2.Size = new System.Drawing.Size(792, 466);
             this.akun2.TabIndex = 2;
             // 
             // metroTabPage2
@@ -399,20 +399,6 @@ namespace BengkelAtma
             this.menuJasa1.Size = new System.Drawing.Size(800, 499);
             this.menuJasa1.TabIndex = 2;
             // 
-            // Surat
-            // 
-            this.Surat.HorizontalScrollbarBarColor = true;
-            this.Surat.HorizontalScrollbarHighlightOnWheel = false;
-            this.Surat.HorizontalScrollbarSize = 10;
-            this.Surat.Location = new System.Drawing.Point(4, 35);
-            this.Surat.Name = "Surat";
-            this.Surat.Size = new System.Drawing.Size(800, 499);
-            this.Surat.TabIndex = 5;
-            this.Surat.Text = "Surat";
-            this.Surat.VerticalScrollbarBarColor = true;
-            this.Surat.VerticalScrollbarHighlightOnWheel = false;
-            this.Surat.VerticalScrollbarSize = 10;
-            // 
             // Laporan
             // 
             this.Laporan.Controls.Add(this.metroTabControl2);
@@ -430,8 +416,8 @@ namespace BengkelAtma
             // 
             // metroTabControl2
             // 
-            this.metroTabControl2.Controls.Add(this.metroTabPage8);
             this.metroTabControl2.Controls.Add(this.metroTabPage3);
+            this.metroTabControl2.Controls.Add(this.metroTabPage8);
             this.metroTabControl2.Controls.Add(this.metroTabPage4);
             this.metroTabControl2.Controls.Add(this.metroTabPage5);
             this.metroTabControl2.Controls.Add(this.metroTabPage6);
@@ -443,6 +429,20 @@ namespace BengkelAtma
             this.metroTabControl2.Size = new System.Drawing.Size(800, 496);
             this.metroTabControl2.TabIndex = 2;
             this.metroTabControl2.UseSelectable = true;
+            // 
+            // metroTabPage8
+            // 
+            this.metroTabPage8.HorizontalScrollbarBarColor = true;
+            this.metroTabPage8.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage8.HorizontalScrollbarSize = 10;
+            this.metroTabPage8.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage8.Name = "metroTabPage8";
+            this.metroTabPage8.Size = new System.Drawing.Size(792, 454);
+            this.metroTabPage8.TabIndex = 5;
+            this.metroTabPage8.Text = "Pengeluaran Bulanan";
+            this.metroTabPage8.VerticalScrollbarBarColor = true;
+            this.metroTabPage8.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage8.VerticalScrollbarSize = 10;
             // 
             // metroTabPage3
             // 
@@ -458,6 +458,15 @@ namespace BengkelAtma
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // jasaReport1
+            // 
+            this.jasaReport1.BackColor = System.Drawing.Color.White;
+            this.jasaReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.jasaReport1.Location = new System.Drawing.Point(0, 0);
+            this.jasaReport1.Name = "jasaReport1";
+            this.jasaReport1.Size = new System.Drawing.Size(792, 454);
+            this.jasaReport1.TabIndex = 2;
             // 
             // metroTabPage4
             // 
@@ -515,19 +524,19 @@ namespace BengkelAtma
             this.metroTabPage7.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage7.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage8
+            // Surat
             // 
-            this.metroTabPage8.HorizontalScrollbarBarColor = true;
-            this.metroTabPage8.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage8.HorizontalScrollbarSize = 10;
-            this.metroTabPage8.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage8.Name = "metroTabPage8";
-            this.metroTabPage8.Size = new System.Drawing.Size(792, 454);
-            this.metroTabPage8.TabIndex = 5;
-            this.metroTabPage8.Text = "Pengeluaran Bulanan";
-            this.metroTabPage8.VerticalScrollbarBarColor = true;
-            this.metroTabPage8.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage8.VerticalScrollbarSize = 10;
+            this.Surat.HorizontalScrollbarBarColor = true;
+            this.Surat.HorizontalScrollbarHighlightOnWheel = false;
+            this.Surat.HorizontalScrollbarSize = 10;
+            this.Surat.Location = new System.Drawing.Point(4, 38);
+            this.Surat.Name = "Surat";
+            this.Surat.Size = new System.Drawing.Size(800, 496);
+            this.Surat.TabIndex = 5;
+            this.Surat.Text = "Surat";
+            this.Surat.VerticalScrollbarBarColor = true;
+            this.Surat.VerticalScrollbarHighlightOnWheel = false;
+            this.Surat.VerticalScrollbarSize = 10;
             // 
             // Pembayaran
             // 
@@ -548,9 +557,9 @@ namespace BengkelAtma
             this.Nota.HorizontalScrollbarBarColor = true;
             this.Nota.HorizontalScrollbarHighlightOnWheel = false;
             this.Nota.HorizontalScrollbarSize = 10;
-            this.Nota.Location = new System.Drawing.Point(4, 38);
+            this.Nota.Location = new System.Drawing.Point(4, 35);
             this.Nota.Name = "Nota";
-            this.Nota.Size = new System.Drawing.Size(800, 496);
+            this.Nota.Size = new System.Drawing.Size(800, 499);
             this.Nota.TabIndex = 7;
             this.Nota.Text = "Nota";
             this.Nota.VerticalScrollbarBarColor = true;
@@ -598,15 +607,6 @@ namespace BengkelAtma
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1008, 47);
             this.panel3.TabIndex = 5;
-            // 
-            // jasaReport1
-            // 
-            this.jasaReport1.BackColor = System.Drawing.Color.White;
-            this.jasaReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.jasaReport1.Location = new System.Drawing.Point(0, 0);
-            this.jasaReport1.Name = "jasaReport1";
-            this.jasaReport1.Size = new System.Drawing.Size(792, 454);
-            this.jasaReport1.TabIndex = 2;
             // 
             // MainMenu
             // 

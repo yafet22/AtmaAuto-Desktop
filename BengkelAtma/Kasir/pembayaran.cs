@@ -175,8 +175,11 @@ namespace BengkelAtma.Kasir
         private async void pembayaran_Load(object sender, EventArgs e)
         {
             DataTable t = await GetTransaction();
-            t.Columns.Remove("id_customer");
+         
             dgTransaksi.DataSource = t;
+            t.Columns.Remove("id_customer");
+            //t.DefaultView.RowFilter = "transaction_status <> 'finish'";
+            dgTransaksi.Columns["customer_name"].DisplayIndex = 1;
             dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgTransaksi.DataBindingComplete += (o, _) =>
@@ -193,6 +196,7 @@ namespace BengkelAtma.Kasir
         private async void btnCariByr_Click(object sender, EventArgs e)
         {
             string searchValue = tbCariByr.Text;
+            
 
             dgTransaksi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
@@ -218,7 +222,11 @@ namespace BengkelAtma.Kasir
                 {
                     MessageBox.Show("Anda Belum Memasukkan Data");
                     DataTable t = await GetTransaction();
+
                     t.Columns.Remove("id_customer");
+                    //t.DefaultView.RowFilter = "transaction_status <> 'finish'";
+                    dgTransaksi.Columns["customer_name"].DisplayIndex = 1;
+                    //dgTransaksi.Columns[3].Visible = false;
                     dgTransaksi.DataSource = t;
                     dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                     dgTransaksi.DataBindingComplete += (o, _) =>
@@ -238,6 +246,9 @@ namespace BengkelAtma.Kasir
                 MessageBox.Show("Data yang Anda cari tidak ada");
                 DataTable t = await GetTransaction();
                 t.Columns.Remove("id_customer");
+                //dgTransaksi.Columns[3].Visible = false;
+                //t.DefaultView.RowFilter = "transaction_status <> 'finish'";
+                dgTransaksi.Columns["customer_name"].DisplayIndex = 1;
                 dgTransaksi.DataSource = t;
                 dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgTransaksi.DataBindingComplete += (o, _) =>
@@ -356,6 +367,7 @@ namespace BengkelAtma.Kasir
                     if (row.Cells[4].Value.ToString().Equals("Sparepart") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
                     {
                         DataTable t = await GetSparepart(id);
+                      
                         dgSparepart.DataSource = t;
                         dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                         dgSparepart.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -372,6 +384,10 @@ namespace BengkelAtma.Kasir
                     if (row.Cells[4].Value.ToString().Equals("Service") || row.Cells[4].Value.ToString().Equals("Service And Sparepart"))
                     {
                         DataTable t = await GetService(id);
+                        //dgService.Columns[4].Visible = false;
+                        //dgService.Columns[5].Visible = false;
+                        //dgService.Columns[7].Visible = false;
+                       
                         dgService.DataSource = t;
                         dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                         dgService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -423,6 +439,9 @@ namespace BengkelAtma.Kasir
                         response.EnsureSuccessStatusCode();
                         pay = await response.Content.ReadAsAsync<Pay>();
                         dgTransaksi.DataSource = await GetTransaction();
+                        dgTransaksi.Columns.Remove("id_customer");
+                        //t.DefaultView.RowFilter = "transaction_status <> 'finish'";
+                        dgTransaksi.Columns["customer_name"].DisplayIndex = 1;
                         dgTransaksi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
                         dgTransaksi.DataBindingComplete += (o, _) =>
@@ -434,6 +453,8 @@ namespace BengkelAtma.Kasir
                                 dataGridView.Columns[dataGridView.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                             }
                         };
+                        dgTransaksi.Columns[7].Visible = false;
+                        dgTransaksi.Columns[1].Visible = false;
                         //((DataTable)dataCabang.DataSource).AcceptChanges();
 
                         MessageBox.Show("Pembayaran Berhasil");
