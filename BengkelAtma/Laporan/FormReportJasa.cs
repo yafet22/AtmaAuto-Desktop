@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BengkelAtma.Laporan
 {
-    public partial class tampilanJasa : Form
+    public partial class FormReportJasa : Form
     {
-        public tampilanJasa()
+        public FormReportJasa()
         {
             InitializeComponent();
         }

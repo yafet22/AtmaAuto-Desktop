@@ -95,6 +95,7 @@
             this.btnLaporanJasa.TabIndex = 2;
             this.btnLaporanJasa.Text = "Laporan Sparepart Terlaris";
             this.btnLaporanJasa.UseVisualStyleBackColor = false;
+            this.btnLaporanJasa.Click += new System.EventHandler(this.btnLaporanJasa_Click);
             // 
             // SparepartTerlaris
             // 

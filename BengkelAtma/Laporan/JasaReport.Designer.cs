@@ -68,6 +68,7 @@
             this.btnLaporanJasa.TabIndex = 2;
             this.btnLaporanJasa.Text = "Laporan Penjualan Jasa";
             this.btnLaporanJasa.UseVisualStyleBackColor = false;
+            this.btnLaporanJasa.Click += new System.EventHandler(this.btnLaporanJasa_Click);
             // 
             // panel1bwahJasa
             // 

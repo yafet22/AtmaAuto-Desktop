@@ -16,5 +16,11 @@ namespace BengkelAtma.Laporan
         {
             InitializeComponent();
         }
+
+        private void btnLaporanJasa_Click(object sender, EventArgs e)
+        {
+            FormReportSisaStockcs SisaStockForm = new FormReportSisaStockcs();
+            SisaStockForm.Show();
+        }
     }
 }

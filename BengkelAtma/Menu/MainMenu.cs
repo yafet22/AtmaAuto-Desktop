@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BengkelAtma.Laporan;
 using BengkelAtma.Menu;
 using Newtonsoft.Json.Linq;
 
@@ -98,5 +99,7 @@ namespace BengkelAtma
             ctrlToCenter.Left = (ctrlToCenter.Parent.Width - ctrlToCenter.Width) / 2;
             ctrlToCenter.Top = (ctrlToCenter.Parent.Height - ctrlToCenter.Height) / 2;
         }
+
+        
     }
 }

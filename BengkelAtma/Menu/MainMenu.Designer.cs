@@ -31,11 +31,7 @@ namespace BengkelAtma
         private void InitializeComponent()
         {
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.btnKeluar = new System.Windows.Forms.Button();
-            this.btnProfil = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.lbUser = new System.Windows.Forms.Label();
-            this.pbProfil = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.TabMenu = new MetroFramework.Controls.MetroTabControl();
@@ -57,9 +53,13 @@ namespace BengkelAtma
             this.metroTabPage8 = new MetroFramework.Controls.MetroTabPage();
             this.Surat = new MetroFramework.Controls.MetroTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnKeluar = new System.Windows.Forms.Button();
+            this.btnProfil = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.pbProfil = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.akun2 = new BengkelAtma.Menu.Akun();
             this.submenuPegawai1 = new BengkelAtma.Menu.submenuPegawai();
             this.cabang2 = new BengkelAtma.Menu.Cabang();
@@ -70,7 +70,6 @@ namespace BengkelAtma
             this.sparepartTerlaris1 = new BengkelAtma.Laporan.SparepartTerlaris();
             this.sisaStok1 = new BengkelAtma.Laporan.SisaStok();
             this.leftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).BeginInit();
             this.panel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.TabMenu.SuspendLayout();
@@ -88,8 +87,9 @@ namespace BengkelAtma
             this.metroTabPage4.SuspendLayout();
             this.metroTabPage5.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -106,61 +106,6 @@ namespace BengkelAtma
             this.leftPanel.Size = new System.Drawing.Size(200, 494);
             this.leftPanel.TabIndex = 0;
             // 
-            // btnKeluar
-            // 
-            this.btnKeluar.BackColor = System.Drawing.Color.Transparent;
-            this.btnKeluar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnKeluar.FlatAppearance.BorderSize = 0;
-            this.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKeluar.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKeluar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnKeluar.Image = global::BengkelAtma.Properties.Resources.checkered_flag;
-            this.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKeluar.Location = new System.Drawing.Point(0, 289);
-            this.btnKeluar.Name = "btnKeluar";
-            this.btnKeluar.Size = new System.Drawing.Size(172, 39);
-            this.btnKeluar.TabIndex = 4;
-            this.btnKeluar.Text = "Keluar";
-            this.btnKeluar.UseVisualStyleBackColor = false;
-            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
-            // 
-            // btnProfil
-            // 
-            this.btnProfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnProfil.FlatAppearance.BorderSize = 0;
-            this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfil.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProfil.Image = global::BengkelAtma.Properties.Resources.client_user;
-            this.btnProfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfil.Location = new System.Drawing.Point(3, 178);
-            this.btnProfil.Name = "btnProfil";
-            this.btnProfil.Size = new System.Drawing.Size(172, 39);
-            this.btnProfil.TabIndex = 3;
-            this.btnProfil.Text = "Profil";
-            this.btnProfil.UseVisualStyleBackColor = false;
-            this.btnProfil.Click += new System.EventHandler(this.btnProfil_Click);
-            this.btnProfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnProfil_MouseClick);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHome.Image = global::BengkelAtma.Properties.Resources.positioning;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(3, 133);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(172, 39);
-            this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "Beranda";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // lbUser
             // 
             this.lbUser.AutoSize = true;
@@ -170,16 +115,6 @@ namespace BengkelAtma
             this.lbUser.Size = new System.Drawing.Size(33, 15);
             this.lbUser.TabIndex = 1;
             this.lbUser.Text = "User";
-            // 
-            // pbProfil
-            // 
-            this.pbProfil.BackgroundImage = global::BengkelAtma.Properties.Resources.logo;
-            this.pbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbProfil.Location = new System.Drawing.Point(39, 12);
-            this.pbProfil.Name = "pbProfil";
-            this.pbProfil.Size = new System.Drawing.Size(114, 63);
-            this.pbProfil.TabIndex = 0;
-            this.pbProfil.TabStop = false;
             // 
             // panel1
             // 
@@ -370,7 +305,7 @@ namespace BengkelAtma
             this.metroTabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl2.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl2.Name = "metroTabControl2";
-            this.metroTabControl2.SelectedIndex = 0;
+            this.metroTabControl2.SelectedIndex = 1;
             this.metroTabControl2.Size = new System.Drawing.Size(800, 496);
             this.metroTabControl2.TabIndex = 2;
             this.metroTabControl2.UseSelectable = true;
@@ -486,6 +421,80 @@ namespace BengkelAtma
             this.panel2.Size = new System.Drawing.Size(1008, 47);
             this.panel2.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1008, 47);
+            this.panel3.TabIndex = 5;
+            // 
+            // btnKeluar
+            // 
+            this.btnKeluar.BackColor = System.Drawing.Color.Transparent;
+            this.btnKeluar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnKeluar.FlatAppearance.BorderSize = 0;
+            this.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKeluar.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeluar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnKeluar.Image = global::BengkelAtma.Properties.Resources.checkered_flag;
+            this.btnKeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKeluar.Location = new System.Drawing.Point(0, 289);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(172, 39);
+            this.btnKeluar.TabIndex = 4;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = false;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
+            // 
+            // btnProfil
+            // 
+            this.btnProfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnProfil.FlatAppearance.BorderSize = 0;
+            this.btnProfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfil.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProfil.Image = global::BengkelAtma.Properties.Resources.client_user;
+            this.btnProfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfil.Location = new System.Drawing.Point(3, 178);
+            this.btnProfil.Name = "btnProfil";
+            this.btnProfil.Size = new System.Drawing.Size(172, 39);
+            this.btnProfil.TabIndex = 3;
+            this.btnProfil.Text = "Profil";
+            this.btnProfil.UseVisualStyleBackColor = false;
+            this.btnProfil.Click += new System.EventHandler(this.btnProfil_Click);
+            this.btnProfil.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnProfil_MouseClick);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHome.Image = global::BengkelAtma.Properties.Resources.positioning;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(3, 133);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(172, 39);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "Beranda";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // pbProfil
+            // 
+            this.pbProfil.BackgroundImage = global::BengkelAtma.Properties.Resources.logo;
+            this.pbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbProfil.Location = new System.Drawing.Point(39, 12);
+            this.pbProfil.Name = "pbProfil";
+            this.pbProfil.Size = new System.Drawing.Size(114, 63);
+            this.pbProfil.TabIndex = 0;
+            this.pbProfil.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -508,15 +517,6 @@ namespace BengkelAtma
             this.label.Size = new System.Drawing.Size(147, 25);
             this.label.TabIndex = 1;
             this.label.Text = "Ayo Pilih Menu";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1008, 47);
-            this.panel3.TabIndex = 5;
             // 
             // akun2
             // 
@@ -614,7 +614,6 @@ namespace BengkelAtma
             this.Text = "MainMenu";
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.TabMenu.ResumeLayout(false);
@@ -632,9 +631,10 @@ namespace BengkelAtma
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

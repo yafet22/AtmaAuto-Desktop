@@ -95,6 +95,7 @@
             this.btnLaporanJasa.TabIndex = 2;
             this.btnLaporanJasa.Text = "Laporan Sisa Stok && Grafik";
             this.btnLaporanJasa.UseVisualStyleBackColor = false;
+            this.btnLaporanJasa.Click += new System.EventHandler(this.btnLaporanJasa_Click);
             // 
             // SisaStok
             // 

@@ -103,6 +103,24 @@
     <Compile Include="Kasir\pembayaran.Designer.cs">
       <DependentUpon>pembayaran.cs</DependentUpon>
     </Compile>
+    <Compile Include="Laporan\FormReportJasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormReportJasa.Designer.cs">
+      <DependentUpon>FormReportJasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormReportSisaStockcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormReportSisaStockcs.Designer.cs">
+      <DependentUpon>FormReportSisaStockcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormReportSparepart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormReportSparepart.Designer.cs">
+      <DependentUpon>FormReportSparepart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\jasa.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +137,12 @@
     </Compile>
     <Compile Include="Laporan\JasaReport.Designer.cs">
       <DependentUpon>JasaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\SisaStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SisaStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Laporan\SisaStok.cs">
       <SubType>UserControl</SubType>
@@ -142,12 +166,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sprpat.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Laporan\tampilanJasa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Laporan\tampilanJasa.Designer.cs">
-      <DependentUpon>tampilanJasa.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\Akun.cs">
       <SubType>UserControl</SubType>
@@ -225,12 +243,25 @@
     <EmbeddedResource Include="Kasir\pembayaran.resx">
       <DependentUpon>pembayaran.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormReportJasa.resx">
+      <DependentUpon>FormReportJasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormReportSisaStockcs.resx">
+      <DependentUpon>FormReportSisaStockcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormReportSparepart.resx">
+      <DependentUpon>FormReportSparepart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\jasa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>jasa.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\JasaReport.resx">
       <DependentUpon>JasaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\SisaStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SisaStock.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\SisaStok.resx">
       <DependentUpon>SisaStok.cs</DependentUpon>
@@ -241,9 +272,6 @@
     <EmbeddedResource Include="Laporan\Sprpat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Sprpat.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\tampilanJasa.resx">
-      <DependentUpon>tampilanJasa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\Akun.resx">
       <DependentUpon>Akun.cs</DependentUpon>

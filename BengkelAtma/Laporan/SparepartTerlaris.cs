@@ -16,5 +16,12 @@ namespace BengkelAtma.Laporan
         {
             InitializeComponent();
         }
+
+        private void btnLaporanJasa_Click(object sender, EventArgs e)
+        {
+
+            FormReportSparepart SparepartsForm = new FormReportSparepart();
+            SparepartsForm.Show();
+        }
     }
 }
