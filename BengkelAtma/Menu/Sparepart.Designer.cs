@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1bawah = new System.Windows.Forms.Panel();
+            this.dataSparepart = new System.Windows.Forms.DataGridView();
             this.labelKodeSparepart = new System.Windows.Forms.Label();
             this.tbKodeSparepart = new System.Windows.Forms.TextBox();
             this.labelNamaSparepart = new System.Windows.Forms.Label();
@@ -77,8 +78,8 @@
             this.panel1KT = new System.Windows.Forms.Panel();
             this.panel1tengah = new System.Windows.Forms.Panel();
             this.panel1kiri = new System.Windows.Forms.Panel();
-            this.dataSparepart = new System.Windows.Forms.DataGridView();
             this.panel1bawah.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSparepart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompatibility)).BeginInit();
             this.panel2all.SuspendLayout();
@@ -90,7 +91,6 @@
             this.panel1KT.SuspendLayout();
             this.panel1tengah.SuspendLayout();
             this.panel1kiri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSparepart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1bawah
@@ -103,6 +103,21 @@
             this.panel1bawah.Padding = new System.Windows.Forms.Padding(3);
             this.panel1bawah.Size = new System.Drawing.Size(785, 130);
             this.panel1bawah.TabIndex = 0;
+            // 
+            // dataSparepart
+            // 
+            this.dataSparepart.AllowUserToResizeRows = false;
+            this.dataSparepart.BackgroundColor = System.Drawing.Color.White;
+            this.dataSparepart.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataSparepart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataSparepart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataSparepart.GridColor = System.Drawing.Color.White;
+            this.dataSparepart.Location = new System.Drawing.Point(3, 3);
+            this.dataSparepart.Name = "dataSparepart";
+            this.dataSparepart.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataSparepart.Size = new System.Drawing.Size(779, 124);
+            this.dataSparepart.TabIndex = 2;
             // 
             // labelKodeSparepart
             // 
@@ -119,6 +134,7 @@
             this.tbKodeSparepart.Name = "tbKodeSparepart";
             this.tbKodeSparepart.Size = new System.Drawing.Size(211, 20);
             this.tbKodeSparepart.TabIndex = 13;
+            this.tbKodeSparepart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbKodeSparepart_KeyDown);
             // 
             // labelNamaSparepart
             // 
@@ -135,6 +151,7 @@
             this.tbNameSparepart.Name = "tbNameSparepart";
             this.tbNameSparepart.Size = new System.Drawing.Size(211, 20);
             this.tbNameSparepart.TabIndex = 15;
+            this.tbNameSparepart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNameSparepart_KeyDown);
             // 
             // labelMerk
             // 
@@ -151,6 +168,7 @@
             this.tbMerkSparepart.Name = "tbMerkSparepart";
             this.tbMerkSparepart.Size = new System.Drawing.Size(211, 20);
             this.tbMerkSparepart.TabIndex = 17;
+            this.tbMerkSparepart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMerkSparepart_KeyDown);
             // 
             // labelSparepartType
             // 
@@ -169,6 +187,7 @@
             this.comboSparepartType.Name = "comboSparepartType";
             this.comboSparepartType.Size = new System.Drawing.Size(211, 21);
             this.comboSparepartType.TabIndex = 20;
+            this.comboSparepartType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboSparepartType_KeyDown);
             // 
             // labelStock
             // 
@@ -185,6 +204,7 @@
             this.tbStock.Name = "tbStock";
             this.tbStock.Size = new System.Drawing.Size(101, 20);
             this.tbStock.TabIndex = 22;
+            this.tbStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbStock_KeyDown);
             // 
             // tbMinStock
             // 
@@ -192,6 +212,7 @@
             this.tbMinStock.Name = "tbMinStock";
             this.tbMinStock.Size = new System.Drawing.Size(106, 20);
             this.tbMinStock.TabIndex = 23;
+            this.tbMinStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMinStock_KeyDown);
             // 
             // labelMinStock
             // 
@@ -217,6 +238,7 @@
             this.tbBeli.Name = "tbBeli";
             this.tbBeli.Size = new System.Drawing.Size(101, 20);
             this.tbBeli.TabIndex = 26;
+            this.tbBeli.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbBeli_KeyDown);
             // 
             // tbJual
             // 
@@ -224,6 +246,7 @@
             this.tbJual.Name = "tbJual";
             this.tbJual.Size = new System.Drawing.Size(106, 20);
             this.tbJual.TabIndex = 27;
+            this.tbJual.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbJual_KeyDown);
             // 
             // labelHargaJual
             // 
@@ -299,6 +322,7 @@
             this.comboPosition.Name = "comboPosition";
             this.comboPosition.Size = new System.Drawing.Size(68, 21);
             this.comboPosition.TabIndex = 38;
+            this.comboPosition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboPosition_KeyDown);
             // 
             // comboTempat
             // 
@@ -308,6 +332,7 @@
             this.comboTempat.Name = "comboTempat";
             this.comboTempat.Size = new System.Drawing.Size(68, 21);
             this.comboTempat.TabIndex = 39;
+            this.comboTempat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboTempat_KeyDown);
             // 
             // btnReset
             // 
@@ -408,7 +433,6 @@
             this.dataCompatibility.RowTemplate.Height = 24;
             this.dataCompatibility.Size = new System.Drawing.Size(271, 184);
             this.dataCompatibility.TabIndex = 48;
-           // this.dataCompatibility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCompatibility_CellContentClick);
             // 
             // comboMotorBrand
             // 
@@ -468,7 +492,6 @@
             this.labelType.Size = new System.Drawing.Size(31, 13);
             this.labelType.TabIndex = 54;
             this.labelType.Text = "Type";
-          //  this.labelType.Click += new System.EventHandler(this.labelType_Click);
             // 
             // panel2all
             // 
@@ -593,21 +616,6 @@
             this.panel1kiri.Size = new System.Drawing.Size(238, 332);
             this.panel1kiri.TabIndex = 55;
             // 
-            // dataSparepart
-            // 
-            this.dataSparepart.AllowUserToResizeRows = false;
-            this.dataSparepart.BackgroundColor = System.Drawing.Color.White;
-            this.dataSparepart.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataSparepart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataSparepart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataSparepart.GridColor = System.Drawing.Color.White;
-            this.dataSparepart.Location = new System.Drawing.Point(3, 3);
-            this.dataSparepart.Name = "dataSparepart";
-            this.dataSparepart.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataSparepart.Size = new System.Drawing.Size(779, 124);
-            this.dataSparepart.TabIndex = 2;
-            // 
             // Sparepart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -618,6 +626,7 @@
             this.Size = new System.Drawing.Size(785, 462);
             this.Load += new System.EventHandler(this.Sparepart_Load);
             this.panel1bawah.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSparepart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompatibility)).EndInit();
             this.panel2all.ResumeLayout(false);
@@ -633,7 +642,6 @@
             this.panel1tengah.PerformLayout();
             this.panel1kiri.ResumeLayout(false);
             this.panel1kiri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSparepart)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1Luar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5DataGrid = new System.Windows.Forms.Panel();
+            this.dgSales = new MetroFramework.Controls.MetroGrid();
             this.panel4bottom = new System.Windows.Forms.Panel();
             this.btnNewSales = new System.Windows.Forms.Button();
             this.btnEditSales = new System.Windows.Forms.Button();
@@ -51,14 +52,13 @@
             this.label3Nama = new System.Windows.Forms.Label();
             this.btnSimpanSales = new System.Windows.Forms.Button();
             this.btnResetSales = new System.Windows.Forms.Button();
-            this.dgSales = new MetroFramework.Controls.MetroGrid();
             this.panel1Luar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5DataGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).BeginInit();
             this.panel4bottom.SuspendLayout();
             this.panel3Top.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1Luar
@@ -92,6 +92,52 @@
             this.panel5DataGrid.Padding = new System.Windows.Forms.Padding(10);
             this.panel5DataGrid.Size = new System.Drawing.Size(320, 218);
             this.panel5DataGrid.TabIndex = 2;
+            // 
+            // dgSales
+            // 
+            this.dgSales.AllowUserToResizeRows = false;
+            this.dgSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSales.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgSales.EnableHeadersVisualStyles = false;
+            this.dgSales.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dgSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgSales.Location = new System.Drawing.Point(10, 10);
+            this.dgSales.Name = "dgSales";
+            this.dgSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgSales.Size = new System.Drawing.Size(300, 198);
+            this.dgSales.TabIndex = 1;
+            this.dgSales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSales_CellClick);
+            this.dgSales.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgSales_UserDeletingRow);
             // 
             // panel4bottom
             // 
@@ -211,6 +257,7 @@
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(236, 21);
             this.cbSupplier.TabIndex = 20;
+            //this.cbSupplier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbSupplier_KeyDown);
             // 
             // tbNoTelpSales
             // 
@@ -218,6 +265,7 @@
             this.tbNoTelpSales.Name = "tbNoTelpSales";
             this.tbNoTelpSales.Size = new System.Drawing.Size(236, 20);
             this.tbNoTelpSales.TabIndex = 19;
+            this.tbNoTelpSales.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNoTelpSales_KeyDown);
             // 
             // label2Telepon
             // 
@@ -234,6 +282,7 @@
             this.tbNamaSales.Name = "tbNamaSales";
             this.tbNamaSales.Size = new System.Drawing.Size(236, 20);
             this.tbNamaSales.TabIndex = 17;
+            this.tbNamaSales.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNamaSales_KeyDown);
             // 
             // label3Nama
             // 
@@ -266,52 +315,6 @@
             this.btnResetSales.UseVisualStyleBackColor = false;
             this.btnResetSales.Click += new System.EventHandler(this.btnResetSales_Click);
             // 
-            // dgSales
-            // 
-            this.dgSales.AllowUserToResizeRows = false;
-            this.dgSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgSales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgSales.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgSales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgSales.EnableHeadersVisualStyles = false;
-            this.dgSales.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dgSales.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgSales.Location = new System.Drawing.Point(10, 10);
-            this.dgSales.Name = "dgSales";
-            this.dgSales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSales.Size = new System.Drawing.Size(300, 198);
-            this.dgSales.TabIndex = 1;
-            this.dgSales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSales_CellClick);
-            this.dgSales.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgSales_UserDeletingRow);
-            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,12 +326,12 @@
             this.panel1Luar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5DataGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).EndInit();
             this.panel4bottom.ResumeLayout(false);
             this.panel3Top.ResumeLayout(false);
             this.panel3Top.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSales)).EndInit();
             this.ResumeLayout(false);
 
         }

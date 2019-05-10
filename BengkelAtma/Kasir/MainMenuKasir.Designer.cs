@@ -32,9 +32,9 @@
             this.metroPanel1Kasir = new MetroFramework.Controls.MetroPanel();
             this.pembayaran2 = new BengkelAtma.Kasir.pembayaran();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.btnNotaKasir = new System.Windows.Forms.Button();
             this.btnKeluarKasir = new System.Windows.Forms.Button();
-            this.btnProfilKasir = new System.Windows.Forms.Button();
-            this.btnHomeKasir = new System.Windows.Forms.Button();
+            this.btnPembayaranKasir = new System.Windows.Forms.Button();
             this.lbUser = new System.Windows.Forms.Label();
             this.pbProfil = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -88,9 +88,9 @@
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
+            this.leftPanel.Controls.Add(this.btnNotaKasir);
             this.leftPanel.Controls.Add(this.btnKeluarKasir);
-            this.leftPanel.Controls.Add(this.btnProfilKasir);
-            this.leftPanel.Controls.Add(this.btnHomeKasir);
+            this.leftPanel.Controls.Add(this.btnPembayaranKasir);
             this.leftPanel.Controls.Add(this.lbUser);
             this.leftPanel.Controls.Add(this.pbProfil);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -98,6 +98,23 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(200, 544);
             this.leftPanel.TabIndex = 9;
+            // 
+            // btnNotaKasir
+            // 
+            this.btnNotaKasir.BackColor = System.Drawing.Color.Transparent;
+            this.btnNotaKasir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNotaKasir.FlatAppearance.BorderSize = 0;
+            this.btnNotaKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotaKasir.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotaKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNotaKasir.Image = global::BengkelAtma.Properties.Resources._3d_file;
+            this.btnNotaKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotaKasir.Location = new System.Drawing.Point(3, 173);
+            this.btnNotaKasir.Name = "btnNotaKasir";
+            this.btnNotaKasir.Size = new System.Drawing.Size(172, 39);
+            this.btnNotaKasir.TabIndex = 5;
+            this.btnNotaKasir.Text = "Cetak Nota";
+            this.btnNotaKasir.UseVisualStyleBackColor = false;
             // 
             // btnKeluarKasir
             // 
@@ -109,7 +126,7 @@
             this.btnKeluarKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnKeluarKasir.Image = global::BengkelAtma.Properties.Resources.checkered_flag;
             this.btnKeluarKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKeluarKasir.Location = new System.Drawing.Point(0, 289);
+            this.btnKeluarKasir.Location = new System.Drawing.Point(2, 289);
             this.btnKeluarKasir.Name = "btnKeluarKasir";
             this.btnKeluarKasir.Size = new System.Drawing.Size(172, 39);
             this.btnKeluarKasir.TabIndex = 4;
@@ -117,39 +134,22 @@
             this.btnKeluarKasir.UseVisualStyleBackColor = false;
             this.btnKeluarKasir.Click += new System.EventHandler(this.btnKeluarKasir_Click);
             // 
-            // btnProfilKasir
+            // btnPembayaranKasir
             // 
-            this.btnProfilKasir.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilKasir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnProfilKasir.FlatAppearance.BorderSize = 0;
-            this.btnProfilKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfilKasir.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfilKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProfilKasir.Image = global::BengkelAtma.Properties.Resources.client_user;
-            this.btnProfilKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfilKasir.Location = new System.Drawing.Point(3, 178);
-            this.btnProfilKasir.Name = "btnProfilKasir";
-            this.btnProfilKasir.Size = new System.Drawing.Size(172, 39);
-            this.btnProfilKasir.TabIndex = 3;
-            this.btnProfilKasir.Text = "Profil";
-            this.btnProfilKasir.UseVisualStyleBackColor = false;
-            // 
-            // btnHomeKasir
-            // 
-            this.btnHomeKasir.BackColor = System.Drawing.Color.Transparent;
-            this.btnHomeKasir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHomeKasir.FlatAppearance.BorderSize = 0;
-            this.btnHomeKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomeKasir.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomeKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHomeKasir.Image = global::BengkelAtma.Properties.Resources.positioning;
-            this.btnHomeKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHomeKasir.Location = new System.Drawing.Point(3, 133);
-            this.btnHomeKasir.Name = "btnHomeKasir";
-            this.btnHomeKasir.Size = new System.Drawing.Size(172, 39);
-            this.btnHomeKasir.TabIndex = 2;
-            this.btnHomeKasir.Text = "Beranda";
-            this.btnHomeKasir.UseVisualStyleBackColor = false;
+            this.btnPembayaranKasir.BackColor = System.Drawing.Color.Transparent;
+            this.btnPembayaranKasir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPembayaranKasir.FlatAppearance.BorderSize = 0;
+            this.btnPembayaranKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPembayaranKasir.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPembayaranKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPembayaranKasir.Image = global::BengkelAtma.Properties.Resources.Dollar_bill_1x;
+            this.btnPembayaranKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPembayaranKasir.Location = new System.Drawing.Point(7, 125);
+            this.btnPembayaranKasir.Name = "btnPembayaranKasir";
+            this.btnPembayaranKasir.Size = new System.Drawing.Size(172, 39);
+            this.btnPembayaranKasir.TabIndex = 3;
+            this.btnPembayaranKasir.Text = "Pembayaran";
+            this.btnPembayaranKasir.UseVisualStyleBackColor = false;
             // 
             // lbUser
             // 
@@ -253,8 +253,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel1Kasir;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Button btnKeluarKasir;
-        private System.Windows.Forms.Button btnProfilKasir;
-        private System.Windows.Forms.Button btnHomeKasir;
+        private System.Windows.Forms.Button btnPembayaranKasir;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.PictureBox pbProfil;
         private System.Windows.Forms.Panel panel3;
@@ -264,5 +263,6 @@
         private pembayaran pembayaran1;
         private System.Windows.Forms.Panel panel1bwahMain;
         private pembayaran pembayaran2;
+        private System.Windows.Forms.Button btnNotaKasir;
     }
 }

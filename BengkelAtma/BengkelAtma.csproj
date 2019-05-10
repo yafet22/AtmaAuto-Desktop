@@ -36,9 +36,23 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -52,10 +66,20 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,17 +109,45 @@
       <DependentUpon>jasa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Laporan\Jasa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jasa.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\JasaReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Laporan\JasaReport.Designer.cs">
       <DependentUpon>JasaReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Laporan\SisaStok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laporan\SisaStok.Designer.cs">
+      <DependentUpon>SisaStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\Spareparts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spareparts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\SparepartTerlaris.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laporan\SparepartTerlaris.Designer.cs">
+      <DependentUpon>SparepartTerlaris.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\Sprpat.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Sprpat.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\tampilanJasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\tampilanJasa.Designer.cs">
+      <DependentUpon>tampilanJasa.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\Akun.cs">
       <SubType>UserControl</SubType>
@@ -180,9 +232,18 @@
     <EmbeddedResource Include="Laporan\JasaReport.resx">
       <DependentUpon>JasaReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\SisaStok.resx">
+      <DependentUpon>SisaStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\SparepartTerlaris.resx">
+      <DependentUpon>SparepartTerlaris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\Sprpat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Sprpat.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\tampilanJasa.resx">
+      <DependentUpon>tampilanJasa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\Akun.resx">
       <DependentUpon>Akun.cs</DependentUpon>
@@ -228,6 +289,28 @@
     <EmbeddedResource Include="ucLogin.resx">
       <DependentUpon>ucLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Laporan\Jasa.xsc">
+      <DependentUpon>Jasa.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Jasa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jasa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\Jasa.xss">
+      <DependentUpon>Jasa.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Spareparts.xsc">
+      <DependentUpon>Spareparts.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Spareparts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Spareparts.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\Spareparts.xss">
+      <DependentUpon>Spareparts.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -279,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Dollar-bill%401x.png" />
+    <None Include="Resources\3d_file.png" />
+    <None Include="Resources\task.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

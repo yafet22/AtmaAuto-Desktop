@@ -33,5 +33,15 @@ namespace BengkelAtma.Properties {
                 return ((string)(this["_8991ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dsn=8991")]
+        public string CnnJasa {
+            get {
+                return ((string)(this["CnnJasa"]));
+            }
+        }
     }
 }

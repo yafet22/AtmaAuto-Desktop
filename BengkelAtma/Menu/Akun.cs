@@ -394,7 +394,13 @@ namespace BengkelAtma.Menu
 
         }
 
-
+        private void tbOldPassAkun_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                tbNewPassAkun.Focus();
+            }
+        }
     }
 }
 

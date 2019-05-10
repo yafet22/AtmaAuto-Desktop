@@ -116,5 +116,35 @@ namespace BengkelAtma
             public static string name;
             public static string role;
         }
+
+        private void tbUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                tbPass.Focus();
+            }
+        }
+
+        private void tbPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                tbMasuk.Focus();
+            }
+        }
+
+        private void tbMasuk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (tbUser.Text.ToString().Trim() != "" && tbPass.Text.ToString().Trim() != "")
+            {
+                GetLogin(tbUser.Text.ToString(), tbPass.Text.ToString());
+            }
+            else
+            {
+                MessageBox.Show(" Username atau password harus diisi");
+            }
+        }
+
+        
     }
 }

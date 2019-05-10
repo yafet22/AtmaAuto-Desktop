@@ -269,6 +269,7 @@
             this.tbOldPassAkun.Name = "tbOldPassAkun";
             this.tbOldPassAkun.Size = new System.Drawing.Size(236, 20);
             this.tbOldPassAkun.TabIndex = 7;
+            this.tbOldPassAkun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbOldPassAkun_KeyDown);
             // 
             // oldPass
             // 

@@ -400,5 +400,13 @@ namespace BengkelAtma.Menu
                 }
             };
         }
+
+        private void tbLynJasa_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbHrgJasa.Focus();
+            }
+        }
     }
 }

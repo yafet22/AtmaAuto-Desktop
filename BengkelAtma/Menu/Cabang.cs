@@ -405,5 +405,21 @@ namespace BengkelAtma.Menu
         {
             dataCabang.Rows[e.RowIndex].ReadOnly = true;
         }
+
+        private void tbNamaCabang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbAlamatCabang.Focus();
+            }
+        }
+
+        private void tbAlamatCabang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbNomorTeleponCabang.Focus();
+            }
+        }
     }
 }

@@ -382,5 +382,23 @@ namespace BengkelAtma.Menu
         {
             dgSales.Rows[e.RowIndex].ReadOnly = true;
         }
+
+        private void tbNamaSales_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbNoTelpSales.Focus();
+            }
+        }
+
+        private void tbNoTelpSales_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cbSupplier.Focus();
+            }
+        }
+
+        
     }
 }

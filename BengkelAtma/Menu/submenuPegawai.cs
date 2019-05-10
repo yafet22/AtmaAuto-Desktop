@@ -450,5 +450,47 @@ namespace BengkelAtma.Menu
                 }
             }
         }
+
+        private void tbNamaPegawai_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbAlamatPegawai.Focus();
+            }
+        }
+
+        private void tbAlamatPegawai_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbNomorTeleponPegawai.Focus();
+            }
+        }
+
+        private void tbNomorTeleponPegawai_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbGajiPegawai.Focus();
+            }
+        }
+
+        private void tbGajiPegawai_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboCabang.Focus();
+            }
+        }
+
+        private void comboCabang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboJabatan.Focus();
+            }
+        }
+
+        
     }
 }

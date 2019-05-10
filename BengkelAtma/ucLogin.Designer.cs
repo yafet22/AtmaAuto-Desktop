@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbMasuk = new AltoControls.AltoButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbUser = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
+            this.tbUser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,7 @@
             this.tbMasuk.Text = "Masuk";
             this.tbMasuk.Transparency = false;
             this.tbMasuk.Click += new System.EventHandler(this.tbMasuk_Click);
+            this.tbMasuk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMasuk_KeyPress);
             // 
             // panel1
             // 
@@ -91,14 +92,6 @@
             this.panel1.Size = new System.Drawing.Size(248, 226);
             this.panel1.TabIndex = 6;
             // 
-            // tbUser
-            // 
-            this.tbUser.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUser.Location = new System.Drawing.Point(18, 65);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(200, 22);
-            this.tbUser.TabIndex = 5;
-            // 
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(18, 121);
@@ -106,6 +99,16 @@
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(200, 20);
             this.tbPass.TabIndex = 6;
+            this.tbPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPass_KeyDown);
+            // 
+            // tbUser
+            // 
+            this.tbUser.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUser.Location = new System.Drawing.Point(18, 65);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(200, 22);
+            this.tbUser.TabIndex = 5;
+            this.tbUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUser_KeyDown);
             // 
             // ucLogin
             // 

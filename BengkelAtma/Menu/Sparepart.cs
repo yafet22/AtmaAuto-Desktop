@@ -692,5 +692,93 @@ namespace BengkelAtma.Menu
 
             dataCompatibility.DataSource = t2;
         }
+
+        private void tbKodeSparepart_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbNameSparepart.Focus();
+            }
+        }
+
+        private void tbNameSparepart_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbMerkSparepart.Focus();
+            }
+        }
+
+        private void tbMerkSparepart_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboSparepartType.Focus();
+            }
+        }
+
+        private void tbStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbMinStock.Focus();
+            }
+        }
+
+        private void comboSparepartType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbStock.Focus();
+            }
+        }
+
+        private void tbMinStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbBeli.Focus();
+            }
+        }
+
+        private void tbJual_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboPosition.Focus();
+            }
+        }
+
+        private void tbBeli_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbJual.Focus();
+            }
+           
+
+        }
+
+        private void comboPosition_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                comboTempat.Focus();
+            }
+
+        }
+
+        private void comboTempat_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tbNomor.Focus();
+            }
+        }
+
+
     }
 }
