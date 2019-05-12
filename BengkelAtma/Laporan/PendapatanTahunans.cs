@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace BengkelAtma.Laporan
 {
-    public partial class SisaStok : UserControl
+    public partial class PendapatanTahunans : UserControl
     {
-        public SisaStok()
+        public PendapatanTahunans()
         {
             InitializeComponent();
         }
 
-        private void btnLaporanSisa_Click(object sender, EventArgs e)
+        private void btnLaporanPThn_Click(object sender, EventArgs e)
         {
-            FormReportSisaStockcs SisaStockForm = new FormReportSisaStockcs();
-            SisaStockForm.Show();
+            FormReportPendapatanTahunan PendapatanTahunanForm = new FormReportPendapatanTahunan();
+            PendapatanTahunanForm.Show();
         }
     }
 }

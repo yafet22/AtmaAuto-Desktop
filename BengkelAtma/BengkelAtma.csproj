@@ -109,6 +109,24 @@
     <Compile Include="Laporan\FormReportJasa.Designer.cs">
       <DependentUpon>FormReportJasa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Laporan\FormReportPendapatanBulanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormReportPendapatanBulanan.Designer.cs">
+      <DependentUpon>FormReportPendapatanBulanan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormReportPendapatanTahunan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormReportPendapatanTahunan.Designer.cs">
+      <DependentUpon>FormReportPendapatanTahunan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\FormReportPengeluaranBulanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormReportPengeluaranBulanan.Designer.cs">
+      <DependentUpon>FormReportPengeluaranBulanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\FormReportSisaStockcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +155,42 @@
     </Compile>
     <Compile Include="Laporan\JasaReport.Designer.cs">
       <DependentUpon>JasaReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\PendapatanBulanan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PendapatanBulanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\PendapatanBulanans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laporan\PendapatanBulanans.Designer.cs">
+      <DependentUpon>PendapatanBulanans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\PendapatanTahunan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PendapatanTahunan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\PendapatanTahunans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laporan\PendapatanTahunans.Designer.cs">
+      <DependentUpon>PendapatanTahunans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\PengeluaranBulanan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PengeluaranBulanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\PengeluaranBulanans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Laporan\PengeluaranBulanans.Designer.cs">
+      <DependentUpon>PengeluaranBulanans.cs</DependentUpon>
     </Compile>
     <Compile Include="Laporan\SisaStock.cs">
       <AutoGen>True</AutoGen>
@@ -246,6 +300,15 @@
     <EmbeddedResource Include="Laporan\FormReportJasa.resx">
       <DependentUpon>FormReportJasa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormReportPendapatanBulanan.resx">
+      <DependentUpon>FormReportPendapatanBulanan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormReportPendapatanTahunan.resx">
+      <DependentUpon>FormReportPendapatanTahunan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormReportPengeluaranBulanan.resx">
+      <DependentUpon>FormReportPengeluaranBulanan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\FormReportSisaStockcs.resx">
       <DependentUpon>FormReportSisaStockcs.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +321,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\JasaReport.resx">
       <DependentUpon>JasaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PendapatanBulanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PendapatanBulanan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PendapatanBulanans.resx">
+      <DependentUpon>PendapatanBulanans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PendapatanTahunan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PendapatanTahunan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PendapatanTahunans.resx">
+      <DependentUpon>PendapatanTahunans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PengeluaranBulanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PengeluaranBulanan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\PengeluaranBulanans.resx">
+      <DependentUpon>PengeluaranBulanans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\SisaStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -396,6 +480,10 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Nota\" />
+    <Folder Include="Surat\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

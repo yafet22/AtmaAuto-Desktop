@@ -68,11 +68,17 @@ namespace BengkelAtma
                     kasir.Show();
 
                 }
-                else
+                else if (role == "Administrator")
                 {
+                    
                     MainMenu main = new MainMenu();
                     var userlogin = user;
                     main.Show();  //bukan ini.,,
+                }
+                else
+                {
+                    MessageBox.Show(" Maaf Selain admin dan kasir, tidak dapat Login! ");
+                    Application.Restart();
                 }
             }
             else
