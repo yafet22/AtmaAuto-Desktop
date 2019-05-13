@@ -33,5 +33,7 @@ namespace BengkelAtma.Kasir
                 MessageBox.Show("Keluar, dibatalkan.");
             }
         }
+
+        
     }
 }

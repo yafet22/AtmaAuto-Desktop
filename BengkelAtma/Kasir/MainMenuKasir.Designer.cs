@@ -30,22 +30,22 @@
         {
             this.panel1Kasir = new System.Windows.Forms.Panel();
             this.metroPanel1Kasir = new MetroFramework.Controls.MetroPanel();
-            this.pembayaran2 = new BengkelAtma.Kasir.pembayaran();
-            this.leftPanel = new System.Windows.Forms.Panel();
-            this.btnNotaKasir = new System.Windows.Forms.Button();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.pembayaran3 = new BengkelAtma.Kasir.pembayaran();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.btnKeluarKasir = new System.Windows.Forms.Button();
-            this.btnPembayaranKasir = new System.Windows.Forms.Button();
-            this.lbUser = new System.Windows.Forms.Label();
-            this.pbProfil = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.panel1bwahMain = new System.Windows.Forms.Panel();
+            this.notase1 = new BengkelAtma.Nota.Notase();
             this.panel1Kasir.SuspendLayout();
             this.metroPanel1Kasir.SuspendLayout();
-            this.leftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).BeginInit();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -55,66 +55,77 @@
             // 
             this.panel1Kasir.Controls.Add(this.metroPanel1Kasir);
             this.panel1Kasir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1Kasir.Location = new System.Drawing.Point(200, 47);
+            this.panel1Kasir.Location = new System.Drawing.Point(0, 47);
             this.panel1Kasir.Name = "panel1Kasir";
-            this.panel1Kasir.Size = new System.Drawing.Size(824, 538);
+            this.panel1Kasir.Size = new System.Drawing.Size(1024, 538);
             this.panel1Kasir.TabIndex = 10;
             // 
             // metroPanel1Kasir
             // 
             this.metroPanel1Kasir.BackColor = System.Drawing.Color.Transparent;
-            this.metroPanel1Kasir.Controls.Add(this.pembayaran2);
+            this.metroPanel1Kasir.Controls.Add(this.metroTabControl1);
             this.metroPanel1Kasir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1Kasir.HorizontalScrollbarBarColor = true;
             this.metroPanel1Kasir.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1Kasir.HorizontalScrollbarSize = 10;
             this.metroPanel1Kasir.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1Kasir.Name = "metroPanel1Kasir";
-            this.metroPanel1Kasir.Size = new System.Drawing.Size(824, 538);
+            this.metroPanel1Kasir.Size = new System.Drawing.Size(1024, 538);
             this.metroPanel1Kasir.TabIndex = 5;
             this.metroPanel1Kasir.VerticalScrollbarBarColor = true;
             this.metroPanel1Kasir.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1Kasir.VerticalScrollbarSize = 10;
             // 
-            // pembayaran2
+            // metroTabControl1
             // 
-            this.pembayaran2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pembayaran2.Location = new System.Drawing.Point(0, 0);
-            this.pembayaran2.MinimumSize = new System.Drawing.Size(1030, 352);
-            this.pembayaran2.Name = "pembayaran2";
-            this.pembayaran2.Size = new System.Drawing.Size(1030, 538);
-            this.pembayaran2.TabIndex = 2;
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(1024, 538);
+            this.metroTabControl1.TabIndex = 2;
+            this.metroTabControl1.UseSelectable = true;
             // 
-            // leftPanel
+            // metroTabPage1
             // 
-            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(168)))), ((int)(((byte)(183)))));
-            this.leftPanel.Controls.Add(this.btnNotaKasir);
-            this.leftPanel.Controls.Add(this.btnKeluarKasir);
-            this.leftPanel.Controls.Add(this.btnPembayaranKasir);
-            this.leftPanel.Controls.Add(this.lbUser);
-            this.leftPanel.Controls.Add(this.pbProfil);
-            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPanel.Location = new System.Drawing.Point(0, 47);
-            this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 544);
-            this.leftPanel.TabIndex = 9;
+            this.metroTabPage1.Controls.Add(this.pembayaran3);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(1016, 496);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "Pembayaran";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // btnNotaKasir
+            // pembayaran3
             // 
-            this.btnNotaKasir.BackColor = System.Drawing.Color.Transparent;
-            this.btnNotaKasir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNotaKasir.FlatAppearance.BorderSize = 0;
-            this.btnNotaKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotaKasir.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotaKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnNotaKasir.Image = global::BengkelAtma.Properties.Resources._3d_file;
-            this.btnNotaKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotaKasir.Location = new System.Drawing.Point(3, 173);
-            this.btnNotaKasir.Name = "btnNotaKasir";
-            this.btnNotaKasir.Size = new System.Drawing.Size(172, 39);
-            this.btnNotaKasir.TabIndex = 5;
-            this.btnNotaKasir.Text = "Cetak Nota";
-            this.btnNotaKasir.UseVisualStyleBackColor = false;
+            this.pembayaran3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pembayaran3.Location = new System.Drawing.Point(0, 0);
+            this.pembayaran3.MinimumSize = new System.Drawing.Size(1030, 352);
+            this.pembayaran3.Name = "pembayaran3";
+            this.pembayaran3.Size = new System.Drawing.Size(1030, 496);
+            this.pembayaran3.TabIndex = 2;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.notase1);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1016, 496);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "Nota";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
             // btnKeluarKasir
             // 
@@ -126,50 +137,13 @@
             this.btnKeluarKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnKeluarKasir.Image = global::BengkelAtma.Properties.Resources.checkered_flag;
             this.btnKeluarKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKeluarKasir.Location = new System.Drawing.Point(2, 289);
+            this.btnKeluarKasir.Location = new System.Drawing.Point(12, 5);
             this.btnKeluarKasir.Name = "btnKeluarKasir";
             this.btnKeluarKasir.Size = new System.Drawing.Size(172, 39);
             this.btnKeluarKasir.TabIndex = 4;
             this.btnKeluarKasir.Text = "Keluar";
             this.btnKeluarKasir.UseVisualStyleBackColor = false;
             this.btnKeluarKasir.Click += new System.EventHandler(this.btnKeluarKasir_Click);
-            // 
-            // btnPembayaranKasir
-            // 
-            this.btnPembayaranKasir.BackColor = System.Drawing.Color.Transparent;
-            this.btnPembayaranKasir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPembayaranKasir.FlatAppearance.BorderSize = 0;
-            this.btnPembayaranKasir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPembayaranKasir.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPembayaranKasir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPembayaranKasir.Image = global::BengkelAtma.Properties.Resources.Dollar_bill_1x;
-            this.btnPembayaranKasir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPembayaranKasir.Location = new System.Drawing.Point(7, 125);
-            this.btnPembayaranKasir.Name = "btnPembayaranKasir";
-            this.btnPembayaranKasir.Size = new System.Drawing.Size(172, 39);
-            this.btnPembayaranKasir.TabIndex = 3;
-            this.btnPembayaranKasir.Text = "Pembayaran";
-            this.btnPembayaranKasir.UseVisualStyleBackColor = false;
-            // 
-            // lbUser
-            // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(81, 83);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(33, 15);
-            this.lbUser.TabIndex = 1;
-            this.lbUser.Text = "User";
-            // 
-            // pbProfil
-            // 
-            this.pbProfil.BackgroundImage = global::BengkelAtma.Properties.Resources.logo;
-            this.pbProfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbProfil.Location = new System.Drawing.Point(39, 12);
-            this.pbProfil.Name = "pbProfil";
-            this.pbProfil.Size = new System.Drawing.Size(114, 63);
-            this.pbProfil.TabIndex = 0;
-            this.pbProfil.TabStop = false;
             // 
             // panel3
             // 
@@ -184,6 +158,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.btnKeluarKasir);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -223,6 +198,15 @@
             this.panel1bwahMain.Size = new System.Drawing.Size(808, 100);
             this.panel1bwahMain.TabIndex = 3;
             // 
+            // notase1
+            // 
+            this.notase1.BackColor = System.Drawing.Color.White;
+            this.notase1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notase1.Location = new System.Drawing.Point(0, 0);
+            this.notase1.Name = "notase1";
+            this.notase1.Size = new System.Drawing.Size(1016, 496);
+            this.notase1.TabIndex = 2;
+            // 
             // MainMenuKasir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,15 +214,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 591);
             this.Controls.Add(this.panel1Kasir);
-            this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.panel3);
             this.Name = "MainMenuKasir";
             this.Text = "MainMenuKasir";
             this.panel1Kasir.ResumeLayout(false);
             this.metroPanel1Kasir.ResumeLayout(false);
-            this.leftPanel.ResumeLayout(false);
-            this.leftPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfil)).EndInit();
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -251,11 +234,7 @@
 
         private System.Windows.Forms.Panel panel1Kasir;
         private MetroFramework.Controls.MetroPanel metroPanel1Kasir;
-        private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Button btnKeluarKasir;
-        private System.Windows.Forms.Button btnPembayaranKasir;
-        private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.PictureBox pbProfil;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -263,6 +242,10 @@
         private pembayaran pembayaran1;
         private System.Windows.Forms.Panel panel1bwahMain;
         private pembayaran pembayaran2;
-        private System.Windows.Forms.Button btnNotaKasir;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private pembayaran pembayaran3;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private Nota.Notase notase1;
     }
 }

@@ -145,11 +145,6 @@
       <DependentUpon>jasa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Laporan\Jasa.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Jasa.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Laporan\JasaReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,11 +198,6 @@
     </Compile>
     <Compile Include="Laporan\SisaStok.Designer.cs">
       <DependentUpon>SisaStok.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Laporan\Spareparts.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Spareparts.xsd</DependentUpon>
     </Compile>
     <Compile Include="Laporan\SparepartTerlaris.cs">
       <SubType>UserControl</SubType>
@@ -265,6 +255,24 @@
     <Compile Include="Menu\Sparepart.Designer.cs">
       <DependentUpon>Sparepart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nota\FormNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota\FormNota.Designer.cs">
+      <DependentUpon>FormNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nota\Notas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Nota\Notase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nota\Notase.Designer.cs">
+      <DependentUpon>Notase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profil\Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -285,6 +293,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Surat\FormSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Surat\FormSP.Designer.cs">
+      <DependentUpon>FormSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\FormSPK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Surat\FormSPK.Designer.cs">
+      <DependentUpon>FormSPK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SuratPemesanan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuratPemesanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Surat\SuratPemesananx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Surat\SuratPemesananx.Designer.cs">
+      <DependentUpon>SuratPemesananx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SuratPerintahKerja.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuratPerintahKerja.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Surat\SuratPerintahKerjax.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Surat\SuratPerintahKerjax.Designer.cs">
+      <DependentUpon>SuratPerintahKerjax.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -345,7 +389,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\SisaStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>SisaStock.cs</LastGenOutput>
+      <LastGenOutput>SisaStock1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\SisaStok.resx">
       <DependentUpon>SisaStok.cs</DependentUpon>
@@ -379,6 +423,16 @@
     <EmbeddedResource Include="Menu\Sparepart.resx">
       <DependentUpon>Sparepart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nota\FormNota.resx">
+      <DependentUpon>FormNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota\Notas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Notas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota\Notase.resx">
+      <DependentUpon>Notase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profil\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,31 +452,29 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Surat\FormSP.resx">
+      <DependentUpon>FormSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surat\FormSPK.resx">
+      <DependentUpon>FormSPK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surat\SuratPemesanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SuratPemesanan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surat\SuratPemesananx.resx">
+      <DependentUpon>SuratPemesananx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surat\SuratPerintahKerja.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SuratPerintahKerja.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surat\SuratPerintahKerjax.resx">
+      <DependentUpon>SuratPerintahKerjax.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucLogin.resx">
       <DependentUpon>ucLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Laporan\Jasa.xsc">
-      <DependentUpon>Jasa.xsd</DependentUpon>
-    </None>
-    <None Include="Laporan\Jasa.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Jasa.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Laporan\Jasa.xss">
-      <DependentUpon>Jasa.xsd</DependentUpon>
-    </None>
-    <None Include="Laporan\Spareparts.xsc">
-      <DependentUpon>Spareparts.xsd</DependentUpon>
-    </None>
-    <None Include="Laporan\Spareparts.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Spareparts.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Laporan\Spareparts.xss">
-      <DependentUpon>Spareparts.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -481,9 +533,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Nota\" />
-    <Folder Include="Surat\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
