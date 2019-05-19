@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PendapatanTahunanNew" targetNamespace="http://tempuri.org/PendapatanTahunanNew.xsd" xmlns:mstns="http://tempuri.org/PendapatanTahunanNew.xsd" xmlns="http://tempuri.org/PendapatanTahunanNew.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PendapatanTahunanNew" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PendapatanTahunanNew" msprop:Generator_UserDSName="PendapatanTahunanNew">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PenTahunanNew" msprop:Generator_TableClassName="PenTahunanNewDataTable" msprop:Generator_TableVarName="tablePenTahunanNew" msprop:Generator_TablePropName="PenTahunanNew" msprop:Generator_RowDeletingName="PenTahunanNewRowDeleting" msprop:Generator_RowChangingName="PenTahunanNewRowChanging" msprop:Generator_RowEvHandlerName="PenTahunanNewRowChangeEventHandler" msprop:Generator_RowDeletedName="PenTahunanNewRowDeleted" msprop:Generator_UserTableName="PenTahunanNew" msprop:Generator_RowChangedName="PenTahunanNewRowChanged" msprop:Generator_RowEvArgName="PenTahunanNewRowChangeEvent" msprop:Generator_RowClassName="PenTahunanNewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tahun" msprop:Generator_ColumnVarNameInTable="columnTahun" msprop:Generator_ColumnPropNameInRow="Tahun" msprop:Generator_ColumnPropNameInTable="TahunColumn" msprop:Generator_UserColumnName="Tahun" type="xs:string" minOccurs="0" />
+              <xs:element name="Cabang" msprop:Generator_ColumnVarNameInTable="columnCabang" msprop:Generator_ColumnPropNameInRow="Cabang" msprop:Generator_ColumnPropNameInTable="CabangColumn" msprop:Generator_UserColumnName="Cabang" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -28,99 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1kiriSisaStok = new System.Windows.Forms.Panel();
-            this.panel3atasSisaStok = new System.Windows.Forms.Panel();
-            this.panel1bwahSisaStok = new System.Windows.Forms.Panel();
-            this.panel2UtamaSisaStok = new System.Windows.Forms.Panel();
-            this.labelJasaReport = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSPK = new System.Windows.Forms.Button();
-            this.panel2UtamaSisaStok.SuspendLayout();
+            this.btnSP = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1kiriSisaStok
+            // tableLayoutPanel1
             // 
-            this.panel1kiriSisaStok.BackColor = System.Drawing.Color.White;
-            this.panel1kiriSisaStok.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1kiriSisaStok.Location = new System.Drawing.Point(0, 0);
-            this.panel1kiriSisaStok.Name = "panel1kiriSisaStok";
-            this.panel1kiriSisaStok.Size = new System.Drawing.Size(256, 400);
-            this.panel1kiriSisaStok.TabIndex = 3;
-            // 
-            // panel3atasSisaStok
-            // 
-            this.panel3atasSisaStok.BackColor = System.Drawing.Color.White;
-            this.panel3atasSisaStok.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3atasSisaStok.Location = new System.Drawing.Point(256, 0);
-            this.panel3atasSisaStok.Name = "panel3atasSisaStok";
-            this.panel3atasSisaStok.Size = new System.Drawing.Size(344, 98);
-            this.panel3atasSisaStok.TabIndex = 5;
-            // 
-            // panel1bwahSisaStok
-            // 
-            this.panel1bwahSisaStok.BackColor = System.Drawing.Color.White;
-            this.panel1bwahSisaStok.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1bwahSisaStok.Location = new System.Drawing.Point(256, 302);
-            this.panel1bwahSisaStok.Name = "panel1bwahSisaStok";
-            this.panel1bwahSisaStok.Size = new System.Drawing.Size(344, 98);
-            this.panel1bwahSisaStok.TabIndex = 6;
-            // 
-            // panel2UtamaSisaStok
-            // 
-            this.panel2UtamaSisaStok.BackColor = System.Drawing.Color.White;
-            this.panel2UtamaSisaStok.Controls.Add(this.labelJasaReport);
-            this.panel2UtamaSisaStok.Controls.Add(this.btnSPK);
-            this.panel2UtamaSisaStok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2UtamaSisaStok.Location = new System.Drawing.Point(256, 98);
-            this.panel2UtamaSisaStok.Name = "panel2UtamaSisaStok";
-            this.panel2UtamaSisaStok.Size = new System.Drawing.Size(344, 204);
-            this.panel2UtamaSisaStok.TabIndex = 7;
-            // 
-            // labelJasaReport
-            // 
-            this.labelJasaReport.AutoSize = true;
-            this.labelJasaReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJasaReport.Location = new System.Drawing.Point(84, 59);
-            this.labelJasaReport.Name = "labelJasaReport";
-            this.labelJasaReport.Size = new System.Drawing.Size(240, 18);
-            this.labelJasaReport.TabIndex = 3;
-            this.labelJasaReport.Text = "Silahkan Tekan Tombol dibawah ini\r\n";
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnSPK, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnSP, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 400);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnSPK
             // 
-            this.btnSPK.BackColor = System.Drawing.Color.Gold;
-            this.btnSPK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSPK.Location = new System.Drawing.Point(117, 122);
+            this.btnSPK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSPK.Location = new System.Drawing.Point(3, 115);
             this.btnSPK.Name = "btnSPK";
-            this.btnSPK.Size = new System.Drawing.Size(169, 23);
-            this.btnSPK.TabIndex = 2;
+            this.btnSPK.Size = new System.Drawing.Size(294, 106);
+            this.btnSPK.TabIndex = 0;
             this.btnSPK.Text = "Surat Perintah Kerja";
-            this.btnSPK.UseVisualStyleBackColor = false;
-            this.btnSPK.Click += new System.EventHandler(this.btnSPK_Click);
+            this.btnSPK.UseVisualStyleBackColor = true;
+            // 
+            // btnSP
+            // 
+            this.btnSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSP.Location = new System.Drawing.Point(303, 115);
+            this.btnSP.Name = "btnSP";
+            this.btnSP.Size = new System.Drawing.Size(294, 106);
+            this.btnSP.TabIndex = 1;
+            this.btnSP.Text = "Surat Pemesanan";
+            this.btnSP.UseVisualStyleBackColor = true;
             // 
             // SuratPerintahKerjax
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel2UtamaSisaStok);
-            this.Controls.Add(this.panel1bwahSisaStok);
-            this.Controls.Add(this.panel3atasSisaStok);
-            this.Controls.Add(this.panel1kiriSisaStok);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SuratPerintahKerjax";
             this.Size = new System.Drawing.Size(600, 400);
-            this.panel2UtamaSisaStok.ResumeLayout(false);
-            this.panel2UtamaSisaStok.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1kiriSisaStok;
-        private System.Windows.Forms.Panel panel3atasSisaStok;
-        private System.Windows.Forms.Panel panel1bwahSisaStok;
-        private System.Windows.Forms.Panel panel2UtamaSisaStok;
-        private System.Windows.Forms.Label labelJasaReport;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnSPK;
+        private System.Windows.Forms.Button btnSP;
     }
 }

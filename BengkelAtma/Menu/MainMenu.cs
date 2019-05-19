@@ -100,6 +100,9 @@ namespace BengkelAtma
             ctrlToCenter.Top = (ctrlToCenter.Parent.Height - ctrlToCenter.Height) / 2;
         }
 
-        
+        private void laporanTampilan1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

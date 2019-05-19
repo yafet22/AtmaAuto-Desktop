@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="JasaTerlarisNew" targetNamespace="http://tempuri.org/JasaTerlarisNew.xsd" xmlns:mstns="http://tempuri.org/JasaTerlarisNew.xsd" xmlns="http://tempuri.org/JasaTerlarisNew.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="JasaTerlarisNew" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="JasaTerlarisNew" msprop:Generator_UserDSName="JasaTerlarisNew">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="JasaTerlarisxNew" msprop:Generator_TableClassName="JasaTerlarisxNewDataTable" msprop:Generator_TableVarName="tableJasaTerlarisxNew" msprop:Generator_TablePropName="JasaTerlarisxNew" msprop:Generator_RowDeletingName="JasaTerlarisxNewRowDeleting" msprop:Generator_RowChangingName="JasaTerlarisxNewRowChanging" msprop:Generator_RowEvHandlerName="JasaTerlarisxNewRowChangeEventHandler" msprop:Generator_RowDeletedName="JasaTerlarisxNewRowDeleted" msprop:Generator_UserTableName="JasaTerlarisxNew" msprop:Generator_RowChangedName="JasaTerlarisxNewRowChanged" msprop:Generator_RowEvArgName="JasaTerlarisxNewRowChangeEvent" msprop:Generator_RowClassName="JasaTerlarisxNewRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

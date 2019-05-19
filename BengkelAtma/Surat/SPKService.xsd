@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SPKService" targetNamespace="http://tempuri.org/SPKService.xsd" xmlns:mstns="http://tempuri.org/SPKService.xsd" xmlns="http://tempuri.org/SPKService.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SPKService" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKService" msprop:Generator_UserDSName="SPKService">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ServiceSPK" msprop:Generator_TableClassName="ServiceSPKDataTable" msprop:Generator_TableVarName="tableServiceSPK" msprop:Generator_TablePropName="ServiceSPK" msprop:Generator_RowDeletingName="ServiceSPKRowDeleting" msprop:Generator_RowChangingName="ServiceSPKRowChanging" msprop:Generator_RowEvHandlerName="ServiceSPKRowChangeEventHandler" msprop:Generator_RowDeletedName="ServiceSPKRowDeleted" msprop:Generator_UserTableName="ServiceSPK" msprop:Generator_RowChangedName="ServiceSPKRowChanged" msprop:Generator_RowEvArgName="ServiceSPKRowChangeEvent" msprop:Generator_RowClassName="ServiceSPKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_transaction" msprop:Generator_ColumnVarNameInTable="columnid_transaction" msprop:Generator_ColumnPropNameInRow="id_transaction" msprop:Generator_ColumnPropNameInTable="id_transactionColumn" msprop:Generator_UserColumnName="id_transaction" type="xs:string" minOccurs="0" />
+              <xs:element name="KodeJasa" msprop:Generator_ColumnVarNameInTable="columnKodeJasa" msprop:Generator_ColumnPropNameInRow="KodeJasa" msprop:Generator_ColumnPropNameInTable="KodeJasaColumn" msprop:Generator_UserColumnName="KodeJasa" type="xs:short" minOccurs="0" />
+              <xs:element name="NamaJasa" msprop:Generator_ColumnVarNameInTable="columnNamaJasa" msprop:Generator_ColumnPropNameInRow="NamaJasa" msprop:Generator_ColumnPropNameInTable="NamaJasaColumn" msprop:Generator_UserColumnName="NamaJasa" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

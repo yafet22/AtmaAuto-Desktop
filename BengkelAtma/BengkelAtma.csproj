@@ -139,17 +139,47 @@
     <Compile Include="Laporan\FormReportSparepart.Designer.cs">
       <DependentUpon>FormReportSparepart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Laporan\FormSprprtTr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\FormSprprtTr.Designer.cs">
+      <DependentUpon>FormSprprtTr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\jasa.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>jasa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Laporan\JasaReport.cs">
+    <Compile Include="Laporan\JasaTerlarisNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JasaTerlarisNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\JasaTerlarissx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\JasaTerlarissx.Designer.cs">
+      <DependentUpon>JasaTerlarissx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\JasaTerlarisx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JasaTerlarisx.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\LaporanTampilan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Laporan\JasaReport.Designer.cs">
-      <DependentUpon>JasaReport.cs</DependentUpon>
+    <Compile Include="Laporan\LaporanTampilan.Designer.cs">
+      <DependentUpon>LaporanTampilan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\Penbulanans.cs">
+      <DependentUpon>Penbulanans.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\Penbulanans.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Penbulanans.xsd</DependentUpon>
     </Compile>
     <Compile Include="Laporan\PendapatanBulanan.cs">
       <AutoGen>True</AutoGen>
@@ -157,11 +187,16 @@
       <DependentUpon>PendapatanBulanan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Laporan\PendapatanBulanans.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Laporan\PendapatanBulananNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PendapatanBulananNew.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Laporan\PendapatanBulanans.Designer.cs">
-      <DependentUpon>PendapatanBulanans.cs</DependentUpon>
+    <Compile Include="Laporan\PendapatanBulanansx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\PendapatanBulanansx.Designer.cs">
+      <DependentUpon>PendapatanBulanansx.cs</DependentUpon>
     </Compile>
     <Compile Include="Laporan\PendapatanTahunan.cs">
       <AutoGen>True</AutoGen>
@@ -169,11 +204,26 @@
       <DependentUpon>PendapatanTahunan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Laporan\PendapatanTahunans.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Laporan\PendapatanTahunanNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PendapatanTahunanNew.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Laporan\PendapatanTahunans.Designer.cs">
-      <DependentUpon>PendapatanTahunans.cs</DependentUpon>
+    <Compile Include="Laporan\PendapatanTahunansx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\PendapatanTahunansx.Designer.cs">
+      <DependentUpon>PendapatanTahunansx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\PendTahunans.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PendTahunans.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\Pengbulanans.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pengbulanans.xsd</DependentUpon>
     </Compile>
     <Compile Include="Laporan\PengeluaranBulanan.cs">
       <AutoGen>True</AutoGen>
@@ -181,11 +231,19 @@
       <DependentUpon>PengeluaranBulanan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Laporan\PengeluaranBulanans.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Laporan\PengeluaranBulananNew.cs">
+      <DependentUpon>PengeluaranBulananNew.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Laporan\PengeluaranBulanans.Designer.cs">
-      <DependentUpon>PengeluaranBulanans.cs</DependentUpon>
+    <Compile Include="Laporan\PengeluaranBulananNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PengeluaranBulananNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\PengeluaranBulanansx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laporan\PengeluaranBulanansx.Designer.cs">
+      <DependentUpon>PengeluaranBulanansx.cs</DependentUpon>
     </Compile>
     <Compile Include="Laporan\SisaStock.cs">
       <AutoGen>True</AutoGen>
@@ -193,17 +251,34 @@
       <DependentUpon>SisaStock.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Laporan\SisaStok.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Laporan\SisaStockNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SisaStockNew.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Laporan\SisaStok.Designer.cs">
-      <DependentUpon>SisaStok.cs</DependentUpon>
+    <Compile Include="Laporan\SisaStocks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SisaStocks.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Laporan\SparepartTerlaris.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Laporan\SisaStocksx.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Laporan\SparepartTerlaris.Designer.cs">
-      <DependentUpon>SparepartTerlaris.cs</DependentUpon>
+    <Compile Include="Laporan\SisaStocksx.Designer.cs">
+      <DependentUpon>SisaStocksx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\SparepartsTerlaris.cs">
+      <DependentUpon>SparepartsTerlaris.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\SparepartsTerlaris.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SparepartsTerlaris.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\SparepartTerlarisNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SparepartTerlarisNew.xsd</DependentUpon>
     </Compile>
     <Compile Include="Laporan\Sprpat.cs">
       <AutoGen>True</AutoGen>
@@ -305,17 +380,46 @@
     <Compile Include="Surat\FormSPK.Designer.cs">
       <DependentUpon>FormSPK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Surat\SPKCs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKCs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKMDService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKMDService.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKMDSparepart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKMDSparepart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKMotor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKMotor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKService.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKSparepart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKSparepart.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Surat\SuratPemesanan.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SuratPemesanan.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Surat\SuratPemesananx.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Surat\SuratPemesananx.Designer.cs">
-      <DependentUpon>SuratPemesananx.cs</DependentUpon>
     </Compile>
     <Compile Include="Surat\SuratPerintahKerja.cs">
       <AutoGen>True</AutoGen>
@@ -359,43 +463,46 @@
     <EmbeddedResource Include="Laporan\FormReportSparepart.resx">
       <DependentUpon>FormReportSparepart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\FormSprprtTr.resx">
+      <DependentUpon>FormSprprtTr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\jasa.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>jasa.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\JasaReport.resx">
-      <DependentUpon>JasaReport.cs</DependentUpon>
+    <EmbeddedResource Include="Laporan\JasaTerlarissx.resx">
+      <DependentUpon>JasaTerlarissx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\LaporanTampilan.resx">
+      <DependentUpon>LaporanTampilan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\PendapatanBulanan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PendapatanBulanan.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\PendapatanBulanans.resx">
-      <DependentUpon>PendapatanBulanans.cs</DependentUpon>
+    <EmbeddedResource Include="Laporan\PendapatanBulanansx.resx">
+      <DependentUpon>PendapatanBulanansx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\PendapatanTahunan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PendapatanTahunan.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\PendapatanTahunans.resx">
-      <DependentUpon>PendapatanTahunans.cs</DependentUpon>
+    <EmbeddedResource Include="Laporan\PendapatanTahunansx.resx">
+      <DependentUpon>PendapatanTahunansx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\PengeluaranBulanan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PengeluaranBulanan.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\PengeluaranBulanans.resx">
-      <DependentUpon>PengeluaranBulanans.cs</DependentUpon>
+    <EmbeddedResource Include="Laporan\PengeluaranBulanansx.resx">
+      <DependentUpon>PengeluaranBulanansx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\SisaStock.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SisaStock1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\SisaStok.resx">
-      <DependentUpon>SisaStok.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Laporan\SparepartTerlaris.resx">
-      <DependentUpon>SparepartTerlaris.cs</DependentUpon>
+    <EmbeddedResource Include="Laporan\SisaStocksx.resx">
+      <DependentUpon>SisaStocksx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan\Sprpat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -462,9 +569,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SuratPemesanan.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Surat\SuratPemesananx.resx">
-      <DependentUpon>SuratPemesananx.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Surat\SuratPerintahKerja.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SuratPerintahKerja.cs</LastGenOutput>
@@ -475,6 +579,138 @@
     <EmbeddedResource Include="ucLogin.resx">
       <DependentUpon>ucLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Laporan\JasaTerlarisNew.xsc">
+      <DependentUpon>JasaTerlarisNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\JasaTerlarisNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JasaTerlarisNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\JasaTerlarisNew.xss">
+      <DependentUpon>JasaTerlarisNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\JasaTerlarisx.xsc">
+      <DependentUpon>JasaTerlarisx.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\JasaTerlarisx.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JasaTerlarisx.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\JasaTerlarisx.xss">
+      <DependentUpon>JasaTerlarisx.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Penbulanans.xsc">
+      <DependentUpon>Penbulanans.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Penbulanans.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Penbulanans.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\Penbulanans.xss">
+      <DependentUpon>Penbulanans.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PendapatanBulananNew.xsc">
+      <DependentUpon>PendapatanBulananNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PendapatanBulananNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PendapatanBulananNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\PendapatanBulananNew.xss">
+      <DependentUpon>PendapatanBulananNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PendapatanTahunanNew.xsc">
+      <DependentUpon>PendapatanTahunanNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PendapatanTahunanNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PendapatanTahunanNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\PendapatanTahunanNew.xss">
+      <DependentUpon>PendapatanTahunanNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PendTahunans.xsc">
+      <DependentUpon>PendTahunans.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PendTahunans.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PendTahunans.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\PendTahunans.xss">
+      <DependentUpon>PendTahunans.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Pengbulanans.xsc">
+      <DependentUpon>Pengbulanans.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\Pengbulanans.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pengbulanans.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\Pengbulanans.xss">
+      <DependentUpon>Pengbulanans.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PengeluaranBulananNew.xsc">
+      <DependentUpon>PengeluaranBulananNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\PengeluaranBulananNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PengeluaranBulananNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\PengeluaranBulananNew.xss">
+      <DependentUpon>PengeluaranBulananNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SisaStockNew.xsc">
+      <DependentUpon>SisaStockNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SisaStockNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SisaStockNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\SisaStockNew.xss">
+      <DependentUpon>SisaStockNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SisaStocks.xsc">
+      <DependentUpon>SisaStocks.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SisaStocks.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SisaStocks.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\SisaStocks.xss">
+      <DependentUpon>SisaStocks.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SparepartsTerlaris.xsc">
+      <DependentUpon>SparepartsTerlaris.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SparepartsTerlaris.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SparepartsTerlaris.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\SparepartsTerlaris.xss">
+      <DependentUpon>SparepartsTerlaris.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SparepartTerlarisNew.xsc">
+      <DependentUpon>SparepartTerlarisNew.xsd</DependentUpon>
+    </None>
+    <None Include="Laporan\SparepartTerlarisNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SparepartTerlarisNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Laporan\SparepartTerlarisNew.xss">
+      <DependentUpon>SparepartTerlarisNew.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -485,6 +721,83 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Surat\SPKCs.xsc">
+      <DependentUpon>SPKCs.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKCs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKCs.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKCs.xss">
+      <DependentUpon>SPKCs.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKMDService.xsc">
+      <DependentUpon>SPKMDService.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKMDService.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKMDService.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKMDService.xss">
+      <DependentUpon>SPKMDService.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKMDSparepart.xsc">
+      <DependentUpon>SPKMDSparepart.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKMDSparepart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKMDSparepart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKMDSparepart.xss">
+      <DependentUpon>SPKMDSparepart.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKMotor.xsc">
+      <DependentUpon>SPKMotor.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKMotor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKMotor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKMotor.xss">
+      <DependentUpon>SPKMotor.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKOrder.xsc">
+      <DependentUpon>SPKOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKOrder.xss">
+      <DependentUpon>SPKOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKService.xsc">
+      <DependentUpon>SPKService.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKService.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKService.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKService.xss">
+      <DependentUpon>SPKService.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKSparepart.xsc">
+      <DependentUpon>SPKSparepart.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKSparepart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKSparepart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKSparepart.xss">
+      <DependentUpon>SPKSparepart.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

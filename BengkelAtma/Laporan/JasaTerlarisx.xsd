@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="JasaTerlarisx" targetNamespace="http://tempuri.org/JasaTerlarisx.xsd" xmlns:mstns="http://tempuri.org/JasaTerlarisx.xsd" xmlns="http://tempuri.org/JasaTerlarisx.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="JasaTerlarisx" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="JasaTerlarisx" msprop:Generator_UserDSName="JasaTerlarisx">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="JasaTerlariss" msprop:Generator_TableClassName="JasaTerlarissDataTable" msprop:Generator_TableVarName="tableJasaTerlariss" msprop:Generator_TablePropName="JasaTerlariss" msprop:Generator_RowDeletingName="JasaTerlarissRowDeleting" msprop:Generator_RowChangingName="JasaTerlarissRowChanging" msprop:Generator_RowEvHandlerName="JasaTerlarissRowChangeEventHandler" msprop:Generator_RowDeletedName="JasaTerlarissRowDeleted" msprop:Generator_UserTableName="JasaTerlariss" msprop:Generator_RowChangedName="JasaTerlarissRowChanged" msprop:Generator_RowEvArgName="JasaTerlarissRowChangeEvent" msprop:Generator_RowClassName="JasaTerlarissRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="motorcycle_brand_name" msprop:Generator_ColumnVarNameInTable="columnmotorcycle_brand_name" msprop:Generator_ColumnPropNameInRow="motorcycle_brand_name" msprop:Generator_ColumnPropNameInTable="motorcycle_brand_nameColumn" msprop:Generator_UserColumnName="motorcycle_brand_name" type="xs:string" minOccurs="0" />
+              <xs:element name="motorcycle_type_name" msprop:Generator_ColumnVarNameInTable="columnmotorcycle_type_name" msprop:Generator_ColumnPropNameInRow="motorcycle_type_name" msprop:Generator_ColumnPropNameInTable="motorcycle_type_nameColumn" msprop:Generator_UserColumnName="motorcycle_type_name" type="xs:string" minOccurs="0" />
+              <xs:element name="service_name" msprop:Generator_ColumnVarNameInTable="columnservice_name" msprop:Generator_ColumnPropNameInRow="service_name" msprop:Generator_ColumnPropNameInTable="service_nameColumn" msprop:Generator_UserColumnName="service_name" type="xs:string" minOccurs="0" />
+              <xs:element name="jumlah_jasa" msprop:Generator_ColumnVarNameInTable="columnjumlah_jasa" msprop:Generator_ColumnPropNameInRow="jumlah_jasa" msprop:Generator_ColumnPropNameInTable="jumlah_jasaColumn" msprop:Generator_UserColumnName="jumlah_jasa" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

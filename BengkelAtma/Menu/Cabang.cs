@@ -23,7 +23,7 @@ namespace BengkelAtma.Menu
         public Cabang()
         {
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com");
+            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
 
         }
 

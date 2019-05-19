@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SisaStocks" targetNamespace="http://tempuri.org/SisaStocks.xsd" xmlns:mstns="http://tempuri.org/SisaStocks.xsd" xmlns="http://tempuri.org/SisaStocks.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SisaStocks" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SisaStocks" msprop:Generator_UserDSName="SisaStocks">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SisaStockxx" msprop:Generator_TableClassName="SisaStockxxDataTable" msprop:Generator_TableVarName="tableSisaStockxx" msprop:Generator_TablePropName="SisaStockxx" msprop:Generator_RowDeletingName="SisaStockxxRowDeleting" msprop:Generator_RowChangingName="SisaStockxxRowChanging" msprop:Generator_RowEvHandlerName="SisaStockxxRowChangeEventHandler" msprop:Generator_RowDeletedName="SisaStockxxRowDeleted" msprop:Generator_UserTableName="SisaStockxx" msprop:Generator_RowChangedName="SisaStockxxRowChanged" msprop:Generator_RowEvArgName="SisaStockxxRowChangeEvent" msprop:Generator_RowClassName="SisaStockxxRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bulan" msprop:Generator_ColumnVarNameInTable="columnBulan" msprop:Generator_ColumnPropNameInRow="Bulan" msprop:Generator_ColumnPropNameInTable="BulanColumn" msprop:Generator_UserColumnName="Bulan" type="xs:string" minOccurs="0" />
+              <xs:element name="JumlahStokSisa" msprop:Generator_ColumnVarNameInTable="columnJumlahStokSisa" msprop:Generator_ColumnPropNameInRow="JumlahStokSisa" msprop:Generator_ColumnPropNameInTable="JumlahStokSisaColumn" msprop:Generator_UserColumnName="JumlahStokSisa" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
