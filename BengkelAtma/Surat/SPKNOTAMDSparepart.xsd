@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SPKNOTAMDSparepart" targetNamespace="http://tempuri.org/SPKNOTAMDSparepart.xsd" xmlns:mstns="http://tempuri.org/SPKNOTAMDSparepart.xsd" xmlns="http://tempuri.org/SPKNOTAMDSparepart.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SPKNOTAMDSparepart" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKNOTAMDSparepart" msprop:Generator_UserDSName="SPKNOTAMDSparepart">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MDSparepartSPKNOTA" msprop:Generator_TableClassName="MDSparepartSPKNOTADataTable" msprop:Generator_TableVarName="tableMDSparepartSPKNOTA" msprop:Generator_TablePropName="MDSparepartSPKNOTA" msprop:Generator_RowDeletingName="MDSparepartSPKNOTARowDeleting" msprop:Generator_RowChangingName="MDSparepartSPKNOTARowChanging" msprop:Generator_RowEvHandlerName="MDSparepartSPKNOTARowChangeEventHandler" msprop:Generator_RowDeletedName="MDSparepartSPKNOTARowDeleted" msprop:Generator_UserTableName="MDSparepartSPKNOTA" msprop:Generator_RowChangedName="MDSparepartSPKNOTARowChanged" msprop:Generator_RowEvArgName="MDSparepartSPKNOTARowChangeEvent" msprop:Generator_RowClassName="MDSparepartSPKNOTARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_transaction" msprop:Generator_ColumnVarNameInTable="columnid_transaction" msprop:Generator_ColumnPropNameInRow="id_transaction" msprop:Generator_ColumnPropNameInTable="id_transactionColumn" msprop:Generator_UserColumnName="id_transaction" type="xs:string" minOccurs="0" />
+              <xs:element name="Montir" msprop:Generator_ColumnVarNameInTable="columnMontir" msprop:Generator_ColumnPropNameInRow="Montir" msprop:Generator_ColumnPropNameInTable="MontirColumn" msprop:Generator_UserColumnName="Montir" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

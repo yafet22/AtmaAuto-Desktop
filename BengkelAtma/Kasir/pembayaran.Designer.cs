@@ -67,6 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
             this.panel1kiri = new System.Windows.Forms.Panel();
+            this.btnCetakNota = new System.Windows.Forms.Button();
             this.panel1kanan.SuspendLayout();
             this.panel1SS.SuspendLayout();
             this.panel1Sparepart.SuspendLayout();
@@ -91,7 +92,7 @@
             this.panel1kanan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1kanan.Location = new System.Drawing.Point(673, 0);
             this.panel1kanan.Name = "panel1kanan";
-            this.panel1kanan.Size = new System.Drawing.Size(357, 352);
+            this.panel1kanan.Size = new System.Drawing.Size(357, 437);
             this.panel1kanan.TabIndex = 8;
             // 
             // panel1SS
@@ -101,7 +102,7 @@
             this.panel1SS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1SS.Location = new System.Drawing.Point(0, 0);
             this.panel1SS.Name = "panel1SS";
-            this.panel1SS.Size = new System.Drawing.Size(357, 224);
+            this.panel1SS.Size = new System.Drawing.Size(357, 309);
             this.panel1SS.TabIndex = 3;
             // 
             // panel1Sparepart
@@ -113,7 +114,7 @@
             this.panel1Sparepart.Location = new System.Drawing.Point(0, 0);
             this.panel1Sparepart.Name = "panel1Sparepart";
             this.panel1Sparepart.Padding = new System.Windows.Forms.Padding(4);
-            this.panel1Sparepart.Size = new System.Drawing.Size(357, 77);
+            this.panel1Sparepart.Size = new System.Drawing.Size(357, 162);
             this.panel1Sparepart.TabIndex = 11;
             // 
             // panel1dgSparepart
@@ -123,7 +124,7 @@
             this.panel1dgSparepart.Location = new System.Drawing.Point(4, 21);
             this.panel1dgSparepart.Name = "panel1dgSparepart";
             this.panel1dgSparepart.Padding = new System.Windows.Forms.Padding(2);
-            this.panel1dgSparepart.Size = new System.Drawing.Size(349, 52);
+            this.panel1dgSparepart.Size = new System.Drawing.Size(349, 137);
             this.panel1dgSparepart.TabIndex = 0;
             // 
             // dgSparepart
@@ -133,7 +134,7 @@
             this.dgSparepart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgSparepart.Location = new System.Drawing.Point(2, 2);
             this.dgSparepart.Name = "dgSparepart";
-            this.dgSparepart.Size = new System.Drawing.Size(345, 48);
+            this.dgSparepart.Size = new System.Drawing.Size(345, 133);
             this.dgSparepart.TabIndex = 0;
             // 
             // label1
@@ -153,7 +154,7 @@
             this.panel1Service.Controls.Add(this.panel2Service);
             this.panel1Service.Controls.Add(this.label1Service);
             this.panel1Service.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1Service.Location = new System.Drawing.Point(0, 77);
+            this.panel1Service.Location = new System.Drawing.Point(0, 162);
             this.panel1Service.Name = "panel1Service";
             this.panel1Service.Padding = new System.Windows.Forms.Padding(4);
             this.panel1Service.Size = new System.Drawing.Size(357, 147);
@@ -192,6 +193,7 @@
             // 
             // panel2bawah
             // 
+            this.panel2bawah.Controls.Add(this.btnCetakNota);
             this.panel2bawah.Controls.Add(this.tbTotal);
             this.panel2bawah.Controls.Add(this.labelTotal);
             this.panel2bawah.Controls.Add(this.btnBayar);
@@ -206,14 +208,14 @@
             this.panel2bawah.Controls.Add(this.label2Bayar);
             this.panel2bawah.Controls.Add(this.labelKodeSparepart);
             this.panel2bawah.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2bawah.Location = new System.Drawing.Point(0, 224);
+            this.panel2bawah.Location = new System.Drawing.Point(0, 309);
             this.panel2bawah.Name = "panel2bawah";
             this.panel2bawah.Size = new System.Drawing.Size(357, 128);
             this.panel2bawah.TabIndex = 0;
             // 
             // tbTotal
             // 
-            this.tbTotal.Location = new System.Drawing.Point(90, 45);
+            this.tbTotal.Location = new System.Drawing.Point(90, 34);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.Size = new System.Drawing.Size(84, 20);
             this.tbTotal.TabIndex = 33;
@@ -221,7 +223,7 @@
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(70, 91);
+            this.labelTotal.Location = new System.Drawing.Point(70, 79);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(36, 13);
             this.labelTotal.TabIndex = 32;
@@ -230,7 +232,7 @@
             // btnBayar
             // 
             this.btnBayar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnBayar.Location = new System.Drawing.Point(180, 86);
+            this.btnBayar.Location = new System.Drawing.Point(180, 74);
             this.btnBayar.Name = "btnBayar";
             this.btnBayar.Size = new System.Drawing.Size(165, 23);
             this.btnBayar.TabIndex = 31;
@@ -241,7 +243,7 @@
             // label1Total
             // 
             this.label1Total.AutoSize = true;
-            this.label1Total.Location = new System.Drawing.Point(3, 91);
+            this.label1Total.Location = new System.Drawing.Point(3, 79);
             this.label1Total.Name = "label1Total";
             this.label1Total.Size = new System.Drawing.Size(61, 13);
             this.label1Total.TabIndex = 29;
@@ -249,7 +251,7 @@
             // 
             // tbKembalian
             // 
-            this.tbKembalian.Location = new System.Drawing.Point(267, 45);
+            this.tbKembalian.Location = new System.Drawing.Point(267, 34);
             this.tbKembalian.Name = "tbKembalian";
             this.tbKembalian.Size = new System.Drawing.Size(80, 20);
             this.tbKembalian.TabIndex = 28;
@@ -267,7 +269,7 @@
             // label1Kembalian
             // 
             this.label1Kembalian.AutoSize = true;
-            this.label1Kembalian.Location = new System.Drawing.Point(266, 30);
+            this.label1Kembalian.Location = new System.Drawing.Point(266, 19);
             this.label1Kembalian.Name = "label1Kembalian";
             this.label1Kembalian.Size = new System.Drawing.Size(59, 13);
             this.label1Kembalian.TabIndex = 27;
@@ -275,7 +277,7 @@
             // 
             // tbDiskon
             // 
-            this.tbDiskon.Location = new System.Drawing.Point(7, 45);
+            this.tbDiskon.Location = new System.Drawing.Point(7, 34);
             this.tbDiskon.Name = "tbDiskon";
             this.tbDiskon.Size = new System.Drawing.Size(78, 20);
             this.tbDiskon.TabIndex = 24;
@@ -285,7 +287,7 @@
             // labelDiskon
             // 
             this.labelDiskon.AutoSize = true;
-            this.labelDiskon.Location = new System.Drawing.Point(5, 30);
+            this.labelDiskon.Location = new System.Drawing.Point(5, 19);
             this.labelDiskon.Name = "labelDiskon";
             this.labelDiskon.Size = new System.Drawing.Size(43, 13);
             this.labelDiskon.TabIndex = 23;
@@ -293,7 +295,7 @@
             // 
             // tbUangBayar
             // 
-            this.tbUangBayar.Location = new System.Drawing.Point(180, 45);
+            this.tbUangBayar.Location = new System.Drawing.Point(180, 34);
             this.tbUangBayar.Name = "tbUangBayar";
             this.tbUangBayar.Size = new System.Drawing.Size(80, 20);
             this.tbUangBayar.TabIndex = 26;
@@ -302,7 +304,7 @@
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
-            this.labelSubTotal.Location = new System.Drawing.Point(88, 29);
+            this.labelSubTotal.Location = new System.Drawing.Point(88, 18);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(34, 13);
             this.labelSubTotal.TabIndex = 21;
@@ -311,7 +313,7 @@
             // label2Bayar
             // 
             this.label2Bayar.AutoSize = true;
-            this.label2Bayar.Location = new System.Drawing.Point(177, 29);
+            this.label2Bayar.Location = new System.Drawing.Point(177, 18);
             this.label2Bayar.Name = "label2Bayar";
             this.label2Bayar.Size = new System.Drawing.Size(66, 13);
             this.label2Bayar.TabIndex = 25;
@@ -334,7 +336,7 @@
             this.panel4dg.Location = new System.Drawing.Point(0, 45);
             this.panel4dg.Name = "panel4dg";
             this.panel4dg.Padding = new System.Windows.Forms.Padding(4);
-            this.panel4dg.Size = new System.Drawing.Size(673, 176);
+            this.panel4dg.Size = new System.Drawing.Size(673, 261);
             this.panel4dg.TabIndex = 2;
             // 
             // dgTransaksi
@@ -344,7 +346,7 @@
             this.dgTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTransaksi.Location = new System.Drawing.Point(4, 4);
             this.dgTransaksi.Name = "dgTransaksi";
-            this.dgTransaksi.Size = new System.Drawing.Size(665, 168);
+            this.dgTransaksi.Size = new System.Drawing.Size(665, 253);
             this.dgTransaksi.TabIndex = 0;
             this.dgTransaksi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransaksi_CellClick);
             this.dgTransaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTransaksi_CellContentClick);
@@ -410,7 +412,7 @@
             this.panel1dataDiri.Controls.Add(this.labelID);
             this.panel1dataDiri.Controls.Add(this.label2);
             this.panel1dataDiri.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1dataDiri.Location = new System.Drawing.Point(0, 221);
+            this.panel1dataDiri.Location = new System.Drawing.Point(0, 306);
             this.panel1dataDiri.Name = "panel1dataDiri";
             this.panel1dataDiri.Size = new System.Drawing.Size(673, 131);
             this.panel1dataDiri.TabIndex = 10;
@@ -479,8 +481,19 @@
             this.panel1kiri.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1kiri.Location = new System.Drawing.Point(0, 0);
             this.panel1kiri.Name = "panel1kiri";
-            this.panel1kiri.Size = new System.Drawing.Size(673, 352);
+            this.panel1kiri.Size = new System.Drawing.Size(673, 437);
             this.panel1kiri.TabIndex = 3;
+            // 
+            // btnCetakNota
+            // 
+            this.btnCetakNota.BackColor = System.Drawing.Color.Gold;
+            this.btnCetakNota.Location = new System.Drawing.Point(180, 102);
+            this.btnCetakNota.Name = "btnCetakNota";
+            this.btnCetakNota.Size = new System.Drawing.Size(165, 23);
+            this.btnCetakNota.TabIndex = 34;
+            this.btnCetakNota.Text = "Cetak Nota";
+            this.btnCetakNota.UseVisualStyleBackColor = false;
+            this.btnCetakNota.Click += new System.EventHandler(this.btnCetakNota_Click);
             // 
             // pembayaran
             // 
@@ -490,7 +503,7 @@
             this.Controls.Add(this.panel1kiri);
             this.MinimumSize = new System.Drawing.Size(1030, 352);
             this.Name = "pembayaran";
-            this.Size = new System.Drawing.Size(1030, 352);
+            this.Size = new System.Drawing.Size(1030, 437);
             this.Load += new System.EventHandler(this.pembayaran_Load);
             this.panel1kanan.ResumeLayout(false);
             this.panel1SS.ResumeLayout(false);
@@ -556,5 +569,6 @@
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Button btnResetByr;
         private System.Windows.Forms.TextBox tbTotal;
+        private System.Windows.Forms.Button btnCetakNota;
     }
 }

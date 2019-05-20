@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="SPKMotor" targetNamespace="http://tempuri.org/SPKMotor.xsd" xmlns:mstns="http://tempuri.org/SPKMotor.xsd" xmlns="http://tempuri.org/SPKMotor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="SPKNOTAMotorService" targetNamespace="http://tempuri.org/SPKNOTAMotorService.xsd" xmlns:mstns="http://tempuri.org/SPKNOTAMotorService.xsd" xmlns="http://tempuri.org/SPKNOTAMotorService.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SPKMotor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKMotor" msprop:Generator_UserDSName="SPKMotor">
+  <xs:element name="SPKNOTAMotorService" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKNOTAMotorService" msprop:Generator_UserDSName="SPKNOTAMotorService">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="MotorSPK" msprop:Generator_TableClassName="MotorSPKDataTable" msprop:Generator_TableVarName="tableMotorSPK" msprop:Generator_TablePropName="MotorSPK" msprop:Generator_RowDeletingName="MotorSPKRowDeleting" msprop:Generator_RowChangingName="MotorSPKRowChanging" msprop:Generator_RowEvHandlerName="MotorSPKRowChangeEventHandler" msprop:Generator_RowDeletedName="MotorSPKRowDeleted" msprop:Generator_UserTableName="MotorSPK" msprop:Generator_RowChangedName="MotorSPKRowChanged" msprop:Generator_RowEvArgName="MotorSPKRowChangeEvent" msprop:Generator_RowClassName="MotorSPKRow">
+        <xs:element name="MotorServiceSPKNOTA" msprop:Generator_TableClassName="MotorServiceSPKNOTADataTable" msprop:Generator_TableVarName="tableMotorServiceSPKNOTA" msprop:Generator_TablePropName="MotorServiceSPKNOTA" msprop:Generator_RowDeletingName="MotorServiceSPKNOTARowDeleting" msprop:Generator_RowChangingName="MotorServiceSPKNOTARowChanging" msprop:Generator_RowEvHandlerName="MotorServiceSPKNOTARowChangeEventHandler" msprop:Generator_RowDeletedName="MotorServiceSPKNOTARowDeleted" msprop:Generator_UserTableName="MotorServiceSPKNOTA" msprop:Generator_RowChangedName="MotorServiceSPKNOTARowChanged" msprop:Generator_RowEvArgName="MotorServiceSPKNOTARowChangeEvent" msprop:Generator_RowClassName="MotorServiceSPKNOTARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_transaction" msprop:Generator_ColumnVarNameInTable="columnid_transaction" msprop:Generator_ColumnPropNameInRow="id_transaction" msprop:Generator_ColumnPropNameInTable="id_transactionColumn" msprop:Generator_UserColumnName="id_transaction" type="xs:string" minOccurs="0" />

@@ -33,19 +33,16 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.pembayaran3 = new BengkelAtma.Kasir.pembayaran();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.btnKeluarKasir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.panel1bwahMain = new System.Windows.Forms.Panel();
-            this.notase1 = new BengkelAtma.Nota.Notase();
             this.panel1Kasir.SuspendLayout();
             this.metroPanel1Kasir.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -79,11 +76,10 @@
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1024, 538);
             this.metroTabControl1.TabIndex = 2;
             this.metroTabControl1.UseSelectable = true;
@@ -111,21 +107,6 @@
             this.pembayaran3.Name = "pembayaran3";
             this.pembayaran3.Size = new System.Drawing.Size(1030, 496);
             this.pembayaran3.TabIndex = 2;
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.notase1);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1016, 496);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "Nota";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
             // btnKeluarKasir
             // 
@@ -198,15 +179,6 @@
             this.panel1bwahMain.Size = new System.Drawing.Size(808, 100);
             this.panel1bwahMain.TabIndex = 3;
             // 
-            // notase1
-            // 
-            this.notase1.BackColor = System.Drawing.Color.White;
-            this.notase1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.notase1.Location = new System.Drawing.Point(0, 0);
-            this.notase1.Name = "notase1";
-            this.notase1.Size = new System.Drawing.Size(1016, 496);
-            this.notase1.TabIndex = 2;
-            // 
             // MainMenuKasir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,7 +193,6 @@
             this.metroPanel1Kasir.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -245,7 +216,6 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private pembayaran pembayaran3;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private Nota.Notase notase1;
+        //private Nota.Notase notase1;
     }
 }

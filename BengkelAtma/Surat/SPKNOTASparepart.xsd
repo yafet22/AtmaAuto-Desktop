@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SPKNOTASparepart" targetNamespace="http://tempuri.org/SPKNOTASparepart.xsd" xmlns:mstns="http://tempuri.org/SPKNOTASparepart.xsd" xmlns="http://tempuri.org/SPKNOTASparepart.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SPKNOTASparepart" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKNOTASparepart" msprop:Generator_UserDSName="SPKNOTASparepart">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SparepartSPKNOTA" msprop:Generator_TableClassName="SparepartSPKNOTADataTable" msprop:Generator_TableVarName="tableSparepartSPKNOTA" msprop:Generator_TablePropName="SparepartSPKNOTA" msprop:Generator_RowDeletingName="SparepartSPKNOTARowDeleting" msprop:Generator_RowChangingName="SparepartSPKNOTARowChanging" msprop:Generator_RowEvHandlerName="SparepartSPKNOTARowChangeEventHandler" msprop:Generator_RowDeletedName="SparepartSPKNOTARowDeleted" msprop:Generator_UserTableName="SparepartSPKNOTA" msprop:Generator_RowChangedName="SparepartSPKNOTARowChanged" msprop:Generator_RowEvArgName="SparepartSPKNOTARowChangeEvent" msprop:Generator_RowClassName="SparepartSPKNOTARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_transaction" msprop:Generator_ColumnVarNameInTable="columnid_transaction" msprop:Generator_ColumnPropNameInRow="id_transaction" msprop:Generator_ColumnPropNameInTable="id_transactionColumn" msprop:Generator_UserColumnName="id_transaction" type="xs:string" minOccurs="0" />
+              <xs:element name="Diskon" msprop:Generator_ColumnVarNameInTable="columnDiskon" msprop:Generator_ColumnPropNameInRow="Diskon" msprop:Generator_ColumnPropNameInTable="DiskonColumn" msprop:Generator_UserColumnName="Diskon" type="xs:double" minOccurs="0" />
+              <xs:element name="Kode" msprop:Generator_ColumnVarNameInTable="columnKode" msprop:Generator_ColumnPropNameInRow="Kode" msprop:Generator_ColumnPropNameInTable="KodeColumn" msprop:Generator_UserColumnName="Kode" type="xs:string" minOccurs="0" />
+              <xs:element name="Nama" msprop:Generator_ColumnVarNameInTable="columnNama" msprop:Generator_ColumnPropNameInRow="Nama" msprop:Generator_ColumnPropNameInTable="NamaColumn" msprop:Generator_UserColumnName="Nama" type="xs:string" minOccurs="0" />
+              <xs:element name="Merk" msprop:Generator_ColumnVarNameInTable="columnMerk" msprop:Generator_ColumnPropNameInRow="Merk" msprop:Generator_ColumnPropNameInTable="MerkColumn" msprop:Generator_UserColumnName="Merk" type="xs:string" minOccurs="0" />
+              <xs:element name="Rak" msprop:Generator_ColumnVarNameInTable="columnRak" msprop:Generator_ColumnPropNameInRow="Rak" msprop:Generator_ColumnPropNameInTable="RakColumn" msprop:Generator_UserColumnName="Rak" type="xs:string" minOccurs="0" />
+              <xs:element name="Jumlah" msprop:Generator_ColumnVarNameInTable="columnJumlah" msprop:Generator_ColumnPropNameInRow="Jumlah" msprop:Generator_ColumnPropNameInTable="JumlahColumn" msprop:Generator_UserColumnName="Jumlah" type="xs:unsignedShort" minOccurs="0" />
+              <xs:element name="Harga_Satuan" msprop:Generator_ColumnVarNameInTable="columnHarga_Satuan" msprop:Generator_ColumnPropNameInRow="Harga_Satuan" msprop:Generator_ColumnPropNameInTable="Harga_SatuanColumn" msprop:Generator_UserColumnName="Harga_Satuan" type="xs:double" minOccurs="0" />
+              <xs:element name="Harga_Total" msprop:Generator_ColumnVarNameInTable="columnHarga_Total" msprop:Generator_ColumnPropNameInRow="Harga_Total" msprop:Generator_ColumnPropNameInTable="Harga_TotalColumn" msprop:Generator_UserColumnName="Harga_Total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

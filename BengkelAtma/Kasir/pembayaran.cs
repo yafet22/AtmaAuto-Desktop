@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.IO;
+using BengkelAtma.Nota;
 
 namespace BengkelAtma.Kasir
 {
@@ -529,6 +530,13 @@ namespace BengkelAtma.Kasir
             {
                 MessageBox.Show(exc.Message);
             }
+        }
+
+        private void btnCetakNota_Click(object sender, EventArgs e)
+        {
+            string id = dgTransaksi.SelectedRows[0].Cells["id_transaction"].Value.ToString();
+            FormNotaNew NotaForm = new FormNotaNew(id);
+            NotaForm.Show();
         }
     }
   }

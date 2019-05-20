@@ -330,23 +330,29 @@
     <Compile Include="Menu\Sparepart.Designer.cs">
       <DependentUpon>Sparepart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\SuratSPK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu\SuratSPK.Designer.cs">
+      <DependentUpon>SuratSPK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nota\FormNota.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Nota\FormNota.Designer.cs">
       <DependentUpon>FormNota.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nota\FormNotaNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nota\FormNotaNew.Designer.cs">
+      <DependentUpon>FormNotaNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nota\Notas.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Notas.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Nota\Notase.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Nota\Notase.Designer.cs">
-      <DependentUpon>Notase.cs</DependentUpon>
     </Compile>
     <Compile Include="Profil\Profile.cs">
       <SubType>UserControl</SubType>
@@ -380,40 +386,51 @@
     <Compile Include="Surat\FormSPK.Designer.cs">
       <DependentUpon>FormSPK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Surat\SPKCs.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SPKCs.xsd</DependentUpon>
+    <Compile Include="Surat\FormSPKNew.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Surat\SPKMDService.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SPKMDService.xsd</DependentUpon>
+    <Compile Include="Surat\FormSPKNew.Designer.cs">
+      <DependentUpon>FormSPKNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="Surat\SPKMDSparepart.Designer.cs">
+    <Compile Include="Surat\SPKNOTACustomerService.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SPKMDSparepart.xsd</DependentUpon>
+      <DependentUpon>SPKNOTACustomerService.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Surat\SPKMotor.Designer.cs">
+    <Compile Include="Surat\SPKNOTAMDService.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SPKMotor.xsd</DependentUpon>
+      <DependentUpon>SPKNOTAMDService.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Surat\SPKOrder.Designer.cs">
+    <Compile Include="Surat\SPKNOTAMDSparepart.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SPKOrder.xsd</DependentUpon>
+      <DependentUpon>SPKNOTAMDSparepart.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Surat\SPKService.Designer.cs">
+    <Compile Include="Surat\SPKNOTAMotorService.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SPKService.xsd</DependentUpon>
+      <DependentUpon>SPKNOTAMotorService.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Surat\SPKSparepart.Designer.cs">
+    <Compile Include="Surat\SPKNOTAMotorSparepart.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SPKSparepart.xsd</DependentUpon>
+      <DependentUpon>SPKNOTAMotorSparepart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKNOTAService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKNOTAService.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKNOTASparepart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKNOTASparepart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPKNOTAWorkOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPKNOTAWorkOrder.xsd</DependentUpon>
     </Compile>
     <Compile Include="Surat\SuratPemesanan.cs">
       <AutoGen>True</AutoGen>
@@ -426,12 +443,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SuratPerintahKerja.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Surat\SuratPerintahKerjax.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Surat\SuratPerintahKerjax.Designer.cs">
-      <DependentUpon>SuratPerintahKerjax.cs</DependentUpon>
     </Compile>
     <Compile Include="ucLogin.cs">
       <SubType>UserControl</SubType>
@@ -530,15 +541,18 @@
     <EmbeddedResource Include="Menu\Sparepart.resx">
       <DependentUpon>Sparepart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SuratSPK.resx">
+      <DependentUpon>SuratSPK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nota\FormNota.resx">
       <DependentUpon>FormNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nota\FormNotaNew.resx">
+      <DependentUpon>FormNotaNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nota\Notas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Notas.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Nota\Notase.resx">
-      <DependentUpon>Notase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profil\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
@@ -565,6 +579,9 @@
     <EmbeddedResource Include="Surat\FormSPK.resx">
       <DependentUpon>FormSPK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Surat\FormSPKNew.resx">
+      <DependentUpon>FormSPKNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Surat\SuratPemesanan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SuratPemesanan.cs</LastGenOutput>
@@ -572,9 +589,6 @@
     <EmbeddedResource Include="Surat\SuratPerintahKerja.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SuratPerintahKerja.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Surat\SuratPerintahKerjax.resx">
-      <DependentUpon>SuratPerintahKerjax.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucLogin.resx">
       <DependentUpon>ucLogin.cs</DependentUpon>
@@ -721,82 +735,93 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Surat\SPKCs.xsc">
-      <DependentUpon>SPKCs.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTACustomerService.xsc">
+      <DependentUpon>SPKNOTACustomerService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKCs.xsd">
+    <None Include="Surat\SPKNOTACustomerService.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKCs.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTACustomerService.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKCs.xss">
-      <DependentUpon>SPKCs.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTACustomerService.xss">
+      <DependentUpon>SPKNOTACustomerService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKMDService.xsc">
-      <DependentUpon>SPKMDService.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMDService.xsc">
+      <DependentUpon>SPKNOTAMDService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKMDService.xsd">
+    <None Include="Surat\SPKNOTAMDService.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKMDService.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTAMDService.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKMDService.xss">
-      <DependentUpon>SPKMDService.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMDService.xss">
+      <DependentUpon>SPKNOTAMDService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKMDSparepart.xsc">
-      <DependentUpon>SPKMDSparepart.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMDSparepart.xsc">
+      <DependentUpon>SPKNOTAMDSparepart.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKMDSparepart.xsd">
+    <None Include="Surat\SPKNOTAMDSparepart.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKMDSparepart.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTAMDSparepart.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKMDSparepart.xss">
-      <DependentUpon>SPKMDSparepart.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMDSparepart.xss">
+      <DependentUpon>SPKNOTAMDSparepart.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKMotor.xsc">
-      <DependentUpon>SPKMotor.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMotorService.xsc">
+      <DependentUpon>SPKNOTAMotorService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKMotor.xsd">
+    <None Include="Surat\SPKNOTAMotorService.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKMotor.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTAMotorService.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKMotor.xss">
-      <DependentUpon>SPKMotor.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMotorService.xss">
+      <DependentUpon>SPKNOTAMotorService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKOrder.xsc">
-      <DependentUpon>SPKOrder.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMotorSparepart.xsc">
+      <DependentUpon>SPKNOTAMotorSparepart.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKOrder.xsd">
+    <None Include="Surat\SPKNOTAMotorSparepart.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKOrder.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTAMotorSparepart.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKOrder.xss">
-      <DependentUpon>SPKOrder.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAMotorSparepart.xss">
+      <DependentUpon>SPKNOTAMotorSparepart.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKService.xsc">
-      <DependentUpon>SPKService.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAService.xsc">
+      <DependentUpon>SPKNOTAService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKService.xsd">
+    <None Include="Surat\SPKNOTAService.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKService.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTAService.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKService.xss">
-      <DependentUpon>SPKService.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTAService.xss">
+      <DependentUpon>SPKNOTAService.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKSparepart.xsc">
-      <DependentUpon>SPKSparepart.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTASparepart.xsc">
+      <DependentUpon>SPKNOTASparepart.xsd</DependentUpon>
     </None>
-    <None Include="Surat\SPKSparepart.xsd">
+    <None Include="Surat\SPKNOTASparepart.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SPKSparepart.Designer.cs</LastGenOutput>
+      <LastGenOutput>SPKNOTASparepart.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Surat\SPKSparepart.xss">
-      <DependentUpon>SPKSparepart.xsd</DependentUpon>
+    <None Include="Surat\SPKNOTASparepart.xss">
+      <DependentUpon>SPKNOTASparepart.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKNOTAWorkOrder.xsc">
+      <DependentUpon>SPKNOTAWorkOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPKNOTAWorkOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPKNOTAWorkOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPKNOTAWorkOrder.xss">
+      <DependentUpon>SPKNOTAWorkOrder.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -27,8 +27,6 @@ namespace BengkelAtma.Menu
 
         }
 
-
-
         public class User
         {
             public int id_user { get; set; }

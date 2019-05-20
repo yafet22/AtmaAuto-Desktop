@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="SPKOrder" targetNamespace="http://tempuri.org/SPKOrder.xsd" xmlns:mstns="http://tempuri.org/SPKOrder.xsd" xmlns="http://tempuri.org/SPKOrder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="SPKNOTAWorkOrder" targetNamespace="http://tempuri.org/SPKNOTAWorkOrder.xsd" xmlns:mstns="http://tempuri.org/SPKNOTAWorkOrder.xsd" xmlns="http://tempuri.org/SPKNOTAWorkOrder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -9,10 +9,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="SPKOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKOrder" msprop:Generator_UserDSName="SPKOrder">
+  <xs:element name="SPKNOTAWorkOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPKNOTAWorkOrder" msprop:Generator_UserDSName="SPKNOTAWorkOrder">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="OrderSPK" msprop:Generator_TableClassName="OrderSPKDataTable" msprop:Generator_TableVarName="tableOrderSPK" msprop:Generator_TablePropName="OrderSPK" msprop:Generator_RowDeletingName="OrderSPKRowDeleting" msprop:Generator_RowChangingName="OrderSPKRowChanging" msprop:Generator_RowEvHandlerName="OrderSPKRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderSPKRowDeleted" msprop:Generator_UserTableName="OrderSPK" msprop:Generator_RowChangedName="OrderSPKRowChanged" msprop:Generator_RowEvArgName="OrderSPKRowChangeEvent" msprop:Generator_RowClassName="OrderSPKRow">
+        <xs:element name="WorkOrderSPKNOTA" msprop:Generator_TableClassName="WorkOrderSPKNOTADataTable" msprop:Generator_TableVarName="tableWorkOrderSPKNOTA" msprop:Generator_TablePropName="WorkOrderSPKNOTA" msprop:Generator_RowDeletingName="WorkOrderSPKNOTARowDeleting" msprop:Generator_RowChangingName="WorkOrderSPKNOTARowChanging" msprop:Generator_RowEvHandlerName="WorkOrderSPKNOTARowChangeEventHandler" msprop:Generator_RowDeletedName="WorkOrderSPKNOTARowDeleted" msprop:Generator_UserTableName="WorkOrderSPKNOTA" msprop:Generator_RowChangedName="WorkOrderSPKNOTARowChanged" msprop:Generator_RowEvArgName="WorkOrderSPKNOTARowChangeEvent" msprop:Generator_RowClassName="WorkOrderSPKNOTARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="created_at" msprop:Generator_ColumnVarNameInTable="columncreated_at" msprop:Generator_ColumnPropNameInRow="created_at" msprop:Generator_ColumnPropNameInTable="created_atColumn" msprop:Generator_UserColumnName="created_at" type="xs:string" minOccurs="0" />

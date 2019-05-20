@@ -20,17 +20,17 @@ namespace BengkelAtma.Surat {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SPKOrder")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SPKNOTAMDSparepart")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SPKOrder : global::System.Data.DataSet {
+    public partial class SPKNOTAMDSparepart : global::System.Data.DataSet {
         
-        private OrderSPKDataTable tableOrderSPK;
+        private MDSparepartSPKNOTADataTable tableMDSparepartSPKNOTA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public SPKOrder() {
+        public SPKNOTAMDSparepart() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BengkelAtma.Surat {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected SPKOrder(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SPKNOTAMDSparepart(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BengkelAtma.Surat {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["OrderSPK"] != null)) {
-                    base.Tables.Add(new OrderSPKDataTable(ds.Tables["OrderSPK"]));
+                if ((ds.Tables["MDSparepartSPKNOTA"] != null)) {
+                    base.Tables.Add(new MDSparepartSPKNOTADataTable(ds.Tables["MDSparepartSPKNOTA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BengkelAtma.Surat {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public OrderSPKDataTable OrderSPK {
+        public MDSparepartSPKNOTADataTable MDSparepartSPKNOTA {
             get {
-                return this.tableOrderSPK;
+                return this.tableMDSparepartSPKNOTA;
             }
         }
         
@@ -127,7 +127,7 @@ namespace BengkelAtma.Surat {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SPKOrder cln = ((SPKOrder)(base.Clone()));
+            SPKNOTAMDSparepart cln = ((SPKNOTAMDSparepart)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace BengkelAtma.Surat {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["OrderSPK"] != null)) {
-                    base.Tables.Add(new OrderSPKDataTable(ds.Tables["OrderSPK"]));
+                if ((ds.Tables["MDSparepartSPKNOTA"] != null)) {
+                    base.Tables.Add(new MDSparepartSPKNOTADataTable(ds.Tables["MDSparepartSPKNOTA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BengkelAtma.Surat {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableOrderSPK = ((OrderSPKDataTable)(base.Tables["OrderSPK"]));
+            this.tableMDSparepartSPKNOTA = ((MDSparepartSPKNOTADataTable)(base.Tables["MDSparepartSPKNOTA"]));
             if ((initTable == true)) {
-                if ((this.tableOrderSPK != null)) {
-                    this.tableOrderSPK.InitVars();
+                if ((this.tableMDSparepartSPKNOTA != null)) {
+                    this.tableMDSparepartSPKNOTA.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace BengkelAtma.Surat {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SPKOrder";
+            this.DataSetName = "SPKNOTAMDSparepart";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SPKOrder.xsd";
+            this.Namespace = "http://tempuri.org/SPKNOTAMDSparepart.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableOrderSPK = new OrderSPKDataTable();
-            base.Tables.Add(this.tableOrderSPK);
+            this.tableMDSparepartSPKNOTA = new MDSparepartSPKNOTADataTable();
+            base.Tables.Add(this.tableMDSparepartSPKNOTA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeOrderSPK() {
+        private bool ShouldSerializeMDSparepartSPKNOTA() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BengkelAtma.Surat {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SPKOrder ds = new SPKOrder();
+            SPKNOTAMDSparepart ds = new SPKNOTAMDSparepart();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace BengkelAtma.Surat {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void OrderSPKRowChangeEventHandler(object sender, OrderSPKRowChangeEvent e);
+        public delegate void MDSparepartSPKNOTARowChangeEventHandler(object sender, MDSparepartSPKNOTARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class OrderSPKDataTable : global::System.Data.TypedTableBase<OrderSPKRow> {
-            
-            private global::System.Data.DataColumn columncreated_at;
+        public partial class MDSparepartSPKNOTADataTable : global::System.Data.TypedTableBase<MDSparepartSPKNOTARow> {
             
             private global::System.Data.DataColumn columnid_transaction;
             
-            private global::System.Data.DataColumn columnCust;
-            
-            private global::System.Data.DataColumn columnTelepon;
+            private global::System.Data.DataColumn columnMontir;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OrderSPKDataTable() {
-                this.TableName = "OrderSPK";
+            public MDSparepartSPKNOTADataTable() {
+                this.TableName = "MDSparepartSPKNOTA";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace BengkelAtma.Surat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal OrderSPKDataTable(global::System.Data.DataTable table) {
+            internal MDSparepartSPKNOTADataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,17 +311,9 @@ namespace BengkelAtma.Surat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected OrderSPKDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MDSparepartSPKNOTADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn created_atColumn {
-                get {
-                    return this.columncreated_at;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -338,17 +326,9 @@ namespace BengkelAtma.Surat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CustColumn {
+            public global::System.Data.DataColumn MontirColumn {
                 get {
-                    return this.columnCust;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TeleponColumn {
-                get {
-                    return this.columnTelepon;
+                    return this.columnMontir;
                 }
             }
             
@@ -363,48 +343,46 @@ namespace BengkelAtma.Surat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OrderSPKRow this[int index] {
+            public MDSparepartSPKNOTARow this[int index] {
                 get {
-                    return ((OrderSPKRow)(this.Rows[index]));
+                    return ((MDSparepartSPKNOTARow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event OrderSPKRowChangeEventHandler OrderSPKRowChanging;
+            public event MDSparepartSPKNOTARowChangeEventHandler MDSparepartSPKNOTARowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event OrderSPKRowChangeEventHandler OrderSPKRowChanged;
+            public event MDSparepartSPKNOTARowChangeEventHandler MDSparepartSPKNOTARowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event OrderSPKRowChangeEventHandler OrderSPKRowDeleting;
+            public event MDSparepartSPKNOTARowChangeEventHandler MDSparepartSPKNOTARowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event OrderSPKRowChangeEventHandler OrderSPKRowDeleted;
+            public event MDSparepartSPKNOTARowChangeEventHandler MDSparepartSPKNOTARowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddOrderSPKRow(OrderSPKRow row) {
+            public void AddMDSparepartSPKNOTARow(MDSparepartSPKNOTARow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OrderSPKRow AddOrderSPKRow(string created_at, string id_transaction, string Cust, string Telepon) {
-                OrderSPKRow rowOrderSPKRow = ((OrderSPKRow)(this.NewRow()));
+            public MDSparepartSPKNOTARow AddMDSparepartSPKNOTARow(string id_transaction, string Montir) {
+                MDSparepartSPKNOTARow rowMDSparepartSPKNOTARow = ((MDSparepartSPKNOTARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        created_at,
                         id_transaction,
-                        Cust,
-                        Telepon};
-                rowOrderSPKRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowOrderSPKRow);
-                return rowOrderSPKRow;
+                        Montir};
+                rowMDSparepartSPKNOTARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMDSparepartSPKNOTARow);
+                return rowMDSparepartSPKNOTARow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                OrderSPKDataTable cln = ((OrderSPKDataTable)(base.Clone()));
+                MDSparepartSPKNOTADataTable cln = ((MDSparepartSPKNOTADataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,55 +390,49 @@ namespace BengkelAtma.Surat {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new OrderSPKDataTable();
+                return new MDSparepartSPKNOTADataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columncreated_at = base.Columns["created_at"];
                 this.columnid_transaction = base.Columns["id_transaction"];
-                this.columnCust = base.Columns["Cust"];
-                this.columnTelepon = base.Columns["Telepon"];
+                this.columnMontir = base.Columns["Montir"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columncreated_at = new global::System.Data.DataColumn("created_at", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreated_at);
                 this.columnid_transaction = new global::System.Data.DataColumn("id_transaction", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_transaction);
-                this.columnCust = new global::System.Data.DataColumn("Cust", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCust);
-                this.columnTelepon = new global::System.Data.DataColumn("Telepon", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTelepon);
+                this.columnMontir = new global::System.Data.DataColumn("Montir", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMontir);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OrderSPKRow NewOrderSPKRow() {
-                return ((OrderSPKRow)(this.NewRow()));
+            public MDSparepartSPKNOTARow NewMDSparepartSPKNOTARow() {
+                return ((MDSparepartSPKNOTARow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new OrderSPKRow(builder);
+                return new MDSparepartSPKNOTARow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(OrderSPKRow);
+                return typeof(MDSparepartSPKNOTARow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.OrderSPKRowChanged != null)) {
-                    this.OrderSPKRowChanged(this, new OrderSPKRowChangeEvent(((OrderSPKRow)(e.Row)), e.Action));
+                if ((this.MDSparepartSPKNOTARowChanged != null)) {
+                    this.MDSparepartSPKNOTARowChanged(this, new MDSparepartSPKNOTARowChangeEvent(((MDSparepartSPKNOTARow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +440,8 @@ namespace BengkelAtma.Surat {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.OrderSPKRowChanging != null)) {
-                    this.OrderSPKRowChanging(this, new OrderSPKRowChangeEvent(((OrderSPKRow)(e.Row)), e.Action));
+                if ((this.MDSparepartSPKNOTARowChanging != null)) {
+                    this.MDSparepartSPKNOTARowChanging(this, new MDSparepartSPKNOTARowChangeEvent(((MDSparepartSPKNOTARow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +449,8 @@ namespace BengkelAtma.Surat {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.OrderSPKRowDeleted != null)) {
-                    this.OrderSPKRowDeleted(this, new OrderSPKRowChangeEvent(((OrderSPKRow)(e.Row)), e.Action));
+                if ((this.MDSparepartSPKNOTARowDeleted != null)) {
+                    this.MDSparepartSPKNOTARowDeleted(this, new MDSparepartSPKNOTARowChangeEvent(((MDSparepartSPKNOTARow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +458,14 @@ namespace BengkelAtma.Surat {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.OrderSPKRowDeleting != null)) {
-                    this.OrderSPKRowDeleting(this, new OrderSPKRowChangeEvent(((OrderSPKRow)(e.Row)), e.Action));
+                if ((this.MDSparepartSPKNOTARowDeleting != null)) {
+                    this.MDSparepartSPKNOTARowDeleting(this, new MDSparepartSPKNOTARowChangeEvent(((MDSparepartSPKNOTARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveOrderSPKRow(OrderSPKRow row) {
+            public void RemoveMDSparepartSPKNOTARow(MDSparepartSPKNOTARow row) {
                 this.Rows.Remove(row);
             }
             
@@ -502,7 +474,7 @@ namespace BengkelAtma.Surat {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SPKOrder ds = new SPKOrder();
+                SPKNOTAMDSparepart ds = new SPKNOTAMDSparepart();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,7 +492,7 @@ namespace BengkelAtma.Surat {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "OrderSPKDataTable";
+                attribute2.FixedValue = "MDSparepartSPKNOTADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,31 +536,15 @@ namespace BengkelAtma.Surat {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class OrderSPKRow : global::System.Data.DataRow {
+        public partial class MDSparepartSPKNOTARow : global::System.Data.DataRow {
             
-            private OrderSPKDataTable tableOrderSPK;
+            private MDSparepartSPKNOTADataTable tableMDSparepartSPKNOTA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal OrderSPKRow(global::System.Data.DataRowBuilder rb) : 
+            internal MDSparepartSPKNOTARow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableOrderSPK = ((OrderSPKDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string created_at {
-                get {
-                    try {
-                        return ((string)(this[this.tableOrderSPK.created_atColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'created_at\' in table \'OrderSPK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableOrderSPK.created_atColumn] = value;
-                }
+                this.tableMDSparepartSPKNOTA = ((MDSparepartSPKNOTADataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -596,95 +552,55 @@ namespace BengkelAtma.Surat {
             public string id_transaction {
                 get {
                     try {
-                        return ((string)(this[this.tableOrderSPK.id_transactionColumn]));
+                        return ((string)(this[this.tableMDSparepartSPKNOTA.id_transactionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id_transaction\' in table \'OrderSPK\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_transaction\' in table \'MDSparepartSPKNOTA\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableOrderSPK.id_transactionColumn] = value;
+                    this[this.tableMDSparepartSPKNOTA.id_transactionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Cust {
+            public string Montir {
                 get {
                     try {
-                        return ((string)(this[this.tableOrderSPK.CustColumn]));
+                        return ((string)(this[this.tableMDSparepartSPKNOTA.MontirColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cust\' in table \'OrderSPK\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Montir\' in table \'MDSparepartSPKNOTA\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableOrderSPK.CustColumn] = value;
+                    this[this.tableMDSparepartSPKNOTA.MontirColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Telepon {
-                get {
-                    try {
-                        return ((string)(this[this.tableOrderSPK.TeleponColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Telepon\' in table \'OrderSPK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableOrderSPK.TeleponColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscreated_atNull() {
-                return this.IsNull(this.tableOrderSPK.created_atColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcreated_atNull() {
-                this[this.tableOrderSPK.created_atColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isid_transactionNull() {
-                return this.IsNull(this.tableOrderSPK.id_transactionColumn);
+                return this.IsNull(this.tableMDSparepartSPKNOTA.id_transactionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setid_transactionNull() {
-                this[this.tableOrderSPK.id_transactionColumn] = global::System.Convert.DBNull;
+                this[this.tableMDSparepartSPKNOTA.id_transactionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCustNull() {
-                return this.IsNull(this.tableOrderSPK.CustColumn);
+            public bool IsMontirNull() {
+                return this.IsNull(this.tableMDSparepartSPKNOTA.MontirColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCustNull() {
-                this[this.tableOrderSPK.CustColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsTeleponNull() {
-                return this.IsNull(this.tableOrderSPK.TeleponColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetTeleponNull() {
-                this[this.tableOrderSPK.TeleponColumn] = global::System.Convert.DBNull;
+            public void SetMontirNull() {
+                this[this.tableMDSparepartSPKNOTA.MontirColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -692,22 +608,22 @@ namespace BengkelAtma.Surat {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class OrderSPKRowChangeEvent : global::System.EventArgs {
+        public class MDSparepartSPKNOTARowChangeEvent : global::System.EventArgs {
             
-            private OrderSPKRow eventRow;
+            private MDSparepartSPKNOTARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OrderSPKRowChangeEvent(OrderSPKRow row, global::System.Data.DataRowAction action) {
+            public MDSparepartSPKNOTARowChangeEvent(MDSparepartSPKNOTARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public OrderSPKRow Row {
+            public MDSparepartSPKNOTARow Row {
                 get {
                     return this.eventRow;
                 }
