@@ -46,9 +46,12 @@ namespace BengkelAtma.Nota
             dt15 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("mechanicsparepart").ToString());
             dt16 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("mechanicjasa").ToString());
 
+            Notes.Subreports["Subdetailsparepart"].Database.Tables["SparepartSPKNOTA"].SetDataSource(dt10);
+            Notes.Subreports["Subdetailservice"].Database.Tables["ServiceSPKNOTA"].SetDataSource(dt11);
+
             Notes.Database.Tables["CustomerServiceSPKNOTA"].SetDataSource(dt9);
-            Notes.Database.Tables["SparepartSPKNOTA"].SetDataSource(dt10);
-            Notes.Database.Tables["ServiceSPKNOTA"].SetDataSource(dt11);
+            //Notes.Database.Tables["SparepartSPKNOTA"].SetDataSource(dt10);
+            //Notes.Database.Tables["ServiceSPKNOTA"].SetDataSource(dt11);
             Notes.Database.Tables["MotorSparepartSPKNOTA"].SetDataSource(dt12);
             Notes.Database.Tables["MotorServiceSPKNOTA"].SetDataSource(dt13);
             Notes.Database.Tables["WorkOrderSPKNOTA"].SetDataSource(dt14);

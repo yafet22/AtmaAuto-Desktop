@@ -438,6 +438,12 @@
       <DependentUpon>SuratPemesanan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Surat\SuratPemesanan_.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Surat\SuratPemesanan_.Designer.cs">
+      <DependentUpon>SuratPemesanan_.cs</DependentUpon>
+    </Compile>
     <Compile Include="Surat\SuratPerintahKerja.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -585,6 +591,9 @@
     <EmbeddedResource Include="Surat\SuratPemesanan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SuratPemesanan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Surat\SuratPemesanan_.resx">
+      <DependentUpon>SuratPemesanan_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Surat\SuratPerintahKerja.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

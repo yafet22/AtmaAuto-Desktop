@@ -32,7 +32,7 @@
             this.metroPanel1Kasir = new MetroFramework.Controls.MetroPanel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.pembayaran3 = new BengkelAtma.Kasir.pembayaran();
+            this.pembayaran4 = new BengkelAtma.Kasir.pembayaran();
             this.btnKeluarKasir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -86,7 +86,7 @@
             // 
             // metroTabPage1
             // 
-            this.metroTabPage1.Controls.Add(this.pembayaran3);
+            this.metroTabPage1.Controls.Add(this.pembayaran4);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
@@ -99,14 +99,14 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
-            // pembayaran3
+            // pembayaran4
             // 
-            this.pembayaran3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pembayaran3.Location = new System.Drawing.Point(0, 0);
-            this.pembayaran3.MinimumSize = new System.Drawing.Size(1030, 352);
-            this.pembayaran3.Name = "pembayaran3";
-            this.pembayaran3.Size = new System.Drawing.Size(1030, 496);
-            this.pembayaran3.TabIndex = 2;
+            this.pembayaran4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pembayaran4.Location = new System.Drawing.Point(0, 0);
+            this.pembayaran4.MinimumSize = new System.Drawing.Size(1030, 352);
+            this.pembayaran4.Name = "pembayaran4";
+            this.pembayaran4.Size = new System.Drawing.Size(1030, 496);
+            this.pembayaran4.TabIndex = 2;
             // 
             // btnKeluarKasir
             // 
@@ -216,6 +216,7 @@
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private pembayaran pembayaran3;
+        private pembayaran pembayaran4;
         //private Nota.Notase notase1;
     }
 }
