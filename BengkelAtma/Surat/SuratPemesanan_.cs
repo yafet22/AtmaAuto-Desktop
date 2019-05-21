@@ -54,11 +54,8 @@ namespace BengkelAtma.Surat
 
             var a = await response.Content.ReadAsStringAsync();
             DataTable dt = new DataTable();
-            JObject json_object = JObject.Parse(a);
-            dt = JsonConvert.DeserializeObject<DataTable>(json_object.GetValue("data").ToString());
-            //dt = json_convert(a);
+            dt = json_convert(a);
             Debug.WriteLine(dt.Rows.Count);
-
 
             return dt;
 
@@ -67,10 +64,14 @@ namespace BengkelAtma.Surat
         public static DataTable json_convert(string json)
         {
             JObject json_object = JObject.Parse(json);
-
+            Debug.WriteLine("cek");
             DataTable dt = new DataTable();
 
             JArray json_array = JArray.Parse(json_object["data"].ToString());
+            json_array.Descendants().OfType<JProperty>()
+                 .Where(p => p.Name == "detail")
+                 .ToList()
+                 .ForEach(att => att.Remove());
             dt = JsonConvert.DeserializeObject<DataTable>(json_array.ToString());
 
             return dt;
