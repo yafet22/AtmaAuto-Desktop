@@ -104,5 +104,10 @@ namespace BengkelAtma
         {
 
         }
+
+        private void laporanTampilan2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

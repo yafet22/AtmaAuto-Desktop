@@ -39,7 +39,9 @@ namespace BengkelAtma.Nota
 
             dt9 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("customerservice").ToString());
             dt10 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("sparepart").ToString());
+           
             dt11 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("service").ToString());
+            
             dt12 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("motorsparepart").ToString());
             dt13 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("motorservice").ToString());
             dt14 = JsonConvert.DeserializeObject<DataTable>(jobject.GetValue("customer").ToString());

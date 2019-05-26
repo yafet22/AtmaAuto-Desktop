@@ -31,6 +31,7 @@ namespace BengkelAtma.Laporan
 
         private void btnLaporanSisa_Click(object sender, EventArgs e)
         {
+           
             SisaStocksx SisaStockForm = new SisaStocksx(tbPilihTahun.Text, tbTipeBarang.Text);
             SisaStockForm.Show();
         }
