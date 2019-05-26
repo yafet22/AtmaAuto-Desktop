@@ -19,9 +19,10 @@ namespace BengkelAtma.Laporan
     public partial class FormSprprtTr : Form
     {
         Sprpat sp = new Sprpat();
-
-        public FormSprprtTr()
+        private string tahun;
+        public FormSprprtTr(string tahun)
         {
+            this.tahun = tahun;
             InitializeComponent();
         }
 
@@ -31,12 +32,13 @@ namespace BengkelAtma.Laporan
             public string NamaBarang { get; set; }
             public string TipeBarang { get; set; }
             public string JumlahPenjualan { get; set; }
+             
         }
 
         public void getData()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/best-seller-sparepart").Result;
+            var response = client.GetAsync("http://p3l.yafetrakan.com/api/best-seller-sparepart/" +tahun).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SPall" targetNamespace="http://tempuri.org/SPall.xsd" xmlns:mstns="http://tempuri.org/SPall.xsd" xmlns="http://tempuri.org/SPall.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SPall" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SPall" msprop:Generator_UserDSName="SPall">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CetakSP" msprop:Generator_TableClassName="CetakSPDataTable" msprop:Generator_TableVarName="tableCetakSP" msprop:Generator_TablePropName="CetakSP" msprop:Generator_RowDeletingName="CetakSPRowDeleting" msprop:Generator_RowChangingName="CetakSPRowChanging" msprop:Generator_RowEvHandlerName="CetakSPRowChangeEventHandler" msprop:Generator_RowDeletedName="CetakSPRowDeleted" msprop:Generator_UserTableName="CetakSP" msprop:Generator_RowChangedName="CetakSPRowChanged" msprop:Generator_RowEvArgName="CetakSPRowChangeEvent" msprop:Generator_RowClassName="CetakSPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="supplier_name" msprop:Generator_ColumnVarNameInTable="columnsupplier_name" msprop:Generator_ColumnPropNameInRow="supplier_name" msprop:Generator_ColumnPropNameInTable="supplier_nameColumn" msprop:Generator_UserColumnName="supplier_name" type="xs:string" minOccurs="0" />
+              <xs:element name="supplier_address" msprop:Generator_ColumnVarNameInTable="columnsupplier_address" msprop:Generator_ColumnPropNameInRow="supplier_address" msprop:Generator_ColumnPropNameInTable="supplier_addressColumn" msprop:Generator_UserColumnName="supplier_address" type="xs:string" minOccurs="0" />
+              <xs:element name="supplier_phone_number" msprop:Generator_ColumnVarNameInTable="columnsupplier_phone_number" msprop:Generator_ColumnPropNameInRow="supplier_phone_number" msprop:Generator_ColumnPropNameInTable="supplier_phone_numberColumn" msprop:Generator_UserColumnName="supplier_phone_number" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:string" minOccurs="0" />
+              <xs:element name="sparepart_name" msprop:Generator_ColumnVarNameInTable="columnsparepart_name" msprop:Generator_ColumnPropNameInRow="sparepart_name" msprop:Generator_ColumnPropNameInTable="sparepart_nameColumn" msprop:Generator_UserColumnName="sparepart_name" type="xs:string" minOccurs="0" />
+              <xs:element name="merk" msprop:Generator_ColumnVarNameInTable="columnmerk" msprop:Generator_ColumnPropNameInRow="merk" msprop:Generator_ColumnPropNameInTable="merkColumn" msprop:Generator_UserColumnName="merk" type="xs:string" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:double" minOccurs="0" />
+              <xs:element name="sparepart_type_name" msprop:Generator_ColumnVarNameInTable="columnsparepart_type_name" msprop:Generator_ColumnPropNameInRow="sparepart_type_name" msprop:Generator_ColumnPropNameInTable="sparepart_type_nameColumn" msprop:Generator_UserColumnName="sparepart_type_name" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

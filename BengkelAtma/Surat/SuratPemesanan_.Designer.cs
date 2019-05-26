@@ -40,6 +40,8 @@
             this.dgPemesanan.Name = "dgPemesanan";
             this.dgPemesanan.Size = new System.Drawing.Size(580, 380);
             this.dgPemesanan.TabIndex = 0;
+            this.dgPemesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPemesanan_CellContentClick);
+            this.dgPemesanan.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgPemesanan_RowHeaderMouseClick);
             // 
             // SuratPemesanan_
             // 

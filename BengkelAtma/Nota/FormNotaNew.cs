@@ -50,8 +50,8 @@ namespace BengkelAtma.Nota
             Notes.Subreports["Subdetailservice"].Database.Tables["ServiceSPKNOTA"].SetDataSource(dt11);
 
             Notes.Database.Tables["CustomerServiceSPKNOTA"].SetDataSource(dt9);
-            //Notes.Database.Tables["SparepartSPKNOTA"].SetDataSource(dt10);
-            //Notes.Database.Tables["ServiceSPKNOTA"].SetDataSource(dt11);
+            Notes.Database.Tables["SparepartSPKNOTA"].SetDataSource(dt10);
+            Notes.Database.Tables["ServiceSPKNOTA"].SetDataSource(dt11);
             Notes.Database.Tables["MotorSparepartSPKNOTA"].SetDataSource(dt12);
             Notes.Database.Tables["MotorServiceSPKNOTA"].SetDataSource(dt13);
             Notes.Database.Tables["WorkOrderSPKNOTA"].SetDataSource(dt14);

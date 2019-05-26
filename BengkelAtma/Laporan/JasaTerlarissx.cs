@@ -17,9 +17,13 @@ namespace BengkelAtma.Laporan
     public partial class JasaTerlarissx : Form
     {
         jasa js = new jasa();
-        public JasaTerlarissx()
+        private string tahun;
+        private string bulan;
+        public JasaTerlarissx(string tahun, string bulan)
         {
             InitializeComponent();
+            this.tahun = tahun;
+            this.bulan = bulan;
         }
 
         public class JasaTerlarisxx
@@ -33,7 +37,7 @@ namespace BengkelAtma.Laporan
         public void getDataJasa()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/service-selling/2019/04").Result;
+            var response = client.GetAsync("http://p3l.yafetrakan.com/api/service-selling/" +tahun + "/" + bulan).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

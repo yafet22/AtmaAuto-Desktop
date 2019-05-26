@@ -76,5 +76,20 @@ namespace BengkelAtma.Surat
 
             return dt;
         }
+
+        private void dgPemesanan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string id = dgPemesanan.SelectedRows[0].Cells["id_procurement"].Value.ToString();
+            FormSPNew SPForm = new FormSPNew(id);
+            SPForm.Show();
+        }
+
+        private void dgPemesanan_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Debug.WriteLine("pandaa");
+            string id = dgPemesanan.SelectedRows[0].Cells["id_procurement"].Value.ToString();
+            FormSPNew SPForm = new FormSPNew(id);
+            SPForm.Show();
+        }
     }
 }

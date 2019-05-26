@@ -17,9 +17,11 @@ namespace BengkelAtma.Laporan
     public partial class PendapatanBulanansx : Form
     {
         PendapatanTahunan pt = new PendapatanTahunan();
-        public PendapatanBulanansx()
+        private string tahun;
+        public PendapatanBulanansx(string tahun)
         {
             InitializeComponent();
+            this.tahun = tahun;
         }
 
         public class PendapatanBulanan
@@ -33,7 +35,7 @@ namespace BengkelAtma.Laporan
         public void getDataPenBul()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/transaction-per-year/2019").Result;
+            var response = client.GetAsync("http://p3l.yafetrakan.com/api/transaction-per-year/" +tahun).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

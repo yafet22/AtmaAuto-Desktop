@@ -19,25 +19,25 @@ namespace BengkelAtma.Laporan
 
         private void btnSparepartTerlaris_Click(object sender, EventArgs e)
         {
-            FormSprprtTr SparepartsForm = new FormSprprtTr();
+            FormSprprtTr SparepartsForm = new FormSprprtTr(tbPilihTahun.Text);
             SparepartsForm.Show();
         }
 
         private void btnJasa_Click(object sender, EventArgs e)
         {
-            JasaTerlarissx JasaForm = new JasaTerlarissx();
+            JasaTerlarissx JasaForm = new JasaTerlarissx(tbPilihTahun.Text, tbBulanLaporan.Text);
             JasaForm.Show();
         }
 
         private void btnLaporanSisa_Click(object sender, EventArgs e)
         {
-            SisaStocksx SisaStockForm = new SisaStocksx();
+            SisaStocksx SisaStockForm = new SisaStocksx(tbPilihTahun.Text, tbTipeBarang.Text);
             SisaStockForm.Show();
         }
 
         private void btnLaporanPBul_Click(object sender, EventArgs e)
         {
-            PendapatanBulanansx PendapatanBulananForm = new PendapatanBulanansx();
+            PendapatanBulanansx PendapatanBulananForm = new PendapatanBulanansx(tbPilihTahun.Text);
             PendapatanBulananForm.Show();
         }
 
@@ -49,8 +49,13 @@ namespace BengkelAtma.Laporan
 
         private void btnLaporanPenBul_Click(object sender, EventArgs e)
         {
-            PengeluaranBulanansx PengeluaranBulananForm = new PengeluaranBulanansx();
+            PengeluaranBulanansx PengeluaranBulananForm = new PengeluaranBulanansx(tbPilihTahun.Text);
             PengeluaranBulananForm.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

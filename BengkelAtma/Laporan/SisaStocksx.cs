@@ -17,9 +17,13 @@ namespace BengkelAtma.Laporan
     public partial class SisaStocksx : Form
     {
         SisaStock ss = new SisaStock();
-        public SisaStocksx()
+        private string tahun;
+        private string sparepart;
+        public SisaStocksx(string tahun, string sparepart)
         {
             InitializeComponent();
+            this.tahun = tahun;
+            this.sparepart = sparepart;
         }
 
         public class SisaStockx

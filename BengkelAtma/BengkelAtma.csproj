@@ -392,6 +392,20 @@
     <Compile Include="Surat\FormSPKNew.Designer.cs">
       <DependentUpon>FormSPKNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="Surat\FormSPNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Surat\FormSPNew.Designer.cs">
+      <DependentUpon>FormSPNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPall.cs">
+      <DependentUpon>SPall.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Surat\SPall.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPall.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Surat\SPKNOTACustomerService.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -588,6 +602,9 @@
     <EmbeddedResource Include="Surat\FormSPKNew.resx">
       <DependentUpon>FormSPKNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Surat\FormSPNew.resx">
+      <DependentUpon>FormSPNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Surat\SuratPemesanan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SuratPemesanan.cs</LastGenOutput>
@@ -744,6 +761,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Surat\SPall.xsc">
+      <DependentUpon>SPall.xsd</DependentUpon>
+    </None>
+    <None Include="Surat\SPall.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SPall.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Surat\SPall.xss">
+      <DependentUpon>SPall.xsd</DependentUpon>
+    </None>
     <None Include="Surat\SPKNOTACustomerService.xsc">
       <DependentUpon>SPKNOTACustomerService.xsd</DependentUpon>
     </None>
