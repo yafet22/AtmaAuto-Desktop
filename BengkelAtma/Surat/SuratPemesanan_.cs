@@ -24,7 +24,7 @@ namespace BengkelAtma.Surat
         public SuratPemesanan_()
         {
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://192.168.19.140/8991/");
         }
 
         private async void SuratPemesanan__Load(object sender, EventArgs e)

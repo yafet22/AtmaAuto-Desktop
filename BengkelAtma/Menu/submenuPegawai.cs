@@ -23,7 +23,7 @@ namespace BengkelAtma.Menu
         public submenuPegawai()
         {
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://192.168.19.140/8991/");
         }
 
         public class Employee

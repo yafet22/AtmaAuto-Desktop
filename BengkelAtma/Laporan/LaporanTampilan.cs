@@ -19,27 +19,58 @@ namespace BengkelAtma.Laporan
 
         private void btnSparepartTerlaris_Click(object sender, EventArgs e)
         {
-            FormSprprtTr SparepartsForm = new FormSprprtTr(tbPilihTahun.Text);
-            SparepartsForm.Show();
+            if (tbPilihTahun.Text.ToString().Trim() == "" || tbBulanLaporan.Text.ToString().Trim() != "" || tbTipeBarang.Text.ToString().Trim() != "")
+            {
+                MessageBox.Show(" Anda hanya dapat menginputkan tahun");
+            }
+            else
+            {
+                FormSprprtTr SparepartsForm = new FormSprprtTr(tbPilihTahun.Text);
+                SparepartsForm.Show();
+            }
         }
 
         private void btnJasa_Click(object sender, EventArgs e)
         {
-            JasaTerlarissx JasaForm = new JasaTerlarissx(tbPilihTahun.Text, tbBulanLaporan.Text);
-            JasaForm.Show();
+            if (tbPilihTahun.Text.ToString().Trim() == "" || tbBulanLaporan.Text.ToString().Trim() == "" || tbTipeBarang.Text.ToString().Trim() != "")
+            {
+                MessageBox.Show(" Anda hanya dapat menginputkan tahun dan bulan");
+            }
+            else
+            {
+                JasaTerlarissx JasaForm = new JasaTerlarissx(tbPilihTahun.Text, tbBulanLaporan.Text);
+                JasaForm.Show();
+            }
+           
         }
 
         private void btnLaporanSisa_Click(object sender, EventArgs e)
         {
-           
-            SisaStocksx SisaStockForm = new SisaStocksx(tbPilihTahun.Text, tbTipeBarang.Text);
-            SisaStockForm.Show();
+            if (tbPilihTahun.Text.ToString().Trim() == "" || tbBulanLaporan.Text.ToString().Trim() != "" || tbTipeBarang.Text.ToString().Trim() == "")
+            {
+                MessageBox.Show(" Anda hanya dapat menginputkan tahun dan tipe barang");
+            }
+            else
+            {
+                SisaStocksx SisaStockForm = new SisaStocksx(tbPilihTahun.Text, tbTipeBarang.Text);
+                SisaStockForm.Show();
+            }
+         
+            
         }
 
         private void btnLaporanPBul_Click(object sender, EventArgs e)
         {
-            PendapatanBulanansx PendapatanBulananForm = new PendapatanBulanansx(tbPilihTahun.Text);
-            PendapatanBulananForm.Show();
+            if (tbPilihTahun.Text.ToString().Trim() == "" || tbBulanLaporan.Text.ToString().Trim() != "" || tbTipeBarang.Text.ToString().Trim() != "")
+            {
+                MessageBox.Show(" Anda hanya dapat menginputkan tahun");
+            }
+            else
+            {
+                PendapatanBulanansx PendapatanBulananForm = new PendapatanBulanansx(tbPilihTahun.Text);
+                PendapatanBulananForm.Show();
+            }
+            
         }
 
         private void btnLaporanPThn_Click(object sender, EventArgs e)
@@ -50,8 +81,16 @@ namespace BengkelAtma.Laporan
 
         private void btnLaporanPenBul_Click(object sender, EventArgs e)
         {
-            PengeluaranBulanansx PengeluaranBulananForm = new PengeluaranBulanansx(tbPilihTahun.Text);
-            PengeluaranBulananForm.Show();
+            if (tbPilihTahun.Text.ToString().Trim() == "" || tbBulanLaporan.Text.ToString().Trim() != "" || tbTipeBarang.Text.ToString().Trim() != "")
+            {
+                MessageBox.Show(" Anda hanya dapat menginputkan tahun");
+            }
+            else
+            {
+                PengeluaranBulanansx PengeluaranBulananForm = new PengeluaranBulanansx(tbPilihTahun.Text);
+                PengeluaranBulananForm.Show();
+            }
+           
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -22,7 +22,7 @@ namespace BengkelAtma.Menu
         public SuratSPK()
         {
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://192.168.19.140/8991/");
         }
 
         static async Task<DataTable> GetTransaction()

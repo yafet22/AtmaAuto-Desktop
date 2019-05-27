@@ -23,7 +23,7 @@ namespace BengkelAtma.Nota
         {
             InitializeComponent();
 
-            Uri url = new Uri(string.Format("http://p3l.yafetrakan.com/api/generate-spk/" + id));
+            Uri url = new Uri(string.Format("http://192.168.19.140/8991/api/generate-spk/" + id));
             string response = Get(url);
 
             JObject jobject = new JObject();

@@ -27,7 +27,7 @@ namespace BengkelAtma
         {
 
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://192.168.19.140/8991/");
 
 
         }
@@ -68,7 +68,7 @@ namespace BengkelAtma
                     kasir.Show();
 
                 }
-                else if (role == "Administrator")
+                else if (role == "Administrator" || role == "Customer Service")
                 {
                     
                     MainMenu main = new MainMenu();

@@ -18,12 +18,12 @@ namespace BengkelAtma.Laporan
     {
         SisaStock ss = new SisaStock();
         private string tahun;
-        private string sparepart;
-        public SisaStocksx(string tahun, string sparepart)
+        private string tipebarang;
+        public SisaStocksx(string tahun, string tipebarang)
         {
             InitializeComponent();
             this.tahun = tahun;
-            this.sparepart = sparepart;
+            this.tipebarang = tipebarang;
         }
 
         public class SisaStockx
@@ -35,7 +35,7 @@ namespace BengkelAtma.Laporan
         public void getDataSisa()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/remaining-stock/2019/Roda").Result;
+            var response = client.GetAsync("http://192.168.19.140/8991/api/remaining-stock/" + tahun + "/" + tipebarang).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

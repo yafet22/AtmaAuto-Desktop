@@ -38,7 +38,7 @@ namespace BengkelAtma.Laporan
         public void getData()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/best-seller-sparepart/" +tahun).Result;
+            var response = client.GetAsync("http://192.168.19.140/8991/api/best-seller-sparepart/" + tahun).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

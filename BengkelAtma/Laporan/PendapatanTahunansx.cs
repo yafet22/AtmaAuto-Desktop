@@ -32,7 +32,7 @@ namespace BengkelAtma.Laporan
         public void getDataPTahunan()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/transaction-by-branch").Result;
+            var response = client.GetAsync("http://192.168.19.140/8991/api/transaction-by-branch").Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

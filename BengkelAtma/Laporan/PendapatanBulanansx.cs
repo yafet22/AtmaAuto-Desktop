@@ -35,7 +35,7 @@ namespace BengkelAtma.Laporan
         public void getDataPenBul()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/transaction-per-year/" +tahun).Result;
+            var response = client.GetAsync("http://192.168.19.140/8991/api/transaction-per-year/" + tahun).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

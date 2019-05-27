@@ -33,7 +33,7 @@ namespace BengkelAtma.Laporan
         public void getDataPengBul()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/expense-per-year/"+tahun).Result;
+            var response = client.GetAsync("http://192.168.19.140/8991/api/expense-per-year/" + tahun).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

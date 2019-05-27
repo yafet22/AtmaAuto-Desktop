@@ -26,7 +26,7 @@ namespace BengkelAtma.Menu
         public Sparepart()
         {
             InitializeComponent();
-            client.BaseAddress = new Uri("http://p3l.yafetrakan.com/");
+            client.BaseAddress = new Uri("http://192.168.19.140/8991/");
         }
 
         private async void Sparepart_Load(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace BengkelAtma.Menu
             //Table.Columns.Add(dtColumn);
 
             disableInput();
-            pictureBox1.Load("http://p3l.yafetrakan.com/asset/default.png");
+            pictureBox1.Load("http://192.168.19.140/8991/asset/default.png");
             DataTable t = await GetSparepart();
             //t.Columns.Remove("id_branch");
             //t.Columns.Remove("id_role");
@@ -135,7 +135,7 @@ namespace BengkelAtma.Menu
             tbBeli.Text = "";
             tbJual.Text = "";
             tbNomor.Text = "";
-            pictureBox1.Load("http://p3l.yafetrakan.com/asset/default.png");
+            pictureBox1.Load("http://192.168.19.140/8991/asset/default.png");
             t2 = null;
         }
 
@@ -534,7 +534,7 @@ namespace BengkelAtma.Menu
                         comboSparepartType.SelectedIndex = comboSparepartType.FindStringExact(Convert.ToString(row.Cells["sparepart_type_name"].Value));
                         if (!Convert.ToString(row.Cells["image"].Value).Equals(""))
                         {
-                            pictureBox1.Load("http://p3l.yafetrakan.com/images/" + Convert.ToString(row.Cells["image"].Value));
+                            pictureBox1.Load("http://192.168.19.140/8991/images/" + Convert.ToString(row.Cells["image"].Value));
                         }
 
                         t2 = await GetCompatibility(id);

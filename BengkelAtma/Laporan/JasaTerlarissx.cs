@@ -19,6 +19,7 @@ namespace BengkelAtma.Laporan
         jasa js = new jasa();
         private string tahun;
         private string bulan;
+
         public JasaTerlarissx(string tahun, string bulan)
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace BengkelAtma.Laporan
         public void getDataJasa()
         {
             var client = new HttpClient();
-            var response = client.GetAsync("http://p3l.yafetrakan.com/api/service-selling/" +tahun + "/" + bulan).Result;
+            var response = client.GetAsync("http://192.168.19.140/8991/api/service-selling/" + tahun + "/" + bulan).Result;
             var a = response.Content.ReadAsStringAsync().Result;
             if (response.IsSuccessStatusCode)
             {

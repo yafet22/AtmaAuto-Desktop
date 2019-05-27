@@ -24,7 +24,7 @@ namespace BengkelAtma.Surat
         public FormSPNew(string id)
         {
             InitializeComponent();
-            Uri url = new Uri(string.Format("http://p3l.yafetrakan.com/api/generate-sp/" + id));
+            Uri url = new Uri(string.Format("http://192.168.19.140/8991/api/generate-sp/" + id));
             string response = Get(url);
 
             JObject jobject = new JObject();
